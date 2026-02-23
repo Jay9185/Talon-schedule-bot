@@ -1,0 +1,34 @@
+name: Talon Recon
+
+on:
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install chromium
+          
+      - name: Run Recon Scraper
+        env:
+          TALON_USER: ${{ secrets.TALON_USER }}
+          TALON_PASS: ${{ secrets.TALON_PASS }}
+        run: python talon_scraper.py
+        
+      - name: Upload Recon Data
+        uses: actions/upload-artifact@v3
+        with:
+          name: talon-data
+          path: |
+            talon_dashboard.png
+            talon_source.html
