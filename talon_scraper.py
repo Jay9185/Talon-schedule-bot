@@ -27,11 +27,17 @@ def run_recon():
             # --- LOGIN SEQUENCE ---
             print("🔐 Attempting to log in...")
             
-            # Using the exact HTML selectors from your recon dump
+            # 1. Fill the username
             page.fill("input[name='uname']", username, timeout=5000)
-            page.fill("input[name='password']", password, timeout=5000)
             
-            # Clicking the specific Javascript login button
+            # 2. Bypassing Talon's read-only anti-bot trap
+            print("🔓 Unlocking password field...")
+            page.locator("input[name='password']").click() # Click to trigger the Javascript unlock
+            page.wait_for_timeout(500) 
+            page.fill("input[name='password']", password, timeout=5000, force=True) # Force the text in
+            
+            # 3. Click the login button
+            print("🚪 Clicking submit...")
             page.click("input[id='butlogin']", timeout=5000)
             
             print("⏳ Waiting for dashboard to load...")
