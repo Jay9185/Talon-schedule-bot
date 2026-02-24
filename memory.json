@@ -1,0 +1,92 @@
+[
+    {
+        "date": "23 FEB",
+        "time": "16:00 - 18:00",
+        "status": "Scheduled",
+        "ip": "Bracke,Cameron",
+        "res": "DVT Brief Rm 26",
+        "lesson": "PPL 1.1-Brief",
+        "type": "Oral"
+    },
+    {
+        "date": "24 FEB",
+        "time": "15:00 - 18:00",
+        "status": "Scheduled",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 1.2-Flight",
+        "type": "Flight"
+    },
+    {
+        "date": "26 FEB",
+        "time": "10:00 - 12:00",
+        "status": "Scheduled",
+        "ip": "Davis,Timothy GS",
+        "res": "DVT Bldg 3 - D",
+        "lesson": "PPL 2.5 GS",
+        "type": "Academic"
+    },
+    {
+        "date": "26 FEB",
+        "time": "12:00 - 14:00",
+        "status": "Scheduled",
+        "ip": "Davis,Timothy GS",
+        "res": "DVT Bldg 3 - D",
+        "lesson": "PPL 2.6 GS",
+        "type": "Academic"
+    },
+    {
+        "date": "26 FEB",
+        "time": "14:00 - 16:00",
+        "status": "Scheduled",
+        "ip": "Reeves,Jordyn",
+        "res": "DVT Bldg 3 - D",
+        "lesson": "PPL 1.1 GS",
+        "type": "Academic"
+    },
+    {
+        "date": "26 FEB",
+        "time": "16:00 - 18:00",
+        "status": "Scheduled",
+        "ip": "Reeves,Jordyn",
+        "res": "DVT Bldg 3 - D",
+        "lesson": "PPL 1.2 GS",
+        "type": "Academic"
+    },
+    {
+        "date": "27 FEB",
+        "time": "10:00 - 12:00",
+        "status": "Scheduled",
+        "ip": "Davis,Timothy GS",
+        "res": "DVT Bldg 3 - D",
+        "lesson": "PPL 2.7 GS",
+        "type": "Academic"
+    },
+    {
+        "date": "27 FEB",
+        "time": "12:00 - 14:00",
+        "status": "Scheduled",
+        "ip": "Davis,Timothy GS",
+        "res": "DVT Bldg 3 - D",
+        "lesson": "PPL 2.8 GS",
+        "type": "Academic"
+    },
+    {
+        "date": "27 FEB",
+        "time": "14:00 - 15:30",
+        "status": "Scheduled",
+        "ip": "Reeves,Jordyn",
+        "res": "DVT Bldg 3 - D",
+        "lesson": "PPL 1.3 GS",
+        "type": "Academic"
+    },
+    {
+        "date": "27 FEB",
+        "time": "16:00 - 18:00",
+        "status": "Scheduled",
+        "ip": "Reeves,Jordyn",
+        "res": "DVT Bldg 3 - D",
+        "lesson": "PPL 1.4 GS",
+        "type": "Academic"
+    }
+]
