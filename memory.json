@@ -1,20 +1,21 @@
 [
     {
-        "date": "23 FEB",
-        "time": "16:00 - 18:00",
-        "status": "Scheduled",
-        "ip": "Bracke,Cameron",
-        "res": "DVT Brief Rm 26",
-        "lesson": "PPL 1.1-Brief",
-        "type": "Oral"
-    },
-    {
         "date": "24 FEB",
         "time": "15:00 - 18:00",
-        "status": "Scheduled",
+        "status": "Authorized",
         "ip": "Bracke,Cameron",
         "res": "545MA",
         "lesson": "PPL 1.2-Flight",
+        "type": "Flight",
+        "changes_text": "\u21b3 \u2705 Stat changed: Scheduled \u27a1\ufe0f Authorized"
+    },
+    {
+        "date": "25 FEB",
+        "time": "15:00 - 18:00",
+        "status": "Scheduling",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 1.3-Flight",
         "type": "Flight"
     },
     {
