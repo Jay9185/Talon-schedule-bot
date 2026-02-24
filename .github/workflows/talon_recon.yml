@@ -1,11 +1,17 @@
-name: Talon Recon
+name: Talon Schedule Bot
 
 on:
   workflow_dispatch:
+  schedule:
+    # Runs automatically every 2 hours
+    - cron: '0 */2 * * *'
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Critical: Allows the bot to save memory back to GitHub
+
     steps:
       - uses: actions/checkout@v3
       
@@ -19,16 +25,19 @@ jobs:
           pip install -r requirements.txt
           playwright install chromium
           
-      - name: Run Recon Scraper
+      - name: Run Talon Scraper
         env:
           TALON_USER: ${{ secrets.TALON_USER }}
           TALON_PASS: ${{ secrets.TALON_PASS }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TRMNL_WEBHOOK_URL: ${{ secrets.TRMNL_WEBHOOK_URL }}
         run: python talon_scraper.py
         
-      - name: Upload Recon Data
-        uses: actions/upload-artifact@v4
-        with:
-          name: talon-data
-          path: |
-            talon_dashboard.png
-            talon_source.html
+      - name: Save Memory Core
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add memory.json
+          git commit -m "Update schedule memory" || echo "No changes to commit"
+          git push
