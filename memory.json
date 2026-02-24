@@ -13,9 +13,10 @@
         "time": "15:00 - 18:00",
         "status": "Scheduled",
         "ip": "Bracke,Cameron",
-        "res": "PA28-181G",
+        "res": "545MA",
         "lesson": "PPL 1.2-Flight",
-        "type": "Flight"
+        "type": "Flight",
+        "changes_text": "\u21b3 \ud83c\udfe2 Res changed: PA28-181G \u27a1\ufe0f 545MA"
     },
     {
         "date": "26 FEB",
