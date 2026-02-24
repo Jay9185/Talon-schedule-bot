@@ -56,31 +56,34 @@ def extract_schedule(html_content):
     return flights_data
 
 def compare_schedules(old_sched, new_sched):
-    """Compares the new schedule against memory to find new or updated flights."""
     new_alerts = []
     updated_alerts = []
+    deleted_alerts = []
+    
+    old_dict = {f"{f['date']}_{f['time']}": f for f in old_sched}
+    new_dict = {f"{f['date']}_{f['time']}": f for f in new_sched}
+    new_dates = set([f['date'] for f in new_sched])
 
-    # Use Date + Lesson as a unique identifier to track changes over time
-    old_dict = {f"{f['date']}_{f['lesson']}": f for f in old_sched}
-
-    for f in new_sched:
-        key = f"{f['date']}_{f['lesson']}"
+    for key, f in new_dict.items():
         if key not in old_dict:
             new_alerts.append(f)
         else:
-            # Check if any crucial details changed on this existing lesson
             old_f = old_dict[key]
             changes = []
-            if old_f['time'] != f['time']: changes.append(f"⏰ Time: {old_f['time']} ➡️ {f['time']}")
-            if old_f['ip'] != f['ip']: changes.append(f"👨‍✈️ IP: {old_f['ip']} ➡️ {f['ip']}")
-            if old_f['res'] != f['res']: changes.append(f"🏢 Res: {old_f['res']} ➡️ {f['res']}")
-            if old_f['status'] != f['status']: changes.append(f"✅ Stat: {old_f['status']} ➡️ {f['status']}")
+            if old_f['lesson'] != f['lesson']: changes.append(f"↳ 📚 MSN changed: {old_f['lesson']} ➡️ {f['lesson']}")
+            if old_f['ip'] != f['ip']: changes.append(f"↳ 👨‍✈️ IP changed: {old_f['ip']} ➡️ {f['ip']}")
+            if old_f['res'] != f['res']: changes.append(f"↳ 🏢 Res changed: {old_f['res']} ➡️ {f['res']}")
+            if old_f['status'] != f['status']: changes.append(f"↳ ✅ Stat changed: {old_f['status']} ➡️ {f['status']}")
 
             if changes:
                 f['changes_text'] = "\n".join(changes)
                 updated_alerts.append(f)
 
-    return new_alerts, updated_alerts
+    for key, old_f in old_dict.items():
+        if key not in new_dict and old_f['date'] in new_dates:
+            deleted_alerts.append(old_f)
+
+    return new_alerts, updated_alerts, deleted_alerts
 
 def send_telegram(message):
     token = os.environ.get("TELEGRAM_BOT_TOKEN")
@@ -88,7 +91,7 @@ def send_telegram(message):
     if not token or not chat_id: return
     
     url = f"https://api.telegram.org/bot{token}/sendMessage"
-    payload = {"chat_id": chat_id, "text": message, "parse_mode": "HTML"}
+    payload = {"chat_id": chat_id, "text": message, "parse_mode": "HTML", "disable_web_page_preview": True}
     try: requests.post(url, json=payload)
     except Exception as e: print(f"Telegram error: {e}")
 
@@ -103,7 +106,6 @@ def run_scraper():
     username = os.environ.get("TALON_USER")
     password = os.environ.get("TALON_PASS")
     
-    # 1. Load memory
     old_schedule = []
     if os.path.exists(MEMORY_FILE):
         try:
@@ -112,7 +114,6 @@ def run_scraper():
         except Exception:
             pass
 
-    # 2. Scrape Talon
     print("🚀 Launching Headless Browser...")
     html_dump = ""
     with sync_playwright() as p:
@@ -134,42 +135,56 @@ def run_scraper():
         finally:
             browser.close()
 
-    # 3. Process, Compare, and Alert
     if html_dump:
         current_schedule = extract_schedule(html_dump)
         if not current_schedule:
             print("No events found in Talon.")
             return
 
-        new_flights, updated_flights = compare_schedules(old_schedule, current_schedule)
+        new_flights, updated_flights, deleted_flights = compare_schedules(old_schedule, current_schedule)
 
-        # Build Telegram Message ONLY if there are changes
-        if new_flights or updated_flights:
-            msg = "🦅 <b>AeroGuard Talon Update</b>\n\n"
+        if new_flights or updated_flights or deleted_flights:
+            alerts_by_date = {}
+            for f in new_flights:
+                d = f['date']; alerts_by_date.setdefault(d, []).append((f, "NEW"))
+            for f in updated_flights:
+                d = f['date']; alerts_by_date.setdefault(d, []).append((f, "UPDATED"))
+            for f in deleted_flights:
+                d = f['date']; alerts_by_date.setdefault(d, []).append((f, "DELETED"))
+
+            msg = ""
+            for date in sorted(alerts_by_date.keys()):
+                msg += f"🗓 <b>SCHEDULE: {date}</b>\n"
+                msg += "CDT: Jaykumar\n\n"
+                
+                for f, alert_type in alerts_by_date[date]:
+                    if alert_type == "NEW":
+                        msg += f"<b>{f['time']}</b> [🆕]\n"
+                    elif alert_type == "DELETED":
+                        msg += f"<b><strike>{f['time']}</strike></b> [🚨 CANCELLED]\n"
+                    else:
+                        msg += f"<b>{f['time']}</b> [🔄]\n"
+                        
+                    msg += f"↳ IP: {f['ip']}\n"
+                    msg += f"↳ RES: {f['res']}\n"
+                    msg += f"↳ MSN: {f['lesson']} ({f['type']})\n"
+                    if alert_type != "DELETED":
+                        msg += f"↳ STAT: {f['status']}\n"
+                    
+                    if alert_type == "UPDATED":
+                        msg += f"<i>{f['changes_text']}</i>\n"
+                    msg += "\n"
             
-            if new_flights:
-                msg += "🆕 <b>NEWLY SCHEDULED:</b>\n"
-                for f in new_flights:
-                    msg += f"📅 <b>{f['date']}</b> | {f['time']}\n"
-                    msg += f"✈️ {f['lesson']} ({f['type']})\n"
-                    msg += f"👨‍✈️ {f['ip']} | 🏢 {f['res']}\n\n"
-            
-            if updated_flights:
-                msg += "🔄 <b>UPDATED DETAILS:</b>\n"
-                for f in updated_flights:
-                    msg += f"📅 <b>{f['date']} - {f['lesson']}</b>\n"
-                    msg += f"{f['changes_text']}\n\n"
+            msg += f"<a href='{TALON_LOGIN_URL}'>Open Talon</a>"
 
             print("Changes detected! Sending to Telegram...")
             send_telegram(msg)
         else:
             print("No changes detected since last check. Staying silent.")
 
-        # Always update the TRMNL screen with the latest view
         print("Sending current snapshot to TRMNL...")
         update_trmnl(current_schedule)
 
-        # 4. Save new memory
         with open(MEMORY_FILE, "w") as f:
             json.dump(current_schedule, f, indent=4)
         print("✅ Run complete. Memory updated.")
