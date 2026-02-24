@@ -2,6 +2,7 @@ import os
 import sys
 import json
 import requests
+from datetime import datetime, timezone, timedelta
 from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
 
@@ -106,6 +107,10 @@ def run_scraper():
     username = os.environ.get("TALON_USER")
     password = os.environ.get("TALON_PASS")
     
+    # Generate the MST Timestamp
+    mst_tz = timezone(timedelta(hours=-7), name="MST")
+    now_mst = datetime.now(mst_tz).strftime("%d %b %H:%M MST").upper()
+
     old_schedule = []
     if os.path.exists(MEMORY_FILE):
         try:
@@ -175,7 +180,9 @@ def run_scraper():
                         msg += f"<i>{f['changes_text']}</i>\n"
                     msg += "\n"
             
-            msg += f"<a href='{TALON_LOGIN_URL}'>Open Talon</a>"
+            # Add the links and timestamp at the bottom
+            msg += f"<a href='{TALON_LOGIN_URL}'>Open Talon</a>\n"
+            msg += f"<i>Last Updated: {now_mst}</i>"
 
             print("Changes detected! Sending to Telegram...")
             send_telegram(msg)
