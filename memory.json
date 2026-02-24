@@ -2,12 +2,12 @@
     {
         "date": "24 FEB",
         "time": "15:00 - 18:00",
-        "status": "Authorized",
+        "status": "Ops Check In",
         "ip": "Bracke,Cameron",
         "res": "545MA",
         "lesson": "PPL 1.2-Flight",
         "type": "Flight",
-        "changes_text": "\u21b3 \u2705 Stat changed: Scheduled \u27a1\ufe0f Authorized"
+        "changes_text": "\u21b3 \u2705 Stat changed: Authorized \u27a1\ufe0f Ops Check In"
     },
     {
         "date": "25 FEB",
