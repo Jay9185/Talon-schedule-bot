@@ -32,18 +32,34 @@ def extract_schedule(html_content):
         resource = cols[5].get_text(strip=True)
         unit = cols[7].get_text(strip=True)
         instructor = cols[8].get_text(strip=True)
-        
-        # Grab the hover text (title attribute) from the row
-        raw_title = row.get('title', '').strip()
-        remark = ""
-        # Clean it up: Talon usually puts "Comments: " in front of it.
-        if raw_title.startswith("Comments:"):
-            remark = raw_title.replace("Comments:", "").strip()
-        # Ignore generic "Activity Type:" hover popups since we already have that data
-        elif raw_title and not raw_title.startswith("Activity Type:"):
-            remark = raw_title
 
         if "Rest Period" in act_type: continue
+
+        # --- DEEP SCAN FOR REMARKS ---
+        remark = ""
+        # Create a list of the main row PLUS every single tag nested inside of it
+        all_elements = [row] + row.find_all(True) 
+        
+        for tag in all_elements:
+            title_text = tag.get('title', '').strip()
+            
+            if not title_text:
+                continue
+                
+            # Ignore the generic Talon popups
+            if title_text.startswith("Activity Type:"):
+                continue
+                
+            # If we find an explicit "Comments:" tag, grab it and stop looking!
+            if "Comments:" in title_text:
+                remark = title_text.replace("Comments:", "").strip()
+                break
+                
+            # If we find a non-generic title, save it, but keep looking just in case 
+            # there is a better explicit "Comments:" tag hiding further down.
+            if len(title_text) > 2:
+                remark = title_text
+        # -----------------------------
             
         start_parts = start.split(" ")
         stop_parts = stop.split(" ")
@@ -63,7 +79,7 @@ def extract_schedule(html_content):
             "res": resource if resource else "TBD",
             "lesson": unit[:20] if unit else "Unknown", 
             "type": act_type,
-            "remark": remark  # Added remark to the dictionary
+            "remark": remark
         })
     return flights_data
 
@@ -90,7 +106,6 @@ def compare_schedules(old_sched, new_sched):
             # Check if dispatch added or changed a remark
             old_remark = old_f.get('remark', '')
             if old_remark != f['remark']: 
-                # Only log the change if the new remark actually has text
                 if f['remark']:
                     changes.append(f"MOD: Remark updated to '{f['remark']}'")
                 else:
@@ -196,7 +211,6 @@ def run_scraper():
                     if alert_type != "DELETED":
                         msg += f"<b>Status:</b> {f['status']}\n"
                     
-                    # Add the Remark if it exists!
                     if f.get('remark'):
                         msg += f"<b>Remark:</b> {f['remark']}\n"
                     
