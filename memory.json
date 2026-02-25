@@ -1,14 +1,5 @@
 [
     {
-        "date": "24 FEB",
-        "time": "15:00 - 18:00",
-        "status": "Completed",
-        "ip": "Bracke,Cameron",
-        "res": "904AG (NXI)",
-        "lesson": "PPL 1.2-Flight",
-        "type": "Flight"
-    },
-    {
         "date": "25 FEB",
         "time": "15:00 - 18:00",
         "status": "Scheduled",
