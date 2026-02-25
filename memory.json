@@ -2,20 +2,22 @@
     {
         "date": "24 FEB",
         "time": "15:00 - 18:00",
-        "status": "Ops Check In",
+        "status": "Completed",
         "ip": "Bracke,Cameron",
-        "res": "545MA",
+        "res": "904AG (NXI)",
         "lesson": "PPL 1.2-Flight",
-        "type": "Flight"
+        "type": "Flight",
+        "changes_text": "\u21b3 \ud83c\udfe2 Res changed: 545MA \u27a1\ufe0f 904AG (NXI)\n\u21b3 \u2705 Stat changed: Ops Check In \u27a1\ufe0f Completed"
     },
     {
         "date": "25 FEB",
         "time": "15:00 - 18:00",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "Bracke,Cameron",
         "res": "PA28-181G",
         "lesson": "PPL 1.3-Flight",
-        "type": "Flight"
+        "type": "Flight",
+        "changes_text": "\u21b3 \u2705 Stat changed: Scheduling \u27a1\ufe0f Scheduled"
     },
     {
         "date": "26 FEB",
