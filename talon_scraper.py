@@ -47,6 +47,7 @@ def extract_schedule(html_content):
             "Take Academic Attendance",
             "Activity Completion",
             "Edit",
+            "Ops Check In",
             "Delete",
             "View",
             "Report",
