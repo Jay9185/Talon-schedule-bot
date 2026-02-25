@@ -35,36 +35,46 @@ def extract_schedule(html_content):
 
         if "Rest Period" in act_type: continue
 
-        # --- DEEP SCAN FOR REMARKS ---
+        # --- BULLETPROOF REMARK SCANNER ---
         remark = ""
         all_elements = [row] + row.find_all(True) 
+        valid_fallback_titles = []
         
-        # Add the generic Talon system tooltips here so the bot ignores them
+        # Expanded system tooltip filter
         ignore_list = [
-            "Activity Type:", 
-            "Click here to report an incident.", 
+            "Activity Type", 
+            "Click here", 
             "Take Academic Attendance",
+            "Activity Completion",
             "Edit",
-            "Delete"
+            "Delete",
+            "View",
+            "Report",
+            "Grade",
+            "Cancel"
         ]
         
         for tag in all_elements:
             title_text = tag.get('title', '').strip()
             if not title_text: continue
                 
-            # Check if this tooltip is on our ignore list
-            if any(title_text.startswith(ignore_phrase) for ignore_phrase in ignore_list):
-                continue
-                
-            # If we find an explicit "Comments:" tag, grab it and stop looking!
+            # 1. THE SNIPER: If it officially says "Comments:", this is 100% a dispatcher remark.
             if "Comments:" in title_text:
-                remark = title_text.replace("Comments:", "").strip()
-                break
+                remark = title_text.split("Comments:")[-1].strip()
+                break # We found the exact remark, stop looking immediately.
                 
-            # If it passed the ignore list and isn't a blank string, save it
-            if len(title_text) > 2:
-                remark = title_text
-        # -----------------------------
+            # 2. THE FILTER: Check if this tooltip is a known system button
+            is_system_button = any(title_text.lower().startswith(ignore.lower()) for ignore in ignore_list)
+            
+            # 3. THE FALLBACK: If it's not a system button, save it just in case
+            if not is_system_button and len(title_text) > 3:
+                valid_fallback_titles.append(title_text)
+                
+        # 4. THE HEURISTIC: If we didn't find "Comments:" but found other valid tooltips, 
+        # assume the longest text is the human-typed remark (since system buttons are short).
+        if not remark and valid_fallback_titles:
+            remark = max(valid_fallback_titles, key=len)
+        # ----------------------------------
             
         start_parts = start.split(" ")
         stop_parts = stop.split(" ")
@@ -216,7 +226,6 @@ def run_scraper():
                     if alert_type != "DELETED":
                         msg += f"<b>Status:</b> {f['status']}\n"
                     
-                    # Only print the remark line if there is actually a valid remark
                     if f.get('remark'):
                         msg += f"<b>Remark:</b> {f['remark']}\n"
                     
