@@ -2,12 +2,13 @@
     {
         "date": "25 FEB",
         "time": "15:00 - 18:00",
-        "status": "Scheduled",
+        "status": "Authorized",
         "ip": "Bracke,Cameron",
         "res": "345AG (NXI)",
         "lesson": "PPL 1.3-Flight",
         "type": "Flight",
-        "remark": "Authorize Activity"
+        "remark": "Authorize Activity",
+        "changes_text": "MOD: Status changed: Scheduled to Authorized"
     },
     {
         "date": "26 FEB",
