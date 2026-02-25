@@ -37,17 +37,23 @@ def extract_schedule(html_content):
 
         # --- DEEP SCAN FOR REMARKS ---
         remark = ""
-        # Create a list of the main row PLUS every single tag nested inside of it
         all_elements = [row] + row.find_all(True) 
+        
+        # Add the generic Talon system tooltips here so the bot ignores them
+        ignore_list = [
+            "Activity Type:", 
+            "Click here to report an incident.", 
+            "Take Academic Attendance",
+            "Edit",
+            "Delete"
+        ]
         
         for tag in all_elements:
             title_text = tag.get('title', '').strip()
-            
-            if not title_text:
-                continue
+            if not title_text: continue
                 
-            # Ignore the generic Talon popups
-            if title_text.startswith("Activity Type:"):
+            # Check if this tooltip is on our ignore list
+            if any(title_text.startswith(ignore_phrase) for ignore_phrase in ignore_list):
                 continue
                 
             # If we find an explicit "Comments:" tag, grab it and stop looking!
@@ -55,8 +61,7 @@ def extract_schedule(html_content):
                 remark = title_text.replace("Comments:", "").strip()
                 break
                 
-            # If we find a non-generic title, save it, but keep looking just in case 
-            # there is a better explicit "Comments:" tag hiding further down.
+            # If it passed the ignore list and isn't a blank string, save it
             if len(title_text) > 2:
                 remark = title_text
         # -----------------------------
@@ -211,6 +216,7 @@ def run_scraper():
                     if alert_type != "DELETED":
                         msg += f"<b>Status:</b> {f['status']}\n"
                     
+                    # Only print the remark line if there is actually a valid remark
                     if f.get('remark'):
                         msg += f"<b>Remark:</b> {f['remark']}\n"
                     
