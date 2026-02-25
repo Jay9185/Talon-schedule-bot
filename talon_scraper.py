@@ -71,10 +71,10 @@ def compare_schedules(old_sched, new_sched):
         else:
             old_f = old_dict[key]
             changes = []
-            if old_f['lesson'] != f['lesson']: changes.append(f"↳ 📚 MSN changed: {old_f['lesson']} ➡️ {f['lesson']}")
-            if old_f['ip'] != f['ip']: changes.append(f"↳ 👨‍✈️ IP changed: {old_f['ip']} ➡️ {f['ip']}")
-            if old_f['res'] != f['res']: changes.append(f"↳ 🏢 Res changed: {old_f['res']} ➡️ {f['res']}")
-            if old_f['status'] != f['status']: changes.append(f"↳ ✅ Stat changed: {old_f['status']} ➡️ {f['status']}")
+            if old_f['lesson'] != f['lesson']: changes.append(f"MOD: Lesson changed: {old_f['lesson']} to {f['lesson']}")
+            if old_f['ip'] != f['ip']: changes.append(f"MOD: Instructor changed: {old_f['ip']} to {f['ip']}")
+            if old_f['res'] != f['res']: changes.append(f"MOD: Reserved changed: {old_f['res']} to {f['res']}")
+            if old_f['status'] != f['status']: changes.append(f"MOD: Status changed: {old_f['status']} to {f['status']}")
 
             if changes:
                 f['changes_text'] = "\n".join(changes)
@@ -96,10 +96,10 @@ def send_telegram(message):
     try: requests.post(url, json=payload)
     except Exception as e: print(f"Telegram error: {e}")
 
-def update_trmnl(flights):
+def update_trmnl(flights, timestamp_str):
     webhook = os.environ.get("TRMNL_WEBHOOK_URL")
     if not webhook: return
-    payload = {"merge_variables": {"flights": flights[:4]}}
+    payload = {"merge_variables": {"flights": flights[:4], "updated_at": timestamp_str}}
     try: requests.post(webhook, json=payload)
     except Exception as e: print(f"TRMNL error: {e}")
 
@@ -107,8 +107,8 @@ def run_scraper():
     username = os.environ.get("TALON_USER")
     password = os.environ.get("TALON_PASS")
     
-    # Generate the MST Timestamp
-    mst_tz = timezone(timedelta(hours=-7), name="MST")
+    # Generate MST Timestamp for Phoenix (UTC-7)
+    mst_tz = timezone(timedelta(hours=-7))
     now_mst = datetime.now(mst_tz).strftime("%d %b %H:%M MST").upper()
 
     old_schedule = []
@@ -157,32 +157,33 @@ def run_scraper():
             for f in deleted_flights:
                 d = f['date']; alerts_by_date.setdefault(d, []).append((f, "DELETED"))
 
-            msg = ""
+            msg = "<b>━━ AEROGUARD DISPATCH ━━</b>\n\n"
+            
             for date in sorted(alerts_by_date.keys()):
-                msg += f"🗓 <b>SCHEDULE: {date}</b>\n"
-                msg += "CDT: Jaykumar\n\n"
+                msg += f"<b>DATE: {date}</b>\n\n"
                 
                 for f, alert_type in alerts_by_date[date]:
                     if alert_type == "NEW":
-                        msg += f"<b>{f['time']}</b> [🆕]\n"
+                        msg += f"<b>[ NEW ] {f['time']}</b>\n"
                     elif alert_type == "DELETED":
-                        msg += f"<b><strike>{f['time']}</strike></b> [🚨 CANCELLED]\n"
+                        msg += f"<b>[ CANCELLED ] <s>{f['time']}</s></b>\n"
                     else:
-                        msg += f"<b>{f['time']}</b> [🔄]\n"
-                        
-                    msg += f"↳ IP: {f['ip']}\n"
-                    msg += f"↳ RES: {f['res']}\n"
-                    msg += f"↳ MSN: {f['lesson']} ({f['type']})\n"
+                        msg += f"<b>[ UPDATE ] {f['time']}</b>\n"
+                    
+                    # HTML Blockquotes for Telegram parsing
+                    msg += "<blockquote>"
+                    msg += f"<b>Lesson:</b> {f['lesson']} ({f['type']})\n"
+                    msg += f"<b>Instructor:</b> {f['ip']}\n"
+                    msg += f"<b>Reserved:</b> {f['res']}\n"
                     if alert_type != "DELETED":
-                        msg += f"↳ STAT: {f['status']}\n"
+                        msg += f"<b>Status:</b> {f['status']}\n"
                     
                     if alert_type == "UPDATED":
                         msg += f"<i>{f['changes_text']}</i>\n"
-                    msg += "\n"
+                    msg += "</blockquote>\n"
             
-            # Add the links and timestamp at the bottom
-            msg += f"<a href='{TALON_LOGIN_URL}'>Open Talon</a>\n"
-            msg += f"<i>Last Updated: {now_mst}</i>"
+            # Link removed; timestamp remains
+            msg += f"<code>Last Updated: {now_mst}</code>"
 
             print("Changes detected! Sending to Telegram...")
             send_telegram(msg)
@@ -190,7 +191,7 @@ def run_scraper():
             print("No changes detected since last check. Staying silent.")
 
         print("Sending current snapshot to TRMNL...")
-        update_trmnl(current_schedule)
+        update_trmnl(current_schedule, now_mst)
 
         with open(MEMORY_FILE, "w") as f:
             json.dump(current_schedule, f, indent=4)
