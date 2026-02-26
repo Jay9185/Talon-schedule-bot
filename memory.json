@@ -2,13 +2,13 @@
     {
         "date": "25 FEB",
         "time": "15:00 - 18:00",
-        "status": "Ops Check In",
+        "status": "Completed",
         "ip": "Bracke,Cameron",
         "res": "345AG (NXI)",
         "lesson": "PPL 1.3-Flight",
         "type": "Flight",
         "remark": "Authorize Activity",
-        "changes_text": "MOD: Status changed: Authorized to Ops Check In"
+        "changes_text": "MOD: Status changed: Ops Check In to Completed"
     },
     {
         "date": "26 FEB",
