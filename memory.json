@@ -1,15 +1,5 @@
 [
     {
-        "date": "25 FEB",
-        "time": "15:00 - 18:00",
-        "status": "Completed",
-        "ip": "Bracke,Cameron",
-        "res": "345AG (NXI)",
-        "lesson": "PPL 1.3-Flight",
-        "type": "Flight",
-        "remark": "Authorize Activity"
-    },
-    {
         "date": "26 FEB",
         "time": "10:00 - 12:00",
         "status": "Scheduled",
