@@ -58,5 +58,15 @@
         "lesson": "PPL 1.4 GS",
         "type": "Academic",
         "remark": ""
+    },
+    {
+        "date": "28 FEB",
+        "time": "11:00 - 14:00",
+        "status": "Scheduling",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181",
+        "lesson": "PPL 1.4-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
