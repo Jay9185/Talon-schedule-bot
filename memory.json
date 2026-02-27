@@ -51,7 +51,7 @@
     },
     {
         "date": "27 FEB",
-        "time": "16:00 - 18:00",
+        "time": "15:30 - 17:30",
         "status": "Scheduled",
         "ip": "Reeves,Jordyn",
         "res": "DVT Bldg 3 - D",
@@ -61,10 +61,10 @@
     },
     {
         "date": "28 FEB",
-        "time": "11:00 - 14:00",
+        "time": "15:00 - 18:00",
         "status": "Scheduling",
         "ip": "Bracke,Cameron",
-        "res": "PA28-181",
+        "res": "PA28-181G",
         "lesson": "PPL 1.4-Flight",
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day"
