@@ -22,22 +22,24 @@
     {
         "date": "26 FEB",
         "time": "14:00 - 16:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Reeves,Jordyn",
         "res": "DVT Bldg 3 - D",
         "lesson": "PPL 1.1 GS",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "changes_text": "MOD: Status changed: Scheduled to Completed"
     },
     {
         "date": "26 FEB",
         "time": "16:00 - 18:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Reeves,Jordyn",
         "res": "DVT Bldg 3 - D",
         "lesson": "PPL 1.2 GS",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "changes_text": "MOD: Status changed: Scheduled to Completed"
     },
     {
         "date": "27 FEB",
