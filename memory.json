@@ -68,5 +68,45 @@
         "lesson": "PPL 1.4-Flight",
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day"
+    },
+    {
+        "date": "04 MAR",
+        "time": "08:00 - 10:00",
+        "status": "Scheduled",
+        "ip": "Walker,Cyrus",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "PPL 3.9 GS",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "04 MAR",
+        "time": "10:00 - 12:00",
+        "status": "Scheduled",
+        "ip": "Walker,Cyrus",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "PPL 3.10 GS",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "05 MAR",
+        "time": "10:00 - 12:00",
+        "status": "Scheduled",
+        "ip": "Reeves,Jordyn",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "PPL 3.11 GS",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "05 MAR",
+        "time": "12:00 - 14:00",
+        "status": "Scheduled",
+        "ip": "Reeves,Jordyn",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "PPL 3.12 GS",
+        "type": "Academic",
+        "remark": ""
     }
 ]
