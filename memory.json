@@ -42,12 +42,13 @@
     {
         "date": "27 FEB",
         "time": "14:00 - 15:30",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Reeves,Jordyn",
         "res": "DVT Bldg 3 - D",
         "lesson": "PPL 1.3 GS",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "changes_text": "MOD: Status changed: Scheduled to Completed"
     },
     {
         "date": "27 FEB",
@@ -62,12 +63,13 @@
     {
         "date": "28 FEB",
         "time": "15:00 - 18:00",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "Bracke,Cameron",
         "res": "PA28-181G",
         "lesson": "PPL 1.4-Flight",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "Authorize Activity",
+        "changes_text": "MOD: Status changed: Scheduling to Scheduled\nMOD: Remark updated to 'Authorize Activity'"
     },
     {
         "date": "04 MAR",
