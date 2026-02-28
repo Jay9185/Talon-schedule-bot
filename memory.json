@@ -54,10 +54,11 @@
         "time": "15:00 - 18:00",
         "status": "Scheduled",
         "ip": "Bracke,Cameron",
-        "res": "PA28-181G",
+        "res": "4133D (A)",
         "lesson": "PPL 1.4-Flight",
         "type": "Flight",
-        "remark": "Authorize Activity"
+        "remark": "Authorize Activity",
+        "changes_text": "MOD: Reserved changed: PA28-181G to 4133D (A)"
     },
     {
         "date": "04 MAR",
