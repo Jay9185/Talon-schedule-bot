@@ -40,25 +40,25 @@
         "remark": ""
     },
     {
-        "date": "27 FEB",
-        "time": "15:30 - 17:30",
-        "status": "Scheduled",
-        "ip": "Reeves,Jordyn",
-        "res": "DVT Bldg 3 - D",
-        "lesson": "PPL 1.4 GS",
-        "type": "Academic",
-        "remark": ""
-    },
-    {
         "date": "28 FEB",
         "time": "15:00 - 18:00",
         "status": "Scheduled",
         "ip": "Bracke,Cameron",
-        "res": "908AG (NXI)",
+        "res": "271AG (NXI)",
         "lesson": "PPL 1.4-Flight",
         "type": "Flight",
         "remark": "Authorize Activity",
-        "changes_text": "MOD: Reserved changed: 4133D (A) to 908AG (NXI)"
+        "changes_text": "MOD: Reserved changed: 908AG (NXI) to 271AG (NXI)"
+    },
+    {
+        "date": "01 MAR",
+        "time": "06:00 - 09:00",
+        "status": "Scheduling",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 1.5-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     },
     {
         "date": "04 MAR",
