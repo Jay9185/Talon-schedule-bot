@@ -52,12 +52,13 @@
     {
         "date": "01 MAR",
         "time": "06:00 - 09:00",
-        "status": "Scheduled",
+        "status": "CancelledIP Sick Full Day",
         "ip": "Bracke,Cameron",
         "res": "PA28-181G",
         "lesson": "PPL 1.5-Flight",
         "type": "Flight",
-        "remark": "Authorize Activity"
+        "remark": "Authorize Activity",
+        "changes_text": "MOD: Status changed: Scheduled to CancelledIP Sick Full Day"
     },
     {
         "date": "04 MAR",
