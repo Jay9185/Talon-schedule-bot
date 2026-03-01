@@ -40,16 +40,6 @@
         "remark": ""
     },
     {
-        "date": "28 FEB",
-        "time": "15:00 - 18:00",
-        "status": "Completed",
-        "ip": "Bracke,Cameron",
-        "res": "271AG (NXI)",
-        "lesson": "PPL 1.4-Flight",
-        "type": "Flight",
-        "remark": "Authorize Activity"
-    },
-    {
         "date": "01 MAR",
         "time": "06:00 - 09:00",
         "status": "CancelledIP Sick Full Day",
@@ -57,8 +47,7 @@
         "res": "PA28-181G",
         "lesson": "PPL 1.5-Flight",
         "type": "Flight",
-        "remark": "Authorize Activity",
-        "changes_text": "MOD: Status changed: Scheduled to CancelledIP Sick Full Day"
+        "remark": "Authorize Activity"
     },
     {
         "date": "04 MAR",
