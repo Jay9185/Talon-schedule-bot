@@ -42,23 +42,24 @@
     {
         "date": "28 FEB",
         "time": "15:00 - 18:00",
-        "status": "Ops Check In",
+        "status": "Completed",
         "ip": "Bracke,Cameron",
         "res": "271AG (NXI)",
         "lesson": "PPL 1.4-Flight",
         "type": "Flight",
         "remark": "Authorize Activity",
-        "changes_text": "MOD: Status changed: Scheduled to Ops Check In"
+        "changes_text": "MOD: Status changed: Ops Check In to Completed"
     },
     {
         "date": "01 MAR",
         "time": "06:00 - 09:00",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "Bracke,Cameron",
         "res": "PA28-181G",
         "lesson": "PPL 1.5-Flight",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "Authorize Activity",
+        "changes_text": "MOD: Status changed: Scheduling to Scheduled\nMOD: Remark updated to 'Authorize Activity'"
     },
     {
         "date": "04 MAR",
