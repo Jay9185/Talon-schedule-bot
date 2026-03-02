@@ -40,16 +40,6 @@
         "remark": ""
     },
     {
-        "date": "01 MAR",
-        "time": "06:00 - 09:00",
-        "status": "CancelledIP Sick Full Day",
-        "ip": "Bracke,Cameron",
-        "res": "PA28-181G",
-        "lesson": "PPL 1.5-Flight",
-        "type": "Flight",
-        "remark": "Authorize Activity"
-    },
-    {
         "date": "02 MAR",
         "time": "08:00 - 11:00",
         "status": "Scheduled",
