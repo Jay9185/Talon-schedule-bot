@@ -42,13 +42,13 @@
     {
         "date": "02 MAR",
         "time": "08:00 - 11:00",
-        "status": "Ramp In",
+        "status": "Completed",
         "ip": "Bracke,Cameron",
         "res": "175AG (NXI)",
         "lesson": "PPL 1.5-Flight",
         "type": "Flight",
         "remark": "Authorize Activity",
-        "changes_text": "MOD: Status changed: Ramp Out to Ramp In"
+        "changes_text": "MOD: Status changed: Ramp In to Completed"
     },
     {
         "date": "03 MAR",
@@ -79,6 +79,16 @@
         "lesson": "PPL 3.10 GS",
         "type": "Academic",
         "remark": ""
+    },
+    {
+        "date": "04 MAR",
+        "time": "17:00 - 18:00",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "DVT Bldg 3 - A",
+        "lesson": "Unknown",
+        "type": "Meeting",
+        "remark": "AI town hall"
     },
     {
         "date": "05 MAR",
