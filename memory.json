@@ -41,14 +41,13 @@
     },
     {
         "date": "03 MAR",
-        "time": "13:00 - 16:00",
+        "time": "10:00 - 13:00",
         "status": "Scheduled",
         "ip": "Bracke,Cameron",
-        "res": "743PA NXi/S/A",
+        "res": "PA28-181G",
         "lesson": "PPL 1.6-Flight",
         "type": "Flight",
-        "remark": "Authorize Activity",
-        "changes_text": "MOD: Reserved changed: PA28-181G to 743PA NXi/S/A"
+        "remark": "Authorize Activity"
     },
     {
         "date": "04 MAR",
