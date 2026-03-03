@@ -42,12 +42,13 @@
     {
         "date": "03 MAR",
         "time": "09:30 - 12:30",
-        "status": "Ops Check In",
+        "status": "Authorized",
         "ip": "Bracke,Cameron",
         "res": "655AG (NXI)",
         "lesson": "PPL 1.6-Flight",
         "type": "Flight",
-        "remark": "Authorize Activity"
+        "remark": "Authorize Activity",
+        "changes_text": "MOD: Status changed: Ops Check In to Authorized"
     },
     {
         "date": "04 MAR",
@@ -68,16 +69,6 @@
         "lesson": "PPL 3.10 GS",
         "type": "Academic",
         "remark": ""
-    },
-    {
-        "date": "04 MAR",
-        "time": "13:00 - 15:30",
-        "status": "Scheduling",
-        "ip": "Bracke,Cameron",
-        "res": "PA28-181G",
-        "lesson": "PPL 1.7-Flight",
-        "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
     },
     {
         "date": "04 MAR",
