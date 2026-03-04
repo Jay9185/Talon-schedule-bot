@@ -40,16 +40,6 @@
         "remark": ""
     },
     {
-        "date": "03 MAR",
-        "time": "09:30 - 12:30",
-        "status": "Completed",
-        "ip": "Bracke,Cameron",
-        "res": "655AG (NXI)",
-        "lesson": "PPL 1.6-Flight",
-        "type": "Flight",
-        "remark": "Authorize Activity"
-    },
-    {
         "date": "04 MAR",
         "time": "08:00 - 10:00",
         "status": "Scheduled",
@@ -106,6 +96,26 @@
         "ip": "Reeves,Jordyn",
         "res": "DVT Bldg 3 - C",
         "lesson": "PPL 3.12 GS",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "10 MAR",
+        "time": "10:00 - 12:00",
+        "status": "Scheduled",
+        "ip": "Davis,Timothy GS",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "PPL 4.13 GS",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "10 MAR",
+        "time": "12:00 - 13:00",
+        "status": "Scheduled",
+        "ip": "Davis,Timothy GS",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "PPL 4.14 GS",
         "type": "Academic",
         "remark": ""
     }
