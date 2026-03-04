@@ -47,8 +47,7 @@
         "res": "DVT Bldg 3 - C",
         "lesson": "PPL 3.9 GS",
         "type": "Academic",
-        "remark": "",
-        "changes_text": "MOD: Status changed: Scheduled to Completed"
+        "remark": ""
     },
     {
         "date": "04 MAR",
@@ -58,18 +57,18 @@
         "res": "DVT Bldg 3 - C",
         "lesson": "PPL 3.10 GS",
         "type": "Academic",
-        "remark": "",
-        "changes_text": "MOD: Status changed: Scheduled to Completed"
+        "remark": ""
     },
     {
         "date": "04 MAR",
         "time": "14:30 - 17:00",
-        "status": "Scheduled",
+        "status": "Ops Check In",
         "ip": "Bracke,Cameron",
         "res": "364AG (NXI)",
         "lesson": "PPL 1.7-Flight",
         "type": "Flight",
-        "remark": "Authorize Activity"
+        "remark": "Authorize Activity",
+        "changes_text": "MOD: Status changed: Scheduled to Ops Check In"
     },
     {
         "date": "04 MAR",
