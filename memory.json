@@ -42,22 +42,24 @@
     {
         "date": "04 MAR",
         "time": "08:00 - 10:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Walker,Cyrus",
         "res": "DVT Bldg 3 - C",
         "lesson": "PPL 3.9 GS",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "changes_text": "MOD: Status changed: Scheduled to Completed"
     },
     {
         "date": "04 MAR",
         "time": "10:00 - 12:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Walker,Cyrus",
         "res": "DVT Bldg 3 - C",
         "lesson": "PPL 3.10 GS",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "changes_text": "MOD: Status changed: Scheduled to Completed"
     },
     {
         "date": "04 MAR",
