@@ -64,11 +64,11 @@
         "time": "14:30 - 17:00",
         "status": "Ops Check In",
         "ip": "Bracke,Cameron",
-        "res": "364AG (NXI)",
+        "res": "PA28-181G",
         "lesson": "PPL 1.7-Flight",
         "type": "Flight",
         "remark": "Authorize Activity",
-        "changes_text": "MOD: Status changed: Scheduled to Ops Check In"
+        "changes_text": "MOD: Reserved changed: 364AG (NXI) to PA28-181G"
     },
     {
         "date": "04 MAR",
