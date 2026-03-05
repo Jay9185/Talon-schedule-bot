@@ -41,26 +41,6 @@
     },
     {
         "date": "04 MAR",
-        "time": "08:00 - 10:00",
-        "status": "Completed",
-        "ip": "Walker,Cyrus",
-        "res": "DVT Bldg 3 - C",
-        "lesson": "PPL 3.9 GS",
-        "type": "Academic",
-        "remark": ""
-    },
-    {
-        "date": "04 MAR",
-        "time": "10:00 - 12:00",
-        "status": "Completed",
-        "ip": "Walker,Cyrus",
-        "res": "DVT Bldg 3 - C",
-        "lesson": "PPL 3.10 GS",
-        "type": "Academic",
-        "remark": ""
-    },
-    {
-        "date": "04 MAR",
         "time": "14:30 - 17:00",
         "status": "Ops Check In",
         "ip": "Bracke,Cameron",
@@ -68,16 +48,6 @@
         "lesson": "PPL 1.7-Flight",
         "type": "Flight",
         "remark": "Authorize Activity"
-    },
-    {
-        "date": "04 MAR",
-        "time": "17:00 - 18:00",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "DVT Bldg 3 - A",
-        "lesson": "Unknown",
-        "type": "Meeting",
-        "remark": "AI town hall"
     },
     {
         "date": "05 MAR",
@@ -116,6 +86,26 @@
         "ip": "Davis,Timothy GS",
         "res": "DVT Bldg 3 - C",
         "lesson": "PPL 4.14 GS",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "11 MAR",
+        "time": "10:00 - 12:00",
+        "status": "Scheduled",
+        "ip": "Davis,Timothy GS",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "PPL 4.15 GS",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "11 MAR",
+        "time": "12:00 - 14:30",
+        "status": "Scheduled",
+        "ip": "Davis,Timothy GS",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "PPL 4.16 GS",
         "type": "Academic",
         "remark": ""
     }
