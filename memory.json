@@ -40,26 +40,6 @@
         "remark": ""
     },
     {
-        "date": "05 MAR",
-        "time": "10:00 - 12:00",
-        "status": "Completed",
-        "ip": "Reeves,Jordyn",
-        "res": "DVT Bldg 3 - C",
-        "lesson": "PPL 3.11 GS",
-        "type": "Academic",
-        "remark": ""
-    },
-    {
-        "date": "05 MAR",
-        "time": "12:00 - 14:00",
-        "status": "Completed",
-        "ip": "Reeves,Jordyn",
-        "res": "DVT Bldg 3 - C",
-        "lesson": "PPL 3.12 GS",
-        "type": "Academic",
-        "remark": ""
-    },
-    {
         "date": "06 MAR",
         "time": "08:00 - 10:30",
         "status": "Scheduled",
