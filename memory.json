@@ -53,21 +53,23 @@
         "date": "10 MAR",
         "time": "10:00 - 12:00",
         "status": "Scheduled",
-        "ip": "Davis,Timothy GS",
+        "ip": "Walker,Cyrus",
         "res": "DVT Bldg 3 - C",
         "lesson": "PPL 4.13 GS",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "changes_text": "MOD: Instructor changed: Davis,Timothy GS to Walker,Cyrus"
     },
     {
         "date": "10 MAR",
         "time": "12:00 - 13:00",
         "status": "Scheduled",
-        "ip": "Davis,Timothy GS",
+        "ip": "Walker,Cyrus",
         "res": "DVT Bldg 3 - C",
         "lesson": "PPL 4.14 GS",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "changes_text": "MOD: Instructor changed: Davis,Timothy GS to Walker,Cyrus"
     },
     {
         "date": "11 MAR",
