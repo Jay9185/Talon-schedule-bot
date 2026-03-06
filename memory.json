@@ -42,13 +42,13 @@
     {
         "date": "06 MAR",
         "time": "08:00 - 10:30",
-        "status": "Ops Check In",
+        "status": "Ramp Out",
         "ip": "Bracke,Cameron",
         "res": "281TW (NXI)",
         "lesson": "PPL 1.7-Flight",
         "type": "Flight",
         "remark": "Authorize Activity",
-        "changes_text": "MOD: Status changed: Scheduled to Ops Check In"
+        "changes_text": "MOD: Status changed: Ops Check In to Ramp Out"
     },
     {
         "date": "10 MAR",
