@@ -47,8 +47,7 @@
         "res": "DVT Bldg 3 - C",
         "lesson": "PPL 3.11 GS",
         "type": "Academic",
-        "remark": "",
-        "changes_text": "MOD: Status changed: Scheduled to Completed"
+        "remark": ""
     },
     {
         "date": "05 MAR",
@@ -58,18 +57,18 @@
         "res": "DVT Bldg 3 - C",
         "lesson": "PPL 3.12 GS",
         "type": "Academic",
-        "remark": "",
-        "changes_text": "MOD: Status changed: Scheduled to Completed"
+        "remark": ""
     },
     {
         "date": "06 MAR",
         "time": "08:00 - 10:30",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "Bracke,Cameron",
         "res": "PA28-181G",
         "lesson": "PPL 1.7-Flight",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "Authorize Activity",
+        "changes_text": "MOD: Status changed: Scheduling to Scheduled\nMOD: Remark updated to 'Authorize Activity'"
     },
     {
         "date": "10 MAR",
