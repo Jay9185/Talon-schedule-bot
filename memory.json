@@ -42,13 +42,13 @@
     {
         "date": "06 MAR",
         "time": "08:00 - 10:30",
-        "status": "Scheduled",
+        "status": "Ops Check In",
         "ip": "Bracke,Cameron",
         "res": "281TW (NXI)",
         "lesson": "PPL 1.7-Flight",
         "type": "Flight",
         "remark": "Authorize Activity",
-        "changes_text": "MOD: Reserved changed: PA28-181G to 281TW (NXI)"
+        "changes_text": "MOD: Status changed: Scheduled to Ops Check In"
     },
     {
         "date": "10 MAR",
