@@ -40,6 +40,16 @@
         "remark": ""
     },
     {
+        "date": "09 MAR",
+        "time": "11:30 - 14:00",
+        "status": "Scheduling",
+        "ip": "Bracke,Cameron",
+        "res": "Redbird AATD",
+        "lesson": "PPL 1.9-AATD",
+        "type": "Sim",
+        "remark": "The schedule has not yet been posted for this day"
+    },
+    {
         "date": "10 MAR",
         "time": "10:00 - 12:00",
         "status": "Scheduled",
@@ -77,6 +87,26 @@
         "res": "DVT Bldg 3 - C",
         "lesson": "PPL 4.16 GS",
         "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "",
+        "time": "",
+        "status": "",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "Unknown",
+        "type": "",
+        "remark": ""
+    },
+    {
+        "date": "08 MAR",
+        "time": "2026 - 2026",
+        "status": "Ops Request",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181",
+        "lesson": "PPL 1.8-Flight",
+        "type": "Flight",
         "remark": ""
     }
 ]
