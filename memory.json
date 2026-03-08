@@ -40,6 +40,16 @@
         "remark": ""
     },
     {
+        "date": "08 MAR",
+        "time": "14:30 - 17:00",
+        "status": "Ops Check In",
+        "ip": "Bracke,Cameron",
+        "res": "904AG (NXI)",
+        "lesson": "PPL 1.8-Flight",
+        "type": "Flight",
+        "remark": "Authorize Activity"
+    },
+    {
         "date": "09 MAR",
         "time": "11:30 - 14:00",
         "status": "Scheduling",
@@ -87,26 +97,6 @@
         "res": "DVT Bldg 3 - C",
         "lesson": "PPL 4.16 GS",
         "type": "Academic",
-        "remark": ""
-    },
-    {
-        "date": "",
-        "time": "",
-        "status": "",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "Unknown",
-        "type": "",
-        "remark": ""
-    },
-    {
-        "date": "08 MAR",
-        "time": "2026 - 2026",
-        "status": "Ops Request",
-        "ip": "Bracke,Cameron",
-        "res": "PA28-181",
-        "lesson": "PPL 1.8-Flight",
-        "type": "Flight",
         "remark": ""
     }
 ]
