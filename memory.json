@@ -47,19 +47,18 @@
         "res": "918AG (NXI)",
         "lesson": "PPL 1.8-Flight",
         "type": "Flight",
-        "remark": "Authorize Activity",
-        "changes_text": "MOD: Status changed: Ramp Out to Completed"
+        "remark": "Authorize Activity"
     },
     {
         "date": "09 MAR",
         "time": "11:30 - 14:00",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Bracke,Cameron",
         "res": "RB LD 2",
         "lesson": "PPL 1.9-AATD",
         "type": "Sim",
         "remark": "Authorize Activity",
-        "changes_text": "MOD: Status changed: Authorized to Ramp Out"
+        "changes_text": "MOD: Status changed: Ramp Out to Completed"
     },
     {
         "date": "10 MAR",
