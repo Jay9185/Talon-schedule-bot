@@ -52,12 +52,13 @@
     {
         "date": "09 MAR",
         "time": "11:30 - 14:00",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "Bracke,Cameron",
-        "res": "Redbird AATD",
+        "res": "RB LD 2",
         "lesson": "PPL 1.9-AATD",
         "type": "Sim",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "Authorize Activity",
+        "changes_text": "MOD: Reserved changed: Redbird AATD to RB LD 2\nMOD: Status changed: Scheduling to Scheduled\nMOD: Remark updated to 'Authorize Activity'"
     },
     {
         "date": "10 MAR",
