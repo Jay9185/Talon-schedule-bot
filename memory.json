@@ -47,8 +47,7 @@
         "res": "918AG (NXI)",
         "lesson": "PPL 1.8-Flight",
         "type": "Flight",
-        "remark": "Authorize Activity",
-        "changes_text": "MOD: Reserved changed: 919AG (NXI) to 918AG (NXI)\nMOD: Status changed: Authorized to Ramp Out"
+        "remark": "Authorize Activity"
     },
     {
         "date": "09 MAR",
@@ -68,8 +67,7 @@
         "res": "DVT Bldg 3 - B",
         "lesson": "PPL 4.13 GS",
         "type": "Academic",
-        "remark": "",
-        "changes_text": "MOD: Reserved changed: DVT Bldg 3 - C to DVT Bldg 3 - B"
+        "remark": ""
     },
     {
         "date": "10 MAR",
@@ -79,8 +77,17 @@
         "res": "DVT Bldg 3 - B",
         "lesson": "PPL 4.14 GS",
         "type": "Academic",
-        "remark": "",
-        "changes_text": "MOD: Reserved changed: DVT Bldg 3 - C to DVT Bldg 3 - B"
+        "remark": ""
+    },
+    {
+        "date": "10 MAR",
+        "time": "11:30 - 14:00",
+        "status": "Scheduling",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 1.10-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     },
     {
         "date": "11 MAR",
