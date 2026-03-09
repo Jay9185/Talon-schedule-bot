@@ -44,10 +44,11 @@
         "time": "09:00 - 11:30",
         "status": "Scheduled",
         "ip": "Bracke,Cameron",
-        "res": "PA28-181",
+        "res": "919AG (NXI)",
         "lesson": "PPL 1.8-Flight",
         "type": "Flight",
-        "remark": "Authorize Activity"
+        "remark": "Authorize Activity",
+        "changes_text": "MOD: Reserved changed: PA28-181 to 919AG (NXI)"
     },
     {
         "date": "09 MAR",
