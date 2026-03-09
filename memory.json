@@ -40,17 +40,6 @@
         "remark": ""
     },
     {
-        "date": "08 MAR",
-        "time": "14:30 - 17:00",
-        "status": "CancelledWX - Winds",
-        "ip": "Bracke,Cameron",
-        "res": "904AG (NXI)",
-        "lesson": "PPL 1.8-Flight",
-        "type": "Flight",
-        "remark": "Authorize Activity",
-        "changes_text": "MOD: Status changed: Ops Check In to CancelledWX - Winds"
-    },
-    {
         "date": "09 MAR",
         "time": "09:00 - 11:30",
         "status": "Scheduled",
