@@ -2,6 +2,7 @@ import os
 import sys
 import json
 import requests
+import html
 from datetime import datetime, timezone, timedelta
 from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
@@ -40,50 +41,35 @@ def extract_schedule(html_content):
         all_elements = [row] + row.find_all(True) 
         valid_fallback_titles = []
         
-        # Expanded system tooltip filter
         ignore_list = [
-            "Activity Type", 
-            "Click here", 
-            "Take Academic Attendance",
-            "Activity Completion",
-            "Edit",
-            "Authorize Activity",
-            "Ops Check In",
-            "Delete",
-            "View",
-            "Report",
-            "Grade",
-            "Cancel"
+            "Activity Type", "Click here", "Take Academic Attendance",
+            "Activity Completion", "Edit", "Authorize Activity",
+            "Ops Check In", "Delete", "View", "Report", "Grade", "Cancel"
         ]
         
         for tag in all_elements:
             title_text = tag.get('title', '').strip()
             if not title_text: continue
                 
-            # 1. THE SNIPER: If it officially says "Comments:", this is 100% a dispatcher remark.
             if "Comments:" in title_text:
                 remark = title_text.split("Comments:")[-1].strip()
-                break # We found the exact remark, stop looking immediately.
+                break 
                 
-            # 2. THE FILTER: Check if this tooltip is a known system button
             is_system_button = any(title_text.lower().startswith(ignore.lower()) for ignore in ignore_list)
             
-            # 3. THE FALLBACK: If it's not a system button, save it just in case
             if not is_system_button and len(title_text) > 3:
                 valid_fallback_titles.append(title_text)
                 
-        # 4. THE HEURISTIC: If we didn't find "Comments:" but found other valid tooltips, 
-        # assume the longest text is the human-typed remark (since system buttons are short).
         if not remark and valid_fallback_titles:
             remark = max(valid_fallback_titles, key=len)
         # ----------------------------------
             
-        start_parts = start.split(" ")
-        stop_parts = stop.split(" ")
+        start_parts = start.split()
+        stop_parts = stop.split()
         
         if len(start_parts) >= 3 and len(stop_parts) >= 3:
             date_str = f"{start_parts[0]} {start_parts[1]}"
-            time_str = f"{start_parts[2]} - {stop_parts[2]}"
+            time_str = f"{start_parts[-1]} - {stop_parts[-1]}"
             if start_parts[0] != stop_parts[0]: time_str += " (+1D)"
         else:
             date_str, time_str = start, stop
@@ -101,7 +87,7 @@ def extract_schedule(html_content):
     return flights_data
 
 def filter_old_flights(schedule):
-    """Keeps future flights and recent flights up to 2 days old."""
+    """Keeps future flights and recent flights up to 2 days old. Scrubs dirty Talon dates."""
     mst_tz = timezone(timedelta(hours=-7))
     now = datetime.now(mst_tz)
     cutoff_date = (now - timedelta(days=2)).date()
@@ -110,23 +96,79 @@ def filter_old_flights(schedule):
     
     for f in schedule:
         try:
-            # Parse the date string (e.g., "09 MAR") into a comparable date object
-            flight_dt = datetime.strptime(f['date'], "%d %b").replace(year=current_year).date()
+            # Strip out asterisks or weird hidden HTML characters from stuck classes
+            clean_date = "".join(c for c in f['date'] if c.isalnum() or c.isspace()).strip()
+            dt_str = f"{clean_date} {current_year}"
+            flight_dt = datetime.strptime(dt_str, "%d %b %Y").date()
             
-            # Handle the year wrap-around (December to January)
             if flight_dt.month == 12 and now.month < 3:
                 flight_dt = flight_dt.replace(year=current_year - 1)
             elif flight_dt.month < 3 and now.month == 12:
                 flight_dt = flight_dt.replace(year=current_year + 1)
                 
-            # Only keep the flight if it is equal to or newer than the 2-day cutoff
             if flight_dt >= cutoff_date:
                 filtered_schedule.append(f)
         except Exception:
-            # If the date fails to parse for any reason, keep it to be safe
             filtered_schedule.append(f)
             
     return filtered_schedule
+
+def is_future_flight(f):
+    """Checks if a flight's start time is currently in the future."""
+    mst_tz = timezone(timedelta(hours=-7))
+    now = datetime.now(mst_tz)
+    current_year = now.year
+    try:
+        start_time_str = f['time'].split("-")[0].strip()
+        clean_date = "".join(c for c in f['date'] if c.isalnum() or c.isspace()).strip()
+        dt_str = f"{clean_date} {current_year} {start_time_str}"
+        flight_dt = datetime.strptime(dt_str, "%d %b %Y %H:%M").replace(tzinfo=mst_tz)
+        
+        if flight_dt.month == 12 and now.month < 3:
+            flight_dt = flight_dt.replace(year=current_year - 1)
+        elif flight_dt.month < 3 and now.month == 12:
+            flight_dt = flight_dt.replace(year=current_year + 1)
+            
+        return flight_dt > now
+    except:
+        return True 
+
+def get_trmnl_flights(schedule):
+    """STRICT TRMNL FILTER: Only returns flights where the end time is in the future."""
+    mst_tz = timezone(timedelta(hours=-7))
+    now = datetime.now(mst_tz)
+    current_year = now.year
+    trmnl_flights = []
+    
+    for f in schedule:
+        try:
+            time_parts = f['time'].split("-")
+            if len(time_parts) < 2:
+                trmnl_flights.append(f)
+                continue
+                
+            stop_time_str = time_parts[1].split("(")[0].strip()
+            clean_date = "".join(c for c in f['date'] if c.isalnum() or c.isspace()).strip()
+            
+            dt_str = f"{clean_date} {current_year} {stop_time_str}"
+            stop_dt = datetime.strptime(dt_str, "%d %b %Y %H:%M").replace(tzinfo=mst_tz)
+            
+            if "(+1D)" in f['time']:
+                stop_dt += timedelta(days=1)
+                
+            if stop_dt.month == 12 and now.month < 3:
+                stop_dt = stop_dt.replace(year=current_year - 1)
+            elif stop_dt.month < 3 and now.month == 12:
+                stop_dt = stop_dt.replace(year=current_year + 1)
+                
+            # If the block has passed, ban it from TRMNL
+            if stop_dt > now:
+                trmnl_flights.append(f)
+        except Exception:
+            # Drop un-parseable corrupt dates from TRMNL so they don't block the screen
+            pass
+            
+    return trmnl_flights[:4]
 
 def compare_schedules(old_sched, new_sched):
     new_alerts = []
@@ -135,7 +177,6 @@ def compare_schedules(old_sched, new_sched):
     
     old_dict = {f"{f['date']}_{f['time']}": f for f in old_sched}
     new_dict = {f"{f['date']}_{f['time']}": f for f in new_sched}
-    new_dates = set([f['date'] for f in new_sched])
 
     for key, f in new_dict.items():
         if key not in old_dict:
@@ -148,21 +189,19 @@ def compare_schedules(old_sched, new_sched):
             if old_f['res'] != f['res']: changes.append(f"MOD: Reserved changed: {old_f['res']} to {f['res']}")
             if old_f['status'] != f['status']: changes.append(f"MOD: Status changed: {old_f['status']} to {f['status']}")
             
-            # Check if dispatch added or changed a remark
             old_remark = old_f.get('remark', '')
             if old_remark != f['remark']: 
-                if f['remark']:
-                    changes.append(f"MOD: Remark updated to '{f['remark']}'")
-                else:
-                    changes.append(f"MOD: Remark removed")
+                if f['remark']: changes.append(f"MOD: Remark updated to '{f['remark']}'")
+                else: changes.append(f"MOD: Remark removed")
 
             if changes:
                 f['changes_text'] = "\n".join(changes)
                 updated_alerts.append(f)
 
     for key, old_f in old_dict.items():
-        if key not in new_dict and old_f['date'] in new_dates:
-            deleted_alerts.append(old_f)
+        if key not in new_dict:
+            if is_future_flight(old_f):
+                deleted_alerts.append(old_f)
 
     return new_alerts, updated_alerts, deleted_alerts
 
@@ -173,13 +212,17 @@ def send_telegram(message):
     
     url = f"https://api.telegram.org/bot{token}/sendMessage"
     payload = {"chat_id": chat_id, "text": message, "parse_mode": "HTML", "disable_web_page_preview": True}
-    try: requests.post(url, json=payload)
-    except Exception as e: print(f"Telegram error: {e}")
+    try: 
+        response = requests.post(url, json=payload)
+        if response.status_code != 200:
+            print(f"Telegram API Error: {response.text}")
+    except Exception as e: 
+        print(f"Telegram Exception: {e}")
 
 def update_trmnl(flights, timestamp_str):
     webhook = os.environ.get("TRMNL_WEBHOOK_URL")
     if not webhook: return
-    payload = {"merge_variables": {"flights": flights[:4], "updated_at": timestamp_str}}
+    payload = {"merge_variables": {"flights": flights, "updated_at": timestamp_str}}
     try: requests.post(webhook, json=payload)
     except Exception as e: print(f"TRMNL error: {e}")
 
@@ -225,11 +268,8 @@ def run_scraper():
             print("No events found in Talon.")
             return
 
-        # ---- THE 2-DAY ROLLING WINDOW FILTER ----
-        # Strip out events older than 48 hours to prevent false cancellation alerts
         current_schedule = filter_old_flights(current_schedule)
         old_schedule = filter_old_flights(old_schedule)
-        # -----------------------------------------
 
         new_flights, updated_flights, deleted_flights = compare_schedules(old_schedule, current_schedule)
 
@@ -256,17 +296,17 @@ def run_scraper():
                         msg += f"<b>[ UPDATE ] {f['time']}</b>\n"
                     
                     msg += "<blockquote>"
-                    msg += f"<b>Lesson:</b> {f['lesson']} ({f['type']})\n"
-                    msg += f"<b>Instructor:</b> {f['ip']}\n"
-                    msg += f"<b>Reserved:</b> {f['res']}\n"
+                    msg += f"<b>Lesson:</b> {html.escape(f['lesson'])} ({html.escape(f['type'])})\n"
+                    msg += f"<b>Instructor:</b> {html.escape(f['ip'])}\n"
+                    msg += f"<b>Reserved:</b> {html.escape(f['res'])}\n"
                     if alert_type != "DELETED":
-                        msg += f"<b>Status:</b> {f['status']}\n"
+                        msg += f"<b>Status:</b> {html.escape(f['status'])}\n"
                     
                     if f.get('remark'):
-                        msg += f"<b>Remark:</b> {f['remark']}\n"
+                        msg += f"<b>Remark:</b> {html.escape(f['remark'])}\n"
                     
                     if alert_type == "UPDATED":
-                        msg += f"<i>{f['changes_text']}</i>\n"
+                        msg += f"<i>{html.escape(f['changes_text'])}</i>\n"
                     msg += "</blockquote>\n"
             
             msg += f"<code>Last Updated: {now_mst}</code>"
@@ -276,8 +316,10 @@ def run_scraper():
         else:
             print("No changes detected since last check. Staying silent.")
 
-        print("Sending current snapshot to TRMNL...")
-        update_trmnl(current_schedule, now_mst)
+        # Push ONLY active/future flights to TRMNL
+        trmnl_payload = get_trmnl_flights(current_schedule)
+        print("Sending active/upcoming snapshot to TRMNL...")
+        update_trmnl(trmnl_payload, now_mst)
 
         with open(MEMORY_FILE, "w") as f:
             json.dump(current_schedule, f, indent=4)
