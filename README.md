@@ -49,7 +49,22 @@ You need your own private copy of this code so it runs on your account, not mine
 3. Leave all the default settings as they are and click **Create fork**.
 4. You will be redirected to a new page. You are now looking at your own private copy of the code.
 
-### Step 3: Add Your Login Credentials
+### Step 3: Update the Login URL for Your School
+
+Every flight school has a unique link for their Talon ETA portal. You need to update the script so it knows where your specific school logs in.
+
+1. In your forked repository, click on the file named `talon_scraper.py`.
+2. Click the small pencil icon (Edit this file) in the top right corner of the code box.
+3. Look at **Line 10**. You will see the configuration variable for the login link:
+`TALON_LOGIN_URL = "https://apps4.talonsystems.com/tseta/servlet/content?module=home&page=homepg&zajael1120=42DC6E6C4E5A723E80D0BF0AC5A1C8AF"`
+4. Delete the URL inside the quotation marks and paste your own school's Talon login link.
+* **Example:** `TALON_LOGIN_URL = "https://yourflightschool.talonsystems.com/tseta/"`
+* *Make sure you keep the quotation marks around your link!*
+
+
+5. Click the green **Commit changes...** button in the top right corner to save your update.
+
+### Step 4: Add Your Login Credentials
 
 You need to give the script your login credentials safely. GitHub has a feature called "Secrets" that encrypts your passwords so no one else can see them.
 
@@ -78,7 +93,7 @@ You need to give the script your login credentials safely. GitHub has a feature 
 
 *(Optional)* If you have a TRMNL e-ink display, create a fifth secret named `TRMNL_WEBHOOK_URL` and paste your plugin's webhook link there.
 
-### Step 4: Turn On the Automation
+### Step 5: Turn On the Automation
 
 By default, GitHub disables automated background tasks on newly copied repositories to prevent spam. You need to flip the switch to turn your bot on.
 
