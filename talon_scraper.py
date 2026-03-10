@@ -7,7 +7,7 @@ from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
 
 # --- CONFIGURATION ---
-TALON_LOGIN_URL = "https://apps4.talonsystems.com/tseta/servlet/content?module=home&page=homepg&zajael1120=42DC6E6C4E5A723E80D0BF0AC5A1C8AF"
+TALON_LOGIN_URL = os.environ.get("TALON_LOGIN_URL", "https://apps4.talonsystems.com/tseta/")
 MEMORY_FILE = "memory.json"
 
 def extract_schedule(html_content):
@@ -47,7 +47,7 @@ def extract_schedule(html_content):
             "Take Academic Attendance",
             "Activity Completion",
             "Edit",
-            "Authorize Acvtivty",
+            "Authorize Activity",
             "Ops Check In",
             "Delete",
             "View",
@@ -99,6 +99,34 @@ def extract_schedule(html_content):
             "remark": remark
         })
     return flights_data
+
+def filter_old_flights(schedule):
+    """Keeps future flights and recent flights up to 2 days old."""
+    mst_tz = timezone(timedelta(hours=-7))
+    now = datetime.now(mst_tz)
+    cutoff_date = (now - timedelta(days=2)).date()
+    current_year = now.year
+    filtered_schedule = []
+    
+    for f in schedule:
+        try:
+            # Parse the date string (e.g., "09 MAR") into a comparable date object
+            flight_dt = datetime.strptime(f['date'], "%d %b").replace(year=current_year).date()
+            
+            # Handle the year wrap-around (December to January)
+            if flight_dt.month == 12 and now.month < 3:
+                flight_dt = flight_dt.replace(year=current_year - 1)
+            elif flight_dt.month < 3 and now.month == 12:
+                flight_dt = flight_dt.replace(year=current_year + 1)
+                
+            # Only keep the flight if it is equal to or newer than the 2-day cutoff
+            if flight_dt >= cutoff_date:
+                filtered_schedule.append(f)
+        except Exception:
+            # If the date fails to parse for any reason, keep it to be safe
+            filtered_schedule.append(f)
+            
+    return filtered_schedule
 
 def compare_schedules(old_sched, new_sched):
     new_alerts = []
@@ -196,6 +224,12 @@ def run_scraper():
         if not current_schedule:
             print("No events found in Talon.")
             return
+
+        # ---- THE 2-DAY ROLLING WINDOW FILTER ----
+        # Strip out events older than 48 hours to prevent false cancellation alerts
+        current_schedule = filter_old_flights(current_schedule)
+        old_schedule = filter_old_flights(old_schedule)
+        # -----------------------------------------
 
         new_flights, updated_flights, deleted_flights = compare_schedules(old_schedule, current_schedule)
 
