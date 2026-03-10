@@ -2,32 +2,35 @@
     {
         "date": "10 MAR",
         "time": "08:00 - 10:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Walker,Cyrus",
         "res": "DVT Bldg 3 - B",
         "lesson": "PPL 4.13 GS",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "changes_text": "MOD: Status changed: Scheduled to Completed"
     },
     {
         "date": "10 MAR",
         "time": "10:00 - 11:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Walker,Cyrus",
         "res": "DVT Bldg 3 - B",
         "lesson": "PPL 4.14 GS",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "changes_text": "MOD: Status changed: Scheduled to Completed"
     },
     {
         "date": "10 MAR",
         "time": "11:30 - 14:00",
-        "status": "Scheduled",
+        "status": "Authorized",
         "ip": "Bracke,Cameron",
-        "res": "545MA",
+        "res": "276AG (NXI)",
         "lesson": "PPL 1.10-Flight",
         "type": "Flight",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "changes_text": "MOD: Reserved changed: 545MA to 276AG (NXI)\nMOD: Status changed: Scheduled to Authorized"
     },
     {
         "date": "11 MAR",
@@ -48,5 +51,15 @@
         "lesson": "PPL 4.16 GS",
         "type": "Academic",
         "remark": ""
+    },
+    {
+        "date": "11 MAR",
+        "time": "14:30 - 17:00",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "DVT Bldg 3 - D",
+        "lesson": "Unknown",
+        "type": "Meeting",
+        "remark": "AI5 Flight Readiness"
     }
 ]
