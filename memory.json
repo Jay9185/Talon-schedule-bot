@@ -7,8 +7,7 @@
         "res": "DVT Bldg 3 - B",
         "lesson": "PPL 4.13 GS",
         "type": "Academic",
-        "remark": "",
-        "changes_text": "MOD: Status changed: Scheduled to Completed"
+        "remark": ""
     },
     {
         "date": "10 MAR",
@@ -18,19 +17,18 @@
         "res": "DVT Bldg 3 - B",
         "lesson": "PPL 4.14 GS",
         "type": "Academic",
-        "remark": "",
-        "changes_text": "MOD: Status changed: Scheduled to Completed"
+        "remark": ""
     },
     {
         "date": "10 MAR",
         "time": "11:30 - 14:00",
-        "status": "Authorized",
+        "status": "Ramp Out",
         "ip": "Bracke,Cameron",
         "res": "276AG (NXI)",
         "lesson": "PPL 1.10-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "changes_text": "MOD: Reserved changed: 545MA to 276AG (NXI)\nMOD: Status changed: Scheduled to Authorized"
+        "changes_text": "MOD: Status changed: Authorized to Ramp Out"
     },
     {
         "date": "11 MAR",
