@@ -22,13 +22,13 @@
     {
         "date": "10 MAR",
         "time": "11:30 - 14:00",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Bracke,Cameron",
         "res": "276AG (NXI)",
         "lesson": "PPL 1.10-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "changes_text": "MOD: Status changed: Authorized to Ramp Out"
+        "changes_text": "MOD: Status changed: Ramp Out to Completed"
     },
     {
         "date": "11 MAR",
