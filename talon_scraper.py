@@ -8,7 +8,7 @@ from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
 
 # --- CONFIGURATION ---
-TALON_LOGIN_URL = os.environ.get("TALON_LOGIN_URL", "https://apps4.talonsystems.com/tseta/")
+TALON_LOGIN_URL = "https://apps4.talonsystems.com/tseta/servlet/content?module=home&page=homepg&zajael1120=42DC6E6C4E5A723E80D0BF0AC5A1C8AF"
 MEMORY_FILE = "memory.json"
 
 def extract_schedule(html_content):
