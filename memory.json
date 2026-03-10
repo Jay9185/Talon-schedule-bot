@@ -87,8 +87,7 @@
         "res": "PA28-181G",
         "lesson": "PPL 1.10-Flight",
         "type": "Flight",
-        "remark": "Authorize Activity",
-        "changes_text": "MOD: Status changed: Scheduling to Scheduled\nMOD: Remark updated to 'Authorize Activity'"
+        "remark": "Authorize Activity"
     },
     {
         "date": "11 MAR",
