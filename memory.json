@@ -1,5 +1,16 @@
 [
     {
+        "date": "13 MAR",
+        "time": "09:00 - 11:30",
+        "status": "Scheduled",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181",
+        "lesson": "PPL 1.10-Flight",
+        "type": "Flight",
+        "remark": "Ramp Out",
+        "changes_text": "MOD: Status changed: Ops Request to Scheduled\nMOD: Remark updated to 'Ramp Out'"
+    },
+    {
         "date": "17 MAR",
         "time": "10:00 - 12:00",
         "status": "Scheduled",
@@ -37,26 +48,6 @@
         "res": "DVT Bldg 3 - D",
         "lesson": "PPL 5.20 GS",
         "type": "Academic",
-        "remark": ""
-    },
-    {
-        "date": "",
-        "time": "",
-        "status": "",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "Unknown",
-        "type": "",
-        "remark": ""
-    },
-    {
-        "date": "13 MAR",
-        "time": "09:00 - 11:30",
-        "status": "Ops Request",
-        "ip": "Bracke,Cameron",
-        "res": "PA28-181",
-        "lesson": "PPL 1.10-Flight",
-        "type": "Flight",
         "remark": ""
     }
 ]
