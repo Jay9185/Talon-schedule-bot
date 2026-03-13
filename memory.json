@@ -38,5 +38,25 @@
         "lesson": "PPL 5.20 GS",
         "type": "Academic",
         "remark": ""
+    },
+    {
+        "date": "",
+        "time": "",
+        "status": "",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "Unknown",
+        "type": "",
+        "remark": ""
+    },
+    {
+        "date": "13 MAR",
+        "time": "09:00 - 11:30",
+        "status": "Ops Request",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181",
+        "lesson": "PPL 1.10-Flight",
+        "type": "Flight",
+        "remark": ""
     }
 ]
