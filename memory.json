@@ -2,21 +2,21 @@
     {
         "date": "13 MAR",
         "time": "09:00 - 11:30",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Bracke,Cameron",
         "res": "746PA (NXi)",
         "lesson": "PPL 1.10-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "changes_text": "MOD: Status changed: Ops Check In to Ramp Out"
+        "changes_text": "MOD: Status changed: Ramp Out to Completed"
     },
     {
         "date": "14 MAR",
-        "time": "07:00 - 10:00",
+        "time": "10:00 - 13:00",
         "status": "Scheduling",
         "ip": "Bracke,Cameron",
         "res": "PA28-181G",
-        "lesson": "PPL 1.10-Flight",
+        "lesson": "PPL 1.11-Flight",
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day"
     },
