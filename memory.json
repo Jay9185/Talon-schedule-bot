@@ -2,13 +2,13 @@
     {
         "date": "13 MAR",
         "time": "09:00 - 11:30",
-        "status": "Ops Check In",
+        "status": "Ramp Out",
         "ip": "Bracke,Cameron",
         "res": "746PA (NXi)",
         "lesson": "PPL 1.10-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "changes_text": "MOD: Reserved changed: PA28-181 to 746PA (NXi)\nMOD: Status changed: Scheduled to Ops Check In"
+        "changes_text": "MOD: Status changed: Ops Check In to Ramp Out"
     },
     {
         "date": "14 MAR",
