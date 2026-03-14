@@ -17,8 +17,7 @@
         "res": "PA28-181G",
         "lesson": "PPL 1.11-Flight",
         "type": "Flight",
-        "remark": "Ramp Out",
-        "changes_text": "MOD: Status changed: Scheduling to Scheduled\nMOD: Remark updated to 'Ramp Out'"
+        "remark": "Ramp Out"
     },
     {
         "date": "17 MAR",
