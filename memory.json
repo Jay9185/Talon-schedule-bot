@@ -1,15 +1,5 @@
 [
     {
-        "date": "13 MAR",
-        "time": "09:00 - 11:30",
-        "status": "Completed",
-        "ip": "Bracke,Cameron",
-        "res": "746PA (NXi)",
-        "lesson": "PPL 1.10-Flight",
-        "type": "Flight",
-        "remark": "Ramp Out"
-    },
-    {
         "date": "14 MAR",
         "time": "11:00 - 14:00",
         "status": "Scheduled",
