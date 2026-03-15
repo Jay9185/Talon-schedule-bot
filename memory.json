@@ -14,10 +14,11 @@
         "time": "15:00 - 18:00",
         "status": "Scheduled",
         "ip": "Bracke,Cameron",
-        "res": "PA28-181G",
+        "res": "746PA (NXi)",
         "lesson": "PPL 1.11-Flight",
         "type": "Flight",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "changes_text": "MOD: Reserved changed: PA28-181G to 746PA (NXi)"
     },
     {
         "date": "17 MAR",
