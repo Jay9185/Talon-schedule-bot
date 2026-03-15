@@ -12,12 +12,13 @@
     {
         "date": "15 MAR",
         "time": "15:00 - 18:00",
-        "status": "Scheduled",
+        "status": "Authorized",
         "ip": "Bracke,Cameron",
         "res": "746PA (NXi)",
         "lesson": "PPL 1.11-Flight",
         "type": "Flight",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "changes_text": "MOD: Status changed: Scheduled to Authorized"
     },
     {
         "date": "16 MAR",
