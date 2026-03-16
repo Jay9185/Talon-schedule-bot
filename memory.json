@@ -2,13 +2,13 @@
     {
         "date": "16 MAR",
         "time": "11:00 - 14:00",
-        "status": "Ops Check In",
+        "status": "Completed",
         "ip": "Bracke,Cameron",
         "res": "742PA (NXi)",
         "lesson": "PPL 1.12-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "changes_text": "MOD: Status changed: Scheduled to Ops Check In"
+        "changes_text": "MOD: Status changed: Ops Check In to Completed"
     },
     {
         "date": "17 MAR",
