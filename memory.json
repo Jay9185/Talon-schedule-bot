@@ -38,5 +38,15 @@
         "lesson": "PPL 5.20 GS",
         "type": "Academic",
         "remark": ""
+    },
+    {
+        "date": "19 MAR",
+        "time": "14:00 - 15:30",
+        "status": "Scheduled",
+        "ip": "Zande,Gene+",
+        "res": "DVT Bldg 3 - A",
+        "lesson": "Pre-Solo Brief",
+        "type": "Academic",
+        "remark": ""
     }
 ]
