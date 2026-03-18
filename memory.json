@@ -1,15 +1,5 @@
 [
     {
-        "date": "17 MAR",
-        "time": "12:00 - 14:00",
-        "status": "Scheduled",
-        "ip": "Davis,Timothy GS",
-        "res": "DVT Bldg 3 - C",
-        "lesson": "PPL 5.18 GS",
-        "type": "Academic",
-        "remark": ""
-    },
-    {
         "date": "18 MAR",
         "time": "10:00 - 12:00",
         "status": "Scheduled",
