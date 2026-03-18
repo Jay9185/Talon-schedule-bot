@@ -1,16 +1,6 @@
 [
     {
         "date": "17 MAR",
-        "time": "10:00 - 12:00",
-        "status": "Completed",
-        "ip": "Davis,Timothy GS",
-        "res": "DVT Bldg 3 - C",
-        "lesson": "PPL 5.17 GS",
-        "type": "Academic",
-        "remark": ""
-    },
-    {
-        "date": "17 MAR",
         "time": "12:00 - 14:00",
         "status": "Scheduled",
         "ip": "Davis,Timothy GS",
@@ -46,6 +36,26 @@
         "ip": "Zande,Gene+",
         "res": "DVT Bldg 3 - A",
         "lesson": "Pre-Solo Brief",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "24 MAR",
+        "time": "10:00 - 12:00",
+        "status": "Scheduled",
+        "ip": "Davis,Timothy GS",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "PPL 6.21 GS",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "24 MAR",
+        "time": "12:00 - 14:30",
+        "status": "Scheduled",
+        "ip": "Davis,Timothy GS",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "PPL 6.22 GS",
         "type": "Academic",
         "remark": ""
     }
