@@ -1,25 +1,5 @@
 [
     {
-        "date": "18 MAR",
-        "time": "10:00 - 12:00",
-        "status": "Completed",
-        "ip": "Davis,Timothy GS",
-        "res": "DVT Bldg 3 - D",
-        "lesson": "PPL 5.19 GS",
-        "type": "Academic",
-        "remark": ""
-    },
-    {
-        "date": "18 MAR",
-        "time": "12:00 - 14:00",
-        "status": "Completed",
-        "ip": "Davis,Timothy GS",
-        "res": "DVT Bldg 3 - D",
-        "lesson": "PPL 5.20 GS",
-        "type": "Academic",
-        "remark": ""
-    },
-    {
         "date": "19 MAR",
         "time": "14:00 - 15:30",
         "status": "Scheduled",
@@ -46,6 +26,26 @@
         "ip": "Davis,Timothy GS",
         "res": "DVT Bldg 3 - C",
         "lesson": "PPL 6.22 GS",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "25 MAR",
+        "time": "10:00 - 12:30",
+        "status": "Scheduled",
+        "ip": "Davis,Timothy GS",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "PPL 6.23 GS",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "25 MAR",
+        "time": "12:30 - 14:00",
+        "status": "Scheduled",
+        "ip": "Davis,Timothy GS",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "PPL 6.24-Exam",
         "type": "Academic",
         "remark": ""
     }
