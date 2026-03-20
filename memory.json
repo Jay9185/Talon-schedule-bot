@@ -11,14 +11,13 @@
     },
     {
         "date": "20 MAR",
-        "time": "12:00 - 15:00",
+        "time": "09:00 - 12:00",
         "status": "Scheduled",
         "ip": "Bracke,Cameron",
-        "res": "404AG (NXI)",
+        "res": "918AG (NXI)",
         "lesson": "PPL 1.12-Flight",
         "type": "Flight",
-        "remark": "Ramp Out",
-        "changes_text": "MOD: Reserved changed: PA28-181G to 404AG (NXI)"
+        "remark": "Ramp Out"
     },
     {
         "date": "24 MAR",
