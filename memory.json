@@ -12,12 +12,13 @@
     {
         "date": "20 MAR",
         "time": "12:00 - 15:00",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "Bracke,Cameron",
         "res": "PA28-181G",
         "lesson": "PPL 1.12-Flight",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "Ramp Out",
+        "changes_text": "MOD: Status changed: Scheduling to Scheduled\nMOD: Remark updated to 'Ramp Out'"
     },
     {
         "date": "24 MAR",
