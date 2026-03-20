@@ -12,13 +12,23 @@
     {
         "date": "20 MAR",
         "time": "09:00 - 12:00",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Bracke,Cameron",
         "res": "740PA",
         "lesson": "PPL 1.12-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "changes_text": "MOD: Reserved changed: 918AG (NXI) to 740PA\nMOD: Status changed: Scheduled to Ramp Out"
+        "changes_text": "MOD: Status changed: Ramp Out to Completed"
+    },
+    {
+        "date": "21 MAR",
+        "time": "11:30 - 14:00",
+        "status": "Scheduling",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 1.13-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     },
     {
         "date": "24 MAR",
