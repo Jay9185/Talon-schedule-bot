@@ -2,12 +2,13 @@
     {
         "date": "21 MAR",
         "time": "11:30 - 14:00",
-        "status": "Scheduled",
+        "status": "Ramp Out",
         "ip": "Bracke,Cameron",
-        "res": "345AG (NXI)",
-        "lesson": "PPL 1.13-Flight",
+        "res": "740PA",
+        "lesson": "PPL 1.12-Flight",
         "type": "Flight",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "changes_text": "MOD: Lesson changed: PPL 1.13-Flight to PPL 1.12-Flight\nMOD: Reserved changed: 345AG (NXI) to 740PA\nMOD: Status changed: Scheduled to Ramp Out"
     },
     {
         "date": "22 MAR",
