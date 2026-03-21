@@ -1,15 +1,5 @@
 [
     {
-        "date": "19 MAR",
-        "time": "14:00 - 15:30",
-        "status": "Scheduled",
-        "ip": "Zande,Gene+",
-        "res": "DVT Bldg 3 - A",
-        "lesson": "Pre-Solo Brief",
-        "type": "Academic",
-        "remark": ""
-    },
-    {
         "date": "20 MAR",
         "time": "09:00 - 12:00",
         "status": "Completed",
@@ -27,8 +17,7 @@
         "res": "PA28-181G",
         "lesson": "PPL 1.13-Flight",
         "type": "Flight",
-        "remark": "Ramp Out",
-        "changes_text": "MOD: Status changed: Scheduling to Scheduled\nMOD: Remark updated to 'Ramp Out'"
+        "remark": "Ramp Out"
     },
     {
         "date": "24 MAR",
