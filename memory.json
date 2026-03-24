@@ -12,32 +12,44 @@
     {
         "date": "24 MAR",
         "time": "07:00 - 10:00",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Bracke,Cameron",
         "res": "545MA",
         "lesson": "PPL 1.13-Flight",
         "type": "Flight",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "changes_text": "MOD: Status changed: Ramp Out to Completed"
     },
     {
         "date": "24 MAR",
         "time": "10:00 - 12:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Davis,Timothy GS",
         "res": "DVT Bldg 3 - C",
         "lesson": "PPL 6.21 GS",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "changes_text": "MOD: Status changed: Scheduled to Completed"
     },
     {
         "date": "24 MAR",
-        "time": "13:00 - 15:30",
+        "time": "12:00 - 14:30",
         "status": "Scheduled",
         "ip": "Davis,Timothy GS",
         "res": "DVT Bldg 3 - C",
         "lesson": "PPL 6.22 GS",
         "type": "Academic",
         "remark": ""
+    },
+    {
+        "date": "25 MAR",
+        "time": "06:00 - 08:30",
+        "status": "Scheduling",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 1.14-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     },
     {
         "date": "25 MAR",
