@@ -12,13 +12,13 @@
     {
         "date": "24 MAR",
         "time": "07:00 - 10:00",
-        "status": "Scheduled",
+        "status": "Ramp Out",
         "ip": "Bracke,Cameron",
         "res": "545MA",
         "lesson": "PPL 1.13-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "changes_text": "MOD: Reserved changed: PA28-181G to 545MA"
+        "changes_text": "MOD: Status changed: Scheduled to Ramp Out"
     },
     {
         "date": "24 MAR",
