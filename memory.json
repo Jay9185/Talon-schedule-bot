@@ -14,10 +14,11 @@
         "time": "07:00 - 10:00",
         "status": "Scheduled",
         "ip": "Bracke,Cameron",
-        "res": "PA28-181G",
+        "res": "545MA",
         "lesson": "PPL 1.13-Flight",
         "type": "Flight",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "changes_text": "MOD: Reserved changed: PA28-181G to 545MA"
     },
     {
         "date": "24 MAR",
