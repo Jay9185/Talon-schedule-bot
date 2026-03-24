@@ -17,8 +17,7 @@
         "res": "545MA",
         "lesson": "PPL 1.13-Flight",
         "type": "Flight",
-        "remark": "Ramp Out",
-        "changes_text": "MOD: Status changed: Scheduled to Ramp Out"
+        "remark": "Ramp Out"
     },
     {
         "date": "24 MAR",
