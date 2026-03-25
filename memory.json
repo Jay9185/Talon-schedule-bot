@@ -4,11 +4,11 @@
         "time": "06:00 - 08:30",
         "status": "Scheduled",
         "ip": "Bracke,Cameron",
-        "res": "562AG (NXI)",
+        "res": "PA28-181G",
         "lesson": "PPL 1.14-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "changes_text": "MOD: Reserved changed: PA28-181G to 562AG (NXI)"
+        "changes_text": "MOD: Reserved changed: 562AG (NXI) to PA28-181G"
     },
     {
         "date": "25 MAR",
