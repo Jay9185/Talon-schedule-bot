@@ -12,12 +12,13 @@
     {
         "date": "25 MAR",
         "time": "10:00 - 12:30",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Davis,Timothy GS",
         "res": "DVT Bldg 3 - C",
         "lesson": "PPL 6.23 GS",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "changes_text": "MOD: Status changed: Scheduled to Completed"
     },
     {
         "date": "25 MAR",
