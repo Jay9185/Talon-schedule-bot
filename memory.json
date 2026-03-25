@@ -37,8 +37,7 @@
         "res": "DVT Bldg 3 - C",
         "lesson": "PPL 6.22 GS",
         "type": "Academic",
-        "remark": "",
-        "changes_text": "MOD: Status changed: Scheduled to Completed"
+        "remark": ""
     },
     {
         "date": "25 MAR",
@@ -48,8 +47,7 @@
         "res": "PA28-181G",
         "lesson": "PPL 1.14-Flight",
         "type": "Flight",
-        "remark": "Ramp Out",
-        "changes_text": "MOD: Status changed: Scheduling to Scheduled\nMOD: Remark updated to 'Ramp Out'"
+        "remark": "Ramp Out"
     },
     {
         "date": "25 MAR",
