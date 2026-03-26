@@ -7,27 +7,17 @@
         "res": "597AG (NXI)",
         "lesson": "PPL 1.14-Flight",
         "type": "Flight",
-        "remark": "Ramp Out",
-        "changes_text": "MOD: Reserved changed: PA28-181 to 597AG (NXI)\nMOD: Status changed: Ops Request to Completed\nMOD: Remark updated to 'Ramp Out'"
-    },
-    {
-        "date": "",
-        "time": "",
-        "status": "",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "Unknown",
-        "type": "",
-        "remark": ""
+        "remark": "Ramp Out"
     },
     {
         "date": "26 MAR",
         "time": "08:00 - 10:15",
-        "status": "Ops Request",
+        "status": "Ramp In",
         "ip": "Bracke,Cameron",
-        "res": "PA28-181",
+        "res": "745PA (NXi)",
         "lesson": "PPL 1.14-Flight",
         "type": "Flight",
-        "remark": ""
+        "remark": "Ramp Out",
+        "changes_text": "MOD: Reserved changed: PA28-181 to 745PA (NXi)\nMOD: Status changed: Ops Request to Ramp In\nMOD: Remark updated to 'Ramp Out'"
     }
 ]
