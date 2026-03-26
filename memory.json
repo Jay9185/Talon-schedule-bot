@@ -1,13 +1,14 @@
 [
     {
-        "date": "25 MAR",
-        "time": "06:00 - 08:30",
-        "status": "Scheduled",
+        "date": "26 MAR",
+        "time": "06:30 - 09:00",
+        "status": "Completed",
         "ip": "Bracke,Cameron",
-        "res": "PA28-181G",
+        "res": "597AG (NXI)",
         "lesson": "PPL 1.14-Flight",
         "type": "Flight",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "changes_text": "MOD: Reserved changed: PA28-181 to 597AG (NXI)\nMOD: Status changed: Ops Request to Completed\nMOD: Remark updated to 'Ramp Out'"
     },
     {
         "date": "",
@@ -21,7 +22,7 @@
     },
     {
         "date": "26 MAR",
-        "time": "06:30 - 09:00",
+        "time": "08:00 - 10:15",
         "status": "Ops Request",
         "ip": "Bracke,Cameron",
         "res": "PA28-181",
