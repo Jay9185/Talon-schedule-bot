@@ -10,26 +10,6 @@
         "remark": "Ramp Out"
     },
     {
-        "date": "25 MAR",
-        "time": "10:00 - 12:30",
-        "status": "Completed",
-        "ip": "Davis,Timothy GS",
-        "res": "DVT Bldg 3 - C",
-        "lesson": "PPL 6.23 GS",
-        "type": "Academic",
-        "remark": ""
-    },
-    {
-        "date": "25 MAR",
-        "time": "12:30 - 14:00",
-        "status": "Scheduled",
-        "ip": "Davis,Timothy GS",
-        "res": "DVT Bldg 3 - C",
-        "lesson": "PPL 6.24-Exam",
-        "type": "Academic",
-        "remark": ""
-    },
-    {
         "date": "",
         "time": "",
         "status": "",
