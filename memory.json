@@ -28,5 +28,25 @@
         "lesson": "PPL 6.24-Exam",
         "type": "Academic",
         "remark": ""
+    },
+    {
+        "date": "",
+        "time": "",
+        "status": "",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "Unknown",
+        "type": "",
+        "remark": ""
+    },
+    {
+        "date": "26 MAR",
+        "time": "06:30 - 09:00",
+        "status": "Ops Request",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181",
+        "lesson": "PPL 1.14-Flight",
+        "type": "Flight",
+        "remark": ""
     }
 ]
