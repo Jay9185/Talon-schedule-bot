@@ -1,25 +1,5 @@
 [
     {
-        "date": "26 MAR",
-        "time": "06:30 - 09:00",
-        "status": "Completed",
-        "ip": "Bracke,Cameron",
-        "res": "597AG (NXI)",
-        "lesson": "PPL 1.14-Flight",
-        "type": "Flight",
-        "remark": "Ramp Out"
-    },
-    {
-        "date": "26 MAR",
-        "time": "08:00 - 10:15",
-        "status": "Completed",
-        "ip": "Bracke,Cameron",
-        "res": "745PA (NXi)",
-        "lesson": "PPL 1.14-Flight",
-        "type": "Flight",
-        "remark": "Ramp Out"
-    },
-    {
         "date": "27 MAR",
         "time": "07:00 - 09:30",
         "status": "Scheduled",
@@ -28,5 +8,15 @@
         "lesson": "PPL 1.14-Flight",
         "type": "Flight",
         "remark": "Ramp Out"
+    },
+    {
+        "date": "02 APR",
+        "time": "09:30 - 13:00",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "Unknown",
+        "type": "FAA Written Test",
+        "remark": "PAR - FAA Written Exam"
     }
 ]
