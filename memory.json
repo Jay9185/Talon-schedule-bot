@@ -4,10 +4,11 @@
         "time": "07:00 - 09:30",
         "status": "Scheduled",
         "ip": "Bracke,Cameron",
-        "res": "PA28-181G",
+        "res": "169AG (NXI)",
         "lesson": "PPL 1.14-Flight",
         "type": "Flight",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "changes_text": "MOD: Reserved changed: PA28-181G to 169AG (NXI)"
     },
     {
         "date": "02 APR",
