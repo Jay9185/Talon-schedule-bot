@@ -1,15 +1,5 @@
 [
     {
-        "date": "27 MAR",
-        "time": "07:00 - 09:30",
-        "status": "Completed",
-        "ip": "Bracke,Cameron",
-        "res": "169AG (NXI)",
-        "lesson": "PPL 1.14-Flight",
-        "type": "Flight",
-        "remark": "Ramp Out"
-    },
-    {
         "date": "02 APR",
         "time": "09:30 - 13:00",
         "status": "Scheduled",
