@@ -1,5 +1,25 @@
 [
     {
+        "date": "30 MAR",
+        "time": "07:00 - 10:00",
+        "status": "Scheduling",
+        "ip": "Allen,Ethan+",
+        "res": "PA28-181G",
+        "lesson": "PPL 1.15-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
+    },
+    {
+        "date": "01 APR",
+        "time": "09:00 - 13:00",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "DVT Bldg 3 - D",
+        "lesson": "Unknown",
+        "type": "Meeting",
+        "remark": ""
+    },
+    {
         "date": "02 APR",
         "time": "09:30 - 13:00",
         "status": "Scheduled",
