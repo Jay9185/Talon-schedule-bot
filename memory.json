@@ -4,10 +4,11 @@
         "time": "07:00 - 10:00",
         "status": "Scheduled",
         "ip": "Allen,Ethan+",
-        "res": "819PA (NXi)",
+        "res": "PA28-181G",
         "lesson": "PPL 1.15-Flight",
         "type": "Flight",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "changes_text": "MOD: Reserved changed: 819PA (NXi) to PA28-181G"
     },
     {
         "date": "01 APR",
