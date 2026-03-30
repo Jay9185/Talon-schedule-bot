@@ -2,13 +2,23 @@
     {
         "date": "30 MAR",
         "time": "07:00 - 10:00",
-        "status": "Scheduled",
+        "status": "CancelledSP Sick",
         "ip": "Allen,Ethan+",
         "res": "PA28-181G",
         "lesson": "PPL 1.15-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "changes_text": "MOD: Reserved changed: 819PA (NXi) to PA28-181G"
+        "changes_text": "MOD: Status changed: Scheduled to CancelledSP Sick"
+    },
+    {
+        "date": "31 MAR",
+        "time": "10:30 - 13:00",
+        "status": "Scheduling",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 1.15-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     },
     {
         "date": "01 APR",
