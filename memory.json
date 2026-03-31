@@ -1,15 +1,5 @@
 [
     {
-        "date": "30 MAR",
-        "time": "07:00 - 10:00",
-        "status": "CancelledSP Sick",
-        "ip": "Allen,Ethan+",
-        "res": "PA28-181G",
-        "lesson": "PPL 1.15-Flight",
-        "type": "Flight",
-        "remark": "Ramp Out"
-    },
-    {
         "date": "31 MAR",
         "time": "10:30 - 13:00",
         "status": "Scheduled",
