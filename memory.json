@@ -4,11 +4,21 @@
         "time": "10:30 - 13:00",
         "status": "Ops Check In",
         "ip": "Bracke,Cameron",
-        "res": "819PA (NXi)",
+        "res": "PA28-181G",
         "lesson": "PPL 1.15-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "changes_text": "MOD: Status changed: Scheduled to Ops Check In"
+        "changes_text": "MOD: Reserved changed: 819PA (NXi) to PA28-181G"
+    },
+    {
+        "date": "01 APR",
+        "time": "06:30 - 09:00",
+        "status": "Scheduling",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 1.15-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     },
     {
         "date": "01 APR",
