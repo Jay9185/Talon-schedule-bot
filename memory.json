@@ -17,8 +17,7 @@
         "res": "254AG (NXI)",
         "lesson": "PPL 1.15-Flight",
         "type": "Flight",
-        "remark": "Ramp Out",
-        "changes_text": "MOD: Status changed: Ramp Out to Completed"
+        "remark": "Ramp Out"
     },
     {
         "date": "01 APR",
@@ -39,5 +38,15 @@
         "lesson": "Unknown",
         "type": "FAA Written Test",
         "remark": "PAR - FAA Written Exam"
+    },
+    {
+        "date": "02 APR",
+        "time": "16:00 - 18:30",
+        "status": "Scheduling",
+        "ip": "Bracke,Cameron",
+        "res": "Oral Brief Rooms",
+        "lesson": "PPL 1.16-Brief",
+        "type": "Oral",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
