@@ -28,5 +28,15 @@
         "lesson": "PPL 1.16-Brief",
         "type": "Oral",
         "remark": "Ramp Out"
+    },
+    {
+        "date": "03 APR",
+        "time": "09:30 - 11:00",
+        "status": "Scheduling",
+        "ip": "Haslam,Luke",
+        "res": "Oral Brief Rooms",
+        "lesson": "PPL 1.17-StgOral",
+        "type": "Oral",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
