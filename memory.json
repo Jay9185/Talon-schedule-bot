@@ -42,11 +42,12 @@
     {
         "date": "02 APR",
         "time": "16:00 - 18:30",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "Bracke,Cameron",
-        "res": "Oral Brief Rooms",
+        "res": "DVT Brief Rm 10",
         "lesson": "PPL 1.16-Brief",
         "type": "Oral",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "Ramp Out",
+        "changes_text": "MOD: Reserved changed: Oral Brief Rooms to DVT Brief Rm 10\nMOD: Status changed: Scheduling to Scheduled\nMOD: Remark updated to 'Ramp Out'"
     }
 ]
