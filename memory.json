@@ -22,22 +22,23 @@
     {
         "date": "02 APR",
         "time": "16:00 - 18:30",
-        "status": "Ops Check In",
+        "status": "Completed",
         "ip": "Bracke,Cameron",
         "res": "DVT Brief Rm 10",
         "lesson": "PPL 1.16-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
-        "changes_text": "MOD: Status changed: Scheduled to Ops Check In"
+        "changes_text": "MOD: Status changed: Ops Check In to Completed"
     },
     {
         "date": "03 APR",
         "time": "12:30 - 14:00",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "Haslam,Luke",
-        "res": "Oral Brief Rooms",
+        "res": "DVT Brief Rm 11",
         "lesson": "PPL 1.17-StgOral",
         "type": "Oral",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "Observer 1: AI5Choudhary,Ank\nObserver 2:",
+        "changes_text": "MOD: Reserved changed: Oral Brief Rooms to DVT Brief Rm 11\nMOD: Status changed: Scheduling to Scheduled\nMOD: Remark updated to 'Observer 1: AI5Choudhary,Ank\nObserver 2:'"
     }
 ]
