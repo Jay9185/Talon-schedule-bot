@@ -7,7 +7,6 @@
         "res": "PA28-181G",
         "lesson": "PPL 1.17-StgFlt",
         "type": "Flight",
-        "remark": "Ramp Out",
-        "changes_text": "MOD: Status changed: Scheduling to Authorized\nMOD: Remark updated to 'Ramp Out'"
+        "remark": "Ramp Out"
     }
 ]
