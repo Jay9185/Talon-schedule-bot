@@ -2,11 +2,12 @@
     {
         "date": "06 APR",
         "time": "10:30 - 13:30",
-        "status": "Scheduling",
+        "status": "Authorized",
         "ip": "Eyrich,Chris",
         "res": "PA28-181G",
         "lesson": "PPL 1.17-StgFlt",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "Ramp Out",
+        "changes_text": "MOD: Status changed: Scheduling to Authorized\nMOD: Remark updated to 'Ramp Out'"
     }
 ]
