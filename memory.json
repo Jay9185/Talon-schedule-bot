@@ -2,11 +2,12 @@
     {
         "date": "06 APR",
         "time": "10:30 - 13:30",
-        "status": "Authorized",
+        "status": "Ramp Out",
         "ip": "Eyrich,Chris",
-        "res": "PA28-181G",
+        "res": "254AG (NXI)",
         "lesson": "PPL 1.17-StgFlt",
         "type": "Flight",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "changes_text": "MOD: Reserved changed: PA28-181G to 254AG (NXI)\nMOD: Status changed: Authorized to Ramp Out"
     }
 ]
