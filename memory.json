@@ -1,12 +1,22 @@
 [
     {
-        "date": "06 APR",
-        "time": "10:30 - 13:30",
-        "status": "Completed",
-        "ip": "Eyrich,Chris",
-        "res": "254AG (NXI)",
-        "lesson": "PPL 1.17-StgFlt",
+        "date": "",
+        "time": "",
+        "status": "",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "Unknown",
+        "type": "",
+        "remark": ""
+    },
+    {
+        "date": "07 APR",
+        "time": "14:00 - 16:30",
+        "status": "Ops Request",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181",
+        "lesson": "PPL 1.15-Flight",
         "type": "Flight",
-        "remark": "Ramp Out"
+        "remark": ""
     }
 ]
