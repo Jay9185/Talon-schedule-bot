@@ -2,12 +2,12 @@
     {
         "date": "08 APR",
         "time": "09:30 - 12:00",
-        "status": "Ops Check In",
+        "status": "Ramp Out",
         "ip": "Bracke,Cameron",
         "res": "823PA (NXi)",
         "lesson": "PPL 1.15-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "changes_text": "MOD: Status changed: Scheduled to Ops Check In"
+        "changes_text": "MOD: Status changed: Ops Check In to Ramp Out"
     }
 ]
