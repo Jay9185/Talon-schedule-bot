@@ -1,22 +1,12 @@
 [
     {
-        "date": "",
-        "time": "",
-        "status": "",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "Unknown",
-        "type": "",
-        "remark": ""
-    },
-    {
-        "date": "07 APR",
-        "time": "14:00 - 16:30",
-        "status": "Ops Request",
+        "date": "08 APR",
+        "time": "08:30 - 11:00",
+        "status": "Scheduled",
         "ip": "Bracke,Cameron",
         "res": "PA28-181",
         "lesson": "PPL 1.15-Flight",
         "type": "Flight",
-        "remark": ""
+        "remark": "Ramp Out"
     }
 ]
