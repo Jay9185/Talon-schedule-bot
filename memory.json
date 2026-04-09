@@ -7,17 +7,6 @@
         "res": "276AG (NXI)",
         "lesson": "PPL 1.15-Flight",
         "type": "Flight",
-        "remark": "Ramp Out",
-        "changes_text": "MOD: Status changed: Ramp Out to Completed"
-    },
-    {
-        "date": "10 APR",
-        "time": "08:45 - 11:15",
-        "status": "Scheduling",
-        "ip": "Bracke,Cameron",
-        "res": "Oral Brief Rooms",
-        "lesson": "PPL 1.16-Brief",
-        "type": "Oral",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "Ramp Out"
     }
 ]
