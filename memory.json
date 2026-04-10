@@ -1,12 +1,12 @@
 [
     {
-        "date": "09 APR",
-        "time": "09:30 - 12:00",
-        "status": "Completed",
-        "ip": "Allen,Ethan+",
-        "res": "276AG (NXI)",
-        "lesson": "PPL 1.15-Flight",
+        "date": "11 APR",
+        "time": "12:00 - 14:30",
+        "status": "Scheduling",
+        "ip": "Haslam,Luke",
+        "res": "PA28-181G",
+        "lesson": "PPL 1.17-StgFlt",
         "type": "Flight",
-        "remark": "Ramp Out"
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
