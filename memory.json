@@ -4,9 +4,10 @@
         "time": "12:00 - 14:30",
         "status": "Authorized",
         "ip": "Haslam,Luke",
-        "res": "PA28-181G",
+        "res": "175AG (NXI)",
         "lesson": "PPL 1.17-StgFlt",
         "type": "Flight",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "changes_text": "MOD: Reserved changed: PA28-181G to 175AG (NXI)"
     }
 ]
