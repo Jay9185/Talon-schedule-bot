@@ -7,7 +7,16 @@
         "res": "175AG (NXI)",
         "lesson": "PPL 1.17-StgFlt",
         "type": "Flight",
-        "remark": "Ramp Out",
-        "changes_text": "MOD: Reserved changed: PA28-181G to 175AG (NXI)"
+        "remark": "Ramp Out"
+    },
+    {
+        "date": "12 APR",
+        "time": "09:30 - 12:30",
+        "status": "Scheduling",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 2.18-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
