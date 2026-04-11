@@ -2,12 +2,13 @@
     {
         "date": "11 APR",
         "time": "12:00 - 14:30",
-        "status": "Authorized",
+        "status": "CancelledWX - Winds",
         "ip": "Haslam,Luke",
         "res": "175AG (NXI)",
         "lesson": "PPL 1.17-StgFlt",
         "type": "Flight",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "changes_text": "MOD: Status changed: Authorized to CancelledWX - Winds"
     },
     {
         "date": "12 APR",
