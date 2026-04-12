@@ -8,5 +8,15 @@
         "lesson": "PPL 2.18-Flight",
         "type": "Flight",
         "remark": "Ramp Out"
+    },
+    {
+        "date": "13 APR",
+        "time": "09:30 - 11:30",
+        "status": "Scheduling",
+        "ip": "Felix,Brandon",
+        "res": "PA28-181G",
+        "lesson": "PPL 1.17-StgFlt",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
