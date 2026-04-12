@@ -1,15 +1,5 @@
 [
     {
-        "date": "11 APR",
-        "time": "12:00 - 14:30",
-        "status": "CancelledWX - Winds",
-        "ip": "Haslam,Luke",
-        "res": "175AG (NXI)",
-        "lesson": "PPL 1.17-StgFlt",
-        "type": "Flight",
-        "remark": "Ramp Out"
-    },
-    {
         "date": "12 APR",
         "time": "09:30 - 12:30",
         "status": "CancelledPrev Msn CX/INC",
@@ -17,7 +7,6 @@
         "res": "PA28-181G",
         "lesson": "PPL 2.18-Flight",
         "type": "Flight",
-        "remark": "Ramp Out",
-        "changes_text": "MOD: Status changed: Scheduled to CancelledPrev Msn CX/INC"
+        "remark": "Ramp Out"
     }
 ]
