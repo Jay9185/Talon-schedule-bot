@@ -12,12 +12,12 @@
     {
         "date": "12 APR",
         "time": "09:30 - 12:30",
-        "status": "Scheduled",
+        "status": "CancelledPrev Msn CX/INC",
         "ip": "Bracke,Cameron",
         "res": "PA28-181G",
         "lesson": "PPL 2.18-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "changes_text": "MOD: Status changed: Scheduling to Scheduled\nMOD: Remark updated to 'Ramp Out'"
+        "changes_text": "MOD: Status changed: Scheduled to CancelledPrev Msn CX/INC"
     }
 ]
