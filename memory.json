@@ -4,9 +4,10 @@
         "time": "09:30 - 11:30",
         "status": "Authorized",
         "ip": "Felix,Brandon",
-        "res": "PA28-181G",
+        "res": "904AG (NXI)",
         "lesson": "PPL 1.17-StgFlt",
         "type": "Flight",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "changes_text": "MOD: Reserved changed: PA28-181G to 904AG (NXI)"
     }
 ]
