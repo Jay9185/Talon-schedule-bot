@@ -2,13 +2,13 @@
     {
         "date": "13 APR",
         "time": "09:30 - 11:30",
-        "status": "Ops Check In",
+        "status": "Ramp In",
         "ip": "Felix,Brandon",
-        "res": "904AG (NXI)",
+        "res": "745PA (NXi)",
         "lesson": "PPL 1.17-StgFlt",
         "type": "Flight",
         "remark": "Ramp Out",
-        "changes_text": "MOD: Status changed: Authorized to Ops Check In"
+        "changes_text": "MOD: Reserved changed: 904AG (NXI) to 745PA (NXi)\nMOD: Status changed: Ops Check In to Ramp In"
     },
     {
         "date": "14 APR",
