@@ -12,12 +12,12 @@
     {
         "date": "13 APR",
         "time": "09:30 - 11:30",
-        "status": "Scheduled",
+        "status": "Authorized",
         "ip": "Felix,Brandon",
         "res": "PA28-181G",
         "lesson": "PPL 1.17-StgFlt",
         "type": "Flight",
         "remark": "Ramp Out",
-        "changes_text": "MOD: Status changed: Scheduling to Scheduled\nMOD: Remark updated to 'Ramp Out'"
+        "changes_text": "MOD: Status changed: Scheduled to Authorized"
     }
 ]
