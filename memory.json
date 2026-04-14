@@ -1,15 +1,5 @@
 [
     {
-        "date": "13 APR",
-        "time": "09:30 - 11:30",
-        "status": "Completed",
-        "ip": "Felix,Brandon",
-        "res": "745PA (NXi)",
-        "lesson": "PPL 1.17-StgFlt",
-        "type": "Flight",
-        "remark": "Ramp Out"
-    },
-    {
         "date": "14 APR",
         "time": "08:30 - 11:00",
         "status": "Scheduled",
