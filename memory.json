@@ -12,6 +12,17 @@
     {
         "date": "15 APR",
         "time": "09:30 - 13:30",
+        "status": "Scheduled",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181",
+        "lesson": "PPL 2.19-D/Solo",
+        "type": "Flight",
+        "remark": "Ramp Out",
+        "changes_text": "MOD: Status changed: Scheduling to Scheduled\nMOD: Remark updated to 'Ramp Out'"
+    },
+    {
+        "date": "16 APR",
+        "time": "05:30 - 09:30",
         "status": "Scheduling",
         "ip": "Bracke,Cameron",
         "res": "PA28-181",
