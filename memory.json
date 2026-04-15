@@ -2,13 +2,13 @@
     {
         "date": "15 APR",
         "time": "09:30 - 13:30",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Bracke,Cameron",
         "res": "908AG (NXI)",
         "lesson": "PPL 2.19-D/Solo",
         "type": "Flight",
         "remark": "Ramp Out",
-        "changes_text": "MOD: Status changed: Ops Check In to Ramp Out"
+        "changes_text": "MOD: Status changed: Ramp Out to Completed"
     },
     {
         "date": "16 APR",
