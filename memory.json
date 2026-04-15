@@ -2,12 +2,13 @@
     {
         "date": "15 APR",
         "time": "09:30 - 13:30",
-        "status": "Scheduled",
+        "status": "Ops Check In",
         "ip": "Bracke,Cameron",
-        "res": "PA28-181",
+        "res": "908AG (NXI)",
         "lesson": "PPL 2.19-D/Solo",
         "type": "Flight",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "changes_text": "MOD: Reserved changed: PA28-181 to 908AG (NXI)\nMOD: Status changed: Scheduled to Ops Check In"
     },
     {
         "date": "16 APR",
