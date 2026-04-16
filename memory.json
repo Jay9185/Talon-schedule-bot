@@ -12,12 +12,12 @@
     {
         "date": "16 APR",
         "time": "05:30 - 09:30",
-        "status": "Scheduled",
+        "status": "CancelledMission not reqd",
         "ip": "Bracke,Cameron",
         "res": "PA28-181",
         "lesson": "PPL 2.19-D/Solo",
         "type": "Flight",
         "remark": "Ramp Out",
-        "changes_text": "MOD: Status changed: Scheduling to Scheduled\nMOD: Remark updated to 'Ramp Out'"
+        "changes_text": "MOD: Status changed: Scheduled to CancelledMission not reqd"
     }
 ]
