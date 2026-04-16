@@ -8,5 +8,15 @@
         "lesson": "PPL 2.19-D/Solo",
         "type": "Flight",
         "remark": "Ramp Out"
+    },
+    {
+        "date": "17 APR",
+        "time": "14:00 - 16:30",
+        "status": "Scheduling",
+        "ip": "Nguyen,Dillon",
+        "res": "Redbird AATD",
+        "lesson": "PPL 2.20-AATD",
+        "type": "Sim",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
