@@ -17,7 +17,6 @@
         "res": "Redbird AATD",
         "lesson": "PPL 2.20-AATD",
         "type": "Sim",
-        "remark": "Ramp Out",
-        "changes_text": "MOD: Status changed: Scheduling to Scheduled\nMOD: Remark updated to 'Ramp Out'"
+        "remark": "Ramp Out"
     }
 ]
