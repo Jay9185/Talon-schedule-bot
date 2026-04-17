@@ -4,9 +4,10 @@
         "time": "16:30 - 19:00",
         "status": "Scheduled",
         "ip": "Hinojosa,Abel",
-        "res": "RB SD 4",
+        "res": "RB LD 3",
         "lesson": "PPL 2.20-AATD",
         "type": "Sim",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "changes_text": "MOD: Reserved changed: RB SD 4 to RB LD 3"
     }
 ]
