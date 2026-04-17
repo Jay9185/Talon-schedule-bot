@@ -1,15 +1,5 @@
 [
     {
-        "date": "16 APR",
-        "time": "05:30 - 09:30",
-        "status": "CancelledMission not reqd",
-        "ip": "Bracke,Cameron",
-        "res": "PA28-181",
-        "lesson": "PPL 2.19-D/Solo",
-        "type": "Flight",
-        "remark": "Ramp Out"
-    },
-    {
         "date": "17 APR",
         "time": "16:30 - 19:00",
         "status": "Scheduled",
