@@ -2,11 +2,12 @@
     {
         "date": "17 APR",
         "time": "16:30 - 19:00",
-        "status": "Authorized",
+        "status": "Completed",
         "ip": "Hinojosa,Abel",
         "res": "RB LD 3",
         "lesson": "PPL 2.20-AATD",
         "type": "Sim",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "changes_text": "MOD: Status changed: Authorized to Completed"
     }
 ]
