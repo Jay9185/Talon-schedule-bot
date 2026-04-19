@@ -8,8 +8,7 @@
         "lesson": "PPL 2.21-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "> STS: SCHEDULED -> CANCELLEDWX - WINDS"
+        "dispatch_sent": true
     },
     {
         "date": "20 APR",
