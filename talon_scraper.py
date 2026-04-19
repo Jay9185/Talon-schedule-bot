@@ -203,7 +203,7 @@ def compare_schedules(old_sched, new_sched):
 
     return new_alerts, updated_alerts, deleted_alerts
 
-def evaluate_weather(flight_dt):
+def evaluate_weather(start_dt, end_dt):
     runway_heading = 70 
     max_wind_limit = 10
     max_crosswind_limit = 5
@@ -244,6 +244,7 @@ def evaluate_weather(flight_dt):
         return f"{dir_str}@{wind_speed}" + (f"G{wind_gust}" if wind_gust else "")
 
     def parse_api_time(t_val):
+        """Safely parses AviationWeather times, whether they are Unix ints or ISO strings."""
         if isinstance(t_val, int):
             return datetime.fromtimestamp(t_val, tz=timezone.utc)
         return datetime.fromisoformat(str(t_val).replace('Z', '+00:00'))
@@ -254,19 +255,48 @@ def evaluate_weather(flight_dt):
             m = metar_resp.json()[0]
             current_wind = run_limits_math(m.get("wdir"), m.get("wspd"), m.get("wgst"), "METAR")
 
-        if flight_dt:
-            flight_utc = flight_dt.astimezone(timezone.utc)
+        if start_dt and end_dt:
+            start_utc = start_dt.astimezone(timezone.utc)
+            end_utc = end_dt.astimezone(timezone.utc)
             taf_resp = requests.get("https://aviationweather.gov/api/data/taf?ids=KDVT&format=json", timeout=10)
             
             if taf_resp.status_code == 200 and taf_resp.json():
                 try:
+                    overlapping_fcsts = []
                     for fcst in taf_resp.json()[0].get("fcsts", []):
                         time_from = parse_api_time(fcst.get("timeFrom"))
                         time_to = parse_api_time(fcst.get("timeTo"))
                         
-                        if time_from <= flight_utc <= time_to:
-                            forecast_wind = run_limits_math(fcst.get("wdir"), fcst.get("wspd"), fcst.get("wgst"), "TAF")
-                            break
+                        # OVERLAP LOGIC: Forecast ends after flight starts AND forecast starts before flight ends
+                        if time_to > start_utc and time_from < end_utc:
+                            overlapping_fcsts.append(fcst)
+                            
+                    if overlapping_fcsts:
+                        worst_wind_str = "N/A"
+                        max_peak_seen = -1
+                        
+                        # Evaluate every overlapping period
+                        for fcst in overlapping_fcsts:
+                            spd = fcst.get("wspd", 0) or 0
+                            gst = fcst.get("wgst", 0) or 0
+                            peak = max(spd, gst)
+                            
+                            period_start_z = parse_api_time(fcst.get("timeFrom")).strftime('%H%M')
+                            
+                            # Run the math and add to reasons if it busts
+                            wind_str = run_limits_math(
+                                fcst.get("wdir"), 
+                                fcst.get("wspd"), 
+                                fcst.get("wgst"), 
+                                f"TAF {period_start_z}Z"
+                            )
+                            
+                            # Save the worst-case wind for the TRMNL/Telegram summary
+                            if peak > max_peak_seen:
+                                max_peak_seen = peak
+                                worst_wind_str = wind_str
+                                
+                        forecast_wind = worst_wind_str
                 except Exception as parse_err:
                     print(f"TAF Parse Warning: {parse_err}")
 
@@ -366,19 +396,31 @@ def run_scraper():
             next_f = trmnl_payload[0]
             current_year = datetime.now(mst_tz).year
             try:
-                start_time_str = next_f['time'].split("-")[0].strip()
+                time_parts = next_f['time'].split("-")
+                start_time_str = time_parts[0].strip()
+                end_time_str = time_parts[1].split("(")[0].strip()
+                
                 clean_date = "".join(c for c in next_f['date'] if c.isalnum() or c.isspace()).strip()
-                dt_str = f"{clean_date} {current_year} {start_time_str}"
-                flight_dt = datetime.strptime(dt_str, "%d %b %Y %H:%M").replace(tzinfo=mst_tz)
                 
-                if flight_dt.month == 12 and datetime.now(mst_tz).month < 3:
-                    flight_dt = flight_dt.replace(year=current_year - 1)
-                elif flight_dt.month < 3 and datetime.now(mst_tz).month == 12:
-                    flight_dt = flight_dt.replace(year=current_year + 1)
+                start_dt_str = f"{clean_date} {current_year} {start_time_str}"
+                end_dt_str = f"{clean_date} {current_year} {end_time_str}"
+                
+                start_dt = datetime.strptime(start_dt_str, "%d %b %Y %H:%M").replace(tzinfo=mst_tz)
+                end_dt = datetime.strptime(end_dt_str, "%d %b %Y %H:%M").replace(tzinfo=mst_tz)
+                
+                if "(+1D)" in next_f['time']:
+                    end_dt += timedelta(days=1)
+                
+                if start_dt.month == 12 and datetime.now(mst_tz).month < 3:
+                    start_dt = start_dt.replace(year=current_year - 1)
+                    end_dt = end_dt.replace(year=current_year - 1)
+                elif start_dt.month < 3 and datetime.now(mst_tz).month == 12:
+                    start_dt = start_dt.replace(year=current_year + 1)
+                    end_dt = end_dt.replace(year=current_year + 1)
                     
-                weather_decision = evaluate_weather(flight_dt)
+                weather_decision = evaluate_weather(start_dt, end_dt)
                 
-                hours_until_flight = (flight_dt - datetime.now(mst_tz)).total_seconds() / 3600
+                hours_until_flight = (start_dt - datetime.now(mst_tz)).total_seconds() / 3600
                 is_preflight_window = (0 < hours_until_flight <= 3)
                 
                 target_key = f"{next_f['date']}_{next_f['time']}"
@@ -394,7 +436,7 @@ def run_scraper():
                         
             except Exception as e:
                 print(f"Date parsing failed for weather evaluation: {e}")
-                weather_decision = evaluate_weather(None)
+                weather_decision = evaluate_weather(None, None)
         
         is_manual_run = os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch"
         
