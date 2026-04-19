@@ -3,6 +3,7 @@ import sys
 import json
 import requests
 import html
+import math
 from datetime import datetime, timezone, timedelta
 from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
@@ -165,7 +166,7 @@ def get_trmnl_flights(schedule):
             if stop_dt > now:
                 trmnl_flights.append(f)
         except Exception:
-            # Drop un-parseable corrupt dates from TRMNL so they don't block the screen
+            # Drop un-parseable corrupt dates from TRMNL so they do not block the screen
             pass
             
     return trmnl_flights[:4]
@@ -205,6 +206,86 @@ def compare_schedules(old_sched, new_sched):
 
     return new_alerts, updated_alerts, deleted_alerts
 
+# ==========================================
+# WEATHER ENGINE ADDITION
+# ==========================================
+
+def evaluate_weather(flight_dt):
+    """Evaluates KDVT live METAR and forecasted TAF against personal minimums."""
+    runway_heading = 70 
+    max_wind_limit = 10
+    max_crosswind_limit = 5
+    
+    reasons = []
+    is_go = True
+    current_wind = "N/A"
+    forecast_wind = "N/A"
+    max_crosswind_encountered = 0
+
+    def run_limits_math(wind_dir, wind_speed, wind_gust, source_name):
+        nonlocal is_go, max_crosswind_encountered
+        
+        wind_speed = wind_speed or 0
+        wind_gust = wind_gust or 0
+        max_speed = max(wind_speed, wind_gust)
+        
+        if max_speed > max_wind_limit:
+            is_go = False
+            reasons.append(f"[{source_name}] Total wind high: {max_speed}KT")
+
+        crosswind = 0
+        if wind_dir == "VRB":
+            crosswind = max_speed
+            if crosswind > max_crosswind_limit:
+                is_go = False
+                reasons.append(f"[{source_name}] VRB crosswind: {crosswind}KT")
+        elif wind_dir is not None:
+            angle_diff_radians = math.radians(wind_dir - runway_heading)
+            crosswind = round(abs(max_speed * math.sin(angle_diff_radians)), 1)
+            max_crosswind_encountered = max(max_crosswind_encountered, crosswind)
+            
+            if crosswind > max_crosswind_limit:
+                is_go = False
+                reasons.append(f"[{source_name}] Crosswind high: {crosswind}KT")
+                
+        dir_str = "VRB" if wind_dir == "VRB" else str(wind_dir).zfill(3) if wind_dir else "000"
+        return f"{dir_str}@{wind_speed}" + (f"G{wind_gust}" if wind_gust else "")
+
+    try:
+        # Phase 1: Live METAR
+        metar_resp = requests.get("https://aviationweather.gov/api/data/metar?ids=KDVT&format=json", timeout=10)
+        if metar_resp.status_code == 200 and metar_resp.json():
+            m = metar_resp.json()[0]
+            current_wind = run_limits_math(m.get("wdir"), m.get("wspd"), m.get("wgst"), "METAR")
+
+        # Phase 2: Forecast TAF
+        if flight_dt:
+            # Convert local MST flight_dt to UTC for accurate TAF forecast matching
+            flight_utc = flight_dt.astimezone(timezone.utc)
+            taf_resp = requests.get("https://aviationweather.gov/api/data/taf?ids=KDVT&format=json", timeout=10)
+            
+            if taf_resp.status_code == 200 and taf_resp.json():
+                try:
+                    for fcst in taf_resp.json()[0].get("fcsts", []):
+                        time_from = datetime.fromisoformat(fcst["timeFrom"].replace('Z', '+00:00'))
+                        time_to = datetime.fromisoformat(fcst["timeTo"].replace('Z', '+00:00'))
+                        
+                        if time_from <= flight_utc <= time_to:
+                            forecast_wind = run_limits_math(fcst.get("wdir"), fcst.get("wspd"), fcst.get("wgst"), "TAF")
+                            break
+                except ValueError:
+                    pass
+
+        return {
+            "status": "GO" if is_go else "NO-GO",
+            "metar_wind": current_wind,
+            "taf_wind": forecast_wind,
+            "max_crosswind_kt": max_crosswind_encountered,
+            "alerts": reasons
+        }
+    except Exception as e:
+        return {"status": "ERROR", "alerts": [f"Weather API Error: {str(e)}"]}
+
 def send_telegram(message):
     token = os.environ.get("TELEGRAM_BOT_TOKEN")
     chat_id = os.environ.get("TELEGRAM_CHAT_ID")
@@ -219,10 +300,19 @@ def send_telegram(message):
     except Exception as e: 
         print(f"Telegram Exception: {e}")
 
-def update_trmnl(flights, timestamp_str):
+def update_trmnl(flights, timestamp_str, weather_data):
     webhook = os.environ.get("TRMNL_WEBHOOK_URL")
     if not webhook: return
-    payload = {"merge_variables": {"flights": flights, "updated_at": timestamp_str}}
+    
+    payload = {
+        "merge_variables": {
+            "flights": flights, 
+            "updated_at": timestamp_str,
+            "go_nogo": weather_data.get("status", "N/A"),
+            "wind_data": weather_data.get("metar_wind", "N/A"),
+            "crosswind": weather_data.get("max_crosswind_kt", 0)
+        }
+    }
     try: requests.post(webhook, json=payload)
     except Exception as e: print(f"TRMNL error: {e}")
 
@@ -272,6 +362,29 @@ def run_scraper():
         old_schedule = filter_old_flights(old_schedule)
 
         new_flights, updated_flights, deleted_flights = compare_schedules(old_schedule, current_schedule)
+        
+        # Isolate the very next upcoming flight for weather evaluation
+        trmnl_payload = get_trmnl_flights(current_schedule)
+        weather_decision = {"status": "NO FLIGHTS", "alerts": []}
+        
+        if trmnl_payload:
+            next_f = trmnl_payload[0]
+            current_year = datetime.now(mst_tz).year
+            try:
+                start_time_str = next_f['time'].split("-")[0].strip()
+                clean_date = "".join(c for c in next_f['date'] if c.isalnum() or c.isspace()).strip()
+                dt_str = f"{clean_date} {current_year} {start_time_str}"
+                flight_dt = datetime.strptime(dt_str, "%d %b %Y %H:%M").replace(tzinfo=mst_tz)
+                
+                if flight_dt.month == 12 and datetime.now(mst_tz).month < 3:
+                    flight_dt = flight_dt.replace(year=current_year - 1)
+                elif flight_dt.month < 3 and datetime.now(mst_tz).month == 12:
+                    flight_dt = flight_dt.replace(year=current_year + 1)
+                    
+                weather_decision = evaluate_weather(flight_dt)
+            except Exception as e:
+                print(f"Date parsing failed for weather evaluation: {e}")
+                weather_decision = evaluate_weather(None)
 
         if new_flights or updated_flights or deleted_flights:
             alerts_by_date = {}
@@ -283,6 +396,22 @@ def run_scraper():
                 d = f['date']; alerts_by_date.setdefault(d, []).append((f, "DELETED"))
 
             msg = "<b>━━ AEROGUARD DISPATCH ━━</b>\n\n"
+            
+            # Layer the weather dispatch directly at the top of the schedule change message
+            if weather_decision["status"] != "NO FLIGHTS":
+                status_icon = "🟢" if weather_decision["status"] == "GO" else "🔴"
+                msg += f"<b>[ WEATHER STATUS: {status_icon} {weather_decision['status']} ]</b>\n"
+                msg += f"Live METAR: {weather_decision.get('metar_wind', 'N/A')}\n"
+                msg += f"Forecast TAF: {weather_decision.get('taf_wind', 'N/A')}\n"
+                msg += f"Max Crosswind: {weather_decision.get('max_crosswind_kt', 0)} KT\n"
+                
+                if weather_decision.get("alerts"):
+                    msg += "\n⚠️ LIMITS EXCEEDED:\n"
+                    for alert in weather_decision["alerts"]:
+                        msg += f"• {alert}\n"
+                else:
+                    msg += "\n✅ Winds within limits.\n"
+                msg += "\n──────────────\n\n"
             
             for date in sorted(alerts_by_date.keys()):
                 msg += f"<b>DATE: {date}</b>\n\n"
@@ -316,10 +445,8 @@ def run_scraper():
         else:
             print("No changes detected since last check. Staying silent.")
 
-        # Push ONLY active/future flights to TRMNL
-        trmnl_payload = get_trmnl_flights(current_schedule)
         print("Sending active/upcoming snapshot to TRMNL...")
-        update_trmnl(trmnl_payload, now_mst)
+        update_trmnl(trmnl_payload, now_mst, weather_decision)
 
         with open(MEMORY_FILE, "w") as f:
             json.dump(current_schedule, f, indent=4)
