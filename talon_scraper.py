@@ -243,6 +243,11 @@ def evaluate_weather(flight_dt):
         dir_str = "VRB" if wind_dir == "VRB" else str(wind_dir).zfill(3) if wind_dir else "000"
         return f"{dir_str}@{wind_speed}" + (f"G{wind_gust}" if wind_gust else "")
 
+    def parse_api_time(t_val):
+        if isinstance(t_val, int):
+            return datetime.fromtimestamp(t_val, tz=timezone.utc)
+        return datetime.fromisoformat(str(t_val).replace('Z', '+00:00'))
+
     try:
         metar_resp = requests.get("https://aviationweather.gov/api/data/metar?ids=KDVT&format=json", timeout=10)
         if metar_resp.status_code == 200 and metar_resp.json():
@@ -256,14 +261,14 @@ def evaluate_weather(flight_dt):
             if taf_resp.status_code == 200 and taf_resp.json():
                 try:
                     for fcst in taf_resp.json()[0].get("fcsts", []):
-                        time_from = datetime.fromisoformat(fcst["timeFrom"].replace('Z', '+00:00'))
-                        time_to = datetime.fromisoformat(fcst["timeTo"].replace('Z', '+00:00'))
+                        time_from = parse_api_time(fcst.get("timeFrom"))
+                        time_to = parse_api_time(fcst.get("timeTo"))
                         
                         if time_from <= flight_utc <= time_to:
                             forecast_wind = run_limits_math(fcst.get("wdir"), fcst.get("wspd"), fcst.get("wgst"), "TAF")
                             break
-                except ValueError:
-                    pass
+                except Exception as parse_err:
+                    print(f"TAF Parse Warning: {parse_err}")
 
         return {
             "status": "GO" if is_go else "NO-GO",
@@ -400,13 +405,12 @@ def run_scraper():
 
         if trigger_weather_dispatch and target_flight_details:
             status_icon = "🟢" if weather_decision["status"] == "GO" else "🔴"
-            msg = "<b>━━ PREFLIGHT BRIEF ━━</b>\n\n"
-            msg += f"<b>Lesson:</b> {html.escape(target_flight_details['lesson'])}\n"
-            msg += f"<b>Time:</b> {html.escape(target_flight_details['time'])}\n"
-            msg += f"<b>Instructor:</b> {html.escape(target_flight_details['ip'])}\n"
-            msg += "──────────────\n\n"
+            date_str = datetime.now(mst_tz).strftime("%d %b").upper()
             
-            msg += f"<b>[ STATUS: {status_icon} {weather_decision['status']} ]</b>\n"
+            msg = f"<b>━━ PREFLIGHT BRIEF ━━</b>\n\n"
+            msg += f"DATE: {date_str}\n\n"
+            
+            msg += f"<b>[ WEATHER STATUS: {status_icon} {weather_decision['status']} ]</b>\n"
             msg += f"Live METAR: {weather_decision.get('metar_wind', 'N/A')}\n"
             msg += f"Forecast TAF: {weather_decision.get('taf_wind', 'N/A')}\n"
             msg += f"Max Crosswind: {weather_decision.get('max_crosswind_kt', 0)} KT\n"
@@ -418,6 +422,19 @@ def run_scraper():
             else:
                 msg += "\n✅ Winds within limits.\n"
                 
+            msg += "\n──────────────\n\n"
+            
+            msg += f"<b>[ PREFLIGHT ] {html.escape(target_flight_details['time'])}</b>\n"
+            msg += f"Lesson: {html.escape(target_flight_details['lesson'])} ({html.escape(target_flight_details['type'])})\n"
+            msg += f"Instructor: {html.escape(target_flight_details['ip'])}\n"
+            msg += f"Reserved: {html.escape(target_flight_details['res'])}\n"
+            msg += f"Status: {html.escape(target_flight_details['status'])}\n"
+            
+            if target_flight_details.get('remark'):
+                msg += f"Remark: {html.escape(target_flight_details['remark'])}\n"
+                
+            msg += f"\n<code>Last Updated: {now_mst}</code>"
+
             print("Sending 3 hour Preflight Brief to Telegram...")
             send_telegram(msg)
 
