@@ -7,6 +7,8 @@
         "res": "276AG (NXI)",
         "lesson": "PPL 2.21-Flight",
         "type": "Flight",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "dispatch_sent": true,
+        "weather_status": "ERROR"
     }
 ]
