@@ -2,9 +2,11 @@ name: Talon Schedule Recon & Dispatch
 
 on:
   schedule:
-    # Runs every 30 minutes to ensure real-time METAR/TAF accuracy
     - cron: '*/30 * * * *'
-  workflow_dispatch: # Allows you to manually trigger the script from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   scrape-and-evaluate:
@@ -23,16 +25,13 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          # Required to install the headless browser binaries for Playwright
           playwright install chromium 
 
       - name: Run Scraper and Weather Engine
         env:
-          # Talon Login
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
           TALON_USER: ${{ secrets.TALON_USER }}
           TALON_PASS: ${{ secrets.TALON_PASS }}
-          
-          # Webhooks and Bots
           TRMNL_WEBHOOK_URL: ${{ secrets.TRMNL_WEBHOOK_URL }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -44,5 +43,4 @@ jobs:
           git config --global user.email "actions@github.com"
           git add memory.json
           
-          # Only commit and push if there are actual changes to the schedule memory
           git diff --quiet && git diff --staged --quiet || (git commit -m "Automated update: Schedule and Weather Memory" && git push)
