@@ -37,7 +37,6 @@ def extract_schedule(html_content):
 
         if "Rest Period" in act_type: continue
 
-        # --- BULLETPROOF REMARK SCANNER ---
         remark = ""
         all_elements = [row] + row.find_all(True) 
         valid_fallback_titles = []
@@ -63,7 +62,6 @@ def extract_schedule(html_content):
                 
         if not remark and valid_fallback_titles:
             remark = max(valid_fallback_titles, key=len)
-        # ----------------------------------
             
         start_parts = start.split()
         stop_parts = stop.split()
@@ -88,7 +86,6 @@ def extract_schedule(html_content):
     return flights_data
 
 def filter_old_flights(schedule):
-    """Keeps future flights and recent flights up to 2 days old. Scrubs dirty Talon dates."""
     mst_tz = timezone(timedelta(hours=-7))
     now = datetime.now(mst_tz)
     cutoff_date = (now - timedelta(days=2)).date()
@@ -97,7 +94,6 @@ def filter_old_flights(schedule):
     
     for f in schedule:
         try:
-            # Strip out asterisks or weird hidden HTML characters from stuck classes
             clean_date = "".join(c for c in f['date'] if c.isalnum() or c.isspace()).strip()
             dt_str = f"{clean_date} {current_year}"
             flight_dt = datetime.strptime(dt_str, "%d %b %Y").date()
@@ -115,7 +111,6 @@ def filter_old_flights(schedule):
     return filtered_schedule
 
 def is_future_flight(f):
-    """Checks if a flight's start time is currently in the future."""
     mst_tz = timezone(timedelta(hours=-7))
     now = datetime.now(mst_tz)
     current_year = now.year
@@ -135,7 +130,6 @@ def is_future_flight(f):
         return True 
 
 def get_trmnl_flights(schedule):
-    """STRICT TRMNL FILTER: Only returns flights where the end time is in the future."""
     mst_tz = timezone(timedelta(hours=-7))
     now = datetime.now(mst_tz)
     current_year = now.year
@@ -162,11 +156,9 @@ def get_trmnl_flights(schedule):
             elif stop_dt.month < 3 and now.month == 12:
                 stop_dt = stop_dt.replace(year=current_year + 1)
                 
-            # If the block has passed, ban it from TRMNL
             if stop_dt > now:
                 trmnl_flights.append(f)
         except Exception:
-            # Drop un-parseable corrupt dates from TRMNL so they do not block the screen
             pass
             
     return trmnl_flights[:4]
@@ -178,6 +170,11 @@ def compare_schedules(old_sched, new_sched):
     
     old_dict = {f"{f['date']}_{f['time']}": f for f in old_sched}
     new_dict = {f"{f['date']}_{f['time']}": f for f in new_sched}
+
+    for f in new_sched:
+        key = f"{f['date']}_{f['time']}"
+        if key in old_dict:
+            f['dispatch_sent'] = old_dict[key].get('dispatch_sent', False)
 
     for key, f in new_dict.items():
         if key not in old_dict:
@@ -206,12 +203,7 @@ def compare_schedules(old_sched, new_sched):
 
     return new_alerts, updated_alerts, deleted_alerts
 
-# ==========================================
-# WEATHER ENGINE ADDITION
-# ==========================================
-
 def evaluate_weather(flight_dt):
-    """Evaluates KDVT live METAR and forecasted TAF against personal minimums."""
     runway_heading = 70 
     max_wind_limit = 10
     max_crosswind_limit = 5
@@ -252,15 +244,12 @@ def evaluate_weather(flight_dt):
         return f"{dir_str}@{wind_speed}" + (f"G{wind_gust}" if wind_gust else "")
 
     try:
-        # Phase 1: Live METAR
         metar_resp = requests.get("https://aviationweather.gov/api/data/metar?ids=KDVT&format=json", timeout=10)
         if metar_resp.status_code == 200 and metar_resp.json():
             m = metar_resp.json()[0]
             current_wind = run_limits_math(m.get("wdir"), m.get("wspd"), m.get("wgst"), "METAR")
 
-        # Phase 2: Forecast TAF
         if flight_dt:
-            # Convert local MST flight_dt to UTC for accurate TAF forecast matching
             flight_utc = flight_dt.astimezone(timezone.utc)
             taf_resp = requests.get("https://aviationweather.gov/api/data/taf?ids=KDVT&format=json", timeout=10)
             
@@ -331,7 +320,7 @@ def run_scraper():
         except Exception:
             pass
 
-    print("🚀 Launching Headless Browser...")
+    print("Launching Headless Browser...")
     html_dump = ""
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
@@ -348,7 +337,7 @@ def run_scraper():
             page.wait_for_timeout(8000) 
             html_dump = page.content()
         except Exception as e:
-            print(f"⚠️ Encountered an issue: {e}")
+            print(f"Encountered an issue: {e}")
         finally:
             browser.close()
 
@@ -360,12 +349,13 @@ def run_scraper():
 
         current_schedule = filter_old_flights(current_schedule)
         old_schedule = filter_old_flights(old_schedule)
-
-        new_flights, updated_flights, deleted_flights = compare_schedules(old_schedule, current_schedule)
         
-        # Isolate the very next upcoming flight for weather evaluation
+        new_flights, updated_flights, deleted_flights = compare_schedules(old_schedule, current_schedule)
+
         trmnl_payload = get_trmnl_flights(current_schedule)
         weather_decision = {"status": "NO FLIGHTS", "alerts": []}
+        trigger_weather_dispatch = False
+        target_flight_details = None
         
         if trmnl_payload:
             next_f = trmnl_payload[0]
@@ -382,9 +372,54 @@ def run_scraper():
                     flight_dt = flight_dt.replace(year=current_year + 1)
                     
                 weather_decision = evaluate_weather(flight_dt)
+                
+                hours_until_flight = (flight_dt - datetime.now(mst_tz)).total_seconds() / 3600
+                is_preflight_window = (0 < hours_until_flight <= 3)
+                
+                target_key = f"{next_f['date']}_{next_f['time']}"
+                for f in current_schedule:
+                    if f"{f['date']}_{f['time']}" == target_key:
+                        f['weather_status'] = weather_decision['status']
+                        
+                        if is_preflight_window and not f.get('dispatch_sent'):
+                            trigger_weather_dispatch = True
+                            target_flight_details = f
+                            f['dispatch_sent'] = True
+                        break
+                        
             except Exception as e:
                 print(f"Date parsing failed for weather evaluation: {e}")
                 weather_decision = evaluate_weather(None)
+        
+        is_manual_run = os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch"
+        
+        if is_manual_run and not (new_flights or updated_flights or deleted_flights):
+            if trmnl_payload:
+                trigger_weather_dispatch = True
+                target_flight_details = trmnl_payload[0]
+
+        if trigger_weather_dispatch and target_flight_details:
+            status_icon = "🟢" if weather_decision["status"] == "GO" else "🔴"
+            msg = "<b>━━ PREFLIGHT BRIEF ━━</b>\n\n"
+            msg += f"<b>Lesson:</b> {html.escape(target_flight_details['lesson'])}\n"
+            msg += f"<b>Time:</b> {html.escape(target_flight_details['time'])}\n"
+            msg += f"<b>Instructor:</b> {html.escape(target_flight_details['ip'])}\n"
+            msg += "──────────────\n\n"
+            
+            msg += f"<b>[ STATUS: {status_icon} {weather_decision['status']} ]</b>\n"
+            msg += f"Live METAR: {weather_decision.get('metar_wind', 'N/A')}\n"
+            msg += f"Forecast TAF: {weather_decision.get('taf_wind', 'N/A')}\n"
+            msg += f"Max Crosswind: {weather_decision.get('max_crosswind_kt', 0)} KT\n"
+            
+            if weather_decision.get("alerts"):
+                msg += "\n⚠️ LIMITS EXCEEDED:\n"
+                for alert in weather_decision["alerts"]:
+                    msg += f"• {alert}\n"
+            else:
+                msg += "\n✅ Winds within limits.\n"
+                
+            print("Sending 3 hour Preflight Brief to Telegram...")
+            send_telegram(msg)
 
         if new_flights or updated_flights or deleted_flights:
             alerts_by_date = {}
@@ -395,23 +430,7 @@ def run_scraper():
             for f in deleted_flights:
                 d = f['date']; alerts_by_date.setdefault(d, []).append((f, "DELETED"))
 
-            msg = "<b>━━ AEROGUARD DISPATCH ━━</b>\n\n"
-            
-            # Layer the weather dispatch directly at the top of the schedule change message
-            if weather_decision["status"] != "NO FLIGHTS":
-                status_icon = "🟢" if weather_decision["status"] == "GO" else "🔴"
-                msg += f"<b>[ WEATHER STATUS: {status_icon} {weather_decision['status']} ]</b>\n"
-                msg += f"Live METAR: {weather_decision.get('metar_wind', 'N/A')}\n"
-                msg += f"Forecast TAF: {weather_decision.get('taf_wind', 'N/A')}\n"
-                msg += f"Max Crosswind: {weather_decision.get('max_crosswind_kt', 0)} KT\n"
-                
-                if weather_decision.get("alerts"):
-                    msg += "\n⚠️ LIMITS EXCEEDED:\n"
-                    for alert in weather_decision["alerts"]:
-                        msg += f"• {alert}\n"
-                else:
-                    msg += "\n✅ Winds within limits.\n"
-                msg += "\n──────────────\n\n"
+            msg = "<b>━━ SCHEDULE UPDATE ━━</b>\n\n"
             
             for date in sorted(alerts_by_date.keys()):
                 msg += f"<b>DATE: {date}</b>\n\n"
@@ -435,22 +454,22 @@ def run_scraper():
                         msg += f"<b>Remark:</b> {html.escape(f['remark'])}\n"
                     
                     if alert_type == "UPDATED":
-                        msg += f"<i>{html.escape(f['changes_text'])}</i>\n"
+                        msg += f"<i>{html.escape(f.get('changes_text', ''))}</i>\n"
                     msg += "</blockquote>\n"
             
             msg += f"<code>Last Updated: {now_mst}</code>"
 
-            print("Changes detected! Sending to Telegram...")
+            print("Schedule changes detected! Sending to Telegram...")
             send_telegram(msg)
-        else:
-            print("No changes detected since last check. Staying silent.")
+        elif not trigger_weather_dispatch:
+            print("No changes and outside preflight window. Staying silent.")
 
-        print("Sending active/upcoming snapshot to TRMNL...")
+        print("Sending active snapshot to TRMNL...")
         update_trmnl(trmnl_payload, now_mst, weather_decision)
 
         with open(MEMORY_FILE, "w") as f:
             json.dump(current_schedule, f, indent=4)
-        print("✅ Run complete. Memory updated.")
+        print("Run complete. Memory updated.")
 
 if __name__ == "__main__":
     run_scraper()
