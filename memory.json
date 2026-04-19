@@ -2,14 +2,14 @@
     {
         "date": "19 APR",
         "time": "07:30 - 10:00",
-        "status": "Scheduled",
+        "status": "CancelledWX - Winds",
         "ip": "Bracke,Cameron",
         "res": "PA28-181G",
         "lesson": "PPL 2.21-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "NO-GO"
+        "changes_text": "> STS: SCHEDULED -> CANCELLEDWX - WINDS"
     },
     {
         "date": "20 APR",
@@ -19,6 +19,8 @@
         "res": "PA28-181G",
         "lesson": "PPL 2.22-Flight",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false,
+        "weather_status": "NO-GO"
     }
 ]
