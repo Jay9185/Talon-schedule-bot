@@ -9,7 +9,16 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> ACF: 276AG (NXI) -> PA28-181G",
-        "weather_status": "ERROR"
+        "weather_status": "NO-GO"
+    },
+    {
+        "date": "20 APR",
+        "time": "10:30 - 13:30",
+        "status": "Scheduling",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 2.22-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
