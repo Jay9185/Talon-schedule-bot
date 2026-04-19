@@ -1,12 +1,12 @@
 [
     {
-        "date": "17 APR",
-        "time": "16:30 - 19:00",
-        "status": "Completed",
-        "ip": "Hinojosa,Abel",
-        "res": "RB LD 3",
-        "lesson": "PPL 2.20-AATD",
-        "type": "Sim",
+        "date": "19 APR",
+        "time": "07:30 - 10:00",
+        "status": "Scheduled",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 2.21-Flight",
+        "type": "Flight",
         "remark": "Ramp Out"
     }
 ]
