@@ -1,43 +1,48 @@
-name: Talon Schedule Bot
+name: Talon Schedule Recon & Dispatch
 
 on:
-  workflow_dispatch:
   schedule:
-    # Runs automatically every 2 hours
-    - cron: '0 */2 * * *'
+    # Runs every 30 minutes to ensure real-time METAR/TAF accuracy
+    - cron: '*/30 * * * *'
+  workflow_dispatch: # Allows you to manually trigger the script from the Actions tab
 
 jobs:
-  scrape:
+  scrape-and-evaluate:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write  # Critical: Allows the bot to save memory back to GitHub
 
     steps:
-      - uses: actions/checkout@v3
-      
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
-          
-      - name: Install dependencies
+          python-version: '3.11'
+
+      - name: Install Dependencies
         run: |
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
-          playwright install chromium
-          
-      - name: Run Talon Scraper
+          # Required to install the headless browser binaries for Playwright
+          playwright install chromium 
+
+      - name: Run Scraper and Weather Engine
         env:
+          # Talon Login
           TALON_USER: ${{ secrets.TALON_USER }}
           TALON_PASS: ${{ secrets.TALON_PASS }}
+          
+          # Webhooks and Bots
+          TRMNL_WEBHOOK_URL: ${{ secrets.TRMNL_WEBHOOK_URL }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          TRMNL_WEBHOOK_URL: ${{ secrets.TRMNL_WEBHOOK_URL }}
         run: python talon_scraper.py
-        
-      - name: Save Memory Core
+
+      - name: Commit Updated Memory
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
           git add memory.json
-          git commit -m "Update schedule memory" || echo "No changes to commit"
-          git push
+          
+          # Only commit and push if there are actual changes to the schedule memory
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Automated update: Schedule and Weather Memory" && git push)
