@@ -13,24 +13,26 @@
     {
         "date": "21 APR",
         "time": "06:45 - 09:15",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "Bracke,Cameron",
         "res": "PA28-181",
         "lesson": "PPL 2.21-Flight",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day",
+        "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "GO"
+        "changes_text": "> STS: SCHEDULING -> SCHEDULED\n> RMK: 'RAMP OUT'",
+        "weather_status": "NO-GO"
     },
     {
         "date": "21 APR",
         "time": "09:30 - 12:00",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "Bracke,Cameron",
         "res": "Oral Brief Rooms",
         "lesson": "PPL 2.23-Brief",
         "type": "Oral",
-        "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false
+        "remark": "Ramp Out",
+        "dispatch_sent": false,
+        "changes_text": "> STS: SCHEDULING -> SCHEDULED\n> RMK: 'RAMP OUT'"
     }
 ]
