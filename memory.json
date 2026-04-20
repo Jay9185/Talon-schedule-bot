@@ -4,11 +4,12 @@
         "time": "10:30 - 13:30",
         "status": "Scheduled",
         "ip": "Bracke,Cameron",
-        "res": "PA28-181G",
+        "res": "281TW (NXI)",
         "lesson": "PPL 2.22-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
+        "changes_text": "> ACF: PA28-181G -> 281TW (NXI)",
         "weather_status": "GO"
     }
 ]
