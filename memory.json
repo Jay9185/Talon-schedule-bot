@@ -2,14 +2,14 @@
     {
         "date": "20 APR",
         "time": "10:30 - 13:30",
-        "status": "Authorized",
+        "status": "Ramp Out",
         "ip": "Bracke,Cameron",
         "res": "281TW (NXI)",
         "lesson": "PPL 2.21-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> LSN: PPL 2.22-FLIGHT -> PPL 2.21-FLIGHT\n> STS: OPS CHECK IN -> AUTHORIZED",
+        "changes_text": "> STS: AUTHORIZED -> RAMP OUT",
         "weather_status": "GO"
     },
     {
