@@ -1,16 +1,5 @@
 [
     {
-        "date": "19 APR",
-        "time": "07:30 - 10:00",
-        "status": "CancelledWX - Winds",
-        "ip": "Bracke,Cameron",
-        "res": "PA28-181G",
-        "lesson": "PPL 2.21-Flight",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "20 APR",
         "time": "10:30 - 13:30",
         "status": "Scheduled",
