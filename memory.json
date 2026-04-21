@@ -8,8 +8,7 @@
         "lesson": "PPL 2.22-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "> STS: RAMP OUT -> COMPLETED"
+        "dispatch_sent": true
     },
     {
         "date": "21 APR",
@@ -21,7 +20,6 @@
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> STS: SCHEDULED -> OPS CHECK IN",
         "weather_status": "NO-GO"
     },
     {
