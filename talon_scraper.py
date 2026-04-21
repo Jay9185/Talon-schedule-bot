@@ -79,7 +79,7 @@ def extract_schedule(html_content):
             "status": status,
             "ip": instructor if instructor else "TBD",
             "res": resource if resource else "TBD",
-            "lesson": unit[:20] if unit else "Unknown", 
+            "lesson": unit[:20] if unit else "UNKNOWN", 
             "type": act_type,
             "remark": remark
         })
@@ -310,7 +310,7 @@ def send_telegram(message):
     if not token or not chat_id: return
     
     url = f"https://api.telegram.org/bot{token}/sendMessage"
-    # Using HTML parse mode to cleanly render the <pre> tag for fixed-width text
+    # Using HTML parse mode to natively support the <pre> tag
     payload = {"chat_id": chat_id, "text": message, "parse_mode": "HTML", "disable_web_page_preview": True}
     try: 
         response = requests.post(url, json=payload)
@@ -444,9 +444,10 @@ def run_scraper():
         # ACARS TELETYPE PREFLIGHT BRIEF 
         # ==========================================
         if trigger_weather_dispatch and target_flight_details:
-            # Format ACARS variables
-            acars_date = datetime.now(mst_tz).strftime("%d%b").upper()
-            acars_time = target_flight_details['time'].replace(" ", "").replace(":", "")
+            # Safely format data to fit ACARS column widths
+            flight_date_str = "".join(c for c in target_flight_details['date'] if c.isalnum() or c.isspace()).strip()
+            acars_date = flight_date_str.replace(" ", "").upper()[:9]
+            acars_time = target_flight_details['time'].replace("-", "to").replace(" ", "").replace(":", "").replace("to", "-")[:9]
             acars_lsn = html.escape(target_flight_details['lesson'].upper())[:10]
             acars_typ = html.escape(target_flight_details['type'].upper())[:10]
             acars_pic = html.escape(target_flight_details['ip'].upper())[:10]
@@ -459,6 +460,7 @@ def run_scraper():
             fct = weather_decision.get('taf_wind', 'N/A')
             xwc = f"{weather_decision.get('max_crosswind_kt', 0):04.1f} KT"
 
+            # Wrapped in <pre> tags so Telegram renders a perfectly spaced block
             msg = "<pre>\n"
             msg += "*** AEROGUARD DISPATCH RELEASE ***\n"
             msg += f"DAT: {acars_date.ljust(10)} BLK: {acars_time}\n"
@@ -504,7 +506,7 @@ def run_scraper():
                 msg += "----------------------------------\n"
                 
                 for f, alert_type in alerts_by_date[date]:
-                    acars_blk = f['time'].replace(" ", "").replace(":", "")
+                    acars_blk = f['time'].replace("-", "to").replace(" ", "").replace(":", "").replace("to", "-")[:9]
                     acars_lsn = html.escape(f['lesson'].upper())[:10]
                     acars_acf = html.escape(f['res'].upper())[:15]
                     acars_pic = html.escape(f['ip'].upper())[:15]
