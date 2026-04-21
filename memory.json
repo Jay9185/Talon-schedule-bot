@@ -1,16 +1,5 @@
 [
     {
-        "date": "20 APR",
-        "time": "10:30 - 13:30",
-        "status": "Completed",
-        "ip": "Bracke,Cameron",
-        "res": "281TW (NXI)",
-        "lesson": "PPL 2.21-Flight",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "21 APR",
         "time": "06:45 - 09:15",
         "status": "Scheduled",
@@ -32,5 +21,15 @@
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": false
+    },
+    {
+        "date": "27 APR",
+        "time": "11:00 - 14:30",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "FAA Written Test",
+        "remark": "PAR - FAA Written Exam"
     }
 ]
