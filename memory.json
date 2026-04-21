@@ -20,7 +20,7 @@
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "NO-GO"
+        "weather_status": "ERROR"
     },
     {
         "date": "27 APR",
