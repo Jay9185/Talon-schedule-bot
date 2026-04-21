@@ -310,7 +310,6 @@ def send_telegram(message):
     if not token or not chat_id: return
     
     url = f"https://api.telegram.org/bot{token}/sendMessage"
-    # Using HTML parse mode to natively support the <pre> tag
     payload = {"chat_id": chat_id, "text": message, "parse_mode": "HTML", "disable_web_page_preview": True}
     try: 
         response = requests.post(url, json=payload)
@@ -435,16 +434,50 @@ def run_scraper():
         
         is_manual_run = os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch"
         
-        if is_manual_run and not (new_flights or updated_flights or deleted_flights):
-            if trmnl_payload:
-                trigger_weather_dispatch = True
-                target_flight_details = trmnl_payload[0]
+        # ==========================================
+        # MANUAL RUN: MASTER SCHEDULE DUMP
+        # ==========================================
+        if is_manual_run:
+            future_flights = [f for f in current_schedule if is_future_flight(f)]
+            
+            if future_flights:
+                msg = "<pre>\n"
+                msg += "==================================\n"
+                msg += "AEROGUARD MASTER SCHEDULE\n"
+                msg += "==================================\n"
+                
+                for f in future_flights:
+                    flight_date_str = "".join(c for c in f['date'] if c.isalnum() or c.isspace()).strip()
+                    acars_date = flight_date_str.replace(" ", "").upper()[:9]
+                    acars_blk = f['time'].replace("-", "to").replace(" ", "").replace(":", "").replace("to", "-")[:9]
+                    acars_lsn = html.escape(f['lesson'].upper())[:10]
+                    acars_pic = html.escape(f['ip'].upper())[:10]
+                    acars_acf = html.escape(f['res'].upper())[:15]
+                    acars_sts = html.escape(f['status'].upper())[:10]
+
+                    msg += f"DAT: {acars_date.ljust(10)} BLK: {acars_blk}\n"
+                    msg += f"LSN: {acars_lsn.ljust(10)} ACF: {acars_acf}\n"
+                    msg += f"PIC: {acars_pic.ljust(10)} STS: {acars_sts}\n"
+                    msg += "----------------------------------\n"
+
+                acars_now = now_mst.replace(":", "").replace(" ", "").upper()
+                msg += f"UPDATED: {acars_now}\n"
+                msg += "==================================\n"
+                msg += "</pre>"
+
+                # Safeguard to prevent Telegram from dropping the message if it exceeds the 4096 char limit
+                if len(msg) > 4000:
+                    msg = msg[:4000] + "\n...[TRUNCATED]</pre>"
+
+                print("Manual trigger detected! Sending Master Schedule to Telegram...")
+                send_telegram(msg)
+                
+            # If manual run, we still allow the 3-hour preflight brief below to process for the immediate flight.
 
         # ==========================================
         # ACARS TELETYPE PREFLIGHT BRIEF 
         # ==========================================
         if trigger_weather_dispatch and target_flight_details:
-            # Safely format data to fit ACARS column widths
             flight_date_str = "".join(c for c in target_flight_details['date'] if c.isalnum() or c.isspace()).strip()
             acars_date = flight_date_str.replace(" ", "").upper()[:9]
             acars_time = target_flight_details['time'].replace("-", "to").replace(" ", "").replace(":", "").replace("to", "-")[:9]
@@ -460,9 +493,10 @@ def run_scraper():
             fct = weather_decision.get('taf_wind', 'N/A')
             xwc = f"{weather_decision.get('max_crosswind_kt', 0):04.1f} KT"
 
-            # Wrapped in <pre> tags so Telegram renders a perfectly spaced block
             msg = "<pre>\n"
-            msg += "*** AEROGUARD DISPATCH RELEASE ***\n"
+            msg += "==================================\n"
+            msg += "AEROGUARD DISPATCH RELEASE\n"
+            msg += "==================================\n"
             msg += f"DAT: {acars_date.ljust(10)} BLK: {acars_time}\n"
             msg += f"LSN: {acars_lsn.ljust(10)} TYP: {acars_typ}\n"
             msg += f"PIC: {acars_pic.ljust(10)} ACF: {acars_acf}\n"
@@ -479,7 +513,7 @@ def run_scraper():
                 for alert in weather_decision["alerts"]:
                     msg += f"- {html.escape(alert)}\n"
                     
-            msg += "**********************************\n"
+            msg += "==================================\n"
             msg += "</pre>"
 
             print("Sending ACARS Preflight Brief to Telegram...")
@@ -488,7 +522,7 @@ def run_scraper():
         # ==========================================
         # ACARS TELETYPE SCHEDULE UPDATE
         # ==========================================
-        if new_flights or updated_flights or deleted_flights:
+        if (new_flights or updated_flights or deleted_flights) and not is_manual_run:
             alerts_by_date = {}
             for f in new_flights:
                 d = f['date']; alerts_by_date.setdefault(d, []).append((f, "NEW"))
@@ -498,7 +532,9 @@ def run_scraper():
                 d = f['date']; alerts_by_date.setdefault(d, []).append((f, "DELETED"))
 
             msg = "<pre>\n"
-            msg += "*** AEROGUARD SCHEDULING ALERT ***\n"
+            msg += "==================================\n"
+            msg += "AEROGUARD SCHEDULING ALERT\n"
+            msg += "==================================\n"
             
             for date in sorted(alerts_by_date.keys()):
                 acars_date = date.replace(" ", "").upper()
@@ -528,13 +564,13 @@ def run_scraper():
             
             acars_now = now_mst.replace(":", "").replace(" ", "").upper()
             msg += f"UPDATED: {acars_now}\n"
-            msg += "**********************************\n"
+            msg += "==================================\n"
             msg += "</pre>"
 
             print("Schedule changes detected! Sending ACARS to Telegram...")
             send_telegram(msg)
             
-        elif not trigger_weather_dispatch:
+        elif not trigger_weather_dispatch and not is_manual_run:
             print("No changes and outside preflight window. Staying silent.")
 
         print("Sending active snapshot to TRMNL...")
