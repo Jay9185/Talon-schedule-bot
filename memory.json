@@ -31,6 +31,6 @@
         "type": "FAA Written Test",
         "remark": "PAR - FAA Written Exam",
         "dispatch_sent": false,
-        "weather_status": "NO-GO"
+        "weather_status": "GO"
     }
 ]
