@@ -1,5 +1,16 @@
 [
     {
+        "date": "23 APR",
+        "time": "11:45 - 14:15",
+        "status": "Scheduling",
+        "ip": "Little,Evan",
+        "res": "Oral Brief Rooms",
+        "lesson": "PPL 2.23-Brief",
+        "type": "Oral",
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "GO"
+    },
+    {
         "date": "27 APR",
         "time": "11:00 - 14:30",
         "status": "Scheduled",
@@ -8,7 +19,6 @@
         "lesson": "UNKNOWN",
         "type": "FAA Written Test",
         "remark": "PAR - FAA Written Exam",
-        "dispatch_sent": false,
-        "weather_status": "GO"
+        "dispatch_sent": false
     }
 ]
