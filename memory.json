@@ -1,27 +1,5 @@
 [
     {
-        "date": "21 APR",
-        "time": "06:45 - 09:15",
-        "status": "Completed",
-        "ip": "Bracke,Cameron",
-        "res": "271AG (NXI)",
-        "lesson": "PPL 2.22-Flight",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
-        "date": "21 APR",
-        "time": "09:30 - 12:00",
-        "status": "Completed",
-        "ip": "Bracke,Cameron",
-        "res": "DVT Brief Rm 11",
-        "lesson": "PPL 2.23-Brief",
-        "type": "Oral",
-        "remark": "Ramp Out",
-        "dispatch_sent": false
-    },
-    {
         "date": "27 APR",
         "time": "11:00 - 14:30",
         "status": "Scheduled",
