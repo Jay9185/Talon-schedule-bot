@@ -2,15 +2,14 @@
     {
         "date": "23 APR",
         "time": "06:00 - 09:30",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Bracke,Cameron",
         "res": "345AG (NXI)",
         "lesson": "PPL 2.24-DDXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> STS: OPS CHECK IN -> RAMP OUT",
-        "weather_status": "GO"
+        "changes_text": "> STS: RAMP OUT -> COMPLETED"
     },
     {
         "date": "27 APR",
@@ -21,6 +20,7 @@
         "lesson": "UNKNOWN",
         "type": "FAA Written Test",
         "remark": "PAR - FAA Written Exam",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "GO"
     }
 ]
