@@ -1,5 +1,18 @@
 [
     {
+        "date": "23 APR",
+        "time": "06:00 - 09:30",
+        "status": "Ops Check In",
+        "ip": "Bracke,Cameron",
+        "res": "345AG (NXI)",
+        "lesson": "PPL 2.24-DDXC",
+        "type": "Flight",
+        "remark": "Ramp Out",
+        "dispatch_sent": false,
+        "changes_text": "> ACF: PA28-181 -> 345AG (NXI)\n> STS: OPS REQUEST -> OPS CHECK IN\n> RMK: 'RAMP OUT'",
+        "weather_status": "GO"
+    },
+    {
         "date": "27 APR",
         "time": "11:00 - 14:30",
         "status": "Scheduled",
@@ -8,29 +21,6 @@
         "lesson": "UNKNOWN",
         "type": "FAA Written Test",
         "remark": "PAR - FAA Written Exam",
-        "dispatch_sent": false,
-        "weather_status": "GO"
-    },
-    {
-        "date": "",
-        "time": "",
-        "status": "",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
-        "date": "23 APR",
-        "time": "06:00 - 09:30",
-        "status": "Ops Request",
-        "ip": "Bracke,Cameron",
-        "res": "PA28-181",
-        "lesson": "PPL 2.24-DDXC",
-        "type": "Flight",
-        "remark": "",
         "dispatch_sent": false
     }
 ]
