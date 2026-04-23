@@ -8,8 +8,18 @@
         "lesson": "PPL 2.24-DDXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "> STS: RAMP OUT -> COMPLETED"
+        "dispatch_sent": false
+    },
+    {
+        "date": "24 APR",
+        "time": "06:00 - 08:30",
+        "status": "Scheduling",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 2.25-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "GO"
     },
     {
         "date": "27 APR",
@@ -20,7 +30,6 @@
         "lesson": "UNKNOWN",
         "type": "FAA Written Test",
         "remark": "PAR - FAA Written Exam",
-        "dispatch_sent": false,
-        "weather_status": "GO"
+        "dispatch_sent": false
     }
 ]
