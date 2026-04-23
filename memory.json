@@ -2,14 +2,14 @@
     {
         "date": "23 APR",
         "time": "06:00 - 09:30",
-        "status": "Ops Check In",
+        "status": "Ramp Out",
         "ip": "Bracke,Cameron",
         "res": "345AG (NXI)",
         "lesson": "PPL 2.24-DDXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> ACF: PA28-181 -> 345AG (NXI)\n> STS: OPS REQUEST -> OPS CHECK IN\n> RMK: 'RAMP OUT'",
+        "changes_text": "> STS: OPS CHECK IN -> RAMP OUT",
         "weather_status": "GO"
     },
     {
