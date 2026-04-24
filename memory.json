@@ -1,16 +1,5 @@
 [
     {
-        "date": "23 APR",
-        "time": "06:00 - 09:30",
-        "status": "Completed",
-        "ip": "Bracke,Cameron",
-        "res": "345AG (NXI)",
-        "lesson": "PPL 2.24-DDXC",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": false
-    },
-    {
         "date": "24 APR",
         "time": "06:00 - 08:30",
         "status": "Scheduled",
