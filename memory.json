@@ -4,12 +4,12 @@
         "time": "06:00 - 08:30",
         "status": "Scheduled",
         "ip": "Bracke,Cameron",
-        "res": "281TW (NXI)",
+        "res": "PA28-181G",
         "lesson": "PPL 2.25-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "GO"
+        "changes_text": "> ACF: 281TW (NXI) -> PA28-181G"
     },
     {
         "date": "27 APR",
@@ -20,6 +20,7 @@
         "lesson": "UNKNOWN",
         "type": "FAA Written Test",
         "remark": "PAR - FAA Written Exam",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "GO"
     }
 ]
