@@ -20,8 +20,7 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> STS: SCHEDULING -> SCHEDULED\n> RMK: 'RAMP OUT'",
-        "weather_status": "GO"
+        "weather_status": "NO-GO"
     },
     {
         "date": "27 APR",
