@@ -9,7 +9,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> ACF: PA28-181G -> 281TW (NXI)",
         "weather_status": "GO"
     },
     {
