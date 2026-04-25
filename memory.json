@@ -11,6 +11,17 @@
         "dispatch_sent": true
     },
     {
+        "date": "26 APR",
+        "time": "10:30 - 13:00",
+        "status": "Scheduling",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 2.25-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "NO-GO"
+    },
+    {
         "date": "27 APR",
         "time": "11:00 - 14:30",
         "status": "Scheduled",
@@ -19,7 +30,6 @@
         "lesson": "UNKNOWN",
         "type": "FAA Written Test",
         "remark": "PAR - FAA Written Exam",
-        "dispatch_sent": false,
-        "weather_status": "GO"
+        "dispatch_sent": false
     }
 ]
