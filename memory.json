@@ -30,7 +30,8 @@
         "res": "PA28-181G",
         "lesson": "PPL 2.26-DDXC",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false
     },
     {
         "date": "27 APR",
