@@ -19,8 +19,7 @@
         "lesson": "PPL 2.25-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "> ACF: 271AG (NXI) -> 364AG (NXI)\n> STS: SCHEDULED -> AUTHORIZED",
+        "dispatch_sent": true,
         "weather_status": "NO-GO"
     },
     {
