@@ -4,11 +4,12 @@
         "time": "06:00 - 10:30",
         "status": "CancelledSP Grounded",
         "ip": "Bracke,Cameron",
-        "res": "PA28-181Ggg",
+        "res": "PA28-181G",
         "lesson": "PPL 2.26-DDXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "> ACF: PA28-181GGG -> PA28-181G"
     },
     {
         "date": "27 APR",
