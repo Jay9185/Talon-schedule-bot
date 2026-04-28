@@ -7,7 +7,8 @@
         "res": "PA28-181G",
         "lesson": "PPL 2.26-DDXC",
         "type": "Flight",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "dispatch_sent": false
     },
     {
         "date": "27 APR",
@@ -17,6 +18,7 @@
         "res": "TBD",
         "lesson": "UNKNOWN",
         "type": "FAA Written Test",
-        "remark": "PAR - FAA Written Exam"
+        "remark": "PAR - FAA Written Exam",
+        "dispatch_sent": false
     }
 ]
