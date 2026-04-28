@@ -11,7 +11,6 @@ from bs4 import BeautifulSoup
 
 # --- CONFIGURATION ---
 TALON_LOGIN_URL = "https://apps4.talonsystems.com/tseta/servlet/content?module=home&page=homepg&zajael1120=42DC6E6C4E5A723E80D0BF0AC5A1C8AF"
-
 MEMORY_FILE = "memory.json"
 
 def extract_schedule(html_content):
@@ -27,7 +26,7 @@ def extract_schedule(html_content):
 
     for row in rows:
         cols = row.find_all('td', recursive=False)
-        # Lowered column threshold to account for potential Talon UI updates
+        # Fix: Lowered column threshold to account for potential Talon UI updates
         if len(cols) < 9: continue
             
         start = cols[1].get_text(strip=True)
@@ -381,7 +380,7 @@ def run_scraper():
                 token_val = qs[token_key][0]
                 print(f"Captured session token! Routing directly to the Schedule tab...")
                 
-                # Build the absolute URL using your target path plus the intercepted token
+                # Build the absolute URL using the target path plus the intercepted token
                 direct_sched_url = f"https://apps4.talonsystems.com/tseta/servlet/content?module=home&filterForm=1&page=homepg&content_type=mysched&showImg=&maxdayshow=7&{token_key}={token_val}"
                 page.goto(direct_sched_url, timeout=20000, wait_until="networkidle")
                 page.wait_for_timeout(3000)
@@ -402,6 +401,7 @@ def run_scraper():
             
             # Iterate through all iframes to find the one holding the schedule
             for frame in page.frames:
+                print(f" - Checking frame URL: {frame.url}")
                 try:
                     # Wait dynamically for up to 10 seconds for the table to appear in this frame
                     frame.wait_for_selector("table#tblSchedListS", timeout=10000)
@@ -414,6 +414,10 @@ def run_scraper():
             if not html_dump:
                 print("FAILED: Could not locate 'tblSchedListS' in any frame.")
                 page.screenshot(path="debug_failed_scrape.png")
+                
+                # Send a Telegram alert if the bot gets stuck
+                error_msg = "⚠️ <b>AEROGUARD SCRAPER ALERT</b>\nBot failed to locate the schedule table. It is likely stuck on a popup or landing page. Check GitHub Actions for the debug screenshot."
+                send_telegram(error_msg)
 
         except Exception as e:
             print(f"Encountered a navigation issue: {e}")
@@ -515,11 +519,14 @@ def run_scraper():
                 msg += "==================================\n"
                 msg += "</pre>"
 
+                # Safeguard to prevent Telegram from dropping the message if it exceeds the 4096 char limit
                 if len(msg) > 4000:
                     msg = msg[:4000] + "\n...[TRUNCATED]</pre>"
 
                 print("Manual trigger detected! Sending Master Schedule to Telegram...")
                 send_telegram(msg)
+                
+            # If manual run, we still allow the 3-hour preflight brief below to process for the immediate flight.
 
         # ==========================================
         # ACARS TELETYPE PREFLIGHT BRIEF 
