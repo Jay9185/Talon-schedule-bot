@@ -10,6 +10,7 @@ from bs4 import BeautifulSoup
 
 # --- CONFIGURATION ---
 TALON_LOGIN_URL = "https://apps4.talonsystems.com/tseta/servlet/content?module=home&page=homepg&zajael1120=42DC6E6C4E5A723E80D0BF0AC5A1C8AF"
+
 MEMORY_FILE = "memory.json"
 
 def extract_schedule(html_content):
@@ -370,12 +371,15 @@ def run_scraper():
             # Give the portal's master layout a moment to build
             page.wait_for_timeout(5000) 
 
+            print(f"Found {len(page.frames)} frames on the current page. Inspecting...")
+            
             # Iterate through all iframes to find the one holding the schedule
             for frame in page.frames:
+                print(f" - Checking frame URL: {frame.url}")
                 try:
-                    # Wait dynamically for up to 15 seconds for the table to appear in this frame
-                    frame.wait_for_selector("table#tblSchedListS", timeout=15000)
-                    print("Schedule table located inside an iframe.")
+                    # Wait dynamically for up to 10 seconds for the table to appear in this frame
+                    frame.wait_for_selector("table#tblSchedListS", timeout=10000)
+                    print("SUCCESS: Schedule table located inside an iframe.")
                     html_dump = frame.content()
                     break # Stop searching once we have the HTML
                 except:
@@ -383,7 +387,7 @@ def run_scraper():
             
             if not html_dump:
                 print("FAILED: Could not locate 'tblSchedListS' in any frame.")
-                # If running locally, this takes a screenshot so you can see what went wrong
+                # This takes a screenshot of the current page state so you can see the blocker
                 page.screenshot(path="debug_failed_scrape.png")
 
         except Exception as e:
