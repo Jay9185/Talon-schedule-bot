@@ -37,6 +37,15 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python talon_scraper.py
 
+      # NEW STEP: Upload the error screenshot if the script fails
+      - name: Upload Debug Screenshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-screenshot
+          path: debug_failed_scrape.png
+          retention-days: 3
+
       - name: Commit Updated Memory
         run: |
           git config --global user.name "GitHub Actions Bot"
