@@ -1,1 +1,22 @@
-
+[
+    {
+        "date": "27 APR",
+        "time": "06:00 - 10:30",
+        "status": "CancelledSP Grounded",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 2.26-DDXC",
+        "type": "Flight",
+        "remark": "Ramp Out"
+    },
+    {
+        "date": "27 APR",
+        "time": "11:00 - 14:30",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "FAA Written Test",
+        "remark": "PAR - FAA Written Exam"
+    }
+]
