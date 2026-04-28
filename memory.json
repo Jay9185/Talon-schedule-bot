@@ -2,12 +2,24 @@
     {
         "date": "28 APR",
         "time": "10:00 - 12:30",
-        "status": "Ops Check In",
+        "status": "Completed",
         "ip": "Bracke,Cameron",
         "res": "254AG (NXI)",
         "lesson": "PPL 2.25-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
+        "dispatch_sent": false,
+        "changes_text": "> STS: OPS CHECK IN -> COMPLETED",
         "weather_status": "GO"
+    },
+    {
+        "date": "29 APR",
+        "time": "08:30 - 13:00",
+        "status": "Scheduling",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 2.26-DDXC",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
