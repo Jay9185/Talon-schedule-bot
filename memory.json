@@ -8,8 +8,7 @@
         "lesson": "PPL 2.26-DDXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "> ACF: PA28-181GGG -> PA28-181G"
+        "dispatch_sent": false
     },
     {
         "date": "27 APR",
