@@ -4,6 +4,7 @@ import json
 import requests
 import html
 import math
+import urllib.parse
 from datetime import datetime, timezone, timedelta
 from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
@@ -358,7 +359,6 @@ def run_scraper():
         context = browser.new_context(viewport={"width": 1920, "height": 1080})
         page = context.new_page()
         try:
-            # Smart waiting: Waits until the network is idle rather than a hard timeout
             page.goto(TALON_LOGIN_URL, timeout=30000, wait_until="networkidle")
             page.fill("input[name='uname']", username, timeout=5000)
             page.locator("input[name='password']").click() 
@@ -366,28 +366,53 @@ def run_scraper():
             page.fill("input[name='password']", password, timeout=5000, force=True) 
             page.click("input[id='butlogin']", timeout=5000)
             
-            print("Logged in, waiting for schedule to render...")
-            
-            # Give the portal's master layout a moment to build
+            print("Logged in, waiting for portal to load...")
             page.wait_for_timeout(5000) 
 
-            print(f"Found {len(page.frames)} frames on the current page. Inspecting...")
+            # INTERCEPT SESSION TOKEN AND FORCE DIRECT NAVIGATION
+            current_url = page.url
+            parsed_url = urllib.parse.urlparse(current_url)
+            qs = urllib.parse.parse_qs(parsed_url.query)
+            
+            # Find the token key (usually 'zajael1120' or similar)
+            token_key = next((k for k in qs.keys() if 'zajael' in k.lower()), None)
+            
+            if token_key:
+                token_val = qs[token_key][0]
+                print(f"Captured session token! Routing directly to the Schedule tab...")
+                
+                # Build the absolute URL using your target path plus the intercepted token
+                direct_sched_url = f"https://apps4.talonsystems.com/tseta/servlet/content?module=home&filterForm=1&page=homepg&content_type=mysched&showImg=&maxdayshow=7&{token_key}={token_val}"
+                page.goto(direct_sched_url, timeout=20000, wait_until="networkidle")
+                page.wait_for_timeout(3000)
+            else:
+                print("Warning: No session token found in URL. Trying UI fallback...")
+                # UI Click Fallback: try to physically click the 'My Schedule' tab
+                for frame in page.frames:
+                    try:
+                        tab = frame.locator("text='My Schedule'")
+                        if tab.count() > 0:
+                            tab.first.click(timeout=3000)
+                            page.wait_for_timeout(4000)
+                            break
+                    except:
+                        continue
+
+            print(f"Found {len(page.frames)} frames on the current page. Inspecting for table...")
             
             # Iterate through all iframes to find the one holding the schedule
             for frame in page.frames:
-                print(f" - Checking frame URL: {frame.url}")
                 try:
                     # Wait dynamically for up to 10 seconds for the table to appear in this frame
                     frame.wait_for_selector("table#tblSchedListS", timeout=10000)
                     print("SUCCESS: Schedule table located inside an iframe.")
                     html_dump = frame.content()
-                    break # Stop searching once we have the HTML
+                    break 
                 except:
                     continue
             
             if not html_dump:
                 print("FAILED: Could not locate 'tblSchedListS' in any frame.")
-                # This takes a screenshot of the current page state so you can see the blocker
                 page.screenshot(path="debug_failed_scrape.png")
 
         except Exception as e:
@@ -490,14 +515,11 @@ def run_scraper():
                 msg += "==================================\n"
                 msg += "</pre>"
 
-                # Safeguard to prevent Telegram from dropping the message if it exceeds the 4096 char limit
                 if len(msg) > 4000:
                     msg = msg[:4000] + "\n...[TRUNCATED]</pre>"
 
                 print("Manual trigger detected! Sending Master Schedule to Telegram...")
                 send_telegram(msg)
-                
-            # If manual run, we still allow the 3-hour preflight brief below to process for the immediate flight.
 
         # ==========================================
         # ACARS TELETYPE PREFLIGHT BRIEF 
