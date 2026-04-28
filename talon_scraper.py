@@ -25,7 +25,8 @@ def extract_schedule(html_content):
 
     for row in rows:
         cols = row.find_all('td', recursive=False)
-        if len(cols) < 10: continue
+        # Lowered column threshold to account for potential Talon UI updates
+        if len(cols) < 9: continue
             
         start = cols[1].get_text(strip=True)
         stop = cols[2].get_text(strip=True)
@@ -356,17 +357,37 @@ def run_scraper():
         context = browser.new_context(viewport={"width": 1920, "height": 1080})
         page = context.new_page()
         try:
-            page.goto(TALON_LOGIN_URL, timeout=15000)
-            page.wait_for_timeout(3000)
+            # Smart waiting: Waits until the network is idle rather than a hard timeout
+            page.goto(TALON_LOGIN_URL, timeout=30000, wait_until="networkidle")
             page.fill("input[name='uname']", username, timeout=5000)
             page.locator("input[name='password']").click() 
             page.wait_for_timeout(500) 
             page.fill("input[name='password']", password, timeout=5000, force=True) 
             page.click("input[id='butlogin']", timeout=5000)
-            page.wait_for_timeout(8000) 
-            html_dump = page.content()
+            
+            print("Logged in, waiting for schedule to render...")
+            
+            # Give the portal's master layout a moment to build
+            page.wait_for_timeout(5000) 
+
+            # Iterate through all iframes to find the one holding the schedule
+            for frame in page.frames:
+                try:
+                    # Wait dynamically for up to 15 seconds for the table to appear in this frame
+                    frame.wait_for_selector("table#tblSchedListS", timeout=15000)
+                    print("Schedule table located inside an iframe.")
+                    html_dump = frame.content()
+                    break # Stop searching once we have the HTML
+                except:
+                    continue
+            
+            if not html_dump:
+                print("FAILED: Could not locate 'tblSchedListS' in any frame.")
+                # If running locally, this takes a screenshot so you can see what went wrong
+                page.screenshot(path="debug_failed_scrape.png")
+
         except Exception as e:
-            print(f"Encountered an issue: {e}")
+            print(f"Encountered a navigation issue: {e}")
         finally:
             browser.close()
 
