@@ -526,8 +526,6 @@ def run_scraper():
                 print("Manual trigger detected! Sending Master Schedule to Telegram...")
                 send_telegram(msg)
                 
-            # If manual run, we still allow the 3-hour preflight brief below to process for the immediate flight.
-
         # ==========================================
         # ACARS TELETYPE PREFLIGHT BRIEF 
         # ==========================================
@@ -576,7 +574,8 @@ def run_scraper():
         # ==========================================
         # ACARS TELETYPE SCHEDULE UPDATE
         # ==========================================
-        if (new_flights or updated_flights or deleted_flights) and not is_manual_run:
+        # FIX: The "and not is_manual_run" restriction has been removed here.
+        if new_flights or updated_flights or deleted_flights:
             alerts_by_date = {}
             for f in new_flights:
                 d = f['date']; alerts_by_date.setdefault(d, []).append((f, "NEW"))
