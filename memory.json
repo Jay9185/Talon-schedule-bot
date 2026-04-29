@@ -4,11 +4,12 @@
         "time": "08:30 - 13:00",
         "status": "Scheduled",
         "ip": "Bracke,Cameron",
-        "res": "PA28-181G",
+        "res": "457AG (NXI)",
         "lesson": "PPL 2.26-DDXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
+        "dispatch_sent": true,
+        "changes_text": "> ACF: PA28-181G -> 457AG (NXI)",
         "weather_status": "GO"
     }
 ]
