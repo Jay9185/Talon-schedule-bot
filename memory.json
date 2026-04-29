@@ -4,12 +4,22 @@
         "time": "08:30 - 13:00",
         "status": "Scheduled",
         "ip": "Bracke,Cameron",
-        "res": "748PA (NXi)",
+        "res": "PA28-181G",
         "lesson": "PPL 2.26-DDXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> ACF: 457AG (NXI) -> 748PA (NXI)",
+        "changes_text": "> ACF: 748PA (NXI) -> PA28-181G",
         "weather_status": "GO"
+    },
+    {
+        "date": "30 APR",
+        "time": "12:00 - 14:30",
+        "status": "Scheduling",
+        "ip": "Bracke,Cameron",
+        "res": "Oral Brief Rooms",
+        "lesson": "PPL 2.27-Brief",
+        "type": "Oral",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
