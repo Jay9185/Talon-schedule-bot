@@ -1,16 +1,5 @@
 [
     {
-        "date": "28 APR",
-        "time": "10:00 - 12:30",
-        "status": "Completed",
-        "ip": "Bracke,Cameron",
-        "res": "254AG (NXI)",
-        "lesson": "PPL 2.25-Flight",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": false
-    },
-    {
         "date": "29 APR",
         "time": "08:30 - 13:00",
         "status": "Scheduled",
