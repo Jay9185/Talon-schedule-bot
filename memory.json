@@ -20,6 +20,6 @@
         "type": "Oral",
         "remark": "The schedule has not yet been posted for this day",
         "dispatch_sent": false,
-        "weather_status": "GO"
+        "weather_status": "NO-GO"
     }
 ]
