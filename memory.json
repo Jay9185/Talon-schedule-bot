@@ -8,8 +8,7 @@
         "lesson": "PPL 2.25-FlightPPL 2",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "> ACF: PA28-181 -> 4131T",
+        "dispatch_sent": true,
         "weather_status": "GO"
     },
     {
