@@ -14,14 +14,14 @@
     {
         "date": "30 APR",
         "time": "11:30 - 16:00",
-        "status": "Ops Check In",
+        "status": "Ramp Out",
         "ip": "Bracke,Cameron",
         "res": "745PA (NXi)",
         "lesson": "PPL 2.25-FlightPPL 2",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> STS: SCHEDULED -> OPS CHECK IN"
+        "changes_text": "> STS: OPS CHECK IN -> RAMP OUT"
     },
     {
         "date": "01 MAY",
