@@ -13,15 +13,14 @@
     {
         "date": "30 APR",
         "time": "11:30 - 16:00",
-        "status": "Ramp In",
+        "status": "Completed",
         "ip": "Bracke,Cameron",
         "res": "745PA (NXi)",
         "lesson": "PPL 2.25-FlightPPL 2",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> STS: RAMP OUT -> RAMP IN",
-        "weather_status": "GO"
+        "changes_text": "> STS: RAMP IN -> COMPLETED"
     },
     {
         "date": "01 MAY",
@@ -32,6 +31,7 @@
         "lesson": "PPL 2.27-Brief",
         "type": "Oral",
         "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "GO"
     }
 ]
