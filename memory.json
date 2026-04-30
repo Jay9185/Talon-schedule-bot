@@ -13,13 +13,14 @@
     {
         "date": "30 APR",
         "time": "11:30 - 16:00",
-        "status": "Ramp Out",
+        "status": "Ramp In",
         "ip": "Bracke,Cameron",
         "res": "745PA (NXi)",
         "lesson": "PPL 2.25-FlightPPL 2",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
+        "changes_text": "> STS: RAMP OUT -> RAMP IN",
         "weather_status": "GO"
     },
     {
