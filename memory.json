@@ -9,7 +9,7 @@
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "GO"
+        "weather_status": "NO-GO"
     },
     {
         "date": "30 APR",
@@ -20,8 +20,7 @@
         "lesson": "PPL 2.25-FlightPPL 2",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "> STS: OPS CHECK IN -> RAMP OUT"
+        "dispatch_sent": false
     },
     {
         "date": "01 MAY",
