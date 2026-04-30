@@ -8,20 +8,29 @@
         "lesson": "PPL 2.26-DDXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "> STS: SCHEDULED -> CANCELLEDIP SICK FULL DAY"
+        "dispatch_sent": true
+    },
+    {
+        "date": "30 APR",
+        "time": "11:00 - 15:30",
+        "status": "Scheduled",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181",
+        "lesson": "PPL 2.25-FlightPPL 2",
+        "type": "Flight",
+        "remark": "Ramp Out",
+        "weather_status": "GO"
     },
     {
         "date": "30 APR",
         "time": "12:00 - 14:30",
-        "status": "Scheduled",
+        "status": "CancelledPrev Msn CX/INC",
         "ip": "Bracke,Cameron",
         "res": "DVT Brief Rm 15",
         "lesson": "PPL 2.27-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> ACF: ORAL BRIEF ROOMS -> DVT BRIEF RM 15",
-        "weather_status": "GO"
+        "changes_text": "> STS: SCHEDULED -> CANCELLEDPREV MSN CX/INC"
     }
 ]
