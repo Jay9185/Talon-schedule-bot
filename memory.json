@@ -13,14 +13,14 @@
     {
         "date": "03 MAY",
         "time": "07:00 - 11:00",
-        "status": "Ramp In",
+        "status": "Completed",
         "ip": "Bracke,Cameron",
         "res": "175AG (NXI)",
         "lesson": "PPL 2.26-DDXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> STS: RAMP OUT -> RAMP IN"
+        "changes_text": "> STS: RAMP IN -> COMPLETED"
     },
     {
         "date": "04 MAY",
