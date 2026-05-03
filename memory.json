@@ -13,14 +13,14 @@
     {
         "date": "03 MAY",
         "time": "07:00 - 11:00",
-        "status": "Ramp Out",
+        "status": "Ramp In",
         "ip": "Bracke,Cameron",
         "res": "175AG (NXI)",
         "lesson": "PPL 2.26-DDXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "NO-GO"
+        "changes_text": "> STS: RAMP OUT -> RAMP IN"
     },
     {
         "date": "04 MAY",
@@ -30,6 +30,8 @@
         "res": "PA28-181G",
         "lesson": "PPL 2.26-DDXC",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false,
+        "weather_status": "NO-GO"
     }
 ]
