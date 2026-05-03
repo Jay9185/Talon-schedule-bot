@@ -11,23 +11,16 @@
         "dispatch_sent": true
     },
     {
-        "date": "",
-        "time": "",
-        "status": "",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "",
-        "remark": ""
-    },
-    {
         "date": "03 MAY",
         "time": "07:00 - 11:00",
-        "status": "Ops Request",
+        "status": "Scheduled",
         "ip": "Bracke,Cameron",
         "res": "PA28-181",
         "lesson": "PPL 2.26-DDXC",
         "type": "Flight",
-        "remark": ""
+        "remark": "Ramp Out",
+        "dispatch_sent": true,
+        "changes_text": "> STS: OPS REQUEST -> SCHEDULED\n> RMK: 'RAMP OUT'",
+        "weather_status": "NO-GO"
     }
 ]
