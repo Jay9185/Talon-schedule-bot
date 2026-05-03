@@ -21,5 +21,15 @@
         "remark": "Ramp Out",
         "dispatch_sent": true,
         "weather_status": "NO-GO"
+    },
+    {
+        "date": "04 MAY",
+        "time": "14:30 - 18:00",
+        "status": "Scheduling",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 2.26-DDXC",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
