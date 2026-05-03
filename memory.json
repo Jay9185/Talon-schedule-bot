@@ -19,8 +19,7 @@
         "lesson": "PPL 2.26-DDXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "> STS: RAMP IN -> COMPLETED"
+        "dispatch_sent": true
     },
     {
         "date": "04 MAY",
