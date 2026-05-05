@@ -8,6 +8,7 @@
         "lesson": "PPL 2.28-DNXCPPL 2.2",
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
-        "weather_status": "ERROR"
+        "dispatch_sent": false,
+        "weather_status": "NO-GO"
     }
 ]
