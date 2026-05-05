@@ -1,13 +1,13 @@
 [
     {
-        "date": "04 MAY",
-        "time": "15:00 - 17:30",
-        "status": "Completed",
+        "date": "06 MAY",
+        "time": "18:30 - 23:30",
+        "status": "Scheduling",
         "ip": "Bracke,Cameron",
-        "res": "DVT Brief Rm 21",
-        "lesson": "PPL 2.27-Brief",
-        "type": "Oral",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
+        "res": "PA28-181",
+        "lesson": "PPL 2.28-DNXCPPL 2.2",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "ERROR"
     }
 ]
