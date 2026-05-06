@@ -8,8 +8,7 @@
         "lesson": "PPL 2.28-DNXCPPL 2.2",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "> STS: SCHEDULED -> CANCELLEDRESCHED SAME DAY",
+        "dispatch_sent": true,
         "weather_status": "GO"
     },
     {
