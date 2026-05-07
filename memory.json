@@ -9,7 +9,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> STS: SCHEDULED -> CANCELLEDRESCHED SAME DAY",
-        "weather_status": "ERROR"
+        "weather_status": "GO"
     }
 ]
