@@ -1,58 +1,15 @@
 [
     {
-        "date": "06 MAY",
-        "time": "18:30 - 00:00 (+1D)",
-        "status": "CancelledResched Same Day",
-        "ip": "Bracke,Cameron",
-        "res": "345AG (NXI)",
-        "lesson": "PPL 2.28-DNXCPPL 2.2",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "weather_status": "GO"
-    },
-    {
-        "date": "06 MAY",
-        "time": "18:30 - 23:30",
-        "status": "CancelledWrong Student",
-        "ip": "Bracke,Cameron",
-        "res": "175AG (NXI)",
-        "lesson": "PPL 2.28-DNXCPPL 2.2",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": false
-    },
-    {
         "date": "07 MAY",
         "time": "14:30 - 17:00",
-        "status": "Scheduled",
+        "status": "CancelledResched Same Day",
         "ip": "Bracke,Cameron",
         "res": "PA28-181",
         "lesson": "PPL 2.30-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false
-    },
-    {
-        "date": "",
-        "time": "",
-        "status": "",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
-        "date": "06 MAY",
-        "time": "20:45 - 23:45",
-        "status": "Ops Request",
-        "ip": "Bracke,Cameron",
-        "res": "PA28-181G",
-        "lesson": "PPL 2.28-DNXC",
-        "type": "Flight",
-        "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "> STS: SCHEDULED -> CANCELLEDRESCHED SAME DAY",
+        "weather_status": "ERROR"
     }
 ]
