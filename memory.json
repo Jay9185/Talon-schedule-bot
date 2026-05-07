@@ -9,7 +9,7 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "GO"
+        "weather_status": "NO-GO"
     },
     {
         "date": "07 MAY",
@@ -25,12 +25,13 @@
     {
         "date": "08 MAY",
         "time": "12:00 - 15:00",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "Allen,Ethan+",
         "res": "PA28-181G",
         "lesson": "PPL 2.30-Flight",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false
+        "remark": "Ramp Out",
+        "dispatch_sent": false,
+        "changes_text": "> STS: SCHEDULING -> SCHEDULED\n> RMK: 'RAMP OUT'"
     }
 ]
