@@ -12,23 +12,25 @@
         "weather_status": "GO"
     },
     {
-        "date": "",
-        "time": "",
-        "status": "",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "",
-        "remark": ""
-    },
-    {
         "date": "07 MAY",
         "time": "18:30 - 23:30",
-        "status": "Ops Request",
+        "status": "Scheduled",
         "ip": "Bracke,Cameron",
-        "res": "PA28-181G",
-        "lesson": "PPL 2.28-DNXC",
+        "res": "545MA",
+        "lesson": "PPL 2.28-DNXCPPL 2.2",
         "type": "Flight",
-        "remark": ""
+        "remark": "Ramp Out",
+        "dispatch_sent": false,
+        "changes_text": "> LSN: PPL 2.28-DNXC -> PPL 2.28-DNXCPPL 2.2\n> ACF: PA28-181G -> 545MA\n> STS: OPS REQUEST -> SCHEDULED\n> RMK: 'RAMP OUT'"
+    },
+    {
+        "date": "08 MAY",
+        "time": "12:00 - 15:00",
+        "status": "Scheduling",
+        "ip": "Allen,Ethan+",
+        "res": "PA28-181G",
+        "lesson": "PPL 2.30-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
