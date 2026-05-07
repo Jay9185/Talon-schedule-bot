@@ -31,7 +31,26 @@
         "lesson": "PPL 2.30-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "> STS: SCHEDULING -> SCHEDULED\n> RMK: 'RAMP OUT'"
+        "dispatch_sent": false
+    },
+    {
+        "date": "",
+        "time": "",
+        "status": "",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "",
+        "remark": ""
+    },
+    {
+        "date": "06 MAY",
+        "time": "20:45 - 23:45",
+        "status": "Ops Request",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 2.28-DNXC",
+        "type": "Flight",
+        "remark": ""
     }
 ]
