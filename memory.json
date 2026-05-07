@@ -10,5 +10,25 @@
         "remark": "Ramp Out",
         "dispatch_sent": false,
         "weather_status": "GO"
+    },
+    {
+        "date": "",
+        "time": "",
+        "status": "",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "",
+        "remark": ""
+    },
+    {
+        "date": "07 MAY",
+        "time": "18:30 - 23:30",
+        "status": "Ops Request",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 2.28-DNXC",
+        "type": "Flight",
+        "remark": ""
     }
 ]
