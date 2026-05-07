@@ -41,7 +41,8 @@
         "res": "TBD",
         "lesson": "UNKNOWN",
         "type": "",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "06 MAY",
@@ -51,6 +52,7 @@
         "res": "PA28-181G",
         "lesson": "PPL 2.28-DNXC",
         "type": "Flight",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     }
 ]
