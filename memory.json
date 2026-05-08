@@ -24,13 +24,14 @@
     {
         "date": "09 MAY",
         "time": "19:30 - 01:30 (+1D)",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "Allen,Ethan+",
         "res": "PA28-181G",
         "lesson": "PPL 2.28-DNXCPPL 2.2",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day",
+        "remark": "Ramp Out",
         "dispatch_sent": false,
+        "changes_text": "> STS: SCHEDULING -> SCHEDULED\n> RMK: 'RAMP OUT'",
         "weather_status": "NO-GO"
     }
 ]
