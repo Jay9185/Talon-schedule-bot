@@ -8,19 +8,20 @@
         "lesson": "PPL 2.30-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "weather_status": "NO-GO"
+        "dispatch_sent": true
     },
     {
         "date": "07 MAY",
         "time": "18:30 - 23:30",
-        "status": "Scheduled",
+        "status": "Ops Check In",
         "ip": "Bracke,Cameron",
         "res": "175AG (NXI)",
         "lesson": "PPL 2.28-DNXCPPL 2.2",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "> STS: SCHEDULED -> OPS CHECK IN",
+        "weather_status": "GO"
     },
     {
         "date": "08 MAY",
@@ -31,7 +32,6 @@
         "lesson": "PPL 2.30-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "> STS: SCHEDULING -> SCHEDULED\n> RMK: 'RAMP OUT'"
+        "dispatch_sent": false
     }
 ]
