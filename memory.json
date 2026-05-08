@@ -15,11 +15,12 @@
         "time": "12:00 - 15:00",
         "status": "Scheduled",
         "ip": "Allen,Ethan+",
-        "res": "PA28-181G",
+        "res": "175AG (NXI)",
         "lesson": "PPL 2.30-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
+        "changes_text": "> ACF: PA28-181G -> 175AG (NXI)",
         "weather_status": "NO-GO"
     }
 ]
