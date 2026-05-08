@@ -20,7 +20,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> ACF: PA28-181G -> 175AG (NXI)",
-        "weather_status": "NO-GO"
+        "weather_status": "ERROR"
     }
 ]
