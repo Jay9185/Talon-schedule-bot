@@ -20,7 +20,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> STS: SCHEDULED -> OPS CHECK IN",
         "weather_status": "GO"
     },
     {
