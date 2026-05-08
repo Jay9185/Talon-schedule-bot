@@ -13,13 +13,24 @@
     {
         "date": "08 MAY",
         "time": "12:00 - 15:00",
-        "status": "Scheduled",
+        "status": "CancelledPrev Msn CX/INC",
         "ip": "Allen,Ethan+",
         "res": "175AG (NXI)",
         "lesson": "PPL 2.30-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "NO-GO"
+        "changes_text": "> STS: SCHEDULED -> CANCELLEDPREV MSN CX/INC",
+        "weather_status": "ERROR"
+    },
+    {
+        "date": "09 MAY",
+        "time": "19:30 - 01:30 (+1D)",
+        "status": "Scheduling",
+        "ip": "Allen,Ethan+",
+        "res": "PA28-181G",
+        "lesson": "PPL 2.28-DNXCPPL 2.2",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
