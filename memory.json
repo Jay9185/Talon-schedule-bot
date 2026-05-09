@@ -11,17 +11,6 @@
         "dispatch_sent": false
     },
     {
-        "date": "08 MAY",
-        "time": "12:00 - 15:00",
-        "status": "CancelledPrev Msn CX/INC",
-        "ip": "Allen,Ethan+",
-        "res": "175AG (NXI)",
-        "lesson": "PPL 2.30-Flight",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "09 MAY",
         "time": "19:30 - 01:30 (+1D)",
         "status": "Authorized",
@@ -31,6 +20,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "GO"
+        "weather_status": "NO-GO"
     }
 ]
