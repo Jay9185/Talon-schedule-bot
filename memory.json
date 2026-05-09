@@ -20,7 +20,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> ACF: 195MA (NXI) -> 819PA (NXI)",
         "weather_status": "GO"
     }
 ]
