@@ -9,7 +9,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> ACF: 819PA (NXI) -> 745PA (NXI)\n> STS: AUTHORIZED -> RAMP OUT",
         "weather_status": "GO"
     }
 ]
