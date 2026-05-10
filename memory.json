@@ -1,25 +1,15 @@
 [
     {
-        "date": "07 MAY",
-        "time": "18:30 - 23:30",
-        "status": "Ops Check In",
-        "ip": "Bracke,Cameron",
-        "res": "175AG (NXI)",
-        "lesson": "PPL 2.28-DNXCPPL 2.2",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": false
-    },
-    {
         "date": "09 MAY",
         "time": "19:30 - 01:30 (+1D)",
-        "status": "Authorized",
+        "status": "Ramp Out",
         "ip": "Allen,Ethan+",
-        "res": "819PA (NXi)",
+        "res": "745PA (NXi)",
         "lesson": "PPL 2.28-DNXCPPL 2.2",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "NO-GO"
+        "changes_text": "> ACF: 819PA (NXI) -> 745PA (NXI)\n> STS: AUTHORIZED -> RAMP OUT",
+        "weather_status": "GO"
     }
 ]
