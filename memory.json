@@ -19,6 +19,7 @@
         "lesson": "PPL 2.30-Flight",
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false,
         "weather_status": "GO"
     }
 ]
