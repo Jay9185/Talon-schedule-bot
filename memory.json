@@ -4,12 +4,12 @@
         "time": "11:00 - 14:00",
         "status": "Scheduled",
         "ip": "Bracke,Cameron",
-        "res": "740PA",
+        "res": "PA28-181G",
         "lesson": "PPL 2.30-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> ACF: PA28-181G -> 740PA",
+        "changes_text": "> ACF: 740PA -> PA28-181G",
         "weather_status": "NO-GO"
     }
 ]
