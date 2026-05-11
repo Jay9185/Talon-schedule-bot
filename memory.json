@@ -8,8 +8,17 @@
         "lesson": "PPL 2.30-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "> ACF: 740PA -> PA28-181G",
-        "weather_status": "NO-GO"
+        "dispatch_sent": true
+    },
+    {
+        "date": "12 MAY",
+        "time": "15:00 - 18:00",
+        "status": "Scheduling",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 2.30-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "GO"
     }
 ]
