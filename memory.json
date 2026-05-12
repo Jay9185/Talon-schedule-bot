@@ -19,7 +19,7 @@
         "lesson": "PPL 2.30-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
+        "dispatch_sent": true,
         "weather_status": "GO"
     }
 ]
