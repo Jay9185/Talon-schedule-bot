@@ -13,14 +13,13 @@
     {
         "date": "12 MAY",
         "time": "15:00 - 18:00",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Bracke,Cameron",
         "res": "740PA",
         "lesson": "PPL 2.30-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> STS: OPS CHECK IN -> RAMP OUT",
-        "weather_status": "GO"
+        "changes_text": "> STS: RAMP OUT -> COMPLETED"
     }
 ]
