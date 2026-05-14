@@ -2,13 +2,13 @@
     {
         "date": "14 MAY",
         "time": "09:30 - 12:00",
-        "status": "Ops Check In",
+        "status": "Completed",
         "ip": "Felix,Brandon",
         "res": "DVT Brief Rm 11",
         "lesson": "PPL 2.31-StgOral",
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "ERROR"
+        "changes_text": "> STS: OPS CHECK IN -> COMPLETED"
     }
 ]
