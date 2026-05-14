@@ -1,16 +1,5 @@
 [
     {
-        "date": "11 MAY",
-        "time": "11:00 - 14:00",
-        "status": "Scheduled",
-        "ip": "Bracke,Cameron",
-        "res": "PA28-181G",
-        "lesson": "PPL 2.30-Flight",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "14 MAY",
         "time": "09:30 - 12:00",
         "status": "Authorized",
