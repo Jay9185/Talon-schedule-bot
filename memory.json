@@ -4,11 +4,11 @@
         "time": "08:45 - 09:45",
         "status": "Scheduled",
         "ip": "Bracke,Cameron",
-        "res": "Oral Brief Rooms",
+        "res": "DVT Brief Rm 2",
         "lesson": "PPL 2.27-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
-        "weather_status": "GO",
-        "dispatch_sent": true
+        "dispatch_sent": true,
+        "changes_text": "> ACF: ORAL BRIEF ROOMS -> DVT BRIEF RM 2"
     }
 ]
