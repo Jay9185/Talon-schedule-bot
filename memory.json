@@ -8,7 +8,17 @@
         "lesson": "PPL 2.27-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "> ACF: ORAL BRIEF ROOMS -> DVT BRIEF RM 2"
+        "dispatch_sent": true
+    },
+    {
+        "date": "16 MAY",
+        "time": "10:30 - 12:30",
+        "status": "Scheduling",
+        "ip": "Dukart,Tanner",
+        "res": "Oral Brief Rooms",
+        "lesson": "PPL 2.27-Brief",
+        "type": "Oral",
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "NO-GO"
     }
 ]
