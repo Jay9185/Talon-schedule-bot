@@ -21,5 +21,15 @@
         "remark": "Ramp Out",
         "dispatch_sent": false,
         "weather_status": "NO-GO"
+    },
+    {
+        "date": "17 MAY",
+        "time": "11:30 - 12:30",
+        "status": "Scheduling",
+        "ip": "Felix,Brandon",
+        "res": "Oral Brief Rooms",
+        "lesson": "PPL 2.31-StgOral",
+        "type": "Oral",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
