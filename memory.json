@@ -19,20 +19,7 @@
         "lesson": "PPL 2.27-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "> STS: OPS CHECK IN -> COMPLETED",
-        "weather_status": "NO-GO"
-    },
-    {
-        "date": "17 MAY",
-        "time": "11:30 - 12:30",
-        "status": "Scheduling",
-        "ip": "Felix,Brandon",
-        "res": "Oral Brief Rooms",
-        "lesson": "PPL 2.31-StgOral",
-        "type": "Oral",
-        "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false
+        "dispatch_sent": true
     },
     {
         "date": "17 MAY",
@@ -43,6 +30,17 @@
         "lesson": "PPL 2.23-Brief",
         "type": "Oral",
         "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "NO-GO"
+    },
+    {
+        "date": "17 MAY",
+        "time": "14:30 - 15:30",
+        "status": "Scheduling",
+        "ip": "Freer,Gabrielle",
+        "res": "Oral Brief Rooms",
+        "lesson": "PPL 2.31-StgOral",
+        "type": "Oral",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
