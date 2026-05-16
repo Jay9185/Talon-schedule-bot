@@ -13,14 +13,14 @@
     {
         "date": "16 MAY",
         "time": "10:30 - 12:30",
-        "status": "Ops Check In",
+        "status": "Completed",
         "ip": "Dukart,Tanner",
         "res": "DVT Brief Rm 17",
         "lesson": "PPL 2.27-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> STS: AUTHORIZED -> OPS CHECK IN",
+        "changes_text": "> STS: OPS CHECK IN -> COMPLETED",
         "weather_status": "NO-GO"
     },
     {
@@ -42,6 +42,7 @@
         "res": "Oral Brief Rooms",
         "lesson": "PPL 2.23-Brief",
         "type": "Oral",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false
     }
 ]
