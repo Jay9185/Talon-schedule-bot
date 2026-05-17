@@ -11,17 +11,6 @@
         "dispatch_sent": true
     },
     {
-        "date": "16 MAY",
-        "time": "10:30 - 12:30",
-        "status": "Completed",
-        "ip": "Dukart,Tanner",
-        "res": "DVT Brief Rm 17",
-        "lesson": "PPL 2.27-Brief",
-        "type": "Oral",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "17 MAY",
         "time": "12:30 - 13:30",
         "status": "Scheduled",
@@ -42,7 +31,6 @@
         "lesson": "PPL 2.31-StgOral",
         "type": "Oral",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "> STS: SCHEDULED -> AUTHORIZED"
+        "dispatch_sent": false
     }
 ]
