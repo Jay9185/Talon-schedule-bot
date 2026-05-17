@@ -13,14 +13,15 @@
     {
         "date": "17 MAY",
         "time": "12:30 - 13:30",
-        "status": "Authorized",
+        "status": "Ops Check In",
         "ip": "Bracke,Cameron",
         "res": "DVT Brief Rm 21",
         "lesson": "PPL 2.23-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "ERROR"
+        "changes_text": "> STS: AUTHORIZED -> OPS CHECK IN",
+        "weather_status": "NO-GO"
     },
     {
         "date": "17 MAY",
