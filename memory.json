@@ -1,33 +1,11 @@
 [
     {
-        "date": "15 MAY",
-        "time": "08:45 - 09:45",
-        "status": "Scheduled",
-        "ip": "Bracke,Cameron",
-        "res": "DVT Brief Rm 2",
-        "lesson": "PPL 2.27-Brief",
-        "type": "Oral",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "17 MAY",
         "time": "12:30 - 13:30",
         "status": "Ops Check In",
         "ip": "Bracke,Cameron",
         "res": "DVT Brief Rm 21",
         "lesson": "PPL 2.23-Brief",
-        "type": "Oral",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
-        "date": "17 MAY",
-        "time": "14:30 - 15:30",
-        "status": "Completed",
-        "ip": "Freer,Gabrielle",
-        "res": "DVT Brief Rm 16",
-        "lesson": "PPL 2.31-StgOral",
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": true
