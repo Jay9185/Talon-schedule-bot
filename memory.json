@@ -1,13 +1,13 @@
 [
     {
-        "date": "17 MAY",
-        "time": "12:30 - 13:30",
-        "status": "Ops Check In",
+        "date": "19 MAY",
+        "time": "15:00 - 17:30",
+        "status": "Scheduling",
         "ip": "Bracke,Cameron",
-        "res": "DVT Brief Rm 21",
-        "lesson": "PPL 2.23-Brief",
-        "type": "Oral",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
+        "res": "PA28-181G",
+        "lesson": "SC Refresh Flt",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "NO-GO"
     }
 ]
