@@ -2,15 +2,14 @@
     {
         "date": "19 MAY",
         "time": "09:30 - 12:00",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Bracke,Cameron",
         "res": "908AG (NXI)",
         "lesson": "SC Refresh Flt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> STS: SCHEDULED -> RAMP OUT",
-        "weather_status": "GO"
+        "changes_text": "> STS: RAMP OUT -> COMPLETED"
     },
     {
         "date": "20 MAY",
@@ -20,6 +19,18 @@
         "res": "PA28-181G",
         "lesson": "PPL 2.31-StgFlt",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false,
+        "weather_status": "NO-GO"
+    },
+    {
+        "date": "21 MAY",
+        "time": "16:00 - 17:00",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "DVT Bldg 3 - A",
+        "lesson": "UNKNOWN",
+        "type": "Meeting",
+        "remark": "town hall"
     }
 ]
