@@ -2,14 +2,24 @@
     {
         "date": "19 MAY",
         "time": "09:30 - 12:00",
-        "status": "Scheduled",
+        "status": "Ramp Out",
         "ip": "Bracke,Cameron",
         "res": "908AG (NXI)",
         "lesson": "SC Refresh Flt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> ACF: PA28-181G -> 908AG (NXI)",
-        "weather_status": "ERROR"
+        "changes_text": "> STS: SCHEDULED -> RAMP OUT",
+        "weather_status": "GO"
+    },
+    {
+        "date": "20 MAY",
+        "time": "08:00 - 11:00",
+        "status": "Scheduling",
+        "ip": "Eyrich,Chris",
+        "res": "PA28-181G",
+        "lesson": "PPL 2.31-StgFlt",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
