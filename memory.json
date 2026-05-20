@@ -13,15 +13,15 @@
     {
         "date": "20 MAY",
         "time": "08:00 - 11:00",
-        "status": "Scheduled",
+        "status": "Authorized",
         "ip": "Eyrich,Chris",
         "res": "PA28-181G",
         "lesson": "PPL 2.31-StgFlt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> STS: SCHEDULING -> SCHEDULED\n> RMK: 'RAMP OUT'",
-        "weather_status": "ERROR"
+        "changes_text": "> STS: SCHEDULED -> AUTHORIZED",
+        "weather_status": "GO"
     },
     {
         "date": "21 MAY",
