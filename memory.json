@@ -8,9 +8,7 @@
         "lesson": "PPL 2.31-StgFlt",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "> STS: AUTHORIZED -> CANCELLEDIP SICK PART DAY",
-        "weather_status": "GO"
+        "dispatch_sent": true
     },
     {
         "date": "21 MAY",
@@ -21,6 +19,7 @@
         "lesson": "UNKNOWN",
         "type": "Meeting",
         "remark": "town hall",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "GO"
     }
 ]
