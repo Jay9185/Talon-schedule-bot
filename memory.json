@@ -2,13 +2,14 @@
     {
         "date": "20 MAY",
         "time": "08:00 - 11:00",
-        "status": "Authorized",
+        "status": "CancelledIP Sick Part Day",
         "ip": "Eyrich,Chris",
         "res": "545MA",
         "lesson": "PPL 2.31-StgFlt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
+        "changes_text": "> STS: AUTHORIZED -> CANCELLEDIP SICK PART DAY",
         "weather_status": "GO"
     },
     {
