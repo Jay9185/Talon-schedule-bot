@@ -8,8 +8,7 @@
         "lesson": "PPL 2.31-StgFlt",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "> ACF: PA28-181G -> 545MA",
+        "dispatch_sent": true,
         "weather_status": "GO"
     },
     {
