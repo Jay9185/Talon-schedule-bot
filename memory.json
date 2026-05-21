@@ -2,14 +2,14 @@
     {
         "date": "21 MAY",
         "time": "07:00 - 10:00",
-        "status": "Ops Check In",
+        "status": "Completed",
         "ip": "Eyrich,Chris",
         "res": "545MA",
         "lesson": "PPL 2.31-StgFlt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> STS: AUTHORIZED -> OPS CHECK IN",
+        "changes_text": "> STS: OPS CHECK IN -> COMPLETED",
         "weather_status": "GO"
     },
     {
