@@ -2,14 +2,14 @@
     {
         "date": "21 MAY",
         "time": "07:00 - 10:00",
-        "status": "Authorized",
+        "status": "Ops Check In",
         "ip": "Eyrich,Chris",
         "res": "545MA",
         "lesson": "PPL 2.31-StgFlt",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "> ACF: PA28-181G -> 545MA",
+        "dispatch_sent": true,
+        "changes_text": "> STS: AUTHORIZED -> OPS CHECK IN",
         "weather_status": "GO"
     },
     {
