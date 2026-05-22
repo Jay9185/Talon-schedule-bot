@@ -2,13 +2,24 @@
     {
         "date": "22 MAY",
         "time": "08:00 - 11:00",
-        "status": "Authorized",
+        "status": "Ramp Out",
         "ip": "Geary,Caleb",
         "res": "345AG (NXI)",
         "lesson": "PPL 2.31-StgFlt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
+        "changes_text": "> STS: AUTHORIZED -> RAMP OUT",
         "weather_status": "GO"
+    },
+    {
+        "date": "23 MAY",
+        "time": "11:00 - 13:30",
+        "status": "Scheduling",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 3.32-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
