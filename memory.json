@@ -20,7 +20,6 @@
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
         "dispatch_sent": false,
-        "changes_text": "> LSN: PPL 3.32-FLIGHT -> PPL 2.30-FLIGHT",
-        "weather_status": "GO"
+        "weather_status": "NO-GO"
     }
 ]
