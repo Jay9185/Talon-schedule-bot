@@ -4,12 +4,12 @@
         "time": "08:00 - 11:00",
         "status": "Authorized",
         "ip": "Geary,Caleb",
-        "res": "433MA",
+        "res": "345AG (NXI)",
         "lesson": "PPL 2.31-StgFlt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> ACF: PA28-181G -> 433MA",
+        "changes_text": "> ACF: 433MA -> 345AG (NXI)",
         "weather_status": "GO"
     }
 ]
