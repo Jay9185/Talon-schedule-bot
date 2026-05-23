@@ -2,13 +2,14 @@
     {
         "date": "23 MAY",
         "time": "11:00 - 13:30",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Bracke,Cameron",
         "res": "904AG (NXI)",
         "lesson": "PPL 2.30-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "GO"
+        "changes_text": "> STS: RAMP OUT -> COMPLETED",
+        "weather_status": "ERROR"
     }
 ]
