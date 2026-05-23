@@ -2,14 +2,14 @@
     {
         "date": "23 MAY",
         "time": "11:00 - 13:30",
-        "status": "Scheduled",
+        "status": "Ramp Out",
         "ip": "Bracke,Cameron",
-        "res": "655AG (NXI)",
+        "res": "904AG (NXI)",
         "lesson": "PPL 2.30-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> ACF: PA28-181G -> 655AG (NXI)",
-        "weather_status": "GO"
+        "changes_text": "> ACF: 655AG (NXI) -> 904AG (NXI)\n> STS: SCHEDULED -> RAMP OUT",
+        "weather_status": "ERROR"
     }
 ]
