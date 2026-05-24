@@ -1,13 +1,13 @@
 [
     {
-        "date": "23 MAY",
-        "time": "11:00 - 13:30",
-        "status": "Completed",
-        "ip": "Bracke,Cameron",
-        "res": "904AG (NXI)",
-        "lesson": "PPL 2.30-Flight",
+        "date": "25 MAY",
+        "time": "14:00 - 16:00",
+        "status": "Scheduling",
+        "ip": "Narojnyi,Phil",
+        "res": "PA28-181G",
+        "lesson": "PPL 2.31-StgFlt",
         "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "GO"
     }
 ]
