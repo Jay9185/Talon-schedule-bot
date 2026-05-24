@@ -2,13 +2,14 @@
     {
         "date": "25 MAY",
         "time": "14:00 - 16:00",
-        "status": "Scheduling",
+        "status": "Authorized",
         "ip": "Narojnyi,Phil",
         "res": "PA28-181G",
         "lesson": "PPL 2.31-StgFlt",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day",
+        "remark": "Ramp Out",
         "dispatch_sent": false,
+        "changes_text": "> STS: SCHEDULING -> AUTHORIZED\n> RMK: 'RAMP OUT'",
         "weather_status": "NO-GO"
     }
 ]
