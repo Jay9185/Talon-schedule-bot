@@ -2,13 +2,14 @@
     {
         "date": "25 MAY",
         "time": "14:00 - 16:00",
-        "status": "Authorized",
+        "status": "CancelledWX - Winds",
         "ip": "Narojnyi,Phil",
         "res": "748PA (NXi)",
         "lesson": "PPL 2.31-StgFlt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
+        "changes_text": "> STS: AUTHORIZED -> CANCELLEDWX - WINDS",
         "weather_status": "NO-GO"
     }
 ]
