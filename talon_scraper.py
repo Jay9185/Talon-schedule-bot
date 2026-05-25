@@ -8,6 +8,8 @@ import urllib.parse
 from datetime import datetime, timezone, timedelta
 from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
+from google.oauth2 import service_account
+from googleapiclient.discovery import build
 
 # --- CONFIGURATION ---
 TALON_LOGIN_URL = "https://apps4.talonsystems.com/tseta/servlet/content?module=home&page=homepg&zajael1120=42DC6E6C4E5A723E80D0BF0AC5A1C8AF"
@@ -320,6 +322,70 @@ def send_telegram(message):
     except Exception as e: 
         print(f"Telegram Exception: {e}")
 
+def sync_gcal(schedule):
+    """Wipes future events on the dedicated calendar and rewrites the current schedule."""
+    gcal_json = os.environ.get("GCAL_SERVICE_ACCOUNT_JSON")
+    calendar_id = os.environ.get("GCAL_CALENDAR_ID")
+    
+    if not gcal_json or not calendar_id: 
+        print("Missing GCal Secrets. Skipping Calendar Sync.")
+        return
+
+    try:
+        # Load the raw JSON string from GitHub Secrets
+        creds_dict = json.loads(gcal_json)
+        creds = service_account.Credentials.from_service_account_info(
+            creds_dict, scopes=['https://www.googleapis.com/auth/calendar']
+        )
+        service = build('calendar', 'v3', credentials=creds)
+
+        mst_tz = timezone(timedelta(hours=-7))
+        now = datetime.now(mst_tz)
+        current_year = now.year
+
+        # 1. Fetch and delete existing future events to ensure a perfect sync
+        time_min = now.isoformat()
+        events_result = service.events().list(calendarId=calendar_id, timeMin=time_min, singleEvents=True).execute()
+        existing_events = events_result.get('items', [])
+        
+        for event in existing_events:
+            service.events().delete(calendarId=calendar_id, eventId=event['id']).execute()
+
+        # 2. Write the fresh schedule
+        for f in schedule:
+            try:
+                clean_date = "".join(c for c in f['date'] if c.isalnum() or c.isspace()).strip()
+                start_str = f['time'].split("-")[0].strip()
+                end_str = f['time'].split("-")[1].split("(")[0].strip()
+
+                start_dt = datetime.strptime(f"{clean_date} {current_year} {start_str}", "%d %b %Y %H:%M").replace(tzinfo=mst_tz)
+                end_dt = datetime.strptime(f"{clean_date} {current_year} {end_str}", "%d %b %Y %H:%M").replace(tzinfo=mst_tz)
+
+                if "(+1D)" in f['time']: 
+                    end_dt += timedelta(days=1)
+                
+                # Handle year wrap-around
+                if start_dt.month < now.month and now.month == 12: start_dt = start_dt.replace(year=current_year + 1)
+                if end_dt.month < now.month and now.month == 12: end_dt = end_dt.replace(year=current_year + 1)
+
+                if end_dt < now: 
+                    continue # Skip blocks that already ended
+
+                event_body = {
+                    'summary': f"[{f['status']}] {f['lesson']} ({f['type']})",
+                    'location': f"Aircraft/Room: {f['res']}",
+                    'description': f"Instructor: {f['ip']}\nRemark: {f.get('remark', 'None')}",
+                    'start': {'dateTime': start_dt.isoformat(), 'timeZone': 'America/Phoenix'},
+                    'end': {'dateTime': end_dt.isoformat(), 'timeZone': 'America/Phoenix'},
+                }
+                service.events().insert(calendarId=calendar_id, body=event_body).execute()
+            except Exception as parse_e:
+                print(f"Skipping a corrupted date format for GCal: {parse_e}")
+
+        print("✅ Google Calendar synced successfully.")
+    except Exception as e:
+        print(f"⚠️ GCal Sync Error: {e}")
+
 def update_trmnl(flights, timestamp_str, weather_data):
     webhook = os.environ.get("TRMNL_WEBHOOK_URL")
     if not webhook: return
@@ -519,7 +585,6 @@ def run_scraper():
                 msg += "==================================\n"
                 msg += "</pre>"
 
-                # Safeguard to prevent Telegram from dropping the message if it exceeds the 4096 char limit
                 if len(msg) > 4000:
                     msg = msg[:4000] + "\n...[TRUNCATED]</pre>"
 
@@ -574,7 +639,6 @@ def run_scraper():
         # ==========================================
         # ACARS TELETYPE SCHEDULE UPDATE
         # ==========================================
-        # FIX: The "and not is_manual_run" restriction has been removed here.
         if new_flights or updated_flights or deleted_flights:
             alerts_by_date = {}
             for f in new_flights:
@@ -625,6 +689,9 @@ def run_scraper():
             
         elif not trigger_weather_dispatch and not is_manual_run:
             print("No changes and outside preflight window. Staying silent.")
+
+        print("Syncing schedule to Google Calendar...")
+        sync_gcal(current_schedule)
 
         print("Sending active snapshot to TRMNL...")
         update_trmnl(trmnl_payload, now_mst, weather_decision)
