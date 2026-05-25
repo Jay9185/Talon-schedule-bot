@@ -4,11 +4,12 @@
         "time": "14:00 - 16:00",
         "status": "Authorized",
         "ip": "Narojnyi,Phil",
-        "res": "PA28-181G",
+        "res": "748PA (NXi)",
         "lesson": "PPL 2.31-StgFlt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "GO"
+        "changes_text": "> ACF: PA28-181G -> 748PA (NXI)",
+        "weather_status": "NO-GO"
     }
 ]
