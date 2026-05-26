@@ -1,13 +1,13 @@
 [
     {
-        "date": "25 MAY",
-        "time": "14:00 - 16:00",
-        "status": "CancelledWX - Winds",
+        "date": "27 MAY",
+        "time": "08:30 - 10:30",
+        "status": "Scheduling",
         "ip": "Narojnyi,Phil",
-        "res": "748PA (NXi)",
+        "res": "PA28-181G",
         "lesson": "PPL 2.31-StgFlt",
         "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "NO-GO"
     }
 ]
