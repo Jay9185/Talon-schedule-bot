@@ -9,7 +9,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> STS: SCHEDULING -> AUTHORIZED\n> RMK: 'RAMP OUT'",
         "weather_status": "NO-GO"
     }
 ]
