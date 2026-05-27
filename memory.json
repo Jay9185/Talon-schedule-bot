@@ -9,5 +9,16 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true
+    },
+    {
+        "date": "28 MAY",
+        "time": "06:00 - 08:00",
+        "status": "Scheduling",
+        "ip": "Narojnyi,Phil",
+        "res": "PA28-181G",
+        "lesson": "PPL 2.31-StgFlt",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "NO-GO"
     }
 ]
