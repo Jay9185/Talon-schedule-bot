@@ -2,14 +2,13 @@
     {
         "date": "28 MAY",
         "time": "06:00 - 08:00",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Narojnyi,Phil",
         "res": "WST 271AG (NXI)",
         "lesson": "PPL 2.31-StgFlt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> ACF: PA28-181G -> WST 271AG (NXI)\n> STS: AUTHORIZED -> RAMP OUT",
-        "weather_status": "ERROR"
+        "changes_text": "> STS: RAMP OUT -> COMPLETED"
     }
 ]
