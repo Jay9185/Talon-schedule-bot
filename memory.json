@@ -8,7 +8,17 @@
         "lesson": "PPL 2.31-StgFlt",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "> STS: RAMP OUT -> COMPLETED"
+        "dispatch_sent": false
+    },
+    {
+        "date": "29 MAY",
+        "time": "07:30 - 10:00",
+        "status": "Scheduling",
+        "ip": "Dukart,Tanner",
+        "res": "PA28-181G",
+        "lesson": "PPL 3.32-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "GO"
     }
 ]
