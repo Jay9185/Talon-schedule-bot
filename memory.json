@@ -4,11 +4,12 @@
         "time": "07:30 - 10:00",
         "status": "Completed",
         "ip": "Dukart,Tanner",
-        "res": "WST 169AG (NXI)",
+        "res": "169AG (NXI)",
         "lesson": "PPL 3.32-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true
+        "dispatch_sent": true,
+        "changes_text": "> ACF: WST 169AG (NXI) -> 169AG (NXI)"
     },
     {
         "date": "30 MAY",
