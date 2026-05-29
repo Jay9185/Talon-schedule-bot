@@ -2,14 +2,15 @@
     {
         "date": "29 MAY",
         "time": "07:30 - 10:00",
-        "status": "Scheduled",
+        "status": "Authorized",
         "ip": "Dukart,Tanner",
         "res": "PA28-181G",
         "lesson": "PPL 3.32-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "weather_status": "ERROR"
+        "dispatch_sent": true,
+        "changes_text": "> STS: SCHEDULED -> AUTHORIZED",
+        "weather_status": "GO"
     },
     {
         "date": "30 MAY",
