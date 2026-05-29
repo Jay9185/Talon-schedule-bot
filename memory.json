@@ -20,7 +20,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> STS: SCHEDULING -> SCHEDULED\n> RMK: 'RAMP OUT'",
         "weather_status": "NO-GO"
     },
     {
@@ -31,7 +30,8 @@
         "res": "Oral Brief Rooms",
         "lesson": "PPL 3.33-Brief",
         "type": "Oral",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false
     },
     {
         "date": "30 MAY",
@@ -41,6 +41,7 @@
         "res": "PA28-181G",
         "lesson": "PPL 3.34-Solo",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false
     }
 ]
