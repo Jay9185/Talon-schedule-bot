@@ -2,15 +2,14 @@
     {
         "date": "29 MAY",
         "time": "07:30 - 10:00",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Dukart,Tanner",
         "res": "WST 169AG (NXI)",
         "lesson": "PPL 3.32-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> ACF: PA28-181G -> WST 169AG (NXI)\n> STS: AUTHORIZED -> RAMP OUT",
-        "weather_status": "GO"
+        "changes_text": "> STS: RAMP OUT -> COMPLETED"
     },
     {
         "date": "30 MAY",
@@ -21,7 +20,8 @@
         "lesson": "PPL 3.33-Brief",
         "type": "Oral",
         "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "NO-GO"
     },
     {
         "date": "30 MAY",
