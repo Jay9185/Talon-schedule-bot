@@ -8,8 +8,7 @@
         "lesson": "PPL 3.32-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "> STS: RAMP OUT -> COMPLETED"
+        "dispatch_sent": true
     },
     {
         "date": "30 MAY",
