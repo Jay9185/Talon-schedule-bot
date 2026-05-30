@@ -19,8 +19,7 @@
         "lesson": "PPL 3.34-Solo",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "> STS: RAMP OUT -> COMPLETED"
+        "dispatch_sent": false
     },
     {
         "date": "31 MAY",
@@ -31,6 +30,7 @@
         "lesson": "PPL 3.35-DDXC",
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
-        "weather_status": "GO"
+        "dispatch_sent": false,
+        "weather_status": "ERROR"
     }
 ]
