@@ -8,30 +8,31 @@
         "lesson": "PPL 3.32-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "> ACF: WST 169AG (NXI) -> 169AG (NXI)"
+        "dispatch_sent": true
     },
     {
         "date": "30 MAY",
         "time": "06:30 - 07:30",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "Fielding.Tate",
         "res": "Oral Brief Rooms",
         "lesson": "PPL 3.33-Brief",
         "type": "Oral",
-        "remark": "The schedule has not yet been posted for this day",
+        "remark": "Ramp Out",
         "dispatch_sent": false,
+        "changes_text": "> STS: SCHEDULING -> SCHEDULED\n> RMK: 'RAMP OUT'",
         "weather_status": "NO-GO"
     },
     {
         "date": "30 MAY",
         "time": "07:30 - 11:30",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "TBD",
         "res": "PA28-181G",
         "lesson": "PPL 3.34-Solo",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false
+        "remark": "Ramp Out",
+        "dispatch_sent": false,
+        "changes_text": "> STS: SCHEDULING -> SCHEDULED\n> RMK: 'RAMP OUT'"
     }
 ]
