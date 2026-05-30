@@ -16,10 +16,11 @@
         "time": "07:30 - 11:30",
         "status": "Scheduled",
         "ip": "TBD",
-        "res": "PA28-181G",
+        "res": "904AG (NXI)",
         "lesson": "PPL 3.34-Solo",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "> ACF: PA28-181G -> 904AG (NXI)"
     }
 ]
