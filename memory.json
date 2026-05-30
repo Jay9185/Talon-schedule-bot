@@ -13,13 +13,24 @@
     {
         "date": "30 MAY",
         "time": "07:30 - 11:30",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "TBD",
         "res": "904AG (NXI)",
         "lesson": "PPL 3.34-Solo",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
+        "changes_text": "> STS: RAMP OUT -> COMPLETED"
+    },
+    {
+        "date": "31 MAY",
+        "time": "11:00 - 15:30",
+        "status": "Scheduling",
+        "ip": "Little,Evan",
+        "res": "PA28-181G",
+        "lesson": "PPL 3.35-DDXC",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day",
         "weather_status": "GO"
     }
 ]
