@@ -24,13 +24,14 @@
     {
         "date": "31 MAY",
         "time": "11:00 - 15:30",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "Little,Evan",
         "res": "PA28-181G",
         "lesson": "PPL 3.35-DDXC",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day",
+        "remark": "Ramp Out",
         "dispatch_sent": false,
+        "changes_text": "> STS: SCHEDULING -> SCHEDULED\n> RMK: 'RAMP OUT'",
         "weather_status": "GO"
     }
 ]
