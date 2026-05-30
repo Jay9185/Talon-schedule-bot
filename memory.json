@@ -1,16 +1,5 @@
 [
     {
-        "date": "29 MAY",
-        "time": "07:30 - 10:00",
-        "status": "Completed",
-        "ip": "Dukart,Tanner",
-        "res": "169AG (NXI)",
-        "lesson": "PPL 3.32-Flight",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "30 MAY",
         "time": "06:30 - 07:30",
         "status": "Scheduled",
@@ -20,7 +9,6 @@
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> ACF: ORAL BRIEF ROOMS -> DVT BRIEF RM 28",
         "weather_status": "GO"
     },
     {
