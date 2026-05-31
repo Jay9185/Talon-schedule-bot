@@ -2,13 +2,34 @@
     {
         "date": "31 MAY",
         "time": "13:00 - 17:30",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Borg,Reid",
         "res": "281TW (NXI)",
         "lesson": "PPL 3.35-DDXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
+        "changes_text": "> STS: RAMP OUT -> COMPLETED",
         "weather_status": "GO"
+    },
+    {
+        "date": "01 JUN",
+        "time": "08:00 - 09:00",
+        "status": "Scheduled",
+        "ip": "Miller,Kaeden",
+        "res": "Oral Brief Rooms",
+        "lesson": "PPL 3.39-Brief",
+        "type": "Oral",
+        "remark": "Ramp Out"
+    },
+    {
+        "date": "01 JUN",
+        "time": "09:00 - 13:00",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "PA28-181G",
+        "lesson": "PPL 3.40-Solo XC",
+        "type": "Flight",
+        "remark": "Ramp Out"
     }
 ]
