@@ -2,13 +2,14 @@
     {
         "date": "31 MAY",
         "time": "13:00 - 17:30",
-        "status": "Scheduled",
+        "status": "Ramp Out",
         "ip": "Borg,Reid",
         "res": "281TW (NXI)",
         "lesson": "PPL 3.35-DDXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
+        "changes_text": "> STS: SCHEDULED -> RAMP OUT",
         "weather_status": "GO"
     }
 ]
