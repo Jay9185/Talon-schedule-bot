@@ -1,14 +1,13 @@
 [
     {
         "date": "31 MAY",
-        "time": "11:00 - 15:30",
-        "status": "Authorized",
-        "ip": "Little,Evan",
-        "res": "PA28-181G",
+        "time": "13:00 - 17:30",
+        "status": "Scheduled",
+        "ip": "Borg,Reid",
+        "res": "281TW (NXI)",
         "lesson": "PPL 3.35-DDXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
         "weather_status": "GO"
     }
 ]
