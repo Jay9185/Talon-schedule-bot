@@ -2,13 +2,14 @@
     {
         "date": "31 MAY",
         "time": "11:00 - 15:30",
-        "status": "Scheduled",
+        "status": "Authorized",
         "ip": "Little,Evan",
         "res": "PA28-181G",
         "lesson": "PPL 3.35-DDXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
+        "changes_text": "> STS: SCHEDULED -> AUTHORIZED",
         "weather_status": "GO"
     }
 ]
