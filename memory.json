@@ -9,7 +9,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> STS: SCHEDULED -> RAMP OUT",
         "weather_status": "GO"
     }
 ]
