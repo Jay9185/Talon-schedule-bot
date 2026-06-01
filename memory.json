@@ -8,19 +8,20 @@
         "lesson": "PPL 3.35-DDXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "> STS: RAMP OUT -> COMPLETED",
-        "weather_status": "GO"
+        "dispatch_sent": true
     },
     {
         "date": "01 JUN",
         "time": "08:00 - 09:00",
         "status": "Scheduled",
         "ip": "Miller,Kaeden",
-        "res": "Oral Brief Rooms",
+        "res": "DVT Brief Rm 29",
         "lesson": "PPL 3.39-Brief",
         "type": "Oral",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "dispatch_sent": false,
+        "changes_text": "> ACF: ORAL BRIEF ROOMS -> DVT BRIEF RM 29",
+        "weather_status": "GO"
     },
     {
         "date": "01 JUN",
@@ -30,6 +31,7 @@
         "res": "PA28-181G",
         "lesson": "PPL 3.40-Solo XC",
         "type": "Flight",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "dispatch_sent": false
     }
 ]
