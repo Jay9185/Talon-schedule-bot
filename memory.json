@@ -3,12 +3,13 @@
         "date": "01 JUN",
         "time": "08:00 - 09:00",
         "status": "Scheduled",
-        "ip": "Miller,Kaeden",
+        "ip": "Borg,Reid",
         "res": "DVT Brief Rm 29",
         "lesson": "PPL 3.39-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
+        "dispatch_sent": true,
+        "changes_text": "> PIC: MILLER,KAEDEN -> BORG,REID",
         "weather_status": "GO"
     },
     {
@@ -20,7 +21,6 @@
         "lesson": "PPL 3.40-Solo XC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "> ACF: PA28-181G -> 742PA (NXI)"
+        "dispatch_sent": false
     }
 ]
