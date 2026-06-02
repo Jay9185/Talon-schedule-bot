@@ -1,24 +1,13 @@
 [
     {
-        "date": "01 JUN",
-        "time": "08:00 - 09:00",
-        "status": "Completed",
-        "ip": "Borg,Reid",
-        "res": "DVT Brief Rm 29",
-        "lesson": "PPL 3.36-Brief",
-        "type": "Oral",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
-        "date": "01 JUN",
-        "time": "09:00 - 13:00",
-        "status": "Completed",
-        "ip": "TBD",
-        "res": "742PA (NXi)",
-        "lesson": "PPL 3.37-Solo XC",
+        "date": "03 JUN",
+        "time": "12:30 - 15:30",
+        "status": "Scheduling",
+        "ip": "Grucky,Samuel",
+        "res": "PA28-181G",
+        "lesson": "PPL 3.38-Flight",
         "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": false
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "NO-GO"
     }
 ]
