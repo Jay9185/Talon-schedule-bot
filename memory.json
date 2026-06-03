@@ -4,11 +4,12 @@
         "time": "12:30 - 15:30",
         "status": "Authorized",
         "ip": "Grucky,Samuel",
-        "res": "PA28-181G",
+        "res": "919AG (NXI)",
         "lesson": "PPL 3.38-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
+        "changes_text": "> ACF: PA28-181G -> 919AG (NXI)",
         "weather_status": "GO"
     }
 ]
