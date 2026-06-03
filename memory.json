@@ -2,14 +2,14 @@
     {
         "date": "03 JUN",
         "time": "12:30 - 15:30",
-        "status": "Scheduled",
+        "status": "Authorized",
         "ip": "Grucky,Samuel",
         "res": "PA28-181G",
         "lesson": "PPL 3.38-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> STS: SCHEDULING -> SCHEDULED\n> RMK: 'RAMP OUT'",
-        "weather_status": "NO-GO"
+        "changes_text": "> STS: SCHEDULED -> AUTHORIZED",
+        "weather_status": "GO"
     }
 ]
