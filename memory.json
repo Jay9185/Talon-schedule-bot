@@ -2,14 +2,34 @@
     {
         "date": "03 JUN",
         "time": "12:30 - 15:30",
-        "status": "Authorized",
+        "status": "Ops Check In",
         "ip": "Grucky,Samuel",
         "res": "919AG (NXI)",
         "lesson": "PPL 3.38-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "> ACF: PA28-181G -> 919AG (NXI)",
+        "dispatch_sent": true,
+        "changes_text": "> STS: AUTHORIZED -> OPS CHECK IN",
         "weather_status": "GO"
+    },
+    {
+        "date": "04 JUN",
+        "time": "08:30 - 09:30",
+        "status": "Scheduling",
+        "ip": "Bracke,Cameron",
+        "res": "Oral Brief Rooms",
+        "lesson": "PPL 3.39-Brief",
+        "type": "Oral",
+        "remark": "The schedule has not yet been posted for this day"
+    },
+    {
+        "date": "04 JUN",
+        "time": "09:30 - 13:30",
+        "status": "Scheduling",
+        "ip": "TBD",
+        "res": "PA28-181G",
+        "lesson": "PPL 3.40-Solo XC",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
