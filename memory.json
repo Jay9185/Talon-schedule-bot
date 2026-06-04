@@ -1,16 +1,5 @@
 [
     {
-        "date": "03 JUN",
-        "time": "12:30 - 15:30",
-        "status": "Completed",
-        "ip": "Grucky,Samuel",
-        "res": "919AG (NXI)",
-        "lesson": "PPL 3.38-Flight",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "04 JUN",
         "time": "12:30 - 14:30",
         "status": "Scheduled",
@@ -20,6 +9,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "GO"
+        "weather_status": "NO-GO"
     }
 ]
