@@ -8,8 +8,27 @@
         "lesson": "PPL 3.38-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "> ACF: PA28-181G -> 655AG (NXI)",
+        "dispatch_sent": true,
         "weather_status": "GO"
+    },
+    {
+        "date": "05 JUN",
+        "time": "05:00 - 06:00",
+        "status": "Scheduling",
+        "ip": "Dukart,Tanner",
+        "res": "Oral Brief Rooms",
+        "lesson": "PPL 3.39-Brief",
+        "type": "Oral",
+        "remark": "The schedule has not yet been posted for this day"
+    },
+    {
+        "date": "05 JUN",
+        "time": "06:00 - 10:00",
+        "status": "Scheduling",
+        "ip": "TBD",
+        "res": "PA28-181G",
+        "lesson": "PPL 3.40-Solo XC",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
