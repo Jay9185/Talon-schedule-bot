@@ -2,13 +2,14 @@
     {
         "date": "04 JUN",
         "time": "12:30 - 14:30",
-        "status": "Scheduled",
+        "status": "Ramp Out",
         "ip": "Bracke,Cameron",
         "res": "655AG (NXI)",
         "lesson": "PPL 3.38-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
+        "changes_text": "> STS: SCHEDULED -> RAMP OUT",
         "weather_status": "GO"
     },
     {
@@ -19,7 +20,8 @@
         "res": "Oral Brief Rooms",
         "lesson": "PPL 3.39-Brief",
         "type": "Oral",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false
     },
     {
         "date": "05 JUN",
@@ -29,6 +31,7 @@
         "res": "PA28-181G",
         "lesson": "PPL 3.40-Solo XC",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false
     }
 ]
