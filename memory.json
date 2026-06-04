@@ -2,36 +2,24 @@
     {
         "date": "03 JUN",
         "time": "12:30 - 15:30",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Grucky,Samuel",
         "res": "919AG (NXI)",
         "lesson": "PPL 3.38-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> STS: OPS CHECK IN -> RAMP OUT",
-        "weather_status": "GO"
+        "changes_text": "> STS: RAMP OUT -> COMPLETED"
     },
     {
         "date": "04 JUN",
-        "time": "08:30 - 09:30",
-        "status": "Scheduling",
+        "time": "12:30 - 14:30",
+        "status": "Scheduled",
         "ip": "Bracke,Cameron",
-        "res": "Oral Brief Rooms",
-        "lesson": "PPL 3.39-Brief",
-        "type": "Oral",
-        "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false
-    },
-    {
-        "date": "04 JUN",
-        "time": "09:30 - 13:30",
-        "status": "Scheduling",
-        "ip": "TBD",
         "res": "PA28-181G",
-        "lesson": "PPL 3.40-Solo XC",
+        "lesson": "PPL 3.38-Flight",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false
+        "remark": "Ramp Out",
+        "weather_status": "NO-GO"
     }
 ]
