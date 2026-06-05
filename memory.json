@@ -19,8 +19,7 @@
         "lesson": "PPL 3.40-Solo XC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "> STS: RAMP OUT -> COMPLETED"
+        "dispatch_sent": false
     },
     {
         "date": "06 JUN",
@@ -31,6 +30,7 @@
         "lesson": "PPL 3.33-Brief",
         "type": "Oral",
         "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false,
         "weather_status": "GO"
     },
     {
@@ -41,6 +41,7 @@
         "res": "PA28-181G",
         "lesson": "PPL 3.34-Solo",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false
     }
 ]
