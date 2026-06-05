@@ -15,12 +15,12 @@
         "time": "05:00 - 06:00",
         "status": "Scheduled",
         "ip": "Dukart,Tanner",
-        "res": "Oral Brief Rooms",
+        "res": "DVT Brief Rm 10",
         "lesson": "PPL 3.39-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> STS: SCHEDULING -> SCHEDULED\n> RMK: 'RAMP OUT'",
+        "changes_text": "> ACF: ORAL BRIEF ROOMS -> DVT BRIEF RM 10",
         "weather_status": "NO-GO"
     },
     {
@@ -32,7 +32,6 @@
         "lesson": "PPL 3.40-Solo XC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "> STS: SCHEDULING -> SCHEDULED\n> RMK: 'RAMP OUT'"
+        "dispatch_sent": false
     }
 ]
