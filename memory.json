@@ -8,8 +8,7 @@
         "lesson": "PPL 3.39-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "> STS: SCHEDULED -> COMPLETED"
+        "dispatch_sent": true
     },
     {
         "date": "05 JUN",
@@ -21,7 +20,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> ACF: PA28-181G -> 655AG (NXI)\n> STS: SCHEDULED -> RAMP OUT",
         "weather_status": "GO"
     }
 ]
