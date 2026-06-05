@@ -1,16 +1,5 @@
 [
     {
-        "date": "04 JUN",
-        "time": "12:30 - 14:30",
-        "status": "Completed",
-        "ip": "Bracke,Cameron",
-        "res": "655AG (NXI)",
-        "lesson": "PPL 3.38-Flight",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "05 JUN",
         "time": "05:00 - 06:00",
         "status": "Scheduled",
@@ -19,7 +8,7 @@
         "lesson": "PPL 3.39-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
+        "dispatch_sent": true,
         "weather_status": "GO"
     },
     {
