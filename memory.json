@@ -13,13 +13,34 @@
     {
         "date": "05 JUN",
         "time": "06:00 - 10:00",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "TBD",
         "res": "655AG (NXI)",
         "lesson": "PPL 3.40-Solo XC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
+        "changes_text": "> STS: RAMP OUT -> COMPLETED"
+    },
+    {
+        "date": "06 JUN",
+        "time": "05:30 - 06:30",
+        "status": "Scheduling",
+        "ip": "Bozeman,Brett",
+        "res": "Oral Brief Rooms",
+        "lesson": "PPL 3.33-Brief",
+        "type": "Oral",
+        "remark": "The schedule has not yet been posted for this day",
         "weather_status": "GO"
+    },
+    {
+        "date": "06 JUN",
+        "time": "06:30 - 08:30",
+        "status": "Scheduling",
+        "ip": "TBD",
+        "res": "PA28-181G",
+        "lesson": "PPL 3.34-Solo",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
