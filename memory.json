@@ -8,20 +8,18 @@
         "lesson": "PPL 3.33-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "> STS: OPS CHECK IN -> COMPLETED"
+        "dispatch_sent": true
     },
     {
         "date": "06 JUN",
         "time": "06:30 - 08:30",
-        "status": "Ramp Out",
+        "status": "Ramp In",
         "ip": "TBD",
         "res": "597AG (NXI)",
         "lesson": "PPL 3.34-Solo",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> STS: OPS CHECK IN -> RAMP OUT",
-        "weather_status": "GO"
+        "changes_text": "> STS: RAMP OUT -> RAMP IN"
     }
 ]
