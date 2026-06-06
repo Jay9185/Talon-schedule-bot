@@ -1,27 +1,5 @@
 [
     {
-        "date": "05 JUN",
-        "time": "05:00 - 06:00",
-        "status": "Completed",
-        "ip": "Dukart,Tanner",
-        "res": "DVT Brief Rm 10",
-        "lesson": "PPL 3.39-Brief",
-        "type": "Oral",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
-        "date": "05 JUN",
-        "time": "06:00 - 10:00",
-        "status": "Completed",
-        "ip": "TBD",
-        "res": "655AG (NXI)",
-        "lesson": "PPL 3.40-Solo XC",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": false
-    },
-    {
         "date": "06 JUN",
         "time": "05:30 - 06:30",
         "status": "Scheduled",
@@ -31,7 +9,6 @@
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> ACF: ORAL BRIEF ROOMS -> DVT BRIEF RM 13",
         "weather_status": "GO"
     },
     {
