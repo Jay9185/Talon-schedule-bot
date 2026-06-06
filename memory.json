@@ -2,24 +2,26 @@
     {
         "date": "06 JUN",
         "time": "05:30 - 06:30",
-        "status": "Scheduled",
+        "status": "Ops Check In",
         "ip": "Bozeman,Brett",
         "res": "DVT Brief Rm 13",
         "lesson": "PPL 3.33-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": true,
+        "changes_text": "> STS: SCHEDULED -> OPS CHECK IN",
         "weather_status": "GO"
     },
     {
         "date": "06 JUN",
         "time": "06:30 - 08:30",
-        "status": "Scheduled",
+        "status": "Ops Check In",
         "ip": "TBD",
-        "res": "PA28-181G",
+        "res": "597AG (NXI)",
         "lesson": "PPL 3.34-Solo",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "> ACF: PA28-181G -> 597AG (NXI)\n> STS: SCHEDULED -> OPS CHECK IN"
     }
 ]
