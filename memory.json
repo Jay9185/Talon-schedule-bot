@@ -19,7 +19,6 @@
         "lesson": "PPL 3.34-Solo",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "> STS: RAMP OUT -> RAMP IN"
+        "dispatch_sent": false
     }
 ]
