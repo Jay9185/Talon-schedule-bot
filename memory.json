@@ -8,7 +8,17 @@
         "lesson": "PPL 3.41-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "weather_status": "GO"
+        "dispatch_sent": true
+    },
+    {
+        "date": "10 JUN",
+        "time": "08:00 - 10:30",
+        "status": "Scheduling",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 3.41-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "ERROR"
     }
 ]
