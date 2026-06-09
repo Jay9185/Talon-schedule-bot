@@ -1,16 +1,5 @@
 [
     {
-        "date": "06 JUN",
-        "time": "06:30 - 08:30",
-        "status": "Ramp In",
-        "ip": "TBD",
-        "res": "597AG (NXI)",
-        "lesson": "PPL 3.34-Solo",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": false
-    },
-    {
         "date": "09 JUN",
         "time": "06:00 - 09:00",
         "status": "Scheduled",
