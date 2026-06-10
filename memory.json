@@ -19,7 +19,17 @@
         "lesson": "PPL 3.41-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "> STS: RAMP OUT -> COMPLETED"
+        "dispatch_sent": true
+    },
+    {
+        "date": "11 JUN",
+        "time": "11:00 - 14:00",
+        "status": "Scheduling",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 3.42-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "ERROR"
     }
 ]
