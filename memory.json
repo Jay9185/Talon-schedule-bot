@@ -24,13 +24,34 @@
     {
         "date": "11 JUN",
         "time": "11:00 - 14:00",
-        "status": "Scheduled",
+        "status": "CancelledResched Same Day",
         "ip": "Bracke,Cameron",
         "res": "PA28-181G",
         "lesson": "PPL 3.42-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "GO"
+        "changes_text": "> STS: SCHEDULED -> CANCELLEDRESCHED SAME DAY",
+        "weather_status": "ERROR"
+    },
+    {
+        "date": "",
+        "time": "",
+        "status": "",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "",
+        "remark": ""
+    },
+    {
+        "date": "11 JUN",
+        "time": "05:00 - 07:00",
+        "status": "Ops Request",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 3.41-Flight",
+        "type": "Flight",
+        "remark": ""
     }
 ]
