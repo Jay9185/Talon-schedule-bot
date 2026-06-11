@@ -12,6 +12,18 @@
     },
     {
         "date": "11 JUN",
+        "time": "05:00 - 07:00",
+        "status": "Completed",
+        "ip": "Bracke,Cameron",
+        "res": "904AG (NXI)",
+        "lesson": "PPL 3.41-Flight",
+        "type": "Flight",
+        "remark": "Ramp Out",
+        "dispatch_sent": false,
+        "changes_text": "> ACF: PA28-181G -> 904AG (NXI)\n> STS: OPS REQUEST -> COMPLETED\n> RMK: 'RAMP OUT'"
+    },
+    {
+        "date": "11 JUN",
         "time": "11:00 - 14:00",
         "status": "CancelledResched Same Day",
         "ip": "Bracke,Cameron",
@@ -19,29 +31,7 @@
         "lesson": "PPL 3.42-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
+        "dispatch_sent": true,
         "weather_status": "GO"
-    },
-    {
-        "date": "",
-        "time": "",
-        "status": "",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
-        "date": "11 JUN",
-        "time": "05:00 - 07:00",
-        "status": "Ops Request",
-        "ip": "Bracke,Cameron",
-        "res": "PA28-181G",
-        "lesson": "PPL 3.41-Flight",
-        "type": "Flight",
-        "remark": "",
-        "dispatch_sent": false
     }
 ]
