@@ -19,8 +19,7 @@
         "lesson": "PPL 3.41-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "> ACF: PA28-181G -> 904AG (NXI)\n> STS: OPS REQUEST -> COMPLETED\n> RMK: 'RAMP OUT'"
+        "dispatch_sent": false
     },
     {
         "date": "11 JUN",
