@@ -11,17 +11,6 @@
         "dispatch_sent": true
     },
     {
-        "date": "10 JUN",
-        "time": "08:00 - 10:30",
-        "status": "Completed",
-        "ip": "Bracke,Cameron",
-        "res": "819PA (NXi)",
-        "lesson": "PPL 3.41-Flight",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "11 JUN",
         "time": "11:00 - 14:00",
         "status": "CancelledResched Same Day",
@@ -31,8 +20,7 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> STS: SCHEDULED -> CANCELLEDRESCHED SAME DAY",
-        "weather_status": "ERROR"
+        "weather_status": "GO"
     },
     {
         "date": "",
@@ -42,7 +30,8 @@
         "res": "TBD",
         "lesson": "UNKNOWN",
         "type": "",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "11 JUN",
@@ -52,6 +41,7 @@
         "res": "PA28-181G",
         "lesson": "PPL 3.41-Flight",
         "type": "Flight",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     }
 ]
