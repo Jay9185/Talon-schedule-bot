@@ -1,1 +1,13 @@
-[]
+[
+    {
+        "date": "14 JUN",
+        "time": "05:30 - 08:30",
+        "status": "Scheduling",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 3.42-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "GO"
+    }
+]
