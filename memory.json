@@ -2,14 +2,14 @@
     {
         "date": "14 JUN",
         "time": "05:30 - 08:30",
-        "status": "Ramp Out",
+        "status": "Ramp In",
         "ip": "Bracke,Cameron",
         "res": "821PA (NXi)",
         "lesson": "PPL 3.42-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> ACF: PA28-181G -> 821PA (NXI)\n> STS: SCHEDULED -> RAMP OUT",
+        "changes_text": "> STS: RAMP OUT -> RAMP IN",
         "weather_status": "GO"
     }
 ]
