@@ -2,14 +2,23 @@
     {
         "date": "14 JUN",
         "time": "05:30 - 08:30",
-        "status": "Ramp In",
+        "status": "Completed",
         "ip": "Bracke,Cameron",
         "res": "821PA (NXi)",
         "lesson": "PPL 3.42-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> STS: RAMP OUT -> RAMP IN",
-        "weather_status": "GO"
+        "changes_text": "> STS: RAMP IN -> COMPLETED"
+    },
+    {
+        "date": "14 JUN",
+        "time": "08:45 - 09:15",
+        "status": "Completed",
+        "ip": "Bracke,Cameron",
+        "res": "RB LD 3",
+        "lesson": "PPL 2.20-AATD",
+        "type": "Sim",
+        "remark": "Ramp Out"
     }
 ]
