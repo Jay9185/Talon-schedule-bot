@@ -8,8 +8,7 @@
         "lesson": "PPL 3.42-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "> STS: RAMP IN -> COMPLETED"
+        "dispatch_sent": true
     },
     {
         "date": "14 JUN",
@@ -19,6 +18,7 @@
         "res": "RB LD 3",
         "lesson": "PPL 2.20-AATD",
         "type": "Sim",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "dispatch_sent": false
     }
 ]
