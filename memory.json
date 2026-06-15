@@ -8,11 +8,12 @@
         "lesson": "PPL 3.42-Flight",
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false,
         "weather_status": "GO"
     },
     {
         "date": "16 JUN",
-        "time": "10:30 - 13:00",
+        "time": "11:00 - 13:30",
         "status": "Scheduling",
         "ip": "Khairi,Mohammad",
         "res": "PA28-181G",
