@@ -1,1 +1,23 @@
-[]
+[
+    {
+        "date": "16 JUN",
+        "time": "07:00 - 09:30",
+        "status": "Scheduling",
+        "ip": "Bracke,Cameron",
+        "res": "PA28-181G",
+        "lesson": "PPL 3.42-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "GO"
+    },
+    {
+        "date": "16 JUN",
+        "time": "10:30 - 13:00",
+        "status": "Scheduling",
+        "ip": "Khairi,Mohammad",
+        "res": "PA28-181G",
+        "lesson": "PPL 3.42-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
+    }
+]
