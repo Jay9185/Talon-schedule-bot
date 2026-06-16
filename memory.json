@@ -9,7 +9,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> STS: SCHEDULED -> CANCELLEDRESCHED SAME DAY",
         "weather_status": "GO"
     },
     {
@@ -20,6 +19,7 @@
         "res": "PA28-181G",
         "lesson": "PPL 3.42-Flight",
         "type": "Flight",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "dispatch_sent": false
     }
 ]
