@@ -8,19 +8,18 @@
         "lesson": "PPL 3.42-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "weather_status": "GO"
+        "dispatch_sent": false
     },
     {
         "date": "16 JUN",
         "time": "07:30 - 10:00",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Khairi,Mohammad",
         "res": "821PA (NXi)",
         "lesson": "PPL 3.42-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> ACF: PA28-181G -> 821PA (NXI)\n> STS: SCHEDULED -> RAMP OUT"
+        "changes_text": "> STS: RAMP OUT -> COMPLETED"
     }
 ]
