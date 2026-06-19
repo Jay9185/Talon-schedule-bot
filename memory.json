@@ -1,16 +1,5 @@
 [
     {
-        "date": "18 JUN",
-        "time": "12:30 - 15:30",
-        "status": "CancelledPrev Msn CX/INC",
-        "ip": "Pylat,Alex",
-        "res": "DVT Brief Rm 15",
-        "lesson": "PPL 3.43-StgOral",
-        "type": "Oral",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "19 JUN",
         "time": "14:00 - 17:00",
         "status": "Authorized",
@@ -20,7 +9,6 @@
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> ACF: ORAL BRIEF ROOMS -> DVT BRIEF RM 15\n> STS: SCHEDULED -> AUTHORIZED",
         "weather_status": "NO-GO"
     }
 ]
