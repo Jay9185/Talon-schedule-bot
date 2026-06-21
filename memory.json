@@ -1,13 +1,13 @@
 [
     {
-        "date": "19 JUN",
-        "time": "14:00 - 17:00",
-        "status": "CancelledSP Sick",
-        "ip": "Narojnyi,Phil",
-        "res": "DVT Brief Rm 15",
+        "date": "22 JUN",
+        "time": "14:30 - 17:30",
+        "status": "Scheduling",
+        "ip": "Pylat,Alex",
+        "res": "Oral Brief Rooms",
         "lesson": "PPL 3.43-StgOral",
         "type": "Oral",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "GO"
     }
 ]
