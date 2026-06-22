@@ -4,12 +4,12 @@
         "time": "14:30 - 17:30",
         "status": "Authorized",
         "ip": "Pylat,Alex",
-        "res": "Oral Brief Rooms",
+        "res": "DVT Brief Rm 19",
         "lesson": "PPL 3.43-StgOral",
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> STS: SCHEDULED -> AUTHORIZED",
+        "changes_text": "> ACF: ORAL BRIEF ROOMS -> DVT BRIEF RM 19",
         "weather_status": "GO"
     }
 ]
