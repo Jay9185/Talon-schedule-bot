@@ -2,13 +2,13 @@
     {
         "date": "22 JUN",
         "time": "14:30 - 17:30",
-        "status": "Ops Check In",
+        "status": "Completed",
         "ip": "Pylat,Alex",
         "res": "DVT Brief Rm 19",
         "lesson": "PPL 3.43-StgOral",
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "GO"
+        "changes_text": "> STS: OPS CHECK IN -> COMPLETED"
     }
 ]
