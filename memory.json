@@ -9,6 +9,6 @@
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "GO"
+        "weather_status": "ERROR"
     }
 ]
