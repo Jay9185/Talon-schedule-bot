@@ -8,9 +8,7 @@
         "lesson": "PPL 2.27-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "> STS: AUTHORIZED -> COMPLETED",
-        "weather_status": "NO-GO"
+        "dispatch_sent": true
     },
     {
         "date": "25 JUN",
@@ -22,6 +20,6 @@
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> ACF: ORAL BRIEF ROOMS -> DVT BRIEF RM 10\n> STS: SCHEDULING -> AUTHORIZED\n> RMK: 'RAMP OUT'"
+        "weather_status": "GO"
     }
 ]
