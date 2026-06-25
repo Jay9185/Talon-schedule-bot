@@ -2,14 +2,13 @@
     {
         "date": "25 JUN",
         "time": "08:30 - 10:30",
-        "status": "Ops Check In",
+        "status": "Completed",
         "ip": "Narojnyi,Phil",
         "res": "DVT Brief Rm 10",
         "lesson": "PPL 3.43-StgOral",
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> STS: AUTHORIZED -> OPS CHECK IN",
-        "weather_status": "GO"
+        "changes_text": "> STS: OPS CHECK IN -> COMPLETED"
     }
 ]
