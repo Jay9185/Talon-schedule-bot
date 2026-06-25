@@ -1,16 +1,5 @@
 [
     {
-        "date": "24 JUN",
-        "time": "16:00 - 18:00",
-        "status": "Completed",
-        "ip": "Miller,Kaeden",
-        "res": "DVT Brief Rm 10",
-        "lesson": "PPL 2.27-Brief",
-        "type": "Oral",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "25 JUN",
         "time": "08:30 - 10:30",
         "status": "Authorized",
