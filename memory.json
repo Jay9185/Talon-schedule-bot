@@ -2,12 +2,13 @@
     {
         "date": "28 JUN",
         "time": "09:00 - 11:00",
-        "status": "Pend Room",
+        "status": "Completed",
         "ip": "Miller,Kaeden",
-        "res": "Oral Brief Rooms",
+        "res": "DVT Brief Rm 18",
         "lesson": "CSA Brief",
         "type": "Oral",
         "remark": "Ramp Out",
-        "weather_status": "GO"
+        "dispatch_sent": false,
+        "changes_text": "> ACF: ORAL BRIEF ROOMS -> DVT BRIEF RM 18\n> STS: PEND ROOM -> COMPLETED"
     }
 ]
