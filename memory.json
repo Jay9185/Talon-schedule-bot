@@ -1,13 +1,13 @@
 [
     {
-        "date": "25 JUN",
-        "time": "08:30 - 10:30",
-        "status": "Completed",
-        "ip": "Narojnyi,Phil",
-        "res": "DVT Brief Rm 10",
-        "lesson": "PPL 3.43-StgOral",
+        "date": "28 JUN",
+        "time": "09:00 - 11:00",
+        "status": "Pend Room",
+        "ip": "Miller,Kaeden",
+        "res": "Oral Brief Rooms",
+        "lesson": "CSA Brief",
         "type": "Oral",
         "remark": "Ramp Out",
-        "dispatch_sent": true
+        "weather_status": "GO"
     }
 ]
