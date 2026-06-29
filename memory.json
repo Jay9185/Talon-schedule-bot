@@ -12,13 +12,13 @@
     },
     {
         "date": "30 JUN",
-        "time": "14:30 - 15:30",
+        "time": "17:30 - 18:30",
         "status": "Scheduling",
-        "ip": "Narojnyi,Phil",
+        "ip": "Haslam,Luke",
         "res": "Oral Brief Rooms",
         "lesson": "PPL 3.43-StgOral",
         "type": "Oral",
         "remark": "The schedule has not yet been posted for this day",
-        "weather_status": "NO-GO"
+        "weather_status": "ERROR"
     }
 ]
