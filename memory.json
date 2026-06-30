@@ -11,23 +11,15 @@
         "dispatch_sent": false
     },
     {
-        "date": "",
-        "time": "",
-        "status": "",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "",
-        "remark": ""
-    },
-    {
         "date": "30 JUN",
         "time": "12:30 - 14:30",
-        "status": "Ops Request",
+        "status": "Completed",
         "ip": "Bracke,Cameron",
-        "res": "Oral Brief Rooms",
+        "res": "DVT Brief Rm 21",
         "lesson": "CSA Brief",
         "type": "Oral",
-        "remark": ""
+        "remark": "Ramp Out",
+        "dispatch_sent": false,
+        "changes_text": "> ACF: ORAL BRIEF ROOMS -> DVT BRIEF RM 21\n> STS: OPS REQUEST -> COMPLETED\n> RMK: 'RAMP OUT'"
     }
 ]
