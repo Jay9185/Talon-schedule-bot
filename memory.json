@@ -7,6 +7,27 @@
         "res": "DVT Brief Rm 1",
         "lesson": "PPL 3.43-StgOral",
         "type": "Oral",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "dispatch_sent": false
+    },
+    {
+        "date": "",
+        "time": "",
+        "status": "",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "",
+        "remark": ""
+    },
+    {
+        "date": "30 JUN",
+        "time": "12:30 - 14:30",
+        "status": "Ops Request",
+        "ip": "Bracke,Cameron",
+        "res": "Oral Brief Rooms",
+        "lesson": "CSA Brief",
+        "type": "Oral",
+        "remark": ""
     }
 ]
