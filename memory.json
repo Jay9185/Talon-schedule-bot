@@ -19,7 +19,6 @@
         "lesson": "CSA Brief",
         "type": "Oral",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "> ACF: ORAL BRIEF ROOMS -> DVT BRIEF RM 21\n> STS: OPS REQUEST -> COMPLETED\n> RMK: 'RAMP OUT'"
+        "dispatch_sent": false
     }
 ]
