@@ -1,24 +1,13 @@
 [
     {
-        "date": "30 JUN",
-        "time": "10:30 - 11:30",
-        "status": "Completed",
-        "ip": "Haslam,Luke",
-        "res": "DVT Brief Rm 1",
-        "lesson": "PPL 3.43-StgOral",
-        "type": "Oral",
-        "remark": "Ramp Out",
-        "dispatch_sent": false
-    },
-    {
-        "date": "30 JUN",
-        "time": "12:30 - 14:30",
-        "status": "Completed",
-        "ip": "Bracke,Cameron",
-        "res": "DVT Brief Rm 21",
-        "lesson": "CSA Brief",
-        "type": "Oral",
-        "remark": "Ramp Out",
-        "dispatch_sent": false
+        "date": "02 JUL",
+        "time": "07:00 - 10:00",
+        "status": "Scheduling",
+        "ip": "Lee,Hojun",
+        "res": "PA28-181G",
+        "lesson": "SC Refresh Flt",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "NO-GO"
     }
 ]
