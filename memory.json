@@ -4,11 +4,12 @@
         "time": "07:00 - 10:00",
         "status": "Authorized",
         "ip": "Lee,Hojun",
-        "res": "PA28-181G",
+        "res": "823PA (NXi)",
         "lesson": "SC Refresh Flt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
+        "changes_text": "> ACF: PA28-181G -> 823PA (NXI)",
         "weather_status": "GO"
     }
 ]
