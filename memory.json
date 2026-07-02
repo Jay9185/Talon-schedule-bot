@@ -2,13 +2,14 @@
     {
         "date": "02 JUL",
         "time": "07:00 - 10:00",
-        "status": "Scheduling",
+        "status": "Authorized",
         "ip": "Lee,Hojun",
         "res": "PA28-181G",
         "lesson": "SC Refresh Flt",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day",
+        "remark": "Ramp Out",
         "dispatch_sent": false,
+        "changes_text": "> STS: SCHEDULING -> AUTHORIZED\n> RMK: 'RAMP OUT'",
         "weather_status": "NO-GO"
     }
 ]
