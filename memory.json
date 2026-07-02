@@ -2,14 +2,13 @@
     {
         "date": "02 JUL",
         "time": "07:00 - 10:00",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Lee,Hojun",
         "res": "823PA (NXi)",
         "lesson": "SC Refresh Flt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> STS: AUTHORIZED -> RAMP OUT",
-        "weather_status": "GO"
+        "changes_text": "> STS: RAMP OUT -> COMPLETED"
     }
 ]
