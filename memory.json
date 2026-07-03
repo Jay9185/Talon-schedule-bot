@@ -8,6 +8,7 @@
         "lesson": "UNKNOWN",
         "type": "Meeting",
         "remark": "town hall",
+        "dispatch_sent": false,
         "weather_status": "GO"
     }
 ]
