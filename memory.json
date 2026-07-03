@@ -1,13 +1,13 @@
 [
     {
-        "date": "02 JUL",
-        "time": "07:00 - 10:00",
-        "status": "Completed",
-        "ip": "Lee,Hojun",
-        "res": "823PA (NXi)",
-        "lesson": "SC Refresh Flt",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
+        "date": "09 JUL",
+        "time": "16:00 - 17:00",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "DVT Bldg 3 - A",
+        "lesson": "UNKNOWN",
+        "type": "Meeting",
+        "remark": "town hall",
+        "weather_status": "GO"
     }
 ]
