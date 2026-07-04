@@ -8,7 +8,8 @@
         "lesson": "PPL 3.43-StgFlt",
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
-        "weather_status": "GO"
+        "dispatch_sent": false,
+        "weather_status": "ERROR"
     },
     {
         "date": "09 JUL",
