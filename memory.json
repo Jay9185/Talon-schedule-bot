@@ -9,8 +9,7 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> STS: OPS CHECK IN -> RAMP OUT",
-        "weather_status": "ERROR"
+        "weather_status": "GO"
     },
     {
         "date": "09 JUL",
