@@ -4,12 +4,13 @@
         "time": "10:00 - 13:00",
         "status": "Authorized",
         "ip": "Eyrich,Chris",
-        "res": "PA28-181G",
+        "res": "822PA (NXi)",
         "lesson": "PPL 3.43-StgFlt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "GO"
+        "changes_text": "> ACF: PA28-181G -> 822PA (NXI)",
+        "weather_status": "ERROR"
     },
     {
         "date": "09 JUL",
