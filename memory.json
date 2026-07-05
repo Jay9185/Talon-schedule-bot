@@ -2,15 +2,15 @@
     {
         "date": "05 JUL",
         "time": "10:00 - 13:00",
-        "status": "Ops Check In",
+        "status": "Ramp Out",
         "ip": "Eyrich,Chris",
         "res": "822PA (NXi)",
         "lesson": "PPL 3.43-StgFlt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> STS: AUTHORIZED -> OPS CHECK IN",
-        "weather_status": "GO"
+        "changes_text": "> STS: OPS CHECK IN -> RAMP OUT",
+        "weather_status": "ERROR"
     },
     {
         "date": "09 JUL",
