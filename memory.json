@@ -2,15 +2,15 @@
     {
         "date": "05 JUL",
         "time": "10:00 - 13:00",
-        "status": "Authorized",
+        "status": "Ops Check In",
         "ip": "Eyrich,Chris",
         "res": "822PA (NXi)",
         "lesson": "PPL 3.43-StgFlt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> ACF: PA28-181G -> 822PA (NXI)",
-        "weather_status": "ERROR"
+        "changes_text": "> STS: AUTHORIZED -> OPS CHECK IN",
+        "weather_status": "GO"
     },
     {
         "date": "09 JUL",
