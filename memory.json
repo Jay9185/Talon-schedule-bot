@@ -2,14 +2,14 @@
     {
         "date": "06 JUL",
         "time": "08:00 - 10:30",
-        "status": "Pend Authorize",
+        "status": "Completed",
         "ip": "Miller,Kaeden",
-        "res": "PA28-181G",
+        "res": "742PA (NXi)",
         "lesson": "PPL 3.42-Flight",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day",
+        "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "GO"
+        "changes_text": "> ACF: PA28-181G -> 742PA (NXI)\n> STS: PEND AUTHORIZE -> COMPLETED\n> RMK: 'RAMP OUT'"
     },
     {
         "date": "09 JUL",
@@ -20,6 +20,7 @@
         "lesson": "UNKNOWN",
         "type": "Meeting",
         "remark": "town hall",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "GO"
     }
 ]
