@@ -1,16 +1,5 @@
 [
     {
-        "date": "05 JUL",
-        "time": "10:00 - 13:00",
-        "status": "Completed",
-        "ip": "Eyrich,Chris",
-        "res": "822PA (NXi)",
-        "lesson": "PPL 3.43-StgFlt",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "06 JUL",
         "time": "08:00 - 10:30",
         "status": "Pend Authorize",
