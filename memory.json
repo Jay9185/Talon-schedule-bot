@@ -21,5 +21,15 @@
         "type": "Meeting",
         "remark": "town hall",
         "dispatch_sent": false
+    },
+    {
+        "date": "14 JUL",
+        "time": "05:00 - 11:00",
+        "status": "Scheduling",
+        "ip": "O'Connell,Patric",
+        "res": "PA28-181G",
+        "lesson": "104.XX PPL CKRD",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
