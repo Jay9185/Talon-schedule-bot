@@ -2,15 +2,14 @@
     {
         "date": "08 JUL",
         "time": "07:00 - 08:30",
-        "status": "Authorized",
+        "status": "Completed",
         "ip": "Narojnyi,Phil",
         "res": "821PA (NXi)",
         "lesson": "PPL 3.43-StgFlt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> ACF: PA28-181G -> 821PA (NXI)",
-        "weather_status": "GO"
+        "changes_text": "> STS: AUTHORIZED -> COMPLETED"
     },
     {
         "date": "09 JUL",
@@ -21,7 +20,8 @@
         "lesson": "UNKNOWN",
         "type": "Meeting",
         "remark": "town hall",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "GO"
     },
     {
         "date": "14 JUL",
