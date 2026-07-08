@@ -30,6 +30,7 @@
         "res": "PA28-181G",
         "lesson": "104.XX PPL CKRD",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false
     }
 ]
