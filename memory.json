@@ -8,8 +8,7 @@
         "lesson": "PPL 3.43-StgFlt",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "> STS: AUTHORIZED -> COMPLETED"
+        "dispatch_sent": true
     },
     {
         "date": "09 JUL",
