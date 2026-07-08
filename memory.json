@@ -2,14 +2,14 @@
     {
         "date": "08 JUL",
         "time": "07:00 - 08:30",
-        "status": "Scheduled",
+        "status": "Authorized",
         "ip": "Narojnyi,Phil",
         "res": "PA28-181G",
         "lesson": "PPL 3.43-StgFlt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> STS: SCHEDULING -> SCHEDULED\n> RMK: 'RAMP OUT'",
+        "changes_text": "> STS: SCHEDULED -> AUTHORIZED",
         "weather_status": "GO"
     },
     {
