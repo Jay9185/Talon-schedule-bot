@@ -1,16 +1,5 @@
 [
     {
-        "date": "08 JUL",
-        "time": "07:00 - 08:30",
-        "status": "Completed",
-        "ip": "Narojnyi,Phil",
-        "res": "821PA (NXi)",
-        "lesson": "PPL 3.43-StgFlt",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "09 JUL",
         "time": "16:00 - 17:00",
         "status": "Scheduled",
