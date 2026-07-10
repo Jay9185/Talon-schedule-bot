@@ -8,8 +8,7 @@
         "lesson": "UNKNOWN",
         "type": "Meeting",
         "remark": "town hall",
-        "dispatch_sent": true,
-        "weather_status": "NO-GO"
+        "dispatch_sent": true
     },
     {
         "date": "14 JUL",
@@ -20,6 +19,7 @@
         "lesson": "104.XX PPL CKRD",
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "NO-GO"
     }
 ]
