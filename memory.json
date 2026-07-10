@@ -1,16 +1,5 @@
 [
     {
-        "date": "09 JUL",
-        "time": "16:00 - 17:00",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "DVT Bldg 3 - A",
-        "lesson": "UNKNOWN",
-        "type": "Meeting",
-        "remark": "town hall",
-        "dispatch_sent": true
-    },
-    {
         "date": "14 JUL",
         "time": "05:00 - 11:00",
         "status": "Scheduling",
