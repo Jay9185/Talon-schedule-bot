@@ -2,14 +2,14 @@
     {
         "date": "12 JUL",
         "time": "08:30 - 12:00",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Miller,Kaeden",
         "res": "364AG (NXI)",
         "lesson": "CR Refresh Flt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "GO"
+        "changes_text": "> STS: RAMP OUT -> COMPLETED"
     },
     {
         "date": "14 JUL",
@@ -20,6 +20,7 @@
         "lesson": "104.XX PPL CKRD",
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "NO-GO"
     }
 ]
