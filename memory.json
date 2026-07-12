@@ -8,8 +8,7 @@
         "lesson": "CR Refresh Flt",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "> STS: RAMP OUT -> COMPLETED"
+        "dispatch_sent": true
     },
     {
         "date": "14 JUL",
