@@ -2,13 +2,14 @@
     {
         "date": "12 JUL",
         "time": "08:30 - 12:00",
-        "status": "Scheduled",
+        "status": "Ops Check In",
         "ip": "Miller,Kaeden",
-        "res": "PA28-181G",
+        "res": "364AG (NXI)",
         "lesson": "CR Refresh Flt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
+        "changes_text": "> ACF: PA28-181G -> 364AG (NXI)\n> STS: SCHEDULED -> OPS CHECK IN",
         "weather_status": "NO-GO"
     },
     {
