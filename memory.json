@@ -2,13 +2,14 @@
     {
         "date": "14 JUL",
         "time": "05:00 - 11:00",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "O'Connell,Patric",
         "res": "PA28-181G",
         "lesson": "104.XX PPL CKRD",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day",
+        "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "NO-GO"
+        "changes_text": "> STS: SCHEDULING -> SCHEDULED\n> RMK: 'RAMP OUT'",
+        "weather_status": "GO"
     }
 ]
