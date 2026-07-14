@@ -2,13 +2,13 @@
     {
         "date": "14 JUL",
         "time": "05:00 - 11:00",
-        "status": "Ramp In",
+        "status": "Completed",
         "ip": "O'Connell,Patric",
         "res": "822PA (NXi)",
         "lesson": "104.XX PPL CKRD",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> STS: OVERDUE -> RAMP IN"
+        "changes_text": "> STS: RAMP IN -> COMPLETED"
     }
 ]
