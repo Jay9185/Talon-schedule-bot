@@ -9,7 +9,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> ACF: PA28-181 -> 925PA (S/A)",
         "weather_status": "GO"
     }
 ]
