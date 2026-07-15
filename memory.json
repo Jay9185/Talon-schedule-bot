@@ -2,13 +2,14 @@
     {
         "date": "15 JUL",
         "time": "12:30 - 15:00",
-        "status": "Scheduled",
+        "status": "Ramp Out",
         "ip": "Miller,Kaeden",
-        "res": "925PA (S/A)",
+        "res": "364AG (NXI)",
         "lesson": "PPL 3.42-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
+        "changes_text": "> ACF: 925PA (S/A) -> 364AG (NXI)\n> STS: SCHEDULED -> RAMP OUT",
         "weather_status": "NO-GO"
     }
 ]
