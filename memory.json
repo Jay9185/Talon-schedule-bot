@@ -19,6 +19,7 @@
         "lesson": "PPL 3.42-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "weather_status": "GO"
+        "dispatch_sent": false,
+        "weather_status": "NO-GO"
     }
 ]
