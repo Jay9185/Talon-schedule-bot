@@ -4,11 +4,12 @@
         "time": "12:30 - 15:00",
         "status": "Scheduled",
         "ip": "Miller,Kaeden",
-        "res": "PA28-181",
+        "res": "925PA (S/A)",
         "lesson": "PPL 3.42-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
+        "changes_text": "> ACF: PA28-181 -> 925PA (S/A)",
         "weather_status": "GO"
     }
 ]
