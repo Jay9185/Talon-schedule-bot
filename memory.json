@@ -1,13 +1,13 @@
 [
     {
-        "date": "15 JUL",
-        "time": "12:30 - 15:00",
-        "status": "Completed",
-        "ip": "Miller,Kaeden",
-        "res": "364AG (NXI)",
-        "lesson": "PPL 3.42-Flight",
+        "date": "23 JUL",
+        "time": "11:00 - 14:00",
+        "status": "Scheduling",
+        "ip": "O'Connell,Patric",
+        "res": "PA28-181G",
+        "lesson": "104.XX PPL CKRD",
         "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "NO-GO"
     }
 ]
