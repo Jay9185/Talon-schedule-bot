@@ -2,15 +2,15 @@
     {
         "date": "22 JUL",
         "time": "12:30 - 15:00",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Miller,Kaeden",
         "res": "742PA (NXi)",
         "lesson": "CR Refresh Flt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "> STS: SCHEDULED -> RAMP OUT",
-        "weather_status": "ERROR"
+        "changes_text": "> STS: RAMP OUT -> COMPLETED",
+        "weather_status": "GO"
     },
     {
         "date": "23 JUL",
