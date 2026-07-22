@@ -1,5 +1,16 @@
 [
     {
+        "date": "22 JUL",
+        "time": "12:30 - 15:00",
+        "status": "Scheduled",
+        "ip": "Miller,Kaeden",
+        "res": "PA28-181G",
+        "lesson": "CR Refresh Flt",
+        "type": "Flight",
+        "remark": "Ramp Out",
+        "weather_status": "GO"
+    },
+    {
         "date": "23 JUL",
         "time": "11:00 - 14:00",
         "status": "Scheduling",
@@ -8,7 +19,6 @@
         "lesson": "104.XX PPL CKRD",
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false,
-        "weather_status": "NO-GO"
+        "dispatch_sent": false
     }
 ]
