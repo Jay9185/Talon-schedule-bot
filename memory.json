@@ -8,8 +8,6 @@
         "lesson": "104.XX PPL CKRD",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "> STS: RAMP IN -> COMPLETED",
-        "weather_status": "GO"
+        "dispatch_sent": true
     }
 ]
