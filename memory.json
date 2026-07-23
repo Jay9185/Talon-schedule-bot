@@ -1,16 +1,5 @@
 [
     {
-        "date": "22 JUL",
-        "time": "12:30 - 15:00",
-        "status": "Completed",
-        "ip": "Miller,Kaeden",
-        "res": "742PA (NXi)",
-        "lesson": "CR Refresh Flt",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "23 JUL",
         "time": "11:00 - 14:00",
         "status": "Scheduled",
