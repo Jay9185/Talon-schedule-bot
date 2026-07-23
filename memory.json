@@ -2,13 +2,14 @@
     {
         "date": "23 JUL",
         "time": "11:00 - 14:00",
-        "status": "Scheduled",
+        "status": "Ramp Out",
         "ip": "O'Connell,Patric",
         "res": "742PA (NXi)",
         "lesson": "104.XX PPL CKRD",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
+        "changes_text": "> STS: SCHEDULED -> RAMP OUT",
         "weather_status": "GO"
     }
 ]
