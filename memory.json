@@ -20,7 +20,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> ACF: PA28-181G -> 742PA (NXI)\n> STS: SCHEDULING -> SCHEDULED\n> RMK: 'RAMP OUT'",
         "weather_status": "GO"
     }
 ]
