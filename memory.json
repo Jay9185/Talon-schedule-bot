@@ -1,16 +1,5 @@
 [
     {
-        "date": "23 JUL",
-        "time": "11:00 - 14:00",
-        "status": "Completed",
-        "ip": "O'Connell,Patric",
-        "res": "742PA (NXi)",
-        "lesson": "104.XX PPL CKRD",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "24 JUL",
         "time": "10:00 - 13:00",
         "status": "Scheduled",
@@ -19,6 +8,7 @@
         "lesson": "CPLSE 1.1-Flt",
         "type": "Flight",
         "remark": "Ramp Out",
+        "dispatch_sent": false,
         "weather_status": "GO"
     }
 ]
