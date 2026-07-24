@@ -9,5 +9,16 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true
+    },
+    {
+        "date": "24 JUL",
+        "time": "10:00 - 13:00",
+        "status": "Scheduled",
+        "ip": "Miller,Kaeden",
+        "res": "PA28-181G",
+        "lesson": "CPLSE 1.1-Flt",
+        "type": "Flight",
+        "remark": "Ramp Out",
+        "weather_status": "GO"
     }
 ]
