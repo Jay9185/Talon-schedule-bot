@@ -2,13 +2,14 @@
     {
         "date": "26 JUL",
         "time": "11:00 - 17:30",
-        "status": "Scheduled",
+        "status": "Authorized",
         "ip": "Miller,Kaeden",
-        "res": "PA28-181G",
+        "res": "748PA (NXi)",
         "lesson": "CPLSE 1.1-FltCPLSE 1",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
+        "changes_text": "> ACF: PA28-181G -> 748PA (NXI)\n> STS: SCHEDULED -> AUTHORIZED",
         "weather_status": "NO-GO"
     }
 ]
