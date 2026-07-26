@@ -8,6 +8,7 @@
         "lesson": "CPLSE 1.1-FltCPLSE 1",
         "type": "Flight",
         "remark": "Ramp Out",
-        "weather_status": "NO-GO"
+        "dispatch_sent": false,
+        "weather_status": "GO"
     }
 ]
