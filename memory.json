@@ -1,16 +1,5 @@
 [
     {
-        "date": "26 JUL",
-        "time": "11:00 - 17:30",
-        "status": "Completed",
-        "ip": "Miller,Kaeden",
-        "res": "748PA (NXi)",
-        "lesson": "CPLSE 1.1-FltCPLSE 1",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "28 JUL",
         "time": "06:00 - 12:00",
         "status": "Scheduling",
@@ -20,6 +9,6 @@
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
         "dispatch_sent": false,
-        "weather_status": "NO-GO"
+        "weather_status": "GO"
     }
 ]
