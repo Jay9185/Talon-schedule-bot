@@ -9,29 +9,30 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "NO-GO"
+        "weather_status": "GO"
     },
     {
         "date": "28 JUL",
         "time": "08:30 - 10:30",
-        "status": "Ops Check In",
+        "status": "Completed",
         "ip": "Miller,Kaeden",
         "res": "DVT Brief Rm 14",
         "lesson": "IR 1.1-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> STS: SCHEDULED -> OPS CHECK IN"
+        "changes_text": "> STS: OPS CHECK IN -> COMPLETED"
     },
     {
         "date": "28 JUL",
         "time": "10:30 - 13:30",
-        "status": "Scheduled",
+        "status": "Ramp Out",
         "ip": "Miller,Kaeden",
         "res": "RB SD 5",
         "lesson": "IR 1.2-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "> STS: SCHEDULED -> RAMP OUT"
     }
 ]
