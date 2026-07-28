@@ -33,14 +33,23 @@
         "dispatch_sent": false
     },
     {
-        "date": "30 JUL",
-        "time": "09:30 - 14:30",
-        "status": "Scheduling",
+        "date": "",
+        "time": "",
+        "status": "",
         "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "",
+        "remark": ""
+    },
+    {
+        "date": "29 JUL",
+        "time": "08:30 - 11:30",
+        "status": "Ops Request",
+        "ip": "Miller,Kaeden",
         "res": "PA28-181G",
-        "lesson": "CPLSE 1.5-SXC",
+        "lesson": "CPLSE 1.4-Flt",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day",
-        "weather_status": "NO-GO"
+        "remark": ""
     }
 ]
