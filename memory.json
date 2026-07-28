@@ -8,8 +8,7 @@
         "lesson": "CPLSE 1.3-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "weather_status": "GO"
+        "dispatch_sent": true
     },
     {
         "date": "28 JUL",
@@ -20,8 +19,7 @@
         "lesson": "IR 1.1-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "> STS: OPS CHECK IN -> COMPLETED"
+        "dispatch_sent": false
     },
     {
         "date": "28 JUL",
@@ -33,6 +31,6 @@
         "type": "Sim",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> STS: SCHEDULED -> RAMP OUT"
+        "weather_status": "NO-GO"
     }
 ]
