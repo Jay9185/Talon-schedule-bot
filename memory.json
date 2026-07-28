@@ -9,17 +9,18 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "> STS: SCHEDULED -> CANCELLEDWRONG MSN/RES/TM",
-        "weather_status": "NO-GO"
+        "weather_status": "GO"
     },
     {
         "date": "28 JUL",
         "time": "08:30 - 10:30",
         "status": "Scheduled",
         "ip": "Miller,Kaeden",
-        "res": "Oral Brief Rooms",
+        "res": "DVT Brief Rm 14",
         "lesson": "IR 1.1-Brief",
         "type": "Oral",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "dispatch_sent": false,
+        "changes_text": "> ACF: ORAL BRIEF ROOMS -> DVT BRIEF RM 14"
     }
 ]
