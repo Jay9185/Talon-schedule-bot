@@ -21,5 +21,15 @@
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": false
+    },
+    {
+        "date": "28 JUL",
+        "time": "10:30 - 13:30",
+        "status": "Scheduled",
+        "ip": "Miller,Kaeden",
+        "res": "RB SD 5",
+        "lesson": "IR 1.2-AATD",
+        "type": "Sim",
+        "remark": "Ramp Out"
     }
 ]
