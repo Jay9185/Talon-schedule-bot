@@ -24,13 +24,13 @@
     {
         "date": "28 JUL",
         "time": "10:30 - 13:30",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Miller,Kaeden",
         "res": "RB SD 5",
         "lesson": "IR 1.2-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "NO-GO"
+        "changes_text": "> STS: RAMP OUT -> COMPLETED"
     }
 ]
