@@ -30,7 +30,6 @@
         "lesson": "IR 1.2-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "> STS: RAMP OUT -> COMPLETED"
+        "dispatch_sent": false
     }
 ]
