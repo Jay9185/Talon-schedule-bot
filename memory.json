@@ -2,13 +2,14 @@
     {
         "date": "29 JUL",
         "time": "09:00 - 12:00",
-        "status": "Scheduled",
+        "status": "CancelledN/A Aircraft",
         "ip": "Miller,Kaeden",
         "res": "PA28-181G",
         "lesson": "CPLSE 1.4-Flt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
+        "changes_text": "> STS: SCHEDULED -> CANCELLEDN/A AIRCRAFT",
         "weather_status": "GO"
     }
 ]
