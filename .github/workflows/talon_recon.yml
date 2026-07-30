@@ -3,7 +3,7 @@ name: Talon Schedule Recon & Dispatch
 on:
   schedule:
     - cron: '*/30 * * * *'
-  workflow_dispatch:  # This allows the manual run button
+  workflow_dispatch:
 
 permissions:
   contents: write
