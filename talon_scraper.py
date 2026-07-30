@@ -8,8 +8,6 @@ import urllib.parse
 from datetime import datetime, timezone, timedelta
 from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
-from google.oauth2 import service_account
-from googleapiclient.discovery import build
 
 # --- CONFIGURATION ---
 TALON_LOGIN_URL = "https://apps4.talonsystems.com/tseta/servlet/content?module=home&page=homepg&zajael1120=42DC6E6C4E5A723E80D0BF0AC5A1C8AF"
@@ -28,7 +26,6 @@ def extract_schedule(html_content):
 
     for row in rows:
         cols = row.find_all('td', recursive=False)
-        # Fix: Lowered column threshold to account for potential Talon UI updates
         if len(cols) < 9: continue
             
         start = cols[1].get_text(strip=True)
@@ -210,7 +207,7 @@ def compare_schedules(old_sched, new_sched):
 def evaluate_weather(start_dt, end_dt):
     runway_heading = 70 
     max_wind_limit = 10
-    max_crosswind_limit = 6  # Enforcing the 6 KT limit
+    max_crosswind_limit = 6 
     
     reasons = []
     is_go = True
@@ -323,68 +320,24 @@ def send_telegram(message):
         print(f"Telegram Exception: {e}")
 
 def sync_gcal(schedule):
-    """Wipes future events on the dedicated calendar and rewrites the current schedule."""
-    gcal_json = os.environ.get("GCAL_SERVICE_ACCOUNT_JSON")
-    calendar_id = os.environ.get("GCAL_CALENDAR_ID")
-    
-    if not gcal_json or not calendar_id: 
-        print("Missing GCal Secrets. Skipping Calendar Sync.")
+    """Syncs schedule using the Google Apps Script Webhook."""
+    webhook_url = os.environ.get("GCAL_WEBHOOK_URL")
+
+    if not webhook_url:
+        print("Skipping GCal Sync: Missing GCAL_WEBHOOK_URL secret.")
         return
 
     try:
-        # Load the raw JSON string from GitHub Secrets
-        creds_dict = json.loads(gcal_json)
-        creds = service_account.Credentials.from_service_account_info(
-            creds_dict, scopes=['https://www.googleapis.com/auth/calendar']
-        )
-        service = build('calendar', 'v3', credentials=creds)
-
-        mst_tz = timezone(timedelta(hours=-7))
-        now = datetime.now(mst_tz)
-        current_year = now.year
-
-        # 1. Fetch and delete existing future events to ensure a perfect sync
-        time_min = now.isoformat()
-        events_result = service.events().list(calendarId=calendar_id, timeMin=time_min, singleEvents=True).execute()
-        existing_events = events_result.get('items', [])
+        print("Sending schedule to Google Calendar Webhook...")
+        # Send the scraped schedule directly to your Google Apps Script
+        resp = requests.post(webhook_url, json={"schedule": schedule}, timeout=15)
         
-        for event in existing_events:
-            service.events().delete(calendarId=calendar_id, eventId=event['id']).execute()
-
-        # 2. Write the fresh schedule
-        for f in schedule:
-            try:
-                clean_date = "".join(c for c in f['date'] if c.isalnum() or c.isspace()).strip()
-                start_str = f['time'].split("-")[0].strip()
-                end_str = f['time'].split("-")[1].split("(")[0].strip()
-
-                start_dt = datetime.strptime(f"{clean_date} {current_year} {start_str}", "%d %b %Y %H:%M").replace(tzinfo=mst_tz)
-                end_dt = datetime.strptime(f"{clean_date} {current_year} {end_str}", "%d %b %Y %H:%M").replace(tzinfo=mst_tz)
-
-                if "(+1D)" in f['time']: 
-                    end_dt += timedelta(days=1)
-                
-                # Handle year wrap-around
-                if start_dt.month < now.month and now.month == 12: start_dt = start_dt.replace(year=current_year + 1)
-                if end_dt.month < now.month and now.month == 12: end_dt = end_dt.replace(year=current_year + 1)
-
-                if end_dt < now: 
-                    continue # Skip blocks that already ended
-
-                event_body = {
-                    'summary': f"[{f['status']}] {f['lesson']} ({f['type']})",
-                    'location': f"Aircraft/Room: {f['res']}",
-                    'description': f"Instructor: {f['ip']}\nRemark: {f.get('remark', 'None')}",
-                    'start': {'dateTime': start_dt.isoformat(), 'timeZone': 'America/Phoenix'},
-                    'end': {'dateTime': end_dt.isoformat(), 'timeZone': 'America/Phoenix'},
-                }
-                service.events().insert(calendarId=calendar_id, body=event_body).execute()
-            except Exception as parse_e:
-                print(f"Skipping a corrupted date format for GCal: {parse_e}")
-
-        print("✅ Google Calendar synced successfully.")
+        if resp.status_code == 200:
+            print(f"✅ Webhook GCal Sync successful.")
+        else:
+            print(f"⚠️ Webhook GCal Sync failed with status {resp.status_code}: {resp.text}")
     except Exception as e:
-        print(f"⚠️ GCal Sync Error: {e}")
+        print(f"⚠️ Webhook GCal Sync Error: {e}")
 
 def update_trmnl(flights, timestamp_str, weather_data):
     webhook = os.environ.get("TRMNL_WEBHOOK_URL")
@@ -439,20 +392,17 @@ def run_scraper():
             parsed_url = urllib.parse.urlparse(current_url)
             qs = urllib.parse.parse_qs(parsed_url.query)
             
-            # Find the token key (usually 'zajael1120' or similar)
             token_key = next((k for k in qs.keys() if 'zajael' in k.lower()), None)
             
             if token_key:
                 token_val = qs[token_key][0]
                 print(f"Captured session token! Routing directly to the Schedule tab...")
                 
-                # Build the absolute URL using the target path plus the intercepted token
                 direct_sched_url = f"https://apps4.talonsystems.com/tseta/servlet/content?module=home&filterForm=1&page=homepg&content_type=mysched&showImg=&maxdayshow=7&{token_key}={token_val}"
                 page.goto(direct_sched_url, timeout=20000, wait_until="networkidle")
                 page.wait_for_timeout(3000)
             else:
                 print("Warning: No session token found in URL. Trying UI fallback...")
-                # UI Click Fallback: try to physically click the 'My Schedule' tab
                 for frame in page.frames:
                     try:
                         tab = frame.locator("text='My Schedule'")
@@ -465,11 +415,9 @@ def run_scraper():
 
             print(f"Found {len(page.frames)} frames on the current page. Inspecting for table...")
             
-            # Iterate through all iframes to find the one holding the schedule
             for frame in page.frames:
                 print(f" - Checking frame URL: {frame.url}")
                 try:
-                    # Wait dynamically for up to 10 seconds for the table to appear in this frame
                     frame.wait_for_selector("table#tblSchedListS", timeout=10000)
                     print("SUCCESS: Schedule table located inside an iframe.")
                     html_dump = frame.content()
@@ -481,8 +429,7 @@ def run_scraper():
                 print("FAILED: Could not locate 'tblSchedListS' in any frame.")
                 page.screenshot(path="debug_failed_scrape.png")
                 
-                # Send a Telegram alert if the bot gets stuck
-                error_msg = "⚠️ <b>AEROGUARD SCRAPER ALERT</b>\nBot failed to locate the schedule table. It is likely stuck on a popup or landing page. Check GitHub Actions for the debug screenshot."
+                error_msg = "⚠️ <b>AEROGUARD SCRAPER ALERT</b>\nBot failed to locate the schedule table. Check GitHub Actions for the debug screenshot."
                 send_telegram(error_msg)
 
         except Exception as e:
@@ -554,9 +501,6 @@ def run_scraper():
         
         is_manual_run = os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch"
         
-        # ==========================================
-        # MANUAL RUN: MASTER SCHEDULE DUMP
-        # ==========================================
         if is_manual_run:
             future_flights = [f for f in current_schedule if is_future_flight(f)]
             
@@ -591,9 +535,6 @@ def run_scraper():
                 print("Manual trigger detected! Sending Master Schedule to Telegram...")
                 send_telegram(msg)
                 
-        # ==========================================
-        # ACARS TELETYPE PREFLIGHT BRIEF 
-        # ==========================================
         if trigger_weather_dispatch and target_flight_details:
             flight_date_str = "".join(c for c in target_flight_details['date'] if c.isalnum() or c.isspace()).strip()
             acars_date = flight_date_str.replace(" ", "").upper()[:9]
@@ -636,9 +577,6 @@ def run_scraper():
             print("Sending ACARS Preflight Brief to Telegram...")
             send_telegram(msg)
 
-        # ==========================================
-        # ACARS TELETYPE SCHEDULE UPDATE
-        # ==========================================
         if new_flights or updated_flights or deleted_flights:
             alerts_by_date = {}
             for f in new_flights:
@@ -690,7 +628,6 @@ def run_scraper():
         elif not trigger_weather_dispatch and not is_manual_run:
             print("No changes and outside preflight window. Staying silent.")
 
-        print("Syncing schedule to Google Calendar...")
         sync_gcal(current_schedule)
 
         print("Sending active snapshot to TRMNL...")
