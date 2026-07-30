@@ -80,7 +80,7 @@ def extract_schedule(html_content):
             "status": status,
             "ip": instructor if instructor else "TBD",
             "res": resource if resource else "TBD",
-            "lesson": unit[:20] if unit else "UNKNOWN", 
+            "lesson": unit if unit else "UNKNOWN", 
             "type": act_type,
             "remark": remark
         })
@@ -183,18 +183,18 @@ def compare_schedules(old_sched, new_sched):
         else:
             old_f = old_dict[key]
             changes = []
-            if old_f['lesson'] != f['lesson']: changes.append(f"LSN: {old_f['lesson']} -> {f['lesson']}")
-            if old_f['ip'] != f['ip']: changes.append(f"PIC: {old_f['ip']} -> {f['ip']}")
-            if old_f['res'] != f['res']: changes.append(f"ACF: {old_f['res']} -> {f['res']}")
-            if old_f['status'] != f['status']: changes.append(f"STS: {old_f['status']} -> {f['status']}")
+            if old_f['lesson'] != f['lesson']: changes.append(f"Lesson: {old_f['lesson']} -> {f['lesson']}")
+            if old_f['ip'] != f['ip']: changes.append(f"Instructor: {old_f['ip']} -> {f['ip']}")
+            if old_f['res'] != f['res']: changes.append(f"Aircraft: {old_f['res']} -> {f['res']}")
+            if old_f['status'] != f['status']: changes.append(f"Status: {old_f['status']} -> {f['status']}")
             
             old_remark = old_f.get('remark', '')
             if old_remark != f['remark']: 
-                if f['remark']: changes.append(f"RMK: '{f['remark']}'")
-                else: changes.append(f"RMK REMOVED")
+                if f['remark']: changes.append(f"Remarks: '{f['remark']}'")
+                else: changes.append(f"Remarks Removed")
 
             if changes:
-                f['changes_text'] = "\n".join([f"> {c.upper()}" for c in changes])
+                f['changes_text'] = "\n".join([f"  • {c}" for c in changes])
                 updated_alerts.append(f)
 
     for key, old_f in old_dict.items():
@@ -205,15 +205,16 @@ def compare_schedules(old_sched, new_sched):
     return new_alerts, updated_alerts, deleted_alerts
 
 def evaluate_weather(start_dt, end_dt):
-    runway_heading = 70 
-    max_wind_limit = 10
-    max_crosswind_limit = 6 
+    # KDVT Runways 07L/07R (074°) and 25L/25R (254°)
+    runway_heading = 74 
+    max_wind_limit = 15
+    max_crosswind_limit = 10 
     
     reasons = []
     is_go = True
     current_wind = "N/A"
     forecast_wind = "N/A"
-    max_crosswind_encountered = 0
+    max_crosswind_encountered = 0.0
 
     def run_limits_math(wind_dir, wind_speed, wind_gust, source_name):
         nonlocal is_go, max_crosswind_encountered
@@ -224,14 +225,15 @@ def evaluate_weather(start_dt, end_dt):
         
         if max_speed > max_wind_limit:
             is_go = False
-            reasons.append(f"[{source_name}] WIND LMT EXCEED {max_speed}KT")
+            reasons.append(f"[{source_name}] Wind limit exceeded ({max_speed} KT > {max_wind_limit} KT)")
 
-        crosswind = 0
+        crosswind = 0.0
         if wind_dir == "VRB":
-            crosswind = max_speed
+            crosswind = float(max_speed)
+            max_crosswind_encountered = max(max_crosswind_encountered, crosswind)
             if crosswind > max_crosswind_limit:
                 is_go = False
-                reasons.append(f"[{source_name}] VRB XWC EXCEED {crosswind}KT")
+                reasons.append(f"[{source_name}] VRB crosswind exceeded ({crosswind:.1f} KT > {max_crosswind_limit} KT)")
         elif wind_dir is not None:
             angle_diff_radians = math.radians(wind_dir - runway_heading)
             crosswind = round(abs(max_speed * math.sin(angle_diff_radians)), 1)
@@ -239,10 +241,10 @@ def evaluate_weather(start_dt, end_dt):
             
             if crosswind > max_crosswind_limit:
                 is_go = False
-                reasons.append(f"[{source_name}] XWC LMT EXCEED {crosswind:04.1f}KT")
+                reasons.append(f"[{source_name}] Crosswind exceeded ({crosswind:04.1f} KT > {max_crosswind_limit} KT)")
                 
         dir_str = "VRB" if wind_dir == "VRB" else str(wind_dir).zfill(3) if wind_dir else "000"
-        return f"{dir_str}@{wind_speed}" + (f"G{wind_gust}" if wind_gust else "")
+        return f"{dir_str} @ {wind_speed} KT" + (f" G {wind_gust} KT" if wind_gust else "")
 
     def parse_api_time(t_val):
         if isinstance(t_val, int):
@@ -303,7 +305,7 @@ def evaluate_weather(start_dt, end_dt):
             "alerts": reasons
         }
     except Exception as e:
-        return {"status": "ERROR", "alerts": [f"SYS ERR: {str(e)[:20]}"]}
+        return {"status": "ERROR", "alerts": [f"System Error: {str(e)[:20]}"]}
 
 def send_telegram(message):
     token = os.environ.get("TELEGRAM_BOT_TOKEN")
@@ -320,22 +322,17 @@ def send_telegram(message):
         print(f"Telegram Exception: {e}")
 
 def sync_gcal(schedule):
-    """Syncs schedule using the Google Apps Script Webhook."""
     webhook_url = os.environ.get("GCAL_WEBHOOK_URL")
-
     if not webhook_url:
         print("Skipping GCal Sync: Missing GCAL_WEBHOOK_URL secret.")
         return
 
     try:
-        print("Sending schedule to Google Calendar Webhook...")
-        # Send the scraped schedule directly to your Google Apps Script
         resp = requests.post(webhook_url, json={"schedule": schedule}, timeout=15)
-        
         if resp.status_code == 200:
             print(f"✅ Webhook GCal Sync successful.")
         else:
-            print(f"⚠️ Webhook GCal Sync failed with status {resp.status_code}: {resp.text}")
+            print(f"⚠️ Webhook GCal Sync failed with status {resp.status_code}")
     except Exception as e:
         print(f"⚠️ Webhook GCal Sync Error: {e}")
 
@@ -360,7 +357,7 @@ def run_scraper():
     password = os.environ.get("TALON_PASS")
     
     mst_tz = timezone(timedelta(hours=-7))
-    now_mst = datetime.now(mst_tz).strftime("%d %b %H:%M MST").upper()
+    now_mst = datetime.now(mst_tz).strftime("%d %b %Y %I:%M %p MST")
 
     old_schedule = []
     if os.path.exists(MEMORY_FILE):
@@ -387,22 +384,17 @@ def run_scraper():
             print("Logged in, waiting for portal to load...")
             page.wait_for_timeout(5000) 
 
-            # INTERCEPT SESSION TOKEN AND FORCE DIRECT NAVIGATION
             current_url = page.url
             parsed_url = urllib.parse.urlparse(current_url)
             qs = urllib.parse.parse_qs(parsed_url.query)
-            
             token_key = next((k for k in qs.keys() if 'zajael' in k.lower()), None)
             
             if token_key:
                 token_val = qs[token_key][0]
-                print(f"Captured session token! Routing directly to the Schedule tab...")
-                
                 direct_sched_url = f"https://apps4.talonsystems.com/tseta/servlet/content?module=home&filterForm=1&page=homepg&content_type=mysched&showImg=&maxdayshow=7&{token_key}={token_val}"
                 page.goto(direct_sched_url, timeout=20000, wait_until="networkidle")
                 page.wait_for_timeout(3000)
             else:
-                print("Warning: No session token found in URL. Trying UI fallback...")
                 for frame in page.frames:
                     try:
                         tab = frame.locator("text='My Schedule'")
@@ -413,23 +405,16 @@ def run_scraper():
                     except:
                         continue
 
-            print(f"Found {len(page.frames)} frames on the current page. Inspecting for table...")
-            
             for frame in page.frames:
-                print(f" - Checking frame URL: {frame.url}")
                 try:
                     frame.wait_for_selector("table#tblSchedListS", timeout=10000)
-                    print("SUCCESS: Schedule table located inside an iframe.")
                     html_dump = frame.content()
                     break 
                 except:
                     continue
             
             if not html_dump:
-                print("FAILED: Could not locate 'tblSchedListS' in any frame.")
-                page.screenshot(path="debug_failed_scrape.png")
-                
-                error_msg = "⚠️ <b>AEROGUARD SCRAPER ALERT</b>\nBot failed to locate the schedule table. Check GitHub Actions for the debug screenshot."
+                error_msg = "<pre>\n========================================\n        AEROGUARD SCRAPER ALERT       \n========================================\nStatus:      Failed to locate schedule\nAction:      Check GitHub Action logs\n========================================\n</pre>"
                 send_telegram(error_msg)
 
         except Exception as e:
@@ -439,9 +424,7 @@ def run_scraper():
 
     if html_dump:
         current_schedule = extract_schedule(html_dump)
-        if not current_schedule:
-            print("No events found in Talon.")
-            return
+        if not current_schedule: return
 
         current_schedule = filter_old_flights(current_schedule)
         old_schedule = filter_old_flights(old_schedule)
@@ -469,8 +452,7 @@ def run_scraper():
                 start_dt = datetime.strptime(start_dt_str, "%d %b %Y %H:%M").replace(tzinfo=mst_tz)
                 end_dt = datetime.strptime(end_dt_str, "%d %b %Y %H:%M").replace(tzinfo=mst_tz)
                 
-                if "(+1D)" in next_f['time']:
-                    end_dt += timedelta(days=1)
+                if "(+1D)" in next_f['time']: end_dt += timedelta(days=1)
                 
                 if start_dt.month == 12 and datetime.now(mst_tz).month < 3:
                     start_dt = start_dt.replace(year=current_year - 1)
@@ -488,149 +470,102 @@ def run_scraper():
                 for f in current_schedule:
                     if f"{f['date']}_{f['time']}" == target_key:
                         f['weather_status'] = weather_decision['status']
-                        
                         if is_preflight_window and not f.get('dispatch_sent'):
                             trigger_weather_dispatch = True
                             target_flight_details = f
                             f['dispatch_sent'] = True
                         break
-                        
             except Exception as e:
-                print(f"Date parsing failed for weather evaluation: {e}")
                 weather_decision = evaluate_weather(None, None)
         
         is_manual_run = os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch"
         
         if is_manual_run:
             future_flights = [f for f in current_schedule if is_future_flight(f)]
-            
             if future_flights:
                 msg = "<pre>\n"
-                msg += "==================================\n"
-                msg += "AEROGUARD MASTER SCHEDULE\n"
-                msg += "==================================\n"
-                
+                msg += "========================================\n"
+                msg += "        AEROGUARD MASTER SCHEDULE       \n"
+                msg += "========================================\n"
                 for f in future_flights:
-                    flight_date_str = "".join(c for c in f['date'] if c.isalnum() or c.isspace()).strip()
-                    acars_date = flight_date_str.replace(" ", "").upper()[:9]
-                    acars_blk = f['time'].replace("-", "to").replace(" ", "").replace(":", "").replace("to", "-")[:9]
-                    acars_lsn = html.escape(f['lesson'].upper())[:10]
-                    acars_pic = html.escape(f['ip'].upper())[:10]
-                    acars_acf = html.escape(f['res'].upper())[:15]
-                    acars_sts = html.escape(f['status'].upper())[:10]
-
-                    msg += f"DAT: {acars_date.ljust(10)} BLK: {acars_blk}\n"
-                    msg += f"LSN: {acars_lsn.ljust(10)} ACF: {acars_acf}\n"
-                    msg += f"PIC: {acars_pic.ljust(10)} STS: {acars_sts}\n"
-                    msg += "----------------------------------\n"
-
-                acars_now = now_mst.replace(":", "").replace(" ", "").upper()
-                msg += f"UPDATED: {acars_now}\n"
-                msg += "==================================\n"
+                    msg += f"Date:        {html.escape(f['date'])}\n"
+                    msg += f"Block:       {html.escape(f['time'])}\n"
+                    msg += f"Lesson:      {html.escape(f['lesson'])}\n"
+                    msg += f"Type:        {html.escape(f['type'])}\n"
+                    msg += f"Aircraft:    {html.escape(f['res'])}\n"
+                    msg += f"Instructor:  {html.escape(f['ip'])}\n"
+                    msg += f"Status:      {html.escape(f['status'])}\n"
+                    if f.get('remark'):
+                        msg += f"Remarks:     {html.escape(f['remark'])}\n"
+                    msg += "----------------------------------------\n"
+                msg += f"Updated: {now_mst}\n"
+                msg += "========================================\n"
                 msg += "</pre>"
 
                 if len(msg) > 4000:
-                    msg = msg[:4000] + "\n...[TRUNCATED]</pre>"
+                    msg = msg[:3900] + "\n...[TRUNCATED]\n========================================\n</pre>"
 
-                print("Manual trigger detected! Sending Master Schedule to Telegram...")
                 send_telegram(msg)
                 
         if trigger_weather_dispatch and target_flight_details:
-            flight_date_str = "".join(c for c in target_flight_details['date'] if c.isalnum() or c.isspace()).strip()
-            acars_date = flight_date_str.replace(" ", "").upper()[:9]
-            acars_time = target_flight_details['time'].replace("-", "to").replace(" ", "").replace(":", "").replace("to", "-")[:9]
-            acars_lsn = html.escape(target_flight_details['lesson'].upper())[:10]
-            acars_typ = html.escape(target_flight_details['type'].upper())[:10]
-            acars_pic = html.escape(target_flight_details['ip'].upper())[:10]
-            acars_acf = html.escape(target_flight_details['res'].upper())[:15]
-            acars_sts = html.escape(target_flight_details['status'].upper())[:10]
-            acars_rmk = html.escape(target_flight_details.get('remark', 'NONE').upper())[:15]
-            
-            wx_status = weather_decision['status'].upper()
-            obs = weather_decision.get('metar_wind', 'N/A')
-            fct = weather_decision.get('taf_wind', 'N/A')
-            xwc = f"{weather_decision.get('max_crosswind_kt', 0):04.1f} KT"
-
             msg = "<pre>\n"
-            msg += "==================================\n"
-            msg += "AEROGUARD DISPATCH RELEASE\n"
-            msg += "==================================\n"
-            msg += f"DAT: {acars_date.ljust(10)} BLK: {acars_time}\n"
-            msg += f"LSN: {acars_lsn.ljust(10)} TYP: {acars_typ}\n"
-            msg += f"PIC: {acars_pic.ljust(10)} ACF: {acars_acf}\n"
-            msg += f"STS: {acars_sts.ljust(10)} RMK: {acars_rmk}\n\n"
+            msg += "========================================\n"
+            msg += "        AEROGUARD DISPATCH RELEASE      \n"
+            msg += "========================================\n"
+            msg += f"Date:        {html.escape(target_flight_details['date'])}\n"
+            msg += f"Block:       {html.escape(target_flight_details['time'])}\n"
+            msg += f"Lesson:      {html.escape(target_flight_details['lesson'])} ({html.escape(target_flight_details['type'])})\n"
+            msg += f"Aircraft:    {html.escape(target_flight_details['res'])}\n"
+            msg += f"Instructor:  {html.escape(target_flight_details['ip'])}\n"
+            msg += f"Status:      {html.escape(target_flight_details['status'])}\n"
+            msg += f"Remarks:     {html.escape(target_flight_details.get('remark', 'None'))}\n\n"
             
-            msg += f"WX CHECK: {wx_status}\n"
-            msg += "----------------------------------\n"
-            msg += f"OBS: {obs}\n"
-            msg += f"FCT: {fct}\n"
-            msg += f"XWC: {xwc}\n"
+            msg += f"WEATHER ANALYSIS: {weather_decision['status']}\n"
+            msg += "----------------------------------------\n"
+            msg += f"Current Wind:   {weather_decision.get('metar_wind', 'N/A')}\n"
+            msg += f"Forecast Wind:  {weather_decision.get('taf_wind', 'N/A')}\n"
+            msg += f"Max Crosswind:  {weather_decision.get('max_crosswind_kt', 0):04.1f} KT (Rwy 07/25)\n"
             
             if weather_decision.get("alerts"):
-                msg += "\nWARN:\n"
+                msg += "\nWARNINGS:\n"
                 for alert in weather_decision["alerts"]:
                     msg += f"- {html.escape(alert)}\n"
-                    
-            msg += "==================================\n"
+            msg += "========================================\n"
             msg += "</pre>"
 
-            print("Sending ACARS Preflight Brief to Telegram...")
             send_telegram(msg)
 
         if new_flights or updated_flights or deleted_flights:
             alerts_by_date = {}
-            for f in new_flights:
-                d = f['date']; alerts_by_date.setdefault(d, []).append((f, "NEW"))
-            for f in updated_flights:
-                d = f['date']; alerts_by_date.setdefault(d, []).append((f, "UPDATED"))
-            for f in deleted_flights:
-                d = f['date']; alerts_by_date.setdefault(d, []).append((f, "DELETED"))
+            for f in new_flights: alerts_by_date.setdefault(f['date'], []).append((f, "NEW"))
+            for f in updated_flights: alerts_by_date.setdefault(f['date'], []).append((f, "UPDATED"))
+            for f in deleted_flights: alerts_by_date.setdefault(f['date'], []).append((f, "DELETED"))
 
             msg = "<pre>\n"
-            msg += "==================================\n"
-            msg += "AEROGUARD SCHEDULING ALERT\n"
-            msg += "==================================\n"
-            
+            msg += "========================================\n"
+            msg += "       AEROGUARD SCHEDULING ALERT       \n"
+            msg += "========================================\n"
             for date in sorted(alerts_by_date.keys()):
-                acars_date = date.replace(" ", "").upper()
-                msg += f"\nDAT: {acars_date}\n"
-                msg += "----------------------------------\n"
-                
+                msg += f"Date: {html.escape(date)}\n"
+                msg += "----------------------------------------\n"
                 for f, alert_type in alerts_by_date[date]:
-                    acars_blk = f['time'].replace("-", "to").replace(" ", "").replace(":", "").replace("to", "-")[:9]
-                    acars_lsn = html.escape(f['lesson'].upper())[:10]
-                    acars_acf = html.escape(f['res'].upper())[:15]
-                    acars_pic = html.escape(f['ip'].upper())[:15]
-                    
-                    if alert_type == "NEW":
-                        msg += f"ADD: {acars_blk}\n"
-                    elif alert_type == "DELETED":
-                        msg += f"CNL: {acars_blk}\n"
-                    else:
-                        msg += f"MOD: {acars_blk}\n"
-                        
-                    msg += f"LSN: {acars_lsn.ljust(10)} ACF: {acars_acf}\n"
-                    msg += f"PIC: {acars_pic.ljust(10)}\n"
-                    
+                    action = "ADDED" if alert_type == "NEW" else "CANCELED" if alert_type == "DELETED" else "MODIFIED"
+                    msg += f"Action:      {action}\n"
+                    msg += f"Block:       {html.escape(f['time'])}\n"
+                    msg += f"Lesson:      {html.escape(f['lesson'])}\n"
+                    msg += f"Aircraft:    {html.escape(f['res'])}\n"
+                    msg += f"Instructor:  {html.escape(f['ip'])}\n"
+                    msg += f"Status:      {html.escape(f['status'])}\n"
                     if alert_type == "UPDATED" and f.get('changes_text'):
-                        msg += f"{html.escape(f['changes_text'])}\n"
-                        
-                    msg += "----------------------------------\n"
-            
-            acars_now = now_mst.replace(":", "").replace(" ", "").upper()
-            msg += f"UPDATED: {acars_now}\n"
-            msg += "==================================\n"
+                        msg += f"Changes:\n{html.escape(f['changes_text'])}\n"
+                    msg += "----------------------------------------\n"
+            msg += f"Updated: {now_mst}\n"
+            msg += "========================================\n"
             msg += "</pre>"
 
-            print("Schedule changes detected! Sending ACARS to Telegram...")
             send_telegram(msg)
-            
-        elif not trigger_weather_dispatch and not is_manual_run:
-            print("No changes and outside preflight window. Staying silent.")
 
         sync_gcal(current_schedule)
-
-        print("Sending active snapshot to TRMNL...")
         update_trmnl(trmnl_payload, now_mst, weather_decision)
 
         with open(MEMORY_FILE, "w") as f:
