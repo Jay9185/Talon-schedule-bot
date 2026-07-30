@@ -1,16 +1,5 @@
 [
     {
-        "date": "29 JUL",
-        "time": "09:00 - 12:00",
-        "status": "CancelledN/A Aircraft",
-        "ip": "Miller,Kaeden",
-        "res": "PA28-181G",
-        "lesson": "CPLSE 1.4-Flt",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "31 JUL",
         "time": "05:45 - 10:45",
         "status": "Scheduling",
