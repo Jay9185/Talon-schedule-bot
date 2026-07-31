@@ -2,14 +2,14 @@
     {
         "date": "31 JUL",
         "time": "05:45 - 10:45",
-        "status": "Scheduled",
+        "status": "CancelledMission not reqd",
         "ip": "TBD",
         "res": "PA28-181G",
         "lesson": "CPLSE 1.3-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'",
+        "changes_text": "  \u2022 Status: Scheduled -> CancelledMission not reqd",
         "weather_status": "GO"
     },
     {
@@ -20,6 +20,7 @@
         "res": "DVT Bldg 3 - A",
         "lesson": "Senior Solo Brf",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     }
 ]
