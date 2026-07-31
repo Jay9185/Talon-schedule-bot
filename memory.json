@@ -8,8 +8,7 @@
         "lesson": "CPLSE 1.3-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "weather_status": "GO"
+        "dispatch_sent": true
     },
     {
         "date": "01 AUG",
@@ -20,7 +19,8 @@
         "lesson": "Senior Solo Brf",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "GO"
     },
     {
         "date": "03 AUG",
