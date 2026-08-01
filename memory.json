@@ -2,14 +2,14 @@
     {
         "date": "01 AUG",
         "time": "14:00 - 15:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Billman,Ryan+",
         "res": "DVT Bldg 3 - A",
         "lesson": "Senior Solo Brf",
         "type": "Academic",
         "remark": "",
         "dispatch_sent": true,
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Status: Scheduled -> Completed"
     },
     {
         "date": "03 AUG",
@@ -20,7 +20,8 @@
         "lesson": "IR 1.1-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "GO"
     },
     {
         "date": "03 AUG",
