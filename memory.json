@@ -2,13 +2,25 @@
     {
         "date": "02 AUG",
         "time": "11:30 - 14:00",
-        "status": "Scheduled",
+        "status": "CancelledN/A Aircraft",
         "ip": "Miller,Kaeden",
         "res": "PA28-181G",
         "lesson": "CPLSE 1.4-Flt",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true
+        "dispatch_sent": true,
+        "changes_text": "  \u2022 Status: Scheduled -> CancelledN/A Aircraft"
+    },
+    {
+        "date": "03 AUG",
+        "time": "05:00 - 08:00",
+        "status": "Scheduling",
+        "ip": "Miller,Kaeden",
+        "res": "PA28-181G",
+        "lesson": "CPLSE 1.4-Flt",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "NO-GO"
     },
     {
         "date": "03 AUG",
@@ -19,8 +31,7 @@
         "lesson": "CPLSE 1.3-SXC",
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false,
-        "weather_status": "GO"
+        "dispatch_sent": false
     },
     {
         "date": "03 AUG",
