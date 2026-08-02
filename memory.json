@@ -1,16 +1,5 @@
 [
     {
-        "date": "01 AUG",
-        "time": "14:00 - 15:00",
-        "status": "Completed",
-        "ip": "Billman,Ryan+",
-        "res": "DVT Bldg 3 - A",
-        "lesson": "Senior Solo Brf",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": true
-    },
-    {
         "date": "02 AUG",
         "time": "11:30 - 14:00",
         "status": "Scheduled",
