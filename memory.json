@@ -14,14 +14,14 @@
     {
         "date": "03 AUG",
         "time": "09:00 - 12:00",
-        "status": "Scheduled",
+        "status": "Ramp Out",
         "ip": "Miller,Kaeden",
         "res": "276AG (NXI)",
         "lesson": "CPLSE 1.4-Flt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: PA28-181G -> 276AG (NXI)"
+        "changes_text": "  \u2022 Status: Scheduled -> Ramp Out"
     },
     {
         "date": "03 AUG",
