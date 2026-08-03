@@ -31,7 +31,7 @@
         "type": "Academic",
         "remark": "",
         "dispatch_sent": true,
-        "weather_status": "GO"
+        "weather_status": "NO-GO"
     },
     {
         "date": "03 AUG",
@@ -76,5 +76,15 @@
         "type": "Academic",
         "remark": "",
         "dispatch_sent": false
+    },
+    {
+        "date": "05 AUG",
+        "time": "09:00 - 14:00",
+        "status": "Scheduling",
+        "ip": "TBD",
+        "res": "PA28-181G",
+        "lesson": "CPLSE 1.5-SXC",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
