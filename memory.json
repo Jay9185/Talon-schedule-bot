@@ -8,7 +8,7 @@
         "lesson": "CPLSE 1.3-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
+        "dispatch_sent": true,
         "weather_status": "GO"
     },
     {
@@ -16,11 +16,12 @@
         "time": "09:00 - 12:00",
         "status": "Scheduled",
         "ip": "Miller,Kaeden",
-        "res": "PA28-181G",
+        "res": "276AG (NXI)",
         "lesson": "CPLSE 1.4-Flt",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Aircraft: PA28-181G -> 276AG (NXI)"
     },
     {
         "date": "03 AUG",
