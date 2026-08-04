@@ -9,7 +9,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Ops Check In -> CancelledWX - Visibility",
         "weather_status": "GO"
     },
     {
@@ -20,7 +19,8 @@
         "res": "RB LD 1",
         "lesson": "IR 1.3-AATD",
         "type": "Sim",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "dispatch_sent": false
     },
     {
         "date": "04 AUG",
