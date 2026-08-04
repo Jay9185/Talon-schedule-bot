@@ -24,25 +24,26 @@
     {
         "date": "03 AUG",
         "time": "17:00 - 19:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Wait,Scott",
         "res": "DVT Bldg 3 - E",
         "lesson": "IR 1.1-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": true
+        "dispatch_sent": true,
+        "changes_text": "  \u2022 Status: Scheduled -> Completed"
     },
     {
         "date": "03 AUG",
         "time": "19:00 - 21:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Wait,Scott",
         "res": "DVT Bldg 3 - E",
         "lesson": "IR 1.2-Ground",
         "type": "Academic",
         "remark": "",
         "dispatch_sent": false,
-        "weather_status": "ERROR"
+        "changes_text": "  \u2022 Status: Scheduled -> Completed"
     },
     {
         "date": "04 AUG",
@@ -53,7 +54,8 @@
         "lesson": "CPLSE 1.3-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "NO-GO"
     },
     {
         "date": "04 AUG",
