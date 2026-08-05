@@ -2,13 +2,14 @@
     {
         "date": "05 AUG",
         "time": "09:00 - 14:00",
-        "status": "Pend A/C",
+        "status": "CancelledWX - Winds",
         "ip": "TBD",
         "res": "PA28-181G",
         "lesson": "CPLSE 1.5-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "NO-GO"
+        "changes_text": "  \u2022 Status: Pend A/C -> CancelledWX - Winds",
+        "weather_status": "GO"
     }
 ]
