@@ -8,7 +8,6 @@
         "lesson": "CPLSE 1.5-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "weather_status": "GO"
+        "dispatch_sent": true
     }
 ]
