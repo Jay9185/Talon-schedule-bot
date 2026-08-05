@@ -9,7 +9,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "  \u2022 Aircraft: 822PA (NXi) -> PA28-181G\n  \u2022 Status: Scheduled -> Pend A/C",
         "weather_status": "NO-GO"
     }
 ]
