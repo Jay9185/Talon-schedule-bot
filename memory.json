@@ -9,7 +9,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Pend A/C -> CancelledWX - Winds",
         "weather_status": "GO"
     }
 ]
