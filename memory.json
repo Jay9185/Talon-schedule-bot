@@ -19,6 +19,7 @@
         "lesson": "CPLSE 1.3-SXC",
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
-        "weather_status": "GO"
+        "dispatch_sent": false,
+        "weather_status": "NO-GO"
     }
 ]
