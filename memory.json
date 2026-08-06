@@ -1,16 +1,5 @@
 [
     {
-        "date": "05 AUG",
-        "time": "09:00 - 14:00",
-        "status": "CancelledWX - Winds",
-        "ip": "TBD",
-        "res": "PA28-181G",
-        "lesson": "CPLSE 1.5-SXC",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "07 AUG",
         "time": "09:30 - 14:30",
         "status": "Scheduling",
