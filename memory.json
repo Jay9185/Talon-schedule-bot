@@ -2,13 +2,14 @@
     {
         "date": "07 AUG",
         "time": "09:30 - 14:30",
-        "status": "Scheduled",
+        "status": "Ramp Out",
         "ip": "TBD",
         "res": "345AG (NXI)",
         "lesson": "CPLSE 1.3-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
+        "changes_text": "  \u2022 Status: Scheduled -> Ramp Out",
         "weather_status": "GO"
     }
 ]
