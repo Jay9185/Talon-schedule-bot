@@ -30,7 +30,8 @@
         "res": "DVT Bldg 3 - E",
         "lesson": "IR 2.5-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "11 AUG",
@@ -40,6 +41,7 @@
         "res": "DVT Bldg 3 - E",
         "lesson": "IR 2.6-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     }
 ]
