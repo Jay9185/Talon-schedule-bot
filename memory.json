@@ -9,7 +9,7 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "GO"
+        "weather_status": "NO-GO"
     },
     {
         "date": "11 AUG",
@@ -32,5 +32,15 @@
         "type": "Academic",
         "remark": "",
         "dispatch_sent": false
+    },
+    {
+        "date": "11 AUG",
+        "time": "19:00 - 21:30",
+        "status": "Scheduling",
+        "ip": "Miller,Kaeden",
+        "res": "PA28-181G",
+        "lesson": "CPLSE 1.6-Flt",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
