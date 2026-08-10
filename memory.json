@@ -1,16 +1,5 @@
 [
     {
-        "date": "09 AUG",
-        "time": "20:45 - 02:45 (+1D)",
-        "status": "Pend A/C",
-        "ip": "TBD",
-        "res": "PA28-181G",
-        "lesson": "CPLSE 1.5-SXC",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "10 AUG",
         "time": "14:45 - 19:45",
         "status": "Scheduled",
@@ -20,7 +9,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: 271AG (NXI) -> 345AG (NXI)",
         "weather_status": "GO"
     },
     {
