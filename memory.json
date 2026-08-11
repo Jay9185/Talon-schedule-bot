@@ -8,31 +8,28 @@
         "lesson": "CPLSE 1.6-Flt",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Ramp Out -> Completed",
-        "weather_status": "GO"
+        "dispatch_sent": true
     },
     {
         "date": "11 AUG",
-        "time": "15:00 - 17:00",
+        "time": "14:00 - 16:00",
         "status": "Scheduled",
         "ip": "Wait,Scott",
-        "res": "DVT Bldg 3 - E",
+        "res": "DVT Bldg 3 - A",
         "lesson": "IR 2.5-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "weather_status": "NO-GO"
     },
     {
         "date": "11 AUG",
-        "time": "17:00 - 19:00",
+        "time": "16:00 - 18:00",
         "status": "Scheduled",
         "ip": "Wait,Scott",
-        "res": "DVT Bldg 3 - E",
+        "res": "DVT Bldg 3 - A",
         "lesson": "IR 2.6-Ground",
         "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false
+        "remark": ""
     },
     {
         "date": "11 AUG",
