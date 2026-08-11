@@ -8,8 +8,7 @@
         "lesson": "CPLSE 1.3-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "weather_status": "NO-GO"
+        "dispatch_sent": true
     },
     {
         "date": "11 AUG",
@@ -19,7 +18,9 @@
         "res": "PA28-181G",
         "lesson": "CPLSE 1.6-Flt",
         "type": "Flight",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "dispatch_sent": false,
+        "weather_status": "NO-GO"
     },
     {
         "date": "11 AUG",
@@ -52,8 +53,7 @@
         "lesson": "CPLSE 1.6-Flt",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> CancelledResched Same Day"
+        "dispatch_sent": false
     },
     {
         "date": "12 AUG",
