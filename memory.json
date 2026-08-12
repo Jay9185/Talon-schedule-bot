@@ -9,12 +9,22 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Ramp Out -> Completed",
-        "weather_status": "GO"
+        "weather_status": "NO-GO"
     },
     {
         "date": "13 AUG",
         "time": "05:45 - 10:45",
+        "status": "Scheduling",
+        "ip": "TBD",
+        "res": "PA28-181G",
+        "lesson": "CPLSE 1.7-SXC",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false
+    },
+    {
+        "date": "14 AUG",
+        "time": "21:00 - 03:00 (+1D)",
         "status": "Scheduling",
         "ip": "TBD",
         "res": "PA28-181G",
