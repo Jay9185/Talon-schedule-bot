@@ -19,8 +19,7 @@
         "lesson": "IR 2.5-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
+        "dispatch_sent": false
     },
     {
         "date": "11 AUG",
@@ -31,8 +30,7 @@
         "lesson": "IR 2.6-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
+        "dispatch_sent": false
     },
     {
         "date": "11 AUG",
@@ -43,8 +41,7 @@
         "lesson": "CPLSE 1.6-Flt",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "weather_status": "GO"
+        "dispatch_sent": false
     },
     {
         "date": "12 AUG",
@@ -55,6 +52,7 @@
         "lesson": "CPLSE 1.5-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "GO"
     }
 ]
