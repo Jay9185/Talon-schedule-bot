@@ -8,19 +8,20 @@
         "lesson": "CPLSE 1.5-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "weather_status": "NO-GO"
+        "dispatch_sent": true
     },
     {
         "date": "13 AUG",
         "time": "05:45 - 10:45",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "TBD",
         "res": "PA28-181G",
         "lesson": "CPLSE 1.7-SXC",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false
+        "remark": "Ramp Out",
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'",
+        "weather_status": "GO"
     },
     {
         "date": "14 AUG",
@@ -30,6 +31,7 @@
         "res": "PA28-181G",
         "lesson": "CPLSE 1.7-SXC",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false
     }
 ]
