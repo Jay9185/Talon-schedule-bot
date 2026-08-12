@@ -31,7 +31,7 @@
         "type": "Academic",
         "remark": "",
         "dispatch_sent": false,
-        "weather_status": "NO-GO"
+        "weather_status": "GO"
     },
     {
         "date": "11 AUG",
@@ -53,7 +53,6 @@
         "lesson": "CPLSE 1.5-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'"
+        "dispatch_sent": false
     }
 ]
