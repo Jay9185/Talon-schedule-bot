@@ -1,49 +1,5 @@
 [
     {
-        "date": "11 AUG",
-        "time": "11:30 - 15:00",
-        "status": "Completed",
-        "ip": "Miller,Kaeden",
-        "res": "545MA",
-        "lesson": "CPLSE 1.6-Flt",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
-        "date": "11 AUG",
-        "time": "14:00 - 16:00",
-        "status": "Completed",
-        "ip": "Wait,Scott",
-        "res": "DVT Bldg 3 - A",
-        "lesson": "IR 2.5-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
-        "date": "11 AUG",
-        "time": "16:00 - 18:00",
-        "status": "Completed",
-        "ip": "Wait,Scott",
-        "res": "DVT Bldg 3 - A",
-        "lesson": "IR 2.6-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
-        "date": "11 AUG",
-        "time": "19:00 - 21:30",
-        "status": "CancelledResched Same Day",
-        "ip": "Miller,Kaeden",
-        "res": "PA28-181G",
-        "lesson": "CPLSE 1.6-Flt",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": false
-    },
-    {
         "date": "12 AUG",
         "time": "09:30 - 15:30",
         "status": "Scheduled",
