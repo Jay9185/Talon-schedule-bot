@@ -8,19 +8,20 @@
         "lesson": "CPLSE 1.7-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "weather_status": "NO-GO"
+        "dispatch_sent": true
     },
     {
         "date": "13 AUG",
         "time": "11:00 - 14:00",
-        "status": "Scheduled",
+        "status": "Authorized",
         "ip": "Miller,Kaeden",
         "res": "RB LD 1",
         "lesson": "CPLSE 1.9-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduled -> Authorized",
+        "weather_status": "GO"
     },
     {
         "date": "13 AUG",
