@@ -24,25 +24,26 @@
     {
         "date": "13 AUG",
         "time": "14:00 - 16:00",
-        "status": "Authorized",
+        "status": "Completed",
         "ip": "Miller,Kaeden",
         "res": "DVT Brief Rm 16",
         "lesson": "IR 1.4-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Ops Check In -> Authorized",
-        "weather_status": "ERROR"
+        "changes_text": "  \u2022 Status: Authorized -> Completed"
     },
     {
         "date": "14 AUG",
         "time": "05:30 - 11:30",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "TBD",
         "res": "PA28-181G",
         "lesson": "CPLSE 1.7-SXC",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false
+        "remark": "Ramp Out",
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'",
+        "weather_status": "GO"
     }
 ]
