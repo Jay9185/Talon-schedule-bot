@@ -2,13 +2,14 @@
     {
         "date": "13 AUG",
         "time": "05:45 - 10:45",
-        "status": "Scheduled",
+        "status": "Ops Check In",
         "ip": "TBD",
-        "res": "PA28-181G",
+        "res": "822PA (NXi)",
         "lesson": "CPLSE 1.7-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
+        "changes_text": "  \u2022 Aircraft: PA28-181G -> 822PA (NXi)\n  \u2022 Status: Scheduled -> Ops Check In",
         "weather_status": "GO"
     },
     {
