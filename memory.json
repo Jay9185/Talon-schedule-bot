@@ -20,7 +20,7 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "NO-GO"
+        "weather_status": "GO"
     },
     {
         "date": "13 AUG",
@@ -30,17 +30,20 @@
         "res": "Redbird AATD",
         "lesson": "CPLSE 1.9-AATD",
         "type": "Sim",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "dispatch_sent": false
     },
     {
         "date": "13 AUG",
         "time": "14:00 - 16:00",
         "status": "Scheduled",
         "ip": "Miller,Kaeden",
-        "res": "Oral Brief Rooms",
+        "res": "DVT Brief Rm 16",
         "lesson": "IR 1.4-Brief",
         "type": "Oral",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Aircraft: Oral Brief Rooms -> DVT Brief Rm 16"
     },
     {
         "date": "14 AUG",
