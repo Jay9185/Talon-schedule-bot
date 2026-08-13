@@ -4,12 +4,12 @@
         "time": "05:45 - 10:45",
         "status": "Ops Check In",
         "ip": "TBD",
-        "res": "822PA (NXi)",
+        "res": "PA28-181G",
         "lesson": "CPLSE 1.7-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "  \u2022 Aircraft: PA28-181G -> 822PA (NXi)\n  \u2022 Status: Scheduled -> Ops Check In",
+        "changes_text": "  \u2022 Aircraft: 822PA (NXi) -> PA28-181G",
         "weather_status": "GO"
     },
     {
@@ -17,11 +17,12 @@
         "time": "11:00 - 14:00",
         "status": "Scheduled",
         "ip": "Miller,Kaeden",
-        "res": "Redbird AATD",
+        "res": "RB LD 1",
         "lesson": "CPLSE 1.9-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Aircraft: Redbird AATD -> RB LD 1"
     },
     {
         "date": "13 AUG",
