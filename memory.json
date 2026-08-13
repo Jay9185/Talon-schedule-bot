@@ -20,7 +20,7 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "GO"
+        "weather_status": "NO-GO"
     },
     {
         "date": "13 AUG",
@@ -42,8 +42,7 @@
         "lesson": "IR 1.4-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: Oral Brief Rooms -> DVT Brief Rm 16"
+        "dispatch_sent": false
     },
     {
         "date": "14 AUG",
