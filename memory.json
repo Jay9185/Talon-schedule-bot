@@ -1,16 +1,5 @@
 [
     {
-        "date": "12 AUG",
-        "time": "09:30 - 15:30",
-        "status": "Completed",
-        "ip": "TBD",
-        "res": "748PA (NXi)",
-        "lesson": "CPLSE 1.5-SXC",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "13 AUG",
         "time": "05:45 - 10:45",
         "status": "Scheduled",
@@ -20,7 +9,7 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "NO-GO"
+        "weather_status": "GO"
     },
     {
         "date": "13 AUG",
