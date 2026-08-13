@@ -13,14 +13,14 @@
     {
         "date": "13 AUG",
         "time": "11:00 - 14:00",
-        "status": "Authorized",
+        "status": "Ramp Out",
         "ip": "Miller,Kaeden",
         "res": "RB LD 1",
         "lesson": "CPLSE 1.9-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Authorized",
+        "changes_text": "  \u2022 Status: Authorized -> Ramp Out",
         "weather_status": "GO"
     },
     {
