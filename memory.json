@@ -19,21 +19,20 @@
         "lesson": "CPLSE 1.9-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Ramp In -> Completed"
+        "dispatch_sent": false
     },
     {
         "date": "13 AUG",
         "time": "14:00 - 16:00",
-        "status": "Ops Check In",
+        "status": "Authorized",
         "ip": "Miller,Kaeden",
         "res": "DVT Brief Rm 16",
         "lesson": "IR 1.4-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Ops Check In",
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Status: Ops Check In -> Authorized",
+        "weather_status": "ERROR"
     },
     {
         "date": "14 AUG",
