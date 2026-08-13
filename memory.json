@@ -35,13 +35,12 @@
     },
     {
         "date": "14 AUG",
-        "time": "21:00 - 03:00 (+1D)",
+        "time": "05:30 - 11:30",
         "status": "Scheduling",
         "ip": "TBD",
         "res": "PA28-181G",
         "lesson": "CPLSE 1.7-SXC",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
