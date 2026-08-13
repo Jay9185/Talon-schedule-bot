@@ -9,7 +9,7 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "GO"
+        "weather_status": "NO-GO"
     },
     {
         "date": "13 AUG",
@@ -41,6 +41,7 @@
         "res": "PA28-181G",
         "lesson": "CPLSE 1.7-SXC",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false
     }
 ]
