@@ -13,26 +13,27 @@
     {
         "date": "13 AUG",
         "time": "11:00 - 14:00",
-        "status": "Ramp In",
+        "status": "Completed",
         "ip": "Miller,Kaeden",
         "res": "RB LD 1",
         "lesson": "CPLSE 1.9-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Ramp Out -> Ramp In",
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Status: Ramp In -> Completed"
     },
     {
         "date": "13 AUG",
         "time": "14:00 - 16:00",
-        "status": "Scheduled",
+        "status": "Ops Check In",
         "ip": "Miller,Kaeden",
         "res": "DVT Brief Rm 16",
         "lesson": "IR 1.4-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduled -> Ops Check In",
+        "weather_status": "GO"
     },
     {
         "date": "14 AUG",
