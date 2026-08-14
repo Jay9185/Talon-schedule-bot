@@ -1,26 +1,15 @@
 [
     {
-        "date": "13 AUG",
-        "time": "05:45 - 10:45",
-        "status": "Ops Check In",
-        "ip": "TBD",
-        "res": "PA28-181G",
-        "lesson": "CPLSE 1.7-SXC",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "14 AUG",
         "time": "05:30 - 11:30",
-        "status": "CancelledSP Sick",
+        "status": "Scheduled",
         "ip": "TBD",
         "res": "742PA (NXi)",
         "lesson": "CPLSE 1.7-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Scheduled -> CancelledSP Sick",
-        "weather_status": "ERROR"
+        "changes_text": "  \u2022 Status: CancelledSP Sick -> Scheduled",
+        "weather_status": "GO"
     }
 ]
