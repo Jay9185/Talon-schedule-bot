@@ -30,20 +30,19 @@
         "lesson": "IR 1.4-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Authorized -> Completed"
+        "dispatch_sent": false
     },
     {
         "date": "14 AUG",
         "time": "05:30 - 11:30",
         "status": "Scheduled",
         "ip": "TBD",
-        "res": "PA28-181G",
+        "res": "742PA (NXi)",
         "lesson": "CPLSE 1.7-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'",
+        "changes_text": "  \u2022 Aircraft: PA28-181G -> 742PA (NXi)",
         "weather_status": "GO"
     }
 ]
