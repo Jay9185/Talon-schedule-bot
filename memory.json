@@ -8,8 +8,6 @@
         "lesson": "CPLSE 1.7-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Ramp Out -> Completed",
-        "weather_status": "GO"
+        "dispatch_sent": true
     }
 ]
