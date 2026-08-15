@@ -1,16 +1,5 @@
 [
     {
-        "date": "14 AUG",
-        "time": "05:30 - 11:30",
-        "status": "Completed",
-        "ip": "TBD",
-        "res": "742PA (NXi)",
-        "lesson": "CPLSE 1.7-SXC",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "16 AUG",
         "time": "20:15 - 02:15 (+1D)",
         "status": "Scheduling",
@@ -20,6 +9,6 @@
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
         "dispatch_sent": false,
-        "weather_status": "GO"
+        "weather_status": "ERROR"
     }
 ]
