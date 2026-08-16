@@ -4,12 +4,13 @@
         "time": "14:30 - 17:30",
         "status": "Scheduled",
         "ip": "Miller,Kaeden",
-        "res": "PA28-181G",
+        "res": "655AG (NXI)",
         "lesson": "IR 1.5-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "weather_status": "GO"
+        "dispatch_sent": true,
+        "changes_text": "  \u2022 Aircraft: PA28-181G -> 655AG (NXI)",
+        "weather_status": "ERROR"
     },
     {
         "date": "16 AUG",
@@ -30,7 +31,8 @@
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 2.7-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "18 AUG",
@@ -40,7 +42,8 @@
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 2.8-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "19 AUG",
@@ -50,7 +53,8 @@
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 3.9-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "19 AUG",
@@ -59,6 +63,27 @@
         "ip": "Davis,Timothy GS",
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 3.10-Ground",
+        "type": "Academic",
+        "remark": "",
+        "dispatch_sent": false
+    },
+    {
+        "date": "21 AUG",
+        "time": "10:00 - 12:00",
+        "status": "Scheduled",
+        "ip": "Hogan,Geoffrey",
+        "res": "DVT Bldg 3 - B",
+        "lesson": "IR 3.11-Ground",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "21 AUG",
+        "time": "12:00 - 14:00",
+        "status": "Scheduled",
+        "ip": "Hogan,Geoffrey",
+        "res": "DVT Bldg 3 - B",
+        "lesson": "IR 3.12-Ground",
         "type": "Academic",
         "remark": ""
     }
