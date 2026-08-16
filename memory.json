@@ -21,5 +21,45 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false
+    },
+    {
+        "date": "18 AUG",
+        "time": "14:00 - 16:00",
+        "status": "Scheduled",
+        "ip": "Hogan,Geoffrey",
+        "res": "DVT Bldg 3 - D",
+        "lesson": "IR 2.7-Ground",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "18 AUG",
+        "time": "16:00 - 18:00",
+        "status": "Scheduled",
+        "ip": "Hogan,Geoffrey",
+        "res": "DVT Bldg 3 - D",
+        "lesson": "IR 2.8-Ground",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "19 AUG",
+        "time": "15:00 - 17:00",
+        "status": "Scheduled",
+        "ip": "Davis,Timothy GS",
+        "res": "DVT Bldg 3 - D",
+        "lesson": "IR 3.9-Ground",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "19 AUG",
+        "time": "17:00 - 19:00",
+        "status": "Scheduled",
+        "ip": "Davis,Timothy GS",
+        "res": "DVT Bldg 3 - D",
+        "lesson": "IR 3.10-Ground",
+        "type": "Academic",
+        "remark": ""
     }
 ]
