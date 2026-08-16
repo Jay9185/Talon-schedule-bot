@@ -2,14 +2,14 @@
     {
         "date": "16 AUG",
         "time": "14:30 - 17:30",
-        "status": "Authorized",
+        "status": "Ops Check In",
         "ip": "Miller,Kaeden",
         "res": "655AG (NXI)",
         "lesson": "IR 1.5-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Scheduled -> Authorized",
+        "changes_text": "  \u2022 Status: Authorized -> Ops Check In",
         "weather_status": "GO"
     },
     {
@@ -22,6 +22,16 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false
+    },
+    {
+        "date": "17 AUG",
+        "time": "14:30 - 17:30",
+        "status": "Scheduling",
+        "ip": "Miller,Kaeden",
+        "res": "Redbird AATD",
+        "lesson": "CPLSE 1.10-AATD",
+        "type": "Sim",
+        "remark": "The schedule has not yet been posted for this day"
     },
     {
         "date": "18 AUG",
