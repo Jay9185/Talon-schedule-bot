@@ -2,13 +2,14 @@
     {
         "date": "16 AUG",
         "time": "14:30 - 17:30",
-        "status": "Scheduled",
+        "status": "Authorized",
         "ip": "Miller,Kaeden",
         "res": "655AG (NXI)",
         "lesson": "IR 1.5-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
+        "changes_text": "  \u2022 Status: Scheduled -> Authorized",
         "weather_status": "GO"
     },
     {
