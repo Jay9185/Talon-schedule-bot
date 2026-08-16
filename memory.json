@@ -9,8 +9,7 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "  \u2022 Aircraft: PA28-181G -> 655AG (NXI)",
-        "weather_status": "ERROR"
+        "weather_status": "GO"
     },
     {
         "date": "16 AUG",
@@ -75,7 +74,8 @@
         "res": "DVT Bldg 3 - B",
         "lesson": "IR 3.11-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "21 AUG",
@@ -85,6 +85,7 @@
         "res": "DVT Bldg 3 - B",
         "lesson": "IR 3.12-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     }
 ]
