@@ -1,6 +1,17 @@
 [
     {
         "date": "16 AUG",
+        "time": "14:30 - 17:30",
+        "status": "Scheduled",
+        "ip": "Miller,Kaeden",
+        "res": "PA28-181G",
+        "lesson": "IR 1.5-Flight",
+        "type": "Flight",
+        "remark": "Ramp Out",
+        "weather_status": "GO"
+    },
+    {
+        "date": "16 AUG",
         "time": "20:15 - 02:15 (+1D)",
         "status": "Scheduled",
         "ip": "TBD",
@@ -8,8 +19,6 @@
         "lesson": "CPLSE 1.8-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'",
-        "weather_status": "GO"
+        "dispatch_sent": false
     }
 ]
