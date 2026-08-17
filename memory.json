@@ -1,17 +1,6 @@
 [
     {
         "date": "16 AUG",
-        "time": "14:30 - 17:30",
-        "status": "Completed",
-        "ip": "Miller,Kaeden",
-        "res": "655AG (NXI)",
-        "lesson": "IR 1.5-Flight",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
-        "date": "16 AUG",
         "time": "20:15 - 02:15 (+1D)",
         "status": "Ramp Out",
         "ip": "TBD",
@@ -20,7 +9,7 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "ERROR"
+        "weather_status": "GO"
     },
     {
         "date": "17 AUG",
