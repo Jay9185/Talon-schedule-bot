@@ -1,27 +1,16 @@
 [
     {
-        "date": "16 AUG",
-        "time": "20:15 - 02:15 (+1D)",
-        "status": "Ramp In",
-        "ip": "TBD",
-        "res": "748PA (NXi)",
-        "lesson": "CPLSE 1.8-SXC",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "17 AUG",
         "time": "14:30 - 17:30",
-        "status": "Ops Check In",
+        "status": "Ramp Out",
         "ip": "Miller,Kaeden",
         "res": "RB SD 5",
         "lesson": "CPLSE 1.10-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Scheduled -> Ops Check In",
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Status: Ops Check In -> Ramp Out",
+        "weather_status": "NO-GO"
     },
     {
         "date": "18 AUG",
