@@ -8,8 +8,7 @@
         "lesson": "CPLSE 1.8-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "weather_status": "GO"
+        "dispatch_sent": true
     },
     {
         "date": "17 AUG",
@@ -20,7 +19,8 @@
         "lesson": "CPLSE 1.10-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "GO"
     },
     {
         "date": "18 AUG",
