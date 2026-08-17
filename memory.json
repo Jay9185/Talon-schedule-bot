@@ -2,13 +2,14 @@
     {
         "date": "16 AUG",
         "time": "20:15 - 02:15 (+1D)",
-        "status": "Ramp Out",
+        "status": "Ramp In",
         "ip": "TBD",
         "res": "748PA (NXi)",
         "lesson": "CPLSE 1.8-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
+        "changes_text": "  \u2022 Status: Ramp Out -> Ramp In",
         "weather_status": "GO"
     },
     {
