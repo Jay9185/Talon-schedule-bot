@@ -2,25 +2,27 @@
     {
         "date": "16 AUG",
         "time": "14:30 - 17:30",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Miller,Kaeden",
         "res": "655AG (NXI)",
         "lesson": "IR 1.5-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Status: Ramp Out -> Completed"
     },
     {
         "date": "16 AUG",
         "time": "20:15 - 02:15 (+1D)",
         "status": "Scheduled",
         "ip": "TBD",
-        "res": "PA28-181G",
+        "res": "748PA (NXi)",
         "lesson": "CPLSE 1.8-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": true,
+        "changes_text": "  \u2022 Aircraft: PA28-181G -> 748PA (NXi)",
+        "weather_status": "GO"
     },
     {
         "date": "17 AUG",
@@ -31,8 +33,7 @@
         "lesson": "CPLSE 1.10-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'"
+        "dispatch_sent": false
     },
     {
         "date": "18 AUG",
@@ -64,7 +65,8 @@
         "res": "PA28-181G",
         "lesson": "CPLSE 1.11-SXC",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false
     },
     {
         "date": "19 AUG",
