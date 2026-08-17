@@ -2,13 +2,14 @@
     {
         "date": "17 AUG",
         "time": "14:30 - 17:30",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Miller,Kaeden",
         "res": "RB SD 5",
         "lesson": "CPLSE 1.10-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
         "dispatch_sent": true,
+        "changes_text": "  \u2022 Status: Ramp Out -> Completed",
         "weather_status": "GO"
     },
     {
@@ -42,8 +43,7 @@
         "lesson": "CPLSE 1.11-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'"
+        "dispatch_sent": false
     },
     {
         "date": "19 AUG",
