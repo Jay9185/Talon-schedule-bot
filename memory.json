@@ -20,7 +20,6 @@
         "type": "Sim",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: Redbird AATD -> RB SD 5",
         "weather_status": "GO"
     },
     {
