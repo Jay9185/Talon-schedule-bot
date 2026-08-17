@@ -13,13 +13,14 @@
     {
         "date": "17 AUG",
         "time": "14:30 - 17:30",
-        "status": "Scheduled",
+        "status": "Ops Check In",
         "ip": "Miller,Kaeden",
         "res": "RB SD 5",
         "lesson": "CPLSE 1.10-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
         "dispatch_sent": true,
+        "changes_text": "  \u2022 Status: Scheduled -> Ops Check In",
         "weather_status": "GO"
     },
     {
