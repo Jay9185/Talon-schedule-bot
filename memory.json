@@ -8,8 +8,7 @@
         "lesson": "IR 1.5-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Ramp Out -> Completed"
+        "dispatch_sent": true
     },
     {
         "date": "16 AUG",
@@ -21,7 +20,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "  \u2022 Aircraft: PA28-181G -> 748PA (NXi)",
         "weather_status": "GO"
     },
     {
