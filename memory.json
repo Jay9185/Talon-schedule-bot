@@ -41,6 +41,17 @@
         "res": "PA28-181G",
         "lesson": "CPLSE 1.11-SXC",
         "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false
+    },
+    {
+        "date": "20 AUG",
+        "time": "20:45 - 02:45 (+1D)",
+        "status": "Scheduling",
+        "ip": "TBD",
+        "res": "PA28-181G",
+        "lesson": "CPLSE 1.12-SXC",
+        "type": "Flight",
         "remark": "The schedule has not yet been posted for this day"
     },
     {
