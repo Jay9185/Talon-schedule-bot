@@ -34,26 +34,6 @@
         "dispatch_sent": false
     },
     {
-        "date": "19 AUG",
-        "time": "14:00 - 16:00",
-        "status": "Scheduled",
-        "ip": "Hogan,Geoffrey",
-        "res": "DVT Bldg 3 - D",
-        "lesson": "IR 3.9-Ground",
-        "type": "Academic",
-        "remark": ""
-    },
-    {
-        "date": "19 AUG",
-        "time": "16:00 - 18:00",
-        "status": "Scheduled",
-        "ip": "Hogan,Geoffrey",
-        "res": "DVT Bldg 3 - D",
-        "lesson": "IR 3.10-Ground",
-        "type": "Academic",
-        "remark": ""
-    },
-    {
         "date": "21 AUG",
         "time": "10:00 - 12:00",
         "status": "Scheduled",
