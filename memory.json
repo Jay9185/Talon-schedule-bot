@@ -35,25 +35,23 @@
     },
     {
         "date": "19 AUG",
-        "time": "15:00 - 17:00",
+        "time": "14:00 - 16:00",
         "status": "Scheduled",
-        "ip": "Davis,Timothy GS",
+        "ip": "Hogan,Geoffrey",
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 3.9-Ground",
         "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false
+        "remark": ""
     },
     {
         "date": "19 AUG",
-        "time": "17:00 - 19:00",
+        "time": "16:00 - 18:00",
         "status": "Scheduled",
-        "ip": "Davis,Timothy GS",
+        "ip": "Hogan,Geoffrey",
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 3.10-Ground",
         "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false
+        "remark": ""
     },
     {
         "date": "21 AUG",
