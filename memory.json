@@ -31,8 +31,7 @@
         "lesson": "CPLSE 1.11-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: PA28-181G -> 281TW (NXI)"
+        "dispatch_sent": false
     },
     {
         "date": "19 AUG",
