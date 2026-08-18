@@ -52,7 +52,8 @@
         "res": "PA28-181G",
         "lesson": "CPLSE 1.12-SXC",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false
     },
     {
         "date": "21 AUG",
