@@ -8,9 +8,7 @@
         "lesson": "CPLSE 1.10-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Ramp Out -> Completed",
-        "weather_status": "GO"
+        "dispatch_sent": true
     },
     {
         "date": "18 AUG",
@@ -21,7 +19,8 @@
         "lesson": "IR 2.7-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "GO"
     },
     {
         "date": "18 AUG",
