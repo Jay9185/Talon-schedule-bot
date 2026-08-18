@@ -2,14 +2,14 @@
     {
         "date": "18 AUG",
         "time": "14:00 - 16:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Hogan,Geoffrey",
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 2.7-Ground",
         "type": "Academic",
         "remark": "",
         "dispatch_sent": true,
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Status: Scheduled -> Completed"
     },
     {
         "date": "18 AUG",
@@ -20,7 +20,8 @@
         "lesson": "IR 2.8-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "GO"
     },
     {
         "date": "18 AUG",
@@ -36,13 +37,14 @@
     {
         "date": "19 AUG",
         "time": "20:30 - 02:30 (+1D)",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "TBD",
         "res": "PA28-181G",
         "lesson": "CPLSE 1.11-SXC",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false
+        "remark": "Ramp Out",
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'"
     },
     {
         "date": "20 AUG",
