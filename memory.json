@@ -9,7 +9,7 @@
         "type": "Academic",
         "remark": "",
         "dispatch_sent": true,
-        "weather_status": "NO-GO"
+        "weather_status": "GO"
     },
     {
         "date": "18 AUG",
@@ -31,8 +31,7 @@
         "lesson": "CPLSE 1.11-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: 655AG (NXI) -> 821PA (NXi)"
+        "dispatch_sent": false
     },
     {
         "date": "19 AUG",
