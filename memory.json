@@ -13,14 +13,14 @@
     {
         "date": "18 AUG",
         "time": "20:00 - 02:00 (+1D)",
-        "status": "Ramp Out",
+        "status": "Ramp In",
         "ip": "TBD",
         "res": "821PA (NXi)",
         "lesson": "CPLSE 1.11-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "ERROR"
+        "changes_text": "  \u2022 Status: Ramp Out -> Ramp In"
     },
     {
         "date": "19 AUG",
@@ -31,7 +31,8 @@
         "lesson": "CPLSE 1.11-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "NO-GO"
     },
     {
         "date": "20 AUG",
