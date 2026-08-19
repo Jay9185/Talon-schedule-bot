@@ -74,7 +74,8 @@
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 3.9-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "25 AUG",
@@ -84,6 +85,7 @@
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 3.10-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     }
 ]
