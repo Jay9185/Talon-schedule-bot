@@ -26,11 +26,12 @@
         "time": "20:30 - 02:30 (+1D)",
         "status": "Scheduled",
         "ip": "TBD",
-        "res": "PA28-181G",
+        "res": "748PA (NXi)",
         "lesson": "CPLSE 1.11-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
+        "changes_text": "  \u2022 Aircraft: PA28-181G -> 748PA (NXi)",
         "weather_status": "NO-GO"
     },
     {
