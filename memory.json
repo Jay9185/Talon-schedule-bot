@@ -20,7 +20,7 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "ERROR"
+        "weather_status": "GO"
     },
     {
         "date": "21 AUG",
