@@ -4,22 +4,24 @@
         "time": "20:30 - 02:30 (+1D)",
         "status": "Ops Check In",
         "ip": "TBD",
-        "res": "748PA (NXi)",
+        "res": "PA28-181G",
         "lesson": "CPLSE 1.11-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true
+        "dispatch_sent": true,
+        "changes_text": "  \u2022 Aircraft: 748PA (NXi) -> PA28-181G"
     },
     {
         "date": "20 AUG",
         "time": "20:45 - 02:45 (+1D)",
         "status": "Scheduled",
         "ip": "TBD",
-        "res": "PA28-181G",
+        "res": "822PA (NXi)",
         "lesson": "CPLSE 1.12-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
+        "changes_text": "  \u2022 Aircraft: PA28-181G -> 822PA (NXi)",
         "weather_status": "GO"
     },
     {
