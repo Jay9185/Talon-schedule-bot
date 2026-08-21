@@ -41,8 +41,7 @@
         "lesson": "IR 3.12-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false,
-        "weather_status": "GO"
+        "dispatch_sent": false
     },
     {
         "date": "22 AUG",
@@ -53,7 +52,8 @@
         "lesson": "IR 1.6-Flight",
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "GO"
     },
     {
         "date": "22 AUG",
