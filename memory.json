@@ -13,14 +13,14 @@
     {
         "date": "20 AUG",
         "time": "20:45 - 02:45 (+1D)",
-        "status": "Ops Check In",
+        "status": "Ramp Out",
         "ip": "TBD",
         "res": "822PA (NXi)",
         "lesson": "CPLSE 1.12-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Scheduled -> Ops Check In",
+        "changes_text": "  \u2022 Status: Ops Check In -> Ramp Out",
         "weather_status": "GO"
     },
     {
