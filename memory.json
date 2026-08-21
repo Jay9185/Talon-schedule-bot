@@ -19,8 +19,8 @@
         "lesson": "CPLSE 1.12-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "weather_status": "NO-GO"
+        "dispatch_sent": true,
+        "weather_status": "GO"
     },
     {
         "date": "21 AUG",
