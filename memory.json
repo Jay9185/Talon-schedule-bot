@@ -24,25 +24,27 @@
     {
         "date": "22 AUG",
         "time": "14:30 - 17:00",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "Dalotto, Johanna",
         "res": "PA28-181G",
         "lesson": "IR 1.6-Flight",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day",
+        "remark": "Ramp Out",
         "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'",
         "weather_status": "GO"
     },
     {
         "date": "22 AUG",
         "time": "20:00 - 02:00 (+1D)",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "TBD",
         "res": "PA28-181G",
         "lesson": "CPLSE 1.12-SXC",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false
+        "remark": "Ramp Out",
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'"
     },
     {
         "date": "23 AUG",
