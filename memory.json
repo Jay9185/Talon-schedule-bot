@@ -24,13 +24,14 @@
     {
         "date": "22 AUG",
         "time": "14:30 - 17:00",
-        "status": "Scheduled",
+        "status": "Authorized",
         "ip": "Dalotto, Johanna",
         "res": "PA28-181G",
         "lesson": "IR 1.6-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduled -> Authorized",
         "weather_status": "GO"
     },
     {
