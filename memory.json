@@ -31,7 +31,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: PA28-181G -> 904AG (NXI)",
         "weather_status": "NO-GO"
     },
     {
@@ -43,8 +42,7 @@
         "lesson": "CPLSE 1.12-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: PA28-181G -> 908AG (NXI)"
+        "dispatch_sent": false
     },
     {
         "date": "23 AUG",
