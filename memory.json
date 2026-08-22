@@ -24,13 +24,14 @@
     {
         "date": "22 AUG",
         "time": "14:30 - 17:00",
-        "status": "Authorized",
+        "status": "CancelledWX - Heat",
         "ip": "Dalotto, Johanna",
         "res": "904AG (NXI)",
         "lesson": "IR 1.6-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
+        "changes_text": "  \u2022 Status: Authorized -> CancelledWX - Heat",
         "weather_status": "GO"
     },
     {
@@ -39,10 +40,11 @@
         "status": "Scheduled",
         "ip": "TBD",
         "res": "908AG (NXI)",
-        "lesson": "CPLSE 1.12-SXC",
+        "lesson": "CPLSE 1.13-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Lesson: CPLSE 1.12-SXC -> CPLSE 1.13-SXC"
     },
     {
         "date": "23 AUG",
