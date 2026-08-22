@@ -54,5 +54,25 @@
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
         "dispatch_sent": false
+    },
+    {
+        "date": "25 AUG",
+        "time": "10:00 - 12:00",
+        "status": "Scheduled",
+        "ip": "Hogan,Geoffrey",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "IR 4.13-Ground",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "25 AUG",
+        "time": "12:00 - 14:00",
+        "status": "Scheduled",
+        "ip": "Hogan,Geoffrey",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "IR 4.14-Ground",
+        "type": "Academic",
+        "remark": ""
     }
 ]
