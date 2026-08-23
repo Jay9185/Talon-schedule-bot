@@ -34,6 +34,26 @@
         "dispatch_sent": false
     },
     {
+        "date": "24 AUG",
+        "time": "21:00 - 23:30",
+        "status": "Scheduling",
+        "ip": "Miller,Kaeden",
+        "res": "PA28-181G",
+        "lesson": "IR 1.6-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
+    },
+    {
+        "date": "24 AUG",
+        "time": "23:30 - 02:00 (+1D)",
+        "status": "Scheduling",
+        "ip": "Miller,Kaeden",
+        "res": "Oral Brief Rooms",
+        "lesson": "IR 1.7-Brief",
+        "type": "Oral",
+        "remark": "The schedule has not yet been posted for this day"
+    },
+    {
         "date": "25 AUG",
         "time": "10:00 - 12:00",
         "status": "Scheduled",
