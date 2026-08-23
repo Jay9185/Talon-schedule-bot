@@ -13,25 +13,27 @@
     {
         "date": "22 AUG",
         "time": "20:00 - 02:00 (+1D)",
-        "status": "Ops Check In",
+        "status": "CancelledWX - T-Storm",
         "ip": "TBD",
         "res": "908AG (NXI)",
         "lesson": "CPLSE 1.13-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
+        "changes_text": "  \u2022 Status: Ops Check In -> CancelledWX - T-Storm",
         "weather_status": "NO-GO"
     },
     {
         "date": "23 AUG",
         "time": "20:00 - 02:00 (+1D)",
-        "status": "Scheduled",
+        "status": "CancelledCrew RestViolate",
         "ip": "TBD",
         "res": "PA28-181G",
         "lesson": "CPLSE 1.12-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduled -> CancelledCrew RestViolate"
     },
     {
         "date": "24 AUG",
