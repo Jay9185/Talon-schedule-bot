@@ -20,7 +20,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Scheduled -> Ops Check In",
         "weather_status": "NO-GO"
     },
     {
