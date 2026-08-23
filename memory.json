@@ -13,14 +13,15 @@
     {
         "date": "22 AUG",
         "time": "20:00 - 02:00 (+1D)",
-        "status": "Scheduled",
+        "status": "Ops Check In",
         "ip": "TBD",
         "res": "908AG (NXI)",
         "lesson": "CPLSE 1.13-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Status: Scheduled -> Ops Check In",
+        "weather_status": "NO-GO"
     },
     {
         "date": "23 AUG",
