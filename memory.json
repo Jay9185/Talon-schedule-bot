@@ -20,8 +20,7 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Ops Check In -> CancelledWX - T-Storm",
-        "weather_status": "NO-GO"
+        "weather_status": "GO"
     },
     {
         "date": "23 AUG",
@@ -32,8 +31,7 @@
         "lesson": "CPLSE 1.12-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> CancelledCrew RestViolate"
+        "dispatch_sent": false
     },
     {
         "date": "24 AUG",
