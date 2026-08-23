@@ -8,8 +8,7 @@
         "lesson": "IR 1.6-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "weather_status": "GO"
+        "dispatch_sent": true
     },
     {
         "date": "22 AUG",
@@ -20,7 +19,8 @@
         "lesson": "CPLSE 1.13-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": true,
+        "weather_status": "GO"
     },
     {
         "date": "23 AUG",
@@ -31,8 +31,7 @@
         "lesson": "CPLSE 1.12-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'"
+        "dispatch_sent": false
     },
     {
         "date": "24 AUG",
@@ -108,7 +107,8 @@
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 3.11-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "26 AUG",
@@ -118,6 +118,7 @@
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 3.12-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     }
 ]
