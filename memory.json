@@ -36,14 +36,14 @@
     {
         "date": "24 AUG",
         "time": "21:00 - 23:30",
-        "status": "Scheduled",
+        "status": "CancelledResched Same Day",
         "ip": "Miller,Kaeden",
         "res": "PA28-181G",
         "lesson": "IR 1.6-Flight",
         "type": "Flight",
         "remark": "Observer 1: Dawson, Taylor\nObserver 2:",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Observer 1: Dawson, Taylor\nObserver 2:'"
+        "changes_text": "  \u2022 Status: Scheduled -> CancelledResched Same Day"
     },
     {
         "date": "24 AUG",
@@ -54,8 +54,7 @@
         "lesson": "IR 1.7-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'"
+        "dispatch_sent": false
     },
     {
         "date": "25 AUG",
