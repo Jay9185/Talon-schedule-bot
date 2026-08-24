@@ -13,6 +13,28 @@ from bs4 import BeautifulSoup
 TALON_LOGIN_URL = "https://apps4.talonsystems.com/tseta/servlet/content?module=home&page=homepg&zajael1120=42DC6E6C4E5A723E80D0BF0AC5A1C8AF"
 MEMORY_FILE = "memory.json"
 
+def get_smart_date(date_str, now_mst):
+    """Converts a raw date like '26 AUG' into 'Today', 'Tomorrow', or 'This Wednesday'."""
+    try:
+        current_year = now_mst.year
+        clean_date = "".join(c for c in date_str if c.isalnum() or c.isspace()).strip()
+        dt_str = f"{clean_date} {current_year}"
+        dt = datetime.strptime(dt_str, "%d %b %Y").date()
+        
+        # Handle year boundary
+        if dt.month == 12 and now_mst.month < 3: dt = dt.replace(year=current_year - 1)
+        elif dt.month < 3 and now_mst.month == 12: dt = dt.replace(year=current_year + 1)
+        
+        delta = (dt - now_mst.date()).days
+        
+        if delta == 0: return f"Today, {date_str}"
+        elif delta == 1: return f"Tomorrow, {date_str}"
+        elif 1 < delta < 7: return f"This {dt.strftime('%A')}, {date_str}"
+        elif delta == -1: return f"Yesterday, {date_str}"
+        else: return date_str
+    except:
+        return date_str
+
 def extract_schedule(html_content):
     soup = BeautifulSoup(html_content, 'html.parser')
     table = soup.find('table', id='tblSchedListS')
@@ -89,7 +111,6 @@ def extract_schedule(html_content):
 def filter_old_flights(schedule):
     mst_tz = timezone(timedelta(hours=-7))
     now = datetime.now(mst_tz)
-    # INCREASED TO 14 DAYS TO TRACK 7-DAY FATIGUE LIMITS
     cutoff_date = (now - timedelta(days=14)).date()
     current_year = now.year
     filtered_schedule = []
@@ -131,12 +152,19 @@ def is_future_flight(f):
     except:
         return True 
 
+def is_cancelled(f):
+    status = f.get('status', '').lower()
+    return 'cancel' in status or 'cnx' in status
+
 def evaluate_fatigue(target_flight, all_flights):
-    """Calculates duty span and 7-day continuous limits."""
     warnings = []
     mst_tz = timezone(timedelta(hours=-7))
     now = datetime.now(mst_tz)
     current_year = now.year
+    
+    if is_cancelled(target_flight): return []
+        
+    active_flights = [f for f in all_flights if not is_cancelled(f)]
     
     def parse_dt(d_str, t_str):
         clean_date = "".join(c for c in d_str if c.isalnum() or c.isspace()).strip()
@@ -146,9 +174,8 @@ def evaluate_fatigue(target_flight, all_flights):
         elif dt.month < 3 and now.month == 12: dt = dt.replace(year=current_year + 1)
         return dt
 
-    # 1. 12-Hour Duty Limit Check
     try:
-        day_flights = [f for f in all_flights if f['date'] == target_flight['date']]
+        day_flights = [f for f in active_flights if f['date'] == target_flight['date']]
         start_times = []
         end_times = []
         for df in day_flights:
@@ -170,22 +197,19 @@ def evaluate_fatigue(target_flight, all_flights):
     except Exception:
         pass
 
-    # 2. 7-Day Continuous Check
     try:
         unique_dates = set()
-        for f in all_flights:
+        for f in active_flights:
             unique_dates.add(parse_dt(f['date'], "00:00").date())
             
         target_date = parse_dt(target_flight['date'], "00:00").date()
         streak = 1
         
-        # Check consecutive days backward
         check_date = target_date - timedelta(days=1)
         while check_date in unique_dates:
             streak += 1
             check_date -= timedelta(days=1)
             
-        # Check consecutive days forward
         check_date = target_date + timedelta(days=1)
         while check_date in unique_dates:
             streak += 1
@@ -205,6 +229,8 @@ def get_trmnl_flights(schedule):
     trmnl_flights = []
     
     for f in schedule:
+        if is_cancelled(f): continue
+            
         try:
             time_parts = f['time'].split("-")
             if len(time_parts) < 2:
@@ -217,16 +243,11 @@ def get_trmnl_flights(schedule):
             dt_str = f"{clean_date} {current_year} {stop_time_str}"
             stop_dt = datetime.strptime(dt_str, "%d %b %Y %H:%M").replace(tzinfo=mst_tz)
             
-            if "(+1D)" in f['time']:
-                stop_dt += timedelta(days=1)
+            if "(+1D)" in f['time']: stop_dt += timedelta(days=1)
+            if stop_dt.month == 12 and now.month < 3: stop_dt = stop_dt.replace(year=current_year - 1)
+            elif stop_dt.month < 3 and now.month == 12: stop_dt = stop_dt.replace(year=current_year + 1)
                 
-            if stop_dt.month == 12 and now.month < 3:
-                stop_dt = stop_dt.replace(year=current_year - 1)
-            elif stop_dt.month < 3 and now.month == 12:
-                stop_dt = stop_dt.replace(year=current_year + 1)
-                
-            if stop_dt > now:
-                trmnl_flights.append(f)
+            if stop_dt > now: trmnl_flights.append(f)
         except Exception:
             pass
             
@@ -251,14 +272,28 @@ def compare_schedules(old_sched, new_sched):
         else:
             old_f = old_dict[key]
             changes = []
-            if old_f['lesson'] != f['lesson']: changes.append(f"Lesson: {old_f['lesson']} -> {f['lesson']}")
-            if old_f['ip'] != f['ip']: changes.append(f"Instructor: {old_f['ip']} -> {f['ip']}")
-            if old_f['res'] != f['res']: changes.append(f"Aircraft: {old_f['res']} -> {f['res']}")
-            if old_f['status'] != f['status']: changes.append(f"Status: {old_f['status']} -> {f['status']}")
             
-            old_remark = old_f.get('remark', '')
-            if old_remark != f['remark']: 
-                if f['remark']: changes.append(f"Remarks: '{f['remark']}'")
+            # NOISE SUPPRESSION: Strips trailing spaces/invisible formatting before comparing
+            old_lesson = old_f.get('lesson', '').strip()
+            new_lesson = f.get('lesson', '').strip()
+            if old_lesson != new_lesson: changes.append(f"Lesson: {old_lesson} -> {new_lesson}")
+            
+            old_ip = old_f.get('ip', '').strip()
+            new_ip = f.get('ip', '').strip()
+            if old_ip != new_ip: changes.append(f"Instructor: {old_ip} -> {new_ip}")
+            
+            old_res = old_f.get('res', '').strip()
+            new_res = f.get('res', '').strip()
+            if old_res != new_res: changes.append(f"Aircraft: {old_res} -> {new_res}")
+            
+            old_status = old_f.get('status', '').strip()
+            new_status = f.get('status', '').strip()
+            if old_status != new_status: changes.append(f"Status: {old_status} -> {new_status}")
+            
+            old_remark = old_f.get('remark', '').strip()
+            new_remark = f.get('remark', '').strip()
+            if old_remark != new_remark: 
+                if new_remark: changes.append(f"Remarks: '{new_remark}'")
                 else: changes.append(f"Remarks Removed")
 
             if changes:
@@ -273,7 +308,6 @@ def compare_schedules(old_sched, new_sched):
     return new_alerts, updated_alerts, deleted_alerts
 
 def evaluate_weather(start_dt, end_dt):
-    # KDVT Runways 07L/07R (074°) and 25L/25R (254°)
     runway_heading = 74 
     max_wind_limit = 15
     max_crosswind_limit = 10 
@@ -315,8 +349,7 @@ def evaluate_weather(start_dt, end_dt):
         return f"{dir_str} @ {wind_speed} KT" + (f" G {wind_gust} KT" if wind_gust else "")
 
     def parse_api_time(t_val):
-        if isinstance(t_val, int):
-            return datetime.fromtimestamp(t_val, tz=timezone.utc)
+        if isinstance(t_val, int): return datetime.fromtimestamp(t_val, tz=timezone.utc)
         return datetime.fromisoformat(str(t_val).replace('Z', '+00:00'))
 
     try:
@@ -351,10 +384,7 @@ def evaluate_weather(start_dt, end_dt):
                             
                             period_start_z = parse_api_time(fcst.get("timeFrom")).strftime('%H%M')
                             wind_str = run_limits_math(
-                                fcst.get("wdir"), 
-                                fcst.get("wspd"), 
-                                fcst.get("wgst"), 
-                                f"TAF {period_start_z}Z"
+                                fcst.get("wdir"), fcst.get("wspd"), fcst.get("wgst"), f"TAF {period_start_z}Z"
                             )
                             
                             if peak > max_peak_seen:
@@ -391,18 +421,9 @@ def send_telegram(message):
 
 def sync_gcal(schedule):
     webhook_url = os.environ.get("GCAL_WEBHOOK_URL")
-    if not webhook_url:
-        print("Skipping GCal Sync: Missing GCAL_WEBHOOK_URL secret.")
-        return
-
-    try:
-        resp = requests.post(webhook_url, json={"schedule": schedule}, timeout=15)
-        if resp.status_code == 200:
-            print(f"✅ Webhook GCal Sync successful.")
-        else:
-            print(f"⚠️ Webhook GCal Sync failed with status {resp.status_code}")
-    except Exception as e:
-        print(f"⚠️ Webhook GCal Sync Error: {e}")
+    if not webhook_url: return
+    try: requests.post(webhook_url, json={"schedule": schedule}, timeout=15)
+    except: pass
 
 def update_trmnl(flights, timestamp_str, weather_data):
     webhook = os.environ.get("TRMNL_WEBHOOK_URL")
@@ -418,14 +439,15 @@ def update_trmnl(flights, timestamp_str, weather_data):
         }
     }
     try: requests.post(webhook, json=payload)
-    except Exception as e: print(f"TRMNL error: {e}")
+    except: pass
 
 def run_scraper():
     username = os.environ.get("TALON_USER")
     password = os.environ.get("TALON_PASS")
     
     mst_tz = timezone(timedelta(hours=-7))
-    now_mst = datetime.now(mst_tz).strftime("%d %b %Y %I:%M %p MST")
+    now_mst_obj = datetime.now(mst_tz)
+    now_mst = now_mst_obj.strftime("%d %b %Y %I:%M %p MST")
 
     old_schedule = []
     if os.path.exists(MEMORY_FILE):
@@ -449,7 +471,6 @@ def run_scraper():
             page.fill("input[name='password']", password, timeout=5000, force=True) 
             page.click("input[id='butlogin']", timeout=5000)
             
-            print("Logged in, waiting for portal to load...")
             page.wait_for_timeout(5000) 
 
             current_url = page.url
@@ -504,9 +525,10 @@ def run_scraper():
         trigger_weather_dispatch = False
         target_flight_details = None
         
-        if trmnl_payload:
-            next_f = trmnl_payload[0]
-            current_year = datetime.now(mst_tz).year
+        active_future_flights = [f for f in current_schedule if is_future_flight(f) and not is_cancelled(f)]
+        if active_future_flights:
+            next_f = active_future_flights[0]
+            current_year = now_mst_obj.year
             try:
                 time_parts = next_f['time'].split("-")
                 start_time_str = time_parts[0].strip()
@@ -522,16 +544,16 @@ def run_scraper():
                 
                 if "(+1D)" in next_f['time']: end_dt += timedelta(days=1)
                 
-                if start_dt.month == 12 and datetime.now(mst_tz).month < 3:
+                if start_dt.month == 12 and now_mst_obj.month < 3:
                     start_dt = start_dt.replace(year=current_year - 1)
                     end_dt = end_dt.replace(year=current_year - 1)
-                elif start_dt.month < 3 and datetime.now(mst_tz).month == 12:
+                elif start_dt.month < 3 and now_mst_obj.month == 12:
                     start_dt = start_dt.replace(year=current_year + 1)
                     end_dt = end_dt.replace(year=current_year + 1)
                     
                 weather_decision = evaluate_weather(start_dt, end_dt)
                 
-                hours_until_flight = (start_dt - datetime.now(mst_tz)).total_seconds() / 3600
+                hours_until_flight = (start_dt - now_mst_obj).total_seconds() / 3600
                 is_preflight_window = (0 < hours_until_flight <= 3)
                 
                 target_key = f"{next_f['date']}_{next_f['time']}"
@@ -549,14 +571,14 @@ def run_scraper():
         is_manual_run = os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch"
         
         if is_manual_run:
-            future_flights = [f for f in current_schedule if is_future_flight(f)]
-            if future_flights:
+            if active_future_flights:
                 msg = "<pre>\n"
                 msg += "========================================\n"
                 msg += "        AEROGUARD MASTER SCHEDULE       \n"
                 msg += "========================================\n"
-                for f in future_flights:
-                    msg += f"Date:        {html.escape(f['date'])}\n"
+                for f in active_future_flights:
+                    smart_date = get_smart_date(f['date'], now_mst_obj)
+                    msg += f"Date:        {html.escape(smart_date)}\n"
                     msg += f"Block:       {html.escape(f['time'])}\n"
                     msg += f"Lesson:      {html.escape(f['lesson'])}\n"
                     msg += f"Type:        {html.escape(f['type'])}\n"
@@ -583,11 +605,12 @@ def run_scraper():
                 send_telegram(msg)
                 
         if trigger_weather_dispatch and target_flight_details:
+            smart_date = get_smart_date(target_flight_details['date'], now_mst_obj)
             msg = "<pre>\n"
             msg += "========================================\n"
             msg += "        AEROGUARD DISPATCH RELEASE      \n"
             msg += "========================================\n"
-            msg += f"Date:        {html.escape(target_flight_details['date'])}\n"
+            msg += f"Date:        {html.escape(smart_date)}\n"
             msg += f"Block:       {html.escape(target_flight_details['time'])}\n"
             msg += f"Lesson:      {html.escape(target_flight_details['lesson'])} ({html.escape(target_flight_details['type'])})\n"
             msg += f"Aircraft:    {html.escape(target_flight_details['res'])}\n"
@@ -621,21 +644,28 @@ def run_scraper():
             msg += "       AEROGUARD SCHEDULING ALERT       \n"
             msg += "========================================\n"
             for date in sorted(alerts_by_date.keys()):
-                msg += f"Date: {html.escape(date)}\n"
+                smart_date = get_smart_date(date, now_mst_obj)
+                msg += f"{html.escape(smart_date)}\n"
                 msg += "----------------------------------------\n"
                 for f, alert_type in alerts_by_date[date]:
-                    action = "ADDED" if alert_type == "NEW" else "CANCELED" if alert_type == "DELETED" else "MODIFIED"
+                    action = "CANCELED" if is_cancelled(f) else ("ADDED" if alert_type == "NEW" else ("REMOVED" if alert_type == "DELETED" else "MODIFIED"))
+                    
                     msg += f"Action:      {action}\n"
                     msg += f"Block:       {html.escape(f['time'])}\n"
                     msg += f"Lesson:      {html.escape(f['lesson'])}\n"
                     msg += f"Aircraft:    {html.escape(f['res'])}\n"
                     msg += f"Instructor:  {html.escape(f['ip'])}\n"
-                    msg += f"Status:      {html.escape(f['status'])}\n"
+                    
+                    # Highlight the status specifically if it was a cancellation
+                    if is_cancelled(f):
+                        msg += f"Status:      {html.escape(f['status'])} [CNX]\n"
+                    else:
+                        msg += f"Status:      {html.escape(f['status'])}\n"
+                        
                     if alert_type == "UPDATED" and f.get('changes_text'):
                         msg += f"Changes:\n{html.escape(f['changes_text'])}\n"
                         
-                    # Inject Fatigue Warnings for New or Modified Flights
-                    if alert_type in ["NEW", "UPDATED"]:
+                    if alert_type in ["NEW", "UPDATED"] and not is_cancelled(f):
                         fatigue_warns = evaluate_fatigue(f, current_schedule)
                         if fatigue_warns:
                             msg += "\n⚠️ FATIGUE / LEGALITY WARNING:\n"
