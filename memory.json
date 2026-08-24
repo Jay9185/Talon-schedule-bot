@@ -13,14 +13,15 @@
     {
         "date": "24 AUG",
         "time": "12:00 - 14:30",
-        "status": "Ops Check In",
+        "status": "Completed",
         "ip": "Miller,Kaeden",
         "res": "DVT Brief Rm 5",
         "lesson": "IR 1.7-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Status: Ops Check In -> Completed",
+        "weather_status": "ERROR"
     },
     {
         "date": "24 AUG",
