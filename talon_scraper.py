@@ -89,7 +89,8 @@ def extract_schedule(html_content):
 def filter_old_flights(schedule):
     mst_tz = timezone(timedelta(hours=-7))
     now = datetime.now(mst_tz)
-    cutoff_date = (now - timedelta(days=2)).date()
+    # INCREASED TO 14 DAYS TO TRACK 7-DAY FATIGUE LIMITS
+    cutoff_date = (now - timedelta(days=14)).date()
     current_year = now.year
     filtered_schedule = []
     
@@ -129,6 +130,73 @@ def is_future_flight(f):
         return flight_dt > now
     except:
         return True 
+
+def evaluate_fatigue(target_flight, all_flights):
+    """Calculates duty span and 7-day continuous limits."""
+    warnings = []
+    mst_tz = timezone(timedelta(hours=-7))
+    now = datetime.now(mst_tz)
+    current_year = now.year
+    
+    def parse_dt(d_str, t_str):
+        clean_date = "".join(c for c in d_str if c.isalnum() or c.isspace()).strip()
+        dt_str = f"{clean_date} {current_year} {t_str}"
+        dt = datetime.strptime(dt_str, "%d %b %Y %H:%M")
+        if dt.month == 12 and now.month < 3: dt = dt.replace(year=current_year - 1)
+        elif dt.month < 3 and now.month == 12: dt = dt.replace(year=current_year + 1)
+        return dt
+
+    # 1. 12-Hour Duty Limit Check
+    try:
+        day_flights = [f for f in all_flights if f['date'] == target_flight['date']]
+        start_times = []
+        end_times = []
+        for df in day_flights:
+            parts = df['time'].split("-")
+            st = parts[0].strip()
+            et = parts[1].split("(")[0].strip()
+            s_dt = parse_dt(df['date'], st)
+            e_dt = parse_dt(df['date'], et)
+            if "(+1D)" in df['time']: e_dt += timedelta(days=1)
+            start_times.append(s_dt)
+            end_times.append(e_dt)
+            
+        if start_times and end_times:
+            duty_start = min(start_times)
+            duty_end = max(end_times)
+            duty_hours = (duty_end - duty_start).total_seconds() / 3600
+            if duty_hours > 12.0:
+                warnings.append(f"Duty Day Span: {duty_hours:.1f} Hours ({duty_start.strftime('%H:%M')}-{duty_end.strftime('%H:%M')})")
+    except Exception:
+        pass
+
+    # 2. 7-Day Continuous Check
+    try:
+        unique_dates = set()
+        for f in all_flights:
+            unique_dates.add(parse_dt(f['date'], "00:00").date())
+            
+        target_date = parse_dt(target_flight['date'], "00:00").date()
+        streak = 1
+        
+        # Check consecutive days backward
+        check_date = target_date - timedelta(days=1)
+        while check_date in unique_dates:
+            streak += 1
+            check_date -= timedelta(days=1)
+            
+        # Check consecutive days forward
+        check_date = target_date + timedelta(days=1)
+        while check_date in unique_dates:
+            streak += 1
+            check_date += timedelta(days=1)
+            
+        if streak > 7:
+            warnings.append(f"Consecutive Days: {streak} Days (Requires 1 rest day in 7)")
+    except Exception:
+        pass
+        
+    return warnings
 
 def get_trmnl_flights(schedule):
     mst_tz = timezone(timedelta(hours=-7))
@@ -497,6 +565,13 @@ def run_scraper():
                     msg += f"Status:      {html.escape(f['status'])}\n"
                     if f.get('remark'):
                         msg += f"Remarks:     {html.escape(f['remark'])}\n"
+                        
+                    fatigue_warns = evaluate_fatigue(f, current_schedule)
+                    if fatigue_warns:
+                        msg += "\n⚠️ FATIGUE WARNING:\n"
+                        for w in fatigue_warns:
+                            msg += f"- {w}\n"
+                            
                     msg += "----------------------------------------\n"
                 msg += f"Updated: {now_mst}\n"
                 msg += "========================================\n"
@@ -558,6 +633,15 @@ def run_scraper():
                     msg += f"Status:      {html.escape(f['status'])}\n"
                     if alert_type == "UPDATED" and f.get('changes_text'):
                         msg += f"Changes:\n{html.escape(f['changes_text'])}\n"
+                        
+                    # Inject Fatigue Warnings for New or Modified Flights
+                    if alert_type in ["NEW", "UPDATED"]:
+                        fatigue_warns = evaluate_fatigue(f, current_schedule)
+                        if fatigue_warns:
+                            msg += "\n⚠️ FATIGUE / LEGALITY WARNING:\n"
+                            for w in fatigue_warns:
+                                msg += f"- {w}\n"
+                                
                     msg += "----------------------------------------\n"
             msg += f"Updated: {now_mst}\n"
             msg += "========================================\n"
