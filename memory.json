@@ -8,7 +8,7 @@
         "lesson": "CPLSE 1.12-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
+        "dispatch_sent": true,
         "weather_status": "NO-GO"
     },
     {
@@ -42,19 +42,19 @@
         "lesson": "IR 1.6-Flight",
         "type": "Flight",
         "remark": "Observer 1: Dawson, Taylor\nObserver 2:",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> CancelledResched Same Day"
+        "dispatch_sent": false
     },
     {
         "date": "24 AUG",
         "time": "23:30 - 02:00 (+1D)",
-        "status": "Scheduled",
+        "status": "CancelledResched Same Day",
         "ip": "Miller,Kaeden",
         "res": "Oral Brief Rooms",
         "lesson": "IR 1.7-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduled -> CancelledResched Same Day"
     },
     {
         "date": "25 AUG",
