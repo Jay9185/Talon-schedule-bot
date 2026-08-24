@@ -1,6 +1,17 @@
 [
     {
         "date": "24 AUG",
+        "time": "09:00 - 12:00",
+        "status": "Ramp Out",
+        "ip": "Miller,Kaeden",
+        "res": "908AG (NXI)",
+        "lesson": "IR 1.6-Flight",
+        "type": "Flight",
+        "remark": "Ramp Out",
+        "weather_status": "GO"
+    },
+    {
+        "date": "24 AUG",
         "time": "17:00 - 19:00",
         "status": "Scheduled",
         "ip": "Wait,Scott",
@@ -8,8 +19,7 @@
         "lesson": "IR 3.9-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false,
-        "weather_status": "GO"
+        "dispatch_sent": false
     },
     {
         "date": "24 AUG",
@@ -65,6 +75,16 @@
         "type": "Academic",
         "remark": "",
         "dispatch_sent": false
+    },
+    {
+        "date": "25 AUG",
+        "time": "17:00 - 21:00",
+        "status": "Scheduling",
+        "ip": "Miller,Kaeden",
+        "res": "Redbird AATD",
+        "lesson": "IR 1.8-AATDIR 1.9-AATD",
+        "type": "Sim",
+        "remark": "The schedule has not yet been posted for this day"
     },
     {
         "date": "26 AUG",
