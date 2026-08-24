@@ -63,7 +63,8 @@
         "res": "Redbird AATD",
         "lesson": "IR 1.8-AATDIR 1.9-AATD",
         "type": "Sim",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false
     },
     {
         "date": "25 AUG",
