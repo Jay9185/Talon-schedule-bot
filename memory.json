@@ -2,13 +2,24 @@
     {
         "date": "24 AUG",
         "time": "09:00 - 12:00",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Miller,Kaeden",
         "res": "908AG (NXI)",
         "lesson": "IR 1.6-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Ramp Out -> Completed"
+    },
+    {
+        "date": "24 AUG",
+        "time": "12:00 - 14:30",
+        "status": "Ops Check In",
+        "ip": "Miller,Kaeden",
+        "res": "DVT Brief Rm 5",
+        "lesson": "IR 1.7-Brief",
+        "type": "Oral",
+        "remark": "Ramp Out",
         "weather_status": "GO"
     },
     {
