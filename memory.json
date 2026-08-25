@@ -42,7 +42,7 @@
         "type": "Academic",
         "remark": "",
         "dispatch_sent": true,
-        "weather_status": "GO"
+        "weather_status": "ERROR"
     },
     {
         "date": "25 AUG",
@@ -53,8 +53,7 @@
         "lesson": "IR 1.8-AATDIR 1.9-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: RB SD 5 -> RB LD 1"
+        "dispatch_sent": false
     },
     {
         "date": "26 AUG",
