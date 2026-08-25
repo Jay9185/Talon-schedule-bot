@@ -63,6 +63,7 @@
         "lesson": "CPLSE 1.14-Flt",
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false,
         "weather_status": "GO"
     },
     {
