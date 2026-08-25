@@ -41,8 +41,7 @@
         "lesson": "IR 4.14-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": true,
-        "weather_status": "GO"
+        "dispatch_sent": true
     },
     {
         "date": "25 AUG",
@@ -53,7 +52,8 @@
         "lesson": "IR 1.8-AATDIR 1.9-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": true,
+        "weather_status": "GO"
     },
     {
         "date": "26 AUG",
