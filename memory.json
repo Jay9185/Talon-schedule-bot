@@ -41,8 +41,7 @@
         "lesson": "IR 3.10-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": true,
-        "weather_status": "GO"
+        "dispatch_sent": true
     },
     {
         "date": "24 AUG",
@@ -69,13 +68,14 @@
     {
         "date": "25 AUG",
         "time": "06:00 - 10:00",
-        "status": "Scheduled",
+        "status": "CancelledResched Same Day",
         "ip": "Miller,Kaeden",
         "res": "Redbird AATD",
         "lesson": "IR 1.8-AATDIR 1.9-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduled -> CancelledResched Same Day"
     },
     {
         "date": "25 AUG",
@@ -86,7 +86,8 @@
         "lesson": "IR 4.13-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "GO"
     },
     {
         "date": "25 AUG",
@@ -98,6 +99,16 @@
         "type": "Academic",
         "remark": "",
         "dispatch_sent": false
+    },
+    {
+        "date": "25 AUG",
+        "time": "14:00 - 17:30",
+        "status": "Scheduled",
+        "ip": "Miller,Kaeden",
+        "res": "RB SD 5",
+        "lesson": "IR 1.8-AATDIR 1.9-AATD",
+        "type": "Sim",
+        "remark": "Ramp Out"
     },
     {
         "date": "26 AUG",
