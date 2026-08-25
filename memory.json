@@ -46,14 +46,14 @@
     {
         "date": "25 AUG",
         "time": "14:00 - 17:30",
-        "status": "Scheduled",
+        "status": "Authorized",
         "ip": "Miller,Kaeden",
         "res": "RB LD 1",
         "lesson": "IR 1.8-AATDIR 1.9-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Status: Scheduled -> Authorized"
     },
     {
         "date": "26 AUG",
@@ -64,7 +64,8 @@
         "lesson": "IR 4.15-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "NO-GO"
     },
     {
         "date": "26 AUG",
