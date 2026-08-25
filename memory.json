@@ -1,16 +1,5 @@
 [
     {
-        "date": "24 AUG",
-        "time": "19:00 - 21:00",
-        "status": "Scheduled",
-        "ip": "Wait,Scott",
-        "res": "DVT Bldg 3 - E",
-        "lesson": "IR 3.10-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": true
-    },
-    {
         "date": "25 AUG",
         "time": "06:00 - 10:00",
         "status": "CancelledResched Same Day",
@@ -57,13 +46,14 @@
     {
         "date": "26 AUG",
         "time": "06:00 - 09:00",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "Miller,Kaeden",
         "res": "PA28-181G",
         "lesson": "CPLSE 1.14-Flt",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day",
+        "remark": "Ramp Out",
         "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'",
         "weather_status": "GO"
     },
     {
