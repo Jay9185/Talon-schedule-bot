@@ -30,8 +30,7 @@
         "lesson": "IR 4.13-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": true,
-        "weather_status": "GO"
+        "dispatch_sent": true
     },
     {
         "date": "25 AUG",
@@ -42,18 +41,20 @@
         "lesson": "IR 4.14-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": true,
+        "weather_status": "GO"
     },
     {
         "date": "25 AUG",
         "time": "14:00 - 17:30",
         "status": "Scheduled",
         "ip": "Miller,Kaeden",
-        "res": "RB SD 5",
+        "res": "RB LD 1",
         "lesson": "IR 1.8-AATDIR 1.9-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Aircraft: RB SD 5 -> RB LD 1"
     },
     {
         "date": "26 AUG",
