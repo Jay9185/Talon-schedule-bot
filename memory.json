@@ -1,27 +1,5 @@
 [
     {
-        "date": "25 AUG",
-        "time": "10:00 - 12:00",
-        "status": "Scheduled",
-        "ip": "Hogan,Geoffrey",
-        "res": "DVT Bldg 3 - C",
-        "lesson": "IR 4.13-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": true
-    },
-    {
-        "date": "25 AUG",
-        "time": "12:00 - 14:00",
-        "status": "Scheduled",
-        "ip": "Hogan,Geoffrey",
-        "res": "DVT Bldg 3 - C",
-        "lesson": "IR 4.14-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": true
-    },
-    {
         "date": "26 AUG",
         "time": "06:00 - 09:00",
         "status": "Completed",
@@ -46,13 +24,14 @@
     {
         "date": "26 AUG",
         "time": "10:00 - 12:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Hogan,Geoffrey",
         "res": "DVT Bldg 3 - C",
         "lesson": "IR 4.15-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": true
+        "dispatch_sent": true,
+        "changes_text": "  \u2022 Status: Scheduled -> Completed"
     },
     {
         "date": "26 AUG",
@@ -68,35 +47,46 @@
     {
         "date": "26 AUG",
         "time": "14:00 - 16:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Hogan,Geoffrey",
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 3.11-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduled -> Completed"
     },
     {
         "date": "26 AUG",
         "time": "16:00 - 18:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Hogan,Geoffrey",
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 3.12-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduled -> Completed"
     },
     {
         "date": "27 AUG",
-        "time": "20:15 - 01:15 (+1D)",
-        "status": "Scheduling",
+        "time": "06:00 - 09:00",
+        "status": "Scheduled",
+        "ip": "Miller,Kaeden",
+        "res": "Redbird AATD",
+        "lesson": "IR 1.11-AATD",
+        "type": "Sim",
+        "remark": "Ramp Out"
+    },
+    {
+        "date": "27 AUG",
+        "time": "21:00 - 02:00 (+1D)",
+        "status": "Scheduled",
         "ip": "TBD",
         "res": "PA28-181G",
         "lesson": "CPLSE 1.13-SXC",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false,
-        "weather_status": "NO-GO"
+        "remark": "Ramp Out",
+        "weather_status": "GO"
     }
 ]
