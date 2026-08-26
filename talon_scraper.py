@@ -21,7 +21,6 @@ def get_smart_date(date_str, now_mst):
         dt_str = f"{clean_date} {current_year}"
         dt = datetime.strptime(dt_str, "%d %b %Y").date()
         
-        # Handle year boundary
         if dt.month == 12 and now_mst.month < 3: dt = dt.replace(year=current_year - 1)
         elif dt.month < 3 and now_mst.month == 12: dt = dt.replace(year=current_year + 1)
         
@@ -156,6 +155,11 @@ def is_cancelled(f):
     status = f.get('status', '').lower()
     return 'cancel' in status or 'cnx' in status
 
+def is_actual_flight(f):
+    """Returns True if the block is a physical aircraft flight (filters out ground/sim)."""
+    act_type = f.get('type', '').lower()
+    return act_type not in ['academic', 'oral', 'sim', 'ground', 'brief']
+
 def evaluate_fatigue(target_flight, all_flights):
     warnings = []
     mst_tz = timezone(timedelta(hours=-7))
@@ -273,7 +277,6 @@ def compare_schedules(old_sched, new_sched):
             old_f = old_dict[key]
             changes = []
             
-            # NOISE SUPPRESSION: Strips trailing spaces/invisible formatting before comparing
             old_lesson = old_f.get('lesson', '').strip()
             new_lesson = f.get('lesson', '').strip()
             if old_lesson != new_lesson: changes.append(f"Lesson: {old_lesson} -> {new_lesson}")
@@ -526,8 +529,12 @@ def run_scraper():
         target_flight_details = None
         
         active_future_flights = [f for f in current_schedule if is_future_flight(f) and not is_cancelled(f)]
-        if active_future_flights:
-            next_f = active_future_flights[0]
+        
+        # SMART CONTEXT: Only run the weather engine if the upcoming event is an ACTUAL flight
+        weather_applicable_flights = [f for f in active_future_flights if is_actual_flight(f)]
+        
+        if weather_applicable_flights:
+            next_f = weather_applicable_flights[0]
             current_year = now_mst_obj.year
             try:
                 time_parts = next_f['time'].split("-")
@@ -656,7 +663,6 @@ def run_scraper():
                     msg += f"Aircraft:    {html.escape(f['res'])}\n"
                     msg += f"Instructor:  {html.escape(f['ip'])}\n"
                     
-                    # Highlight the status specifically if it was a cancellation
                     if is_cancelled(f):
                         msg += f"Status:      {html.escape(f['status'])} [CNX]\n"
                     else:
