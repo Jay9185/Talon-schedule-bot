@@ -24,14 +24,25 @@
     {
         "date": "26 AUG",
         "time": "06:00 - 09:00",
-        "status": "Scheduled",
+        "status": "Ramp Out",
         "ip": "Miller,Kaeden",
-        "res": "PA28-181G",
+        "res": "748PA (NXi)",
+        "lesson": "IR 1.10-Flight",
+        "type": "Flight",
+        "remark": "Ramp Out",
+        "dispatch_sent": true
+    },
+    {
+        "date": "26 AUG",
+        "time": "06:00 - 09:00",
+        "status": "CancelledResched Same Day",
+        "ip": "Miller,Kaeden",
+        "res": "748PA (NXi)",
         "lesson": "CPLSE 1.14-Flt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Aircraft: PA28-181G -> 748PA (NXi)\n  \u2022 Status: Scheduled -> CancelledResched Same Day"
     },
     {
         "date": "26 AUG",
@@ -42,7 +53,8 @@
         "lesson": "IR 4.15-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "GO"
     },
     {
         "date": "26 AUG",
