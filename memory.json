@@ -52,8 +52,7 @@
         "lesson": "IR 4.15-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": true,
-        "weather_status": "GO"
+        "dispatch_sent": true
     },
     {
         "date": "26 AUG",
@@ -64,7 +63,8 @@
         "lesson": "IR 4.16-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": true,
+        "weather_status": "GO"
     },
     {
         "date": "26 AUG",
