@@ -35,13 +35,14 @@
     {
         "date": "25 AUG",
         "time": "14:00 - 17:30",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Miller,Kaeden",
         "res": "RB LD 1",
         "lesson": "IR 1.8-AATDIR 1.9-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
-        "dispatch_sent": true
+        "dispatch_sent": true,
+        "changes_text": "  \u2022 Status: Ramp Out -> Completed"
     },
     {
         "date": "26 AUG",
@@ -53,7 +54,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'",
         "weather_status": "GO"
     },
     {
