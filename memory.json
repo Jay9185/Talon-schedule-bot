@@ -41,8 +41,7 @@
         "lesson": "IR 1.8-AATDIR 1.9-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Ramp Out -> Completed"
+        "dispatch_sent": true
     },
     {
         "date": "26 AUG",
