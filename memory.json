@@ -30,7 +30,7 @@
         "lesson": "CPLSE 1.14-Flt",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
+        "dispatch_sent": true,
         "weather_status": "GO"
     },
     {
