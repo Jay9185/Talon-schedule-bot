@@ -1,0 +1,28 @@
+name: 12-Hour Fatigue Timer
+
+on:
+  schedule:
+    # Runs at 13:00 UTC (06:00 AM MST) and 01:00 UTC (06:00 PM MST)
+    - cron: '0 1,13 * * *'
+  workflow_dispatch: # Allows you to trigger it manually via the Actions tab
+
+jobs:
+  run-fatigue-timer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: pip install requests
+
+      - name: Run Fatigue Timer
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python fatigue_timer.py
