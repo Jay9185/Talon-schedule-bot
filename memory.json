@@ -30,8 +30,7 @@
         "lesson": "IR 4.15-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
+        "dispatch_sent": true
     },
     {
         "date": "26 AUG",
@@ -53,8 +52,7 @@
         "lesson": "IR 3.11-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
+        "dispatch_sent": false
     },
     {
         "date": "26 AUG",
@@ -65,8 +63,7 @@
         "lesson": "IR 3.12-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
+        "dispatch_sent": false
     },
     {
         "date": "27 AUG",
@@ -76,7 +73,8 @@
         "res": "Redbird AATD",
         "lesson": "IR 1.11-AATD",
         "type": "Sim",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "dispatch_sent": false
     },
     {
         "date": "27 AUG",
@@ -87,6 +85,7 @@
         "lesson": "CPLSE 1.13-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
+        "dispatch_sent": false,
         "weather_status": "GO"
     }
 ]
