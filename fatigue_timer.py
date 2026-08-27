@@ -6,9 +6,11 @@ from datetime import datetime, timezone, timedelta
 MEMORY_FILE = "memory.json"
 
 def is_cancelled(f):
-    """Returns True if the flight is marked as cancelled or CNX."""
     status = f.get('status', '').lower()
     return 'cancel' in status or 'cnx' in status
+
+def is_rest_period(f):
+    return "Rest Period" in f.get('type', '') or "Rest Period" in f.get('lesson', '')
 
 def send_telegram(message):
     token = os.environ.get("TELEGRAM_BOT_TOKEN")
@@ -31,7 +33,7 @@ def generate_report():
         schedule = json.load(f)
 
     # Filter out cancelled flights for fatigue calculations
-    active_flights = [f for f in schedule if not is_cancelled(f)]
+    active_events = [f for f in schedule if not is_cancelled(f)]
     
     mst_tz = timezone(timedelta(hours=-7))
     now_mst = datetime.now(mst_tz)
@@ -47,8 +49,10 @@ def generate_report():
         return dt
 
     # --- 1. CALCULATE CONSECUTIVE DAYS STREAK ---
+    # (Only counts days where actual work occurred, ignores pure rest days)
+    working_flights = [f for f in active_events if not is_rest_period(f)]
     unique_dates = set()
-    for f in active_flights:
+    for f in working_flights:
         try:
             unique_dates.add(parse_dt(f['date'], "00:00").date())
         except:
@@ -66,30 +70,39 @@ def generate_report():
     rest_date = today_date + timedelta(days=days_left)
 
     # --- 2. CALCULATE TODAY'S DUTY HOURS ---
-    today_flights = [f for f in active_flights if parse_dt(f['date'], "00:00").date() == today_date]
+    today_events = [f for f in active_events if parse_dt(f['date'], "00:00").date() == today_date]
+    
+    # Sort chronologically to apply the circuit breaker in the correct order
+    today_events.sort(key=lambda x: parse_dt(x['date'], x['time'].split("-")[0].strip()))
     
     duty_hours = 0.0
-    duty_str = "No events scheduled today."
+    duty_str = "No working events scheduled today."
     
-    if today_flights:
-        start_times = []
-        end_times = []
-        for df in today_flights:
-            parts = df['time'].split("-")
-            st = parts[0].strip()
-            et = parts[1].split("(")[0].strip()
+    duty_start = None
+    worst_start = None
+    worst_end = None
+    
+    for df in today_events:
+        if is_rest_period(df):
+            duty_start = None # CIRCUIT BREAKER: Resets duty clock
+            continue
             
-            s_dt = parse_dt(df['date'], st)
-            e_dt = parse_dt(df['date'], et)
-            if "(+1D)" in df['time']: e_dt += timedelta(days=1)
+        parts = df['time'].split("-")
+        st = parse_dt(df['date'], parts[0].strip())
+        et = parse_dt(df['date'], parts[1].split("(")[0].strip())
+        if "(+1D)" in df['time']: et += timedelta(days=1)
+        
+        if duty_start is None:
+            duty_start = st
             
-            start_times.append(s_dt)
-            end_times.append(e_dt)
+        span = (et - duty_start).total_seconds() / 3600
+        if span > duty_hours:
+            duty_hours = span
+            worst_start = duty_start
+            worst_end = et
             
-        duty_start = min(start_times)
-        duty_end = max(end_times)
-        duty_hours = (duty_end - duty_start).total_seconds() / 3600
-        duty_str = f"{duty_hours:.1f} / 12.0 Hrs ({duty_start.strftime('%H:%M')} - {duty_end.strftime('%H:%M')})"
+    if worst_start and worst_end:
+        duty_str = f"{duty_hours:.1f} / 12.0 Hrs ({worst_start.strftime('%H:%M')} - {worst_end.strftime('%H:%M')})"
     
     # --- 3. BUILD AND SEND TELEGRAM ALERT ---
     msg = "<pre>\n"
