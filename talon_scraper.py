@@ -46,15 +46,19 @@ def extract_schedule(html_content):
 
     for row in rows:
         cols = row.find_all('td', recursive=False)
-        if len(cols) < 9: continue
+        
+        # CRITICAL FIX: Rest Periods have fewer columns because Talon merges the blank cells.
+        if len(cols) < 5: continue
             
         start = cols[1].get_text(strip=True)
         stop = cols[2].get_text(strip=True)
         status = cols[3].get_text(strip=True)
         act_type = cols[4].get_text(strip=True)
-        resource = cols[5].get_text(strip=True)
-        unit = cols[7].get_text(strip=True)
-        instructor = cols[8].get_text(strip=True)
+        
+        # Safely grab the remaining columns only if they exist
+        resource = cols[5].get_text(strip=True) if len(cols) > 5 else "TBD"
+        unit = cols[7].get_text(strip=True) if len(cols) > 7 else ("Rest Period" if act_type == "Rest Period" else "UNKNOWN")
+        instructor = cols[8].get_text(strip=True) if len(cols) > 8 else "TBD"
 
         remark = ""
         all_elements = [row] + row.find_all(True) 
@@ -162,7 +166,6 @@ def evaluate_fatigue(target_flight, all_flights):
     now = datetime.now(mst_tz)
     current_year = now.year
     
-    # We do not evaluate fatigue ON a cancelled flight or a Rest Period
     if is_cancelled(target_flight) or is_rest_period(target_flight): return []
     
     def parse_dt(d_str, t_str):
