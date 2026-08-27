@@ -19,8 +19,17 @@
         "lesson": "IR 1.11-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: Redbird AATD -> RB LD 1\n  \u2022 Status: Scheduled -> Completed"
+        "dispatch_sent": false
+    },
+    {
+        "date": "27 AUG",
+        "time": "09:00 - 21:00",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "Rest Period",
+        "remark": ""
     },
     {
         "date": "27 AUG",
@@ -33,5 +42,15 @@
         "remark": "Ramp Out",
         "dispatch_sent": false,
         "weather_status": "GO"
+    },
+    {
+        "date": "28 AUG",
+        "time": "02:00 - 14:00",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "Rest Period",
+        "remark": ""
     }
 ]
