@@ -1,39 +1,6 @@
 [
     {
         "date": "26 AUG",
-        "time": "06:00 - 09:00",
-        "status": "Completed",
-        "ip": "Miller,Kaeden",
-        "res": "748PA (NXi)",
-        "lesson": "IR 1.10-Flight",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
-        "date": "26 AUG",
-        "time": "06:00 - 09:00",
-        "status": "CancelledResched Same Day",
-        "ip": "Miller,Kaeden",
-        "res": "748PA (NXi)",
-        "lesson": "CPLSE 1.14-Flt",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
-        "date": "26 AUG",
-        "time": "10:00 - 12:00",
-        "status": "Completed",
-        "ip": "Hogan,Geoffrey",
-        "res": "DVT Bldg 3 - C",
-        "lesson": "IR 4.15-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": true
-    },
-    {
-        "date": "26 AUG",
         "time": "12:00 - 14:00",
         "status": "Scheduled",
         "ip": "Hogan,Geoffrey",
@@ -44,37 +11,16 @@
         "dispatch_sent": true
     },
     {
-        "date": "26 AUG",
-        "time": "14:00 - 16:00",
-        "status": "Completed",
-        "ip": "Hogan,Geoffrey",
-        "res": "DVT Bldg 3 - D",
-        "lesson": "IR 3.11-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
-        "date": "26 AUG",
-        "time": "16:00 - 18:00",
-        "status": "Completed",
-        "ip": "Hogan,Geoffrey",
-        "res": "DVT Bldg 3 - D",
-        "lesson": "IR 3.12-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
         "date": "27 AUG",
         "time": "06:00 - 09:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Miller,Kaeden",
-        "res": "Redbird AATD",
+        "res": "RB LD 1",
         "lesson": "IR 1.11-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Aircraft: Redbird AATD -> RB LD 1\n  \u2022 Status: Scheduled -> Completed"
     },
     {
         "date": "27 AUG",
