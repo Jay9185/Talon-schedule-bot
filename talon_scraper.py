@@ -14,7 +14,6 @@ TALON_LOGIN_URL = "https://apps4.talonsystems.com/tseta/servlet/content?module=h
 MEMORY_FILE = "memory.json"
 
 def get_smart_date(date_str, now_mst):
-    """Converts a raw date like '26 AUG' into 'Today', 'Tomorrow', or 'This Wednesday'."""
     try:
         current_year = now_mst.year
         clean_date = "".join(c for c in date_str if c.isalnum() or c.isspace()).strip()
@@ -56,8 +55,6 @@ def extract_schedule(html_content):
         resource = cols[5].get_text(strip=True)
         unit = cols[7].get_text(strip=True)
         instructor = cols[8].get_text(strip=True)
-
-        if "Rest Period" in act_type: continue
 
         remark = ""
         all_elements = [row] + row.find_all(True) 
@@ -120,13 +117,10 @@ def filter_old_flights(schedule):
             dt_str = f"{clean_date} {current_year}"
             flight_dt = datetime.strptime(dt_str, "%d %b %Y").date()
             
-            if flight_dt.month == 12 and now.month < 3:
-                flight_dt = flight_dt.replace(year=current_year - 1)
-            elif flight_dt.month < 3 and now.month == 12:
-                flight_dt = flight_dt.replace(year=current_year + 1)
+            if flight_dt.month == 12 and now.month < 3: flight_dt = flight_dt.replace(year=current_year - 1)
+            elif flight_dt.month < 3 and now.month == 12: flight_dt = flight_dt.replace(year=current_year + 1)
                 
-            if flight_dt >= cutoff_date:
-                filtered_schedule.append(f)
+            if flight_dt >= cutoff_date: filtered_schedule.append(f)
         except Exception:
             filtered_schedule.append(f)
             
@@ -142,10 +136,8 @@ def is_future_flight(f):
         dt_str = f"{clean_date} {current_year} {start_time_str}"
         flight_dt = datetime.strptime(dt_str, "%d %b %Y %H:%M").replace(tzinfo=mst_tz)
         
-        if flight_dt.month == 12 and now.month < 3:
-            flight_dt = flight_dt.replace(year=current_year - 1)
-        elif flight_dt.month < 3 and now.month == 12:
-            flight_dt = flight_dt.replace(year=current_year + 1)
+        if flight_dt.month == 12 and now.month < 3: flight_dt = flight_dt.replace(year=current_year - 1)
+        elif flight_dt.month < 3 and now.month == 12: flight_dt = flight_dt.replace(year=current_year + 1)
             
         return flight_dt > now
     except:
@@ -155,9 +147,13 @@ def is_cancelled(f):
     status = f.get('status', '').lower()
     return 'cancel' in status or 'cnx' in status
 
+def is_rest_period(f):
+    return "Rest Period" in f.get('type', '') or "Rest Period" in f.get('lesson', '')
+
 def is_actual_flight(f):
-    """Returns True if the block is a physical aircraft flight (filters out ground/sim)."""
     act_type = f.get('type', '').lower()
+    lesson = f.get('lesson', '').lower()
+    if 'rest period' in act_type or 'rest period' in lesson: return False
     return act_type not in ['academic', 'oral', 'sim', 'ground', 'brief']
 
 def evaluate_fatigue(target_flight, all_flights):
@@ -166,9 +162,8 @@ def evaluate_fatigue(target_flight, all_flights):
     now = datetime.now(mst_tz)
     current_year = now.year
     
-    if is_cancelled(target_flight): return []
-        
-    active_flights = [f for f in all_flights if not is_cancelled(f)]
+    # We do not evaluate fatigue ON a cancelled flight or a Rest Period
+    if is_cancelled(target_flight) or is_rest_period(target_flight): return []
     
     def parse_dt(d_str, t_str):
         clean_date = "".join(c for c in d_str if c.isalnum() or c.isspace()).strip()
@@ -178,49 +173,66 @@ def evaluate_fatigue(target_flight, all_flights):
         elif dt.month < 3 and now.month == 12: dt = dt.replace(year=current_year + 1)
         return dt
 
+    # 1. 12-Hour Duty Limit (Resets on Rest Periods)
     try:
-        day_flights = [f for f in active_flights if f['date'] == target_flight['date']]
-        start_times = []
-        end_times = []
-        for df in day_flights:
+        day_events = [f for f in all_flights if not is_cancelled(f) and f['date'] == target_flight['date']]
+        
+        # Sort events chronologically to accurately track the circuit breaker
+        day_events.sort(key=lambda x: parse_dt(x['date'], x['time'].split("-")[0].strip()))
+        
+        duty_start = None
+        max_duty_hours = 0.0
+        worst_start = None
+        worst_end = None
+        
+        for df in day_events:
+            if is_rest_period(df):
+                duty_start = None # CIRCUIT BREAKER: Duty resets here
+                continue
+                
             parts = df['time'].split("-")
-            st = parts[0].strip()
-            et = parts[1].split("(")[0].strip()
-            s_dt = parse_dt(df['date'], st)
-            e_dt = parse_dt(df['date'], et)
+            s_dt = parse_dt(df['date'], parts[0].strip())
+            e_dt = parse_dt(df['date'], parts[1].split("(")[0].strip())
             if "(+1D)" in df['time']: e_dt += timedelta(days=1)
-            start_times.append(s_dt)
-            end_times.append(e_dt)
             
-        if start_times and end_times:
-            duty_start = min(start_times)
-            duty_end = max(end_times)
-            duty_hours = (duty_end - duty_start).total_seconds() / 3600
-            if duty_hours > 12.0:
-                warnings.append(f"Duty Day Span: {duty_hours:.1f} Hours ({duty_start.strftime('%H:%M')}-{duty_end.strftime('%H:%M')})")
+            if duty_start is None:
+                duty_start = s_dt
+                
+            span = (e_dt - duty_start).total_seconds() / 3600
+            
+            if span > max_duty_hours:
+                max_duty_hours = span
+                worst_start = duty_start
+                worst_end = e_dt
+                
+        if max_duty_hours > 12.0:
+            warnings.append(f"Duty Day Span: {max_duty_hours:.1f} Hours ({worst_start.strftime('%H:%M')}-{worst_end.strftime('%H:%M')})")
     except Exception:
         pass
 
+    # 2. 7-Day Continuous Check (Ignores days that ONLY have Rest Periods)
     try:
+        working_flights = [f for f in all_flights if not is_cancelled(f) and not is_rest_period(f)]
         unique_dates = set()
-        for f in active_flights:
+        for f in working_flights:
             unique_dates.add(parse_dt(f['date'], "00:00").date())
             
         target_date = parse_dt(target_flight['date'], "00:00").date()
-        streak = 1
-        
-        check_date = target_date - timedelta(days=1)
-        while check_date in unique_dates:
-            streak += 1
-            check_date -= timedelta(days=1)
+        if target_date in unique_dates:
+            streak = 1
             
-        check_date = target_date + timedelta(days=1)
-        while check_date in unique_dates:
-            streak += 1
-            check_date += timedelta(days=1)
-            
-        if streak > 7:
-            warnings.append(f"Consecutive Days: {streak} Days (Requires 1 rest day in 7)")
+            check_date = target_date - timedelta(days=1)
+            while check_date in unique_dates:
+                streak += 1
+                check_date -= timedelta(days=1)
+                
+            check_date = target_date + timedelta(days=1)
+            while check_date in unique_dates:
+                streak += 1
+                check_date += timedelta(days=1)
+                
+            if streak > 7:
+                warnings.append(f"Consecutive Days: {streak} Days (Requires 1 rest day in 7)")
     except Exception:
         pass
         
@@ -233,7 +245,7 @@ def get_trmnl_flights(schedule):
     trmnl_flights = []
     
     for f in schedule:
-        if is_cancelled(f): continue
+        if is_cancelled(f) or is_rest_period(f): continue
             
         try:
             time_parts = f['time'].split("-")
@@ -528,9 +540,8 @@ def run_scraper():
         trigger_weather_dispatch = False
         target_flight_details = None
         
-        active_future_flights = [f for f in current_schedule if is_future_flight(f) and not is_cancelled(f)]
+        active_future_flights = [f for f in current_schedule if is_future_flight(f) and not is_cancelled(f) and not is_rest_period(f)]
         
-        # SMART CONTEXT: Only run the weather engine if the upcoming event is an ACTUAL flight
         weather_applicable_flights = [f for f in active_future_flights if is_actual_flight(f)]
         
         if weather_applicable_flights:
@@ -671,7 +682,7 @@ def run_scraper():
                     if alert_type == "UPDATED" and f.get('changes_text'):
                         msg += f"Changes:\n{html.escape(f['changes_text'])}\n"
                         
-                    if alert_type in ["NEW", "UPDATED"] and not is_cancelled(f):
+                    if alert_type in ["NEW", "UPDATED"] and not is_cancelled(f) and not is_rest_period(f):
                         fatigue_warns = evaluate_fatigue(f, current_schedule)
                         if fatigue_warns:
                             msg += "\n⚠️ FATIGUE / LEGALITY WARNING:\n"
