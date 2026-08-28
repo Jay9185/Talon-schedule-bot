@@ -1,16 +1,5 @@
 [
     {
-        "date": "26 AUG",
-        "time": "12:00 - 14:00",
-        "status": "Scheduled",
-        "ip": "Hogan,Geoffrey",
-        "res": "DVT Bldg 3 - C",
-        "lesson": "IR 4.16-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": true
-    },
-    {
         "date": "27 AUG",
         "time": "06:00 - 09:00",
         "status": "Completed",
@@ -41,8 +30,8 @@
         "lesson": "CPLSE 1.13-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "weather_status": "GO"
+        "dispatch_sent": true,
+        "weather_status": "NO-GO"
     },
     {
         "date": "28 AUG",
@@ -54,5 +43,15 @@
         "type": "Rest Period",
         "remark": "",
         "dispatch_sent": false
+    },
+    {
+        "date": "29 AUG",
+        "time": "21:00 - 02:00 (+1D)",
+        "status": "Scheduling",
+        "ip": "TBD",
+        "res": "PA28-181G",
+        "lesson": "CPLSE 1.15-SXC",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
