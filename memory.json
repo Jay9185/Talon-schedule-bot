@@ -1,37 +1,15 @@
 [
     {
         "date": "27 AUG",
-        "time": "06:00 - 09:00",
-        "status": "Completed",
-        "ip": "Miller,Kaeden",
-        "res": "RB LD 1",
-        "lesson": "IR 1.11-AATD",
-        "type": "Sim",
-        "remark": "Ramp Out",
-        "dispatch_sent": false
-    },
-    {
-        "date": "27 AUG",
-        "time": "09:00 - 21:00",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "Rest Period",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
-        "date": "27 AUG",
         "time": "21:00 - 02:00 (+1D)",
-        "status": "Scheduled",
+        "status": "Pend A/C",
         "ip": "TBD",
         "res": "PA28-181G",
         "lesson": "CPLSE 1.13-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "NO-GO"
+        "changes_text": "  \u2022 Status: Scheduled -> Pend A/C"
     },
     {
         "date": "28 AUG",
@@ -52,6 +30,8 @@
         "res": "PA28-181G",
         "lesson": "CPLSE 1.15-SXC",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false,
+        "weather_status": "GO"
     }
 ]
