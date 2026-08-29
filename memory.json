@@ -11,38 +11,28 @@
         "dispatch_sent": true
     },
     {
-        "date": "28 AUG",
-        "time": "02:00 - 14:00",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "Rest Period",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
         "date": "29 AUG",
         "time": "15:00 - 17:00",
         "status": "Authorized",
         "ip": "Geary,Caleb",
-        "res": "Oral Brief Rooms",
+        "res": "DVT Brief Rm 24",
         "lesson": "IR 1.12-StgOral",
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Authorized"
+        "changes_text": "  \u2022 Aircraft: Oral Brief Rooms -> DVT Brief Rm 24"
     },
     {
         "date": "29 AUG",
         "time": "21:00 - 02:00 (+1D)",
         "status": "Scheduled",
         "ip": "TBD",
-        "res": "PA28-181G",
+        "res": "545MA",
         "lesson": "CPLSE 1.15-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
+        "changes_text": "  \u2022 Aircraft: PA28-181G -> 545MA",
         "weather_status": "GO"
     },
     {
