@@ -19,8 +19,7 @@
         "lesson": "IR 1.12-StgOral",
         "type": "Oral",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: Oral Brief Rooms -> DVT Brief Rm 24"
+        "dispatch_sent": false
     },
     {
         "date": "29 AUG",
@@ -32,8 +31,7 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: PA28-181G -> 545MA",
-        "weather_status": "GO"
+        "weather_status": "NO-GO"
     },
     {
         "date": "30 AUG",
