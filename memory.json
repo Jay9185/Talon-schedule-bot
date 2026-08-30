@@ -34,14 +34,23 @@
     },
     {
         "date": "31 AUG",
-        "time": "20:00 - 01:00 (+1D)",
+        "time": "20:15 - 01:15 (+1D)",
         "status": "Scheduling",
         "ip": "TBD",
         "res": "PA28-181G",
         "lesson": "CPLSE 1.13-SXC",
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false,
         "weather_status": "GO"
+    },
+    {
+        "date": "01 SEP",
+        "time": "01:15 - 13:15",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "Rest Period",
+        "remark": ""
     }
 ]
