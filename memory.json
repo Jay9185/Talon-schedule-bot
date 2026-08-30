@@ -19,8 +19,7 @@
         "lesson": "CPLSE 1.15-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "  \u2022 Aircraft: 545MA -> PA28-181G"
+        "dispatch_sent": true
     },
     {
         "date": "30 AUG",
@@ -43,6 +42,6 @@
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
         "dispatch_sent": false,
-        "weather_status": "GO"
+        "weather_status": "ERROR"
     }
 ]
