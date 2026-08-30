@@ -15,11 +15,12 @@
         "time": "21:00 - 02:00 (+1D)",
         "status": "Scheduled",
         "ip": "TBD",
-        "res": "545MA",
+        "res": "PA28-181G",
         "lesson": "CPLSE 1.15-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true
+        "dispatch_sent": true,
+        "changes_text": "  \u2022 Aircraft: 545MA -> PA28-181G"
     },
     {
         "date": "30 AUG",
@@ -42,6 +43,6 @@
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
         "dispatch_sent": false,
-        "weather_status": "NO-GO"
+        "weather_status": "GO"
     }
 ]
