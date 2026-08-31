@@ -22,26 +22,16 @@
         "dispatch_sent": true
     },
     {
-        "date": "30 AUG",
-        "time": "02:00 - 14:00",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "Rest Period",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
         "date": "31 AUG",
         "time": "20:15 - 01:15 (+1D)",
         "status": "Scheduled",
         "ip": "TBD",
-        "res": "PA28-181G",
+        "res": "271AG (NXI)",
         "lesson": "CPLSE 1.13-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
+        "changes_text": "  \u2022 Aircraft: PA28-181G -> 271AG (NXI)",
         "weather_status": "NO-GO"
     },
     {
