@@ -24,26 +24,24 @@
     {
         "date": "01 SEP",
         "time": "13:30 - 16:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Miller,Kaeden",
         "res": "DVT Brief Rm 11",
         "lesson": "IR 1.7-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduled -> Completed"
     },
     {
         "date": "01 SEP",
-        "time": "16:00 - 18:30",
-        "status": "Scheduled",
+        "time": "15:00 - 17:30",
+        "status": "Ramp Out",
         "ip": "Miller,Kaeden",
-        "res": "597AG (NXI)",
+        "res": "655AG (NXI)",
         "lesson": "CPLSE 1.14-Flt",
         "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "  \u2022 Aircraft: 655AG (NXI) -> 597AG (NXI)",
-        "weather_status": "GO"
+        "remark": "Ramp Out"
     },
     {
         "date": "01 SEP",
@@ -55,5 +53,16 @@
         "type": "Rest Period",
         "remark": "",
         "dispatch_sent": false
+    },
+    {
+        "date": "03 SEP",
+        "time": "20:00 - 01:00 (+1D)",
+        "status": "Scheduling",
+        "ip": "TBD",
+        "res": "PA28-181G",
+        "lesson": "CPLSE 1.13-SXC",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "GO"
     }
 ]
