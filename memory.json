@@ -1,37 +1,15 @@
 [
     {
-        "date": "27 AUG",
-        "time": "21:00 - 02:00 (+1D)",
+        "date": "31 AUG",
+        "time": "20:15 - 01:15 (+1D)",
         "status": "Pend A/C",
         "ip": "TBD",
         "res": "PA28-181G",
         "lesson": "CPLSE 1.13-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
-        "date": "29 AUG",
-        "time": "21:00 - 02:00 (+1D)",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "PA28-181G",
-        "lesson": "CPLSE 1.15-SXC",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
-        "date": "31 AUG",
-        "time": "20:15 - 01:15 (+1D)",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "271AG (NXI)",
-        "lesson": "CPLSE 1.13-SXC",
-        "type": "Flight",
-        "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Aircraft: 271AG (NXI) -> PA28-181G\n  \u2022 Status: Scheduled -> Pend A/C"
     },
     {
         "date": "01 SEP",
@@ -49,12 +27,12 @@
         "time": "13:30 - 16:00",
         "status": "Scheduled",
         "ip": "Miller,Kaeden",
-        "res": "Oral Brief Rooms",
+        "res": "DVT Brief Rm 11",
         "lesson": "IR 1.7-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'"
+        "changes_text": "  \u2022 Aircraft: Oral Brief Rooms -> DVT Brief Rm 11"
     },
     {
         "date": "01 SEP",
@@ -66,7 +44,7 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'"
+        "weather_status": "GO"
     },
     {
         "date": "01 SEP",
@@ -76,6 +54,7 @@
         "res": "TBD",
         "lesson": "UNKNOWN",
         "type": "Rest Period",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     }
 ]
