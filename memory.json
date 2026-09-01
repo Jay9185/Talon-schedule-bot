@@ -37,11 +37,12 @@
         "time": "16:00 - 18:30",
         "status": "Scheduled",
         "ip": "Miller,Kaeden",
-        "res": "655AG (NXI)",
+        "res": "597AG (NXI)",
         "lesson": "CPLSE 1.14-Flt",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
+        "dispatch_sent": true,
+        "changes_text": "  \u2022 Aircraft: 655AG (NXI) -> 597AG (NXI)",
         "weather_status": "GO"
     },
     {
