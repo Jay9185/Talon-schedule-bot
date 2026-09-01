@@ -8,8 +8,7 @@
         "lesson": "CPLSE 1.13-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: 271AG (NXI) -> PA28-181G\n  \u2022 Status: Scheduled -> Pend A/C"
+        "dispatch_sent": false
     },
     {
         "date": "01 SEP",
@@ -31,8 +30,7 @@
         "lesson": "IR 1.7-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: Oral Brief Rooms -> DVT Brief Rm 11"
+        "dispatch_sent": false
     },
     {
         "date": "01 SEP",
