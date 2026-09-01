@@ -37,11 +37,12 @@
         "time": "16:00 - 18:30",
         "status": "Scheduled",
         "ip": "Miller,Kaeden",
-        "res": "PA28-181G",
+        "res": "655AG (NXI)",
         "lesson": "CPLSE 1.14-Flt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
+        "changes_text": "  \u2022 Aircraft: PA28-181G -> 655AG (NXI)",
         "weather_status": "GO"
     },
     {
