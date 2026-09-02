@@ -1,16 +1,5 @@
 [
     {
-        "date": "31 AUG",
-        "time": "20:15 - 01:15 (+1D)",
-        "status": "Pend A/C",
-        "ip": "TBD",
-        "res": "PA28-181G",
-        "lesson": "CPLSE 1.13-SXC",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": false
-    },
-    {
         "date": "01 SEP",
         "time": "01:15 - 13:15",
         "status": "Scheduled",
@@ -30,18 +19,19 @@
         "lesson": "IR 1.7-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
+        "dispatch_sent": false
     },
     {
         "date": "01 SEP",
         "time": "15:00 - 17:30",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Miller,Kaeden",
         "res": "655AG (NXI)",
         "lesson": "CPLSE 1.14-Flt",
         "type": "Flight",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Ramp Out -> Completed"
     },
     {
         "date": "01 SEP",
@@ -63,6 +53,27 @@
         "lesson": "CPLSE 1.13-SXC",
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false,
         "weather_status": "GO"
+    },
+    {
+        "date": "",
+        "time": "",
+        "status": "",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "",
+        "remark": ""
+    },
+    {
+        "date": "02 SEP",
+        "time": "09:30 - 13:00",
+        "status": "Ops Request",
+        "ip": "Miller,Kaeden",
+        "res": "PA28-181G",
+        "lesson": "CPLSE 1.14-Flt",
+        "type": "Flight",
+        "remark": ""
     }
 ]
