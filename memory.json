@@ -1,49 +1,5 @@
 [
     {
-        "date": "01 SEP",
-        "time": "01:15 - 13:15",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "Rest Period",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
-        "date": "01 SEP",
-        "time": "13:30 - 16:00",
-        "status": "Completed",
-        "ip": "Miller,Kaeden",
-        "res": "DVT Brief Rm 11",
-        "lesson": "IR 1.7-Brief",
-        "type": "Oral",
-        "remark": "Ramp Out",
-        "dispatch_sent": false
-    },
-    {
-        "date": "01 SEP",
-        "time": "15:00 - 17:30",
-        "status": "Completed",
-        "ip": "Miller,Kaeden",
-        "res": "655AG (NXI)",
-        "lesson": "CPLSE 1.14-Flt",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": false
-    },
-    {
-        "date": "01 SEP",
-        "time": "18:30 - 06:30 (+1D)",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "Rest Period",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
         "date": "02 SEP",
         "time": "09:30 - 13:00",
         "status": "Scheduled",
@@ -53,7 +9,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Lesson: CPLSE 1.14-Flt -> CPLSE 1.14-FltCPLSE 1.16-Flt\n  \u2022 Status: Ops Request -> Scheduled\n  \u2022 Remarks: 'Ramp Out'",
         "weather_status": "GO"
     },
     {
