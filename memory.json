@@ -2,15 +2,14 @@
     {
         "date": "02 SEP",
         "time": "09:30 - 13:00",
-        "status": "Scheduled",
+        "status": "Ramp Out",
         "ip": "Miller,Kaeden",
         "res": "919AG (NXI)",
         "lesson": "CPLSE 1.14-FltCPLSE 1.16-Flt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "  \u2022 Aircraft: PA28-181G -> 919AG (NXI)",
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Status: Scheduled -> Ramp Out"
     },
     {
         "date": "03 SEP",
@@ -21,6 +20,7 @@
         "lesson": "CPLSE 1.13-SXC",
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "GO"
     }
 ]
