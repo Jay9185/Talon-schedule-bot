@@ -4,11 +4,12 @@
         "time": "09:30 - 13:00",
         "status": "Scheduled",
         "ip": "Miller,Kaeden",
-        "res": "PA28-181G",
+        "res": "919AG (NXI)",
         "lesson": "CPLSE 1.14-FltCPLSE 1.16-Flt",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
+        "dispatch_sent": true,
+        "changes_text": "  \u2022 Aircraft: PA28-181G -> 919AG (NXI)",
         "weather_status": "GO"
     },
     {
