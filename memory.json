@@ -8,8 +8,7 @@
         "lesson": "CPLSE 1.14-FltCPLSE 1.16-Flt",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Ramp Out -> Completed"
+        "dispatch_sent": true
     },
     {
         "date": "03 SEP",
@@ -31,6 +30,7 @@
         "res": "TBD",
         "lesson": "UNKNOWN",
         "type": "Rest Period",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     }
 ]
