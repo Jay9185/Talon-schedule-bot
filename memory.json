@@ -34,6 +34,16 @@
         "weather_status": "GO"
     },
     {
+        "date": "06 SEP",
+        "time": "01:00 - 13:00",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "Rest Period",
+        "remark": ""
+    },
+    {
         "date": "08 SEP",
         "time": "15:00 - 17:00",
         "status": "Scheduled",
@@ -41,7 +51,8 @@
         "res": "DVT Bldg 3 - A",
         "lesson": "IR 5.17-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "08 SEP",
@@ -51,7 +62,8 @@
         "res": "DVT Bldg 3 - A",
         "lesson": "IR 5.18-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "09 SEP",
@@ -61,7 +73,8 @@
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 5.19-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "09 SEP",
@@ -71,6 +84,7 @@
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 5.20-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     }
 ]
