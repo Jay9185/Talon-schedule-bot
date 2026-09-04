@@ -2,25 +2,34 @@
     {
         "date": "03 SEP",
         "time": "20:00 - 01:00 (+1D)",
-        "status": "Scheduled",
+        "status": "CancelledResched Same Day",
         "ip": "TBD",
         "res": "276AG (NXI)",
         "lesson": "CPLSE 1.13-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "ERROR"
+        "changes_text": "  \u2022 Status: Scheduled -> CancelledResched Same Day"
+    },
+    {
+        "date": "03 SEP",
+        "time": "21:00 - 03:00 (+1D)",
+        "status": "Ops Check In",
+        "ip": "TBD",
+        "res": "276AG (NXI)",
+        "lesson": "CPLSE 1.13-SXC",
+        "type": "Flight",
+        "remark": "Ramp Out"
     },
     {
         "date": "04 SEP",
-        "time": "01:00 - 13:00",
+        "time": "04:00 - 16:00",
         "status": "Scheduled",
         "ip": "TBD",
         "res": "TBD",
         "lesson": "UNKNOWN",
         "type": "Rest Period",
-        "remark": "",
-        "dispatch_sent": false
+        "remark": ""
     },
     {
         "date": "05 SEP",
@@ -31,6 +40,7 @@
         "lesson": "CPLSE 1.15-SXC",
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "GO"
     }
 ]
