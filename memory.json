@@ -19,8 +19,7 @@
         "lesson": "CPLSE 1.13-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Ramp Out -> Ramp In"
+        "dispatch_sent": true
     },
     {
         "date": "06 SEP",
