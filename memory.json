@@ -87,5 +87,15 @@
         "remark": "The schedule has not yet been posted for this day",
         "dispatch_sent": false,
         "weather_status": "GO"
+    },
+    {
+        "date": "10 SEP",
+        "time": "01:00 - 13:00",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "Rest Period",
+        "remark": ""
     }
 ]
