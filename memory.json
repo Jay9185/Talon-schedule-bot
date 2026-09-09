@@ -2,35 +2,38 @@
     {
         "date": "08 SEP",
         "time": "15:00 - 17:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Davis,Timothy GS",
         "res": "DVT Bldg 3 - A",
         "lesson": "IR 5.17-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduled -> Completed"
     },
     {
         "date": "08 SEP",
         "time": "17:00 - 19:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Davis,Timothy GS",
         "res": "DVT Bldg 3 - A",
         "lesson": "IR 5.18-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduled -> Completed"
     },
     {
         "date": "08 SEP",
         "time": "21:00 - 03:00 (+1D)",
-        "status": "Scheduled",
+        "status": "Ramp Out",
         "ip": "TBD",
         "res": "281TW (NXI)",
         "lesson": "CPLSE 1.17-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "weather_status": "GO"
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduled -> Ramp Out"
     },
     {
         "date": "09 SEP",
@@ -40,7 +43,8 @@
         "res": "DVT Brief Rm 10",
         "lesson": "IR 1.12-StgOral",
         "type": "Oral",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "dispatch_sent": false
     },
     {
         "date": "09 SEP",
@@ -74,7 +78,7 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'"
+        "weather_status": "ERROR"
     },
     {
         "date": "10 SEP",
