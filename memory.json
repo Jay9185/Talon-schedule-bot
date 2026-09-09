@@ -1,27 +1,5 @@
 [
     {
-        "date": "07 SEP",
-        "time": "20:00 - 01:00 (+1D)",
-        "status": "Ramp In",
-        "ip": "TBD",
-        "res": "281TW (NXI)",
-        "lesson": "CPLSE 1.15-SXC",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
-        "date": "08 SEP",
-        "time": "01:00 - 13:00",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "Rest Period",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
         "date": "08 SEP",
         "time": "15:00 - 17:00",
         "status": "Scheduled",
@@ -45,14 +23,24 @@
     },
     {
         "date": "08 SEP",
-        "time": "19:00 - 07:00 (+1D)",
+        "time": "21:00 - 03:00 (+1D)",
         "status": "Scheduled",
         "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "Rest Period",
-        "remark": "",
-        "dispatch_sent": false
+        "res": "281TW (NXI)",
+        "lesson": "CPLSE 1.17-SXC",
+        "type": "Flight",
+        "remark": "Ramp Out",
+        "weather_status": "GO"
+    },
+    {
+        "date": "09 SEP",
+        "time": "14:00 - 15:00",
+        "status": "Authorized",
+        "ip": "Narojnyi,Phil",
+        "res": "DVT Brief Rm 10",
+        "lesson": "IR 1.12-StgOral",
+        "type": "Oral",
+        "remark": "Ramp Out"
     },
     {
         "date": "09 SEP",
@@ -79,14 +67,14 @@
     {
         "date": "09 SEP",
         "time": "20:00 - 01:00 (+1D)",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "TBD",
         "res": "PA28-181G",
         "lesson": "CPLSE 1.15-SXC",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day",
+        "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'"
     },
     {
         "date": "10 SEP",
@@ -96,6 +84,7 @@
         "res": "TBD",
         "lesson": "UNKNOWN",
         "type": "Rest Period",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     }
 ]
