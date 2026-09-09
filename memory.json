@@ -13,13 +13,14 @@
     {
         "date": "09 SEP",
         "time": "14:00 - 15:00",
-        "status": "Authorized",
+        "status": "CancelledCrew RestViolate",
         "ip": "Narojnyi,Phil",
         "res": "DVT Brief Rm 10",
         "lesson": "IR 1.12-StgOral",
         "type": "Oral",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Authorized -> CancelledCrew RestViolate"
     },
     {
         "date": "09 SEP",
@@ -53,7 +54,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: PA28-181G -> 908AG (NXI)",
         "weather_status": "GO"
     },
     {
