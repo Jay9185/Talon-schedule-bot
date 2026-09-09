@@ -1,16 +1,5 @@
 [
     {
-        "date": "08 SEP",
-        "time": "21:00 - 03:00 (+1D)",
-        "status": "Ramp In",
-        "ip": "TBD",
-        "res": "281TW (NXI)",
-        "lesson": "CPLSE 1.17-SXC",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": false
-    },
-    {
         "date": "09 SEP",
         "time": "14:00 - 15:00",
         "status": "CancelledCrew RestViolate",
