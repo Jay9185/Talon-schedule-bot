@@ -1,39 +1,15 @@
 [
     {
         "date": "08 SEP",
-        "time": "15:00 - 17:00",
-        "status": "Completed",
-        "ip": "Davis,Timothy GS",
-        "res": "DVT Bldg 3 - A",
-        "lesson": "IR 5.17-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
-    },
-    {
-        "date": "08 SEP",
-        "time": "17:00 - 19:00",
-        "status": "Completed",
-        "ip": "Davis,Timothy GS",
-        "res": "DVT Bldg 3 - A",
-        "lesson": "IR 5.18-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
-    },
-    {
-        "date": "08 SEP",
         "time": "21:00 - 03:00 (+1D)",
-        "status": "Ramp Out",
+        "status": "Ramp In",
         "ip": "TBD",
         "res": "281TW (NXI)",
         "lesson": "CPLSE 1.17-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Ramp Out"
+        "changes_text": "  \u2022 Status: Ramp Out -> Ramp In"
     },
     {
         "date": "09 SEP",
@@ -78,7 +54,7 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "ERROR"
+        "weather_status": "GO"
     },
     {
         "date": "10 SEP",
