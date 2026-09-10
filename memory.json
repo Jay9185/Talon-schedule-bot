@@ -19,8 +19,7 @@
         "lesson": "IR 5.19-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
+        "dispatch_sent": false
     },
     {
         "date": "09 SEP",
@@ -31,8 +30,7 @@
         "lesson": "IR 5.20-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
+        "dispatch_sent": false
     },
     {
         "date": "09 SEP",
@@ -42,7 +40,8 @@
         "res": "TBD",
         "lesson": "UNKNOWN",
         "type": "Rest Period",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "09 SEP",
@@ -53,7 +52,6 @@
         "lesson": "CPLSE 1.15-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> CancelledMission not reqd"
+        "dispatch_sent": false
     }
 ]
