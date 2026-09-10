@@ -1,57 +1,12 @@
 [
     {
-        "date": "09 SEP",
-        "time": "14:00 - 15:00",
-        "status": "CancelledCrew RestViolate",
-        "ip": "Narojnyi,Phil",
-        "res": "DVT Brief Rm 10",
-        "lesson": "IR 1.12-StgOral",
-        "type": "Oral",
-        "remark": "Ramp Out",
-        "dispatch_sent": false
-    },
-    {
-        "date": "09 SEP",
-        "time": "15:00 - 17:00",
-        "status": "Completed",
-        "ip": "Davis,Timothy GS",
-        "res": "DVT Bldg 3 - D",
-        "lesson": "IR 5.19-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
-        "date": "09 SEP",
-        "time": "17:00 - 19:00",
-        "status": "Completed",
-        "ip": "Davis,Timothy GS",
-        "res": "DVT Bldg 3 - D",
-        "lesson": "IR 5.20-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
-        "date": "09 SEP",
-        "time": "19:00 - 07:00 (+1D)",
+        "date": "11 SEP",
+        "time": "13:00 - 14:00",
         "status": "Scheduled",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "Rest Period",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
-        "date": "09 SEP",
-        "time": "20:00 - 01:00 (+1D)",
-        "status": "CancelledMission not reqd",
-        "ip": "TBD",
-        "res": "908AG (NXI)",
-        "lesson": "CPLSE 1.15-SXC",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": false
+        "ip": "Zande,Gene+",
+        "res": "DVT Bldg 3 -A(1)",
+        "lesson": "Case Study Brf",
+        "type": "Academic",
+        "remark": ""
     }
 ]
