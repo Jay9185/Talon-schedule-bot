@@ -13,14 +13,14 @@
     {
         "date": "11 SEP",
         "time": "17:30 - 18:30",
-        "status": "Scheduled",
+        "status": "Authorized",
         "ip": "Whetstine,Noah",
         "res": "DVT Brief Rm 1",
         "lesson": "IR 1.12-StgOral",
         "type": "Oral",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: Oral Brief Rooms -> DVT Brief Rm 1"
+        "changes_text": "  \u2022 Status: Scheduled -> Authorized"
     },
     {
         "date": "11 SEP",
