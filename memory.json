@@ -2,14 +2,14 @@
     {
         "date": "11 SEP",
         "time": "13:00 - 14:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Zande,Gene+",
         "res": "DVT Bldg 3 - B",
         "lesson": "Case Study Brf",
         "type": "Academic",
         "remark": "",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: DVT Bldg 3 -A(1) -> DVT Bldg 3 - B"
+        "changes_text": "  \u2022 Status: Scheduled -> Completed"
     },
     {
         "date": "11 SEP",
@@ -41,7 +41,8 @@
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 6.21-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "14 SEP",
@@ -51,7 +52,8 @@
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 6.22-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "15 SEP",
@@ -61,7 +63,8 @@
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 6.23-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "15 SEP",
@@ -71,6 +74,7 @@
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 6.24-Exam",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     }
 ]
