@@ -15,10 +15,12 @@
         "time": "17:30 - 18:30",
         "status": "Scheduled",
         "ip": "Whetstine,Noah",
-        "res": "Oral Brief Rooms",
+        "res": "DVT Brief Rm 1",
         "lesson": "IR 1.12-StgOral",
         "type": "Oral",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Aircraft: Oral Brief Rooms -> DVT Brief Rm 1"
     },
     {
         "date": "11 SEP",
@@ -28,6 +30,7 @@
         "res": "TBD",
         "lesson": "UNKNOWN",
         "type": "Rest Period",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     }
 ]
