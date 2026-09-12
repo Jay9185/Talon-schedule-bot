@@ -8,19 +8,19 @@
         "lesson": "Case Study Brf",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
+        "dispatch_sent": false
     },
     {
         "date": "11 SEP",
         "time": "17:30 - 18:30",
-        "status": "Authorized",
+        "status": "Completed",
         "ip": "Whetstine,Noah",
         "res": "DVT Brief Rm 1",
         "lesson": "IR 1.12-StgOral",
         "type": "Oral",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Authorized -> Completed"
     },
     {
         "date": "11 SEP",
