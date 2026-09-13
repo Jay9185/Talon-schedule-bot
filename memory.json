@@ -2,14 +2,14 @@
     {
         "date": "13 SEP",
         "time": "05:00 - 08:00",
-        "status": "Authorized",
+        "status": "Ops Check In",
         "ip": "Eyrich,Chris",
-        "res": "PA28-181G",
+        "res": "746PA (NXi)",
         "lesson": "IR 1.12-StgFlt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Aircraft: PA28-181G -> 746PA (NXi)\n  \u2022 Status: Authorized -> Ops Check In"
     },
     {
         "date": "14 SEP",
