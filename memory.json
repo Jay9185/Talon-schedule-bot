@@ -2,14 +2,14 @@
     {
         "date": "13 SEP",
         "time": "05:00 - 08:00",
-        "status": "Ops Check In",
+        "status": "Completed",
         "ip": "Eyrich,Chris",
         "res": "746PA (NXi)",
         "lesson": "IR 1.12-StgFlt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: PA28-181G -> 746PA (NXi)\n  \u2022 Status: Authorized -> Ops Check In"
+        "changes_text": "  \u2022 Status: Ops Check In -> Completed"
     },
     {
         "date": "14 SEP",
