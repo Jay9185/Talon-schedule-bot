@@ -12,6 +12,17 @@
     },
     {
         "date": "15 SEP",
+        "time": "12:00 - 15:00",
+        "status": "Scheduling",
+        "ip": "Miller,Kaeden",
+        "res": "PA28-181G",
+        "lesson": "IR 1.10-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "GO"
+    },
+    {
+        "date": "15 SEP",
         "time": "15:00 - 17:00",
         "status": "Scheduled",
         "ip": "Davis,Timothy GS",
@@ -19,8 +30,7 @@
         "lesson": "IR 6.21-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Lesson: IR 6.23-Ground -> IR 6.21-Ground"
+        "dispatch_sent": false
     },
     {
         "date": "15 SEP",
@@ -31,8 +41,7 @@
         "lesson": "IR 6.22-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Lesson: IR 6.24-Exam -> IR 6.22-Ground"
+        "dispatch_sent": false
     },
     {
         "date": "15 SEP",
@@ -42,7 +51,8 @@
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 6.24-Exam",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "15 SEP",
@@ -52,6 +62,17 @@
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 6.23-Ground",
         "type": "Academic",
+        "remark": "",
+        "dispatch_sent": false
+    },
+    {
+        "date": "15 SEP",
+        "time": "23:00 - 11:00 (+1D)",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "Rest Period",
         "remark": ""
     }
 ]
