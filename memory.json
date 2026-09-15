@@ -8,9 +8,8 @@
         "lesson": "IR 1.10-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: PA28-181G -> 918AG (NXI)",
-        "weather_status": "GO"
+        "dispatch_sent": true,
+        "weather_status": "NO-GO"
     },
     {
         "date": "15 SEP",
@@ -66,5 +65,15 @@
         "type": "Rest Period",
         "remark": "",
         "dispatch_sent": false
+    },
+    {
+        "date": "16 SEP",
+        "time": "16:00 - 18:30",
+        "status": "Scheduling",
+        "ip": "Miller,Kaeden",
+        "res": "PA28-181G",
+        "lesson": "CPLSE 1.16-Flt",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
