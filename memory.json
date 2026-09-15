@@ -1,16 +1,5 @@
 [
     {
-        "date": "14 SEP",
-        "time": "17:00 - 05:00 (+1D)",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "Rest Period",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
         "date": "15 SEP",
         "time": "12:30 - 15:00",
         "status": "Authorized",
@@ -20,8 +9,7 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Authorized",
-        "weather_status": "NO-GO"
+        "weather_status": "GO"
     },
     {
         "date": "15 SEP",
