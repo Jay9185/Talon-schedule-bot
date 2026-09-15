@@ -4,11 +4,12 @@
         "time": "12:30 - 15:00",
         "status": "Authorized",
         "ip": "Brace, Donovan",
-        "res": "PA28-181G",
+        "res": "918AG (NXI)",
         "lesson": "IR 1.10-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
+        "changes_text": "  \u2022 Aircraft: PA28-181G -> 918AG (NXI)",
         "weather_status": "GO"
     },
     {
