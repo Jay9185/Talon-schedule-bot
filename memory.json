@@ -2,14 +2,14 @@
     {
         "date": "15 SEP",
         "time": "12:30 - 15:00",
-        "status": "Authorized",
+        "status": "Completed",
         "ip": "Brace, Donovan",
         "res": "918AG (NXI)",
         "lesson": "IR 1.10-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "NO-GO"
+        "changes_text": "  \u2022 Status: Authorized -> Completed"
     },
     {
         "date": "15 SEP",
@@ -65,15 +65,5 @@
         "type": "Rest Period",
         "remark": "",
         "dispatch_sent": false
-    },
-    {
-        "date": "16 SEP",
-        "time": "16:00 - 18:30",
-        "status": "Scheduling",
-        "ip": "Miller,Kaeden",
-        "res": "PA28-181G",
-        "lesson": "CPLSE 1.16-Flt",
-        "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
     }
 ]
