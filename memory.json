@@ -8,8 +8,7 @@
         "lesson": "IR 1.10-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Authorized -> Completed"
+        "dispatch_sent": true
     },
     {
         "date": "15 SEP",
