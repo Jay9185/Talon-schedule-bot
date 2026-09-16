@@ -1,72 +1,13 @@
 [
     {
-        "date": "15 SEP",
-        "time": "12:30 - 15:00",
-        "status": "Completed",
-        "ip": "Brace, Donovan",
-        "res": "918AG (NXI)",
-        "lesson": "IR 1.10-Flight",
+        "date": "17 SEP",
+        "time": "05:00 - 08:00",
+        "status": "Scheduling",
+        "ip": "Eyrich,Chris",
+        "res": "PA28-181G",
+        "lesson": "IR 1.12-StgFlt",
         "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
-        "date": "15 SEP",
-        "time": "15:00 - 17:00",
-        "status": "Completed",
-        "ip": "Davis,Timothy GS",
-        "res": "DVT Bldg 3 - D",
-        "lesson": "IR 6.21-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
-    },
-    {
-        "date": "15 SEP",
-        "time": "17:00 - 19:00",
-        "status": "Completed",
-        "ip": "Davis,Timothy GS",
-        "res": "DVT Bldg 3 - D",
-        "lesson": "IR 6.22-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
-    },
-    {
-        "date": "15 SEP",
-        "time": "19:00 - 21:00",
-        "status": "Completed",
-        "ip": "Davis,Timothy GS",
-        "res": "DVT Bldg 3 - D",
-        "lesson": "IR 6.24-Exam",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
-    },
-    {
-        "date": "15 SEP",
-        "time": "21:00 - 23:00",
-        "status": "Completed",
-        "ip": "Davis,Timothy GS",
-        "res": "DVT Bldg 3 - D",
-        "lesson": "IR 6.23-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
-    },
-    {
-        "date": "15 SEP",
-        "time": "23:00 - 11:00 (+1D)",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "Rest Period",
-        "remark": "",
-        "dispatch_sent": false
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "NO-GO"
     }
 ]
