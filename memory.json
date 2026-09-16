@@ -13,46 +13,50 @@
     {
         "date": "15 SEP",
         "time": "15:00 - 17:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Davis,Timothy GS",
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 6.21-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduled -> Completed"
     },
     {
         "date": "15 SEP",
         "time": "17:00 - 19:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Davis,Timothy GS",
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 6.22-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduled -> Completed"
     },
     {
         "date": "15 SEP",
         "time": "19:00 - 21:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Davis,Timothy GS",
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 6.24-Exam",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduled -> Completed"
     },
     {
         "date": "15 SEP",
         "time": "21:00 - 23:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Davis,Timothy GS",
         "res": "DVT Bldg 3 - D",
         "lesson": "IR 6.23-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduled -> Completed"
     },
     {
         "date": "15 SEP",
