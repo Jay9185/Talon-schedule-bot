@@ -19,7 +19,8 @@
         "lesson": "CPLSE 1.18-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "weather_status": "ERROR"
+        "dispatch_sent": false,
+        "weather_status": "GO"
     },
     {
         "date": "18 SEP",
@@ -29,6 +30,7 @@
         "res": "TBD",
         "lesson": "UNKNOWN",
         "type": "Rest Period",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     }
 ]
