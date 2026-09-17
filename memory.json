@@ -2,13 +2,13 @@
     {
         "date": "17 SEP",
         "time": "05:00 - 08:00",
-        "status": "Authorized",
+        "status": "Ramp Out",
         "ip": "Eyrich,Chris",
-        "res": "PA28-181G",
+        "res": "169AG (NXI)",
         "lesson": "IR 1.12-StgFlt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Aircraft: PA28-181G -> 169AG (NXI)\n  \u2022 Status: Authorized -> Ramp Out"
     }
 ]
