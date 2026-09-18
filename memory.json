@@ -1,26 +1,15 @@
 [
     {
         "date": "17 SEP",
-        "time": "05:00 - 08:00",
-        "status": "Completed",
-        "ip": "Eyrich,Chris",
-        "res": "169AG (NXI)",
-        "lesson": "IR 1.12-StgFlt",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": false
-    },
-    {
-        "date": "17 SEP",
         "time": "21:00 - 03:00 (+1D)",
-        "status": "Ramp Out",
+        "status": "Ramp In",
         "ip": "TBD",
         "res": "276AG (NXI)",
         "lesson": "CPLSE 1.18-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Scheduled -> Ramp Out"
+        "changes_text": "  \u2022 Status: Ramp Out -> Ramp In"
     },
     {
         "date": "18 SEP",
