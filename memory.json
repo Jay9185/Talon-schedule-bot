@@ -13,14 +13,14 @@
     {
         "date": "17 SEP",
         "time": "21:00 - 03:00 (+1D)",
-        "status": "Scheduled",
+        "status": "Ramp Out",
         "ip": "TBD",
         "res": "276AG (NXI)",
         "lesson": "CPLSE 1.18-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Status: Scheduled -> Ramp Out"
     },
     {
         "date": "18 SEP",
