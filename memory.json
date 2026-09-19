@@ -9,5 +9,15 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true
+    },
+    {
+        "date": "20 SEP",
+        "time": "12:30 - 15:00",
+        "status": "Scheduling",
+        "ip": "Brace, Donovan",
+        "res": "Oral Brief Rooms",
+        "lesson": "IR 2.13-Brief",
+        "type": "Oral",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
