@@ -18,6 +18,7 @@
         "res": "Oral Brief Rooms",
         "lesson": "IR 2.13-Brief",
         "type": "Oral",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false
     }
 ]
