@@ -13,14 +13,13 @@
     {
         "date": "19 SEP",
         "time": "20:15 - 01:15 (+1D)",
-        "status": "Scheduled",
+        "status": "Ramp Out",
         "ip": "TBD",
         "res": "908AG (NXI)",
-        "lesson": "CPLSE 1.18-SXC",
+        "lesson": "CPLSE 1.19-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "  \u2022 Aircraft: PA28-181G -> 908AG (NXI)",
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Lesson: CPLSE 1.18-SXC -> CPLSE 1.19-SXC\n  \u2022 Status: Scheduled -> Ramp Out"
     }
 ]
