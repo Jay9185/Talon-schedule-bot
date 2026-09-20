@@ -20,5 +20,15 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true
+    },
+    {
+        "date": "21 SEP",
+        "time": "10:00 - 15:30",
+        "status": "Scheduled",
+        "ip": "Miller,Kaeden",
+        "res": "Redbird AATD",
+        "lesson": "CPLSE 1.20-AATDCPLSE 1.21-AATD",
+        "type": "Sim",
+        "remark": "Ramp Out"
     }
 ]
