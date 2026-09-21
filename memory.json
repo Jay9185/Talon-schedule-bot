@@ -30,7 +30,6 @@
         "lesson": "CPLSE 1.20-AATDCPLSE 1.21-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: Redbird AATD -> RB LD 3 C172"
+        "dispatch_sent": false
     }
 ]
