@@ -1,16 +1,5 @@
 [
     {
-        "date": "17 SEP",
-        "time": "21:00 - 03:00 (+1D)",
-        "status": "Ramp In",
-        "ip": "TBD",
-        "res": "276AG (NXI)",
-        "lesson": "CPLSE 1.18-SXC",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "19 SEP",
         "time": "20:15 - 01:15 (+1D)",
         "status": "Ramp In",
