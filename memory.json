@@ -8,8 +8,7 @@
         "lesson": "IR 2.13-Brief",
         "type": "Oral",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Authorized -> Completed"
+        "dispatch_sent": false
     },
     {
         "date": "22 SEP",
@@ -20,7 +19,6 @@
         "lesson": "IR 2.14-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
+        "dispatch_sent": false
     }
 ]
