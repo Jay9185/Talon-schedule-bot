@@ -1,16 +1,25 @@
 [
     {
         "date": "24 SEP",
+        "time": "12:00 - 14:30",
+        "status": "Ramp Out",
+        "ip": "Miller,Kaeden",
+        "res": "271AG (NXI)",
+        "lesson": "CPLSE 1.22-Flt",
+        "type": "Flight",
+        "remark": "Ramp Out"
+    },
+    {
+        "date": "24 SEP",
         "time": "12:00 - 15:00",
-        "status": "Scheduled",
+        "status": "CancelledResched Same Day",
         "ip": "Miller,Kaeden",
         "res": "271AG (NXI)",
         "lesson": "IR 2.17-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "  \u2022 Aircraft: PA28-181G -> 271AG (NXI)",
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Status: Scheduled -> CancelledResched Same Day"
     },
     {
         "date": "24 SEP",
@@ -22,5 +31,26 @@
         "type": "Sim",
         "remark": "Ramp Out",
         "dispatch_sent": false
+    },
+    {
+        "date": "25 SEP",
+        "time": "23:00 - 04:00 (+1D)",
+        "status": "Scheduling",
+        "ip": "Miller,Kaeden",
+        "res": "PA28-181G",
+        "lesson": "IR 2.18-FlightCPLSE 1.22-Flt",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "GO"
+    },
+    {
+        "date": "26 SEP",
+        "time": "04:00 - 16:00",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "Rest Period",
+        "remark": ""
     }
 ]
