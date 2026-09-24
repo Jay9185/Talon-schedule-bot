@@ -4,11 +4,12 @@
         "time": "12:00 - 15:00",
         "status": "Scheduled",
         "ip": "Miller,Kaeden",
-        "res": "PA28-181G",
+        "res": "271AG (NXI)",
         "lesson": "IR 2.17-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
+        "dispatch_sent": true,
+        "changes_text": "  \u2022 Aircraft: PA28-181G -> 271AG (NXI)",
         "weather_status": "GO"
     },
     {
