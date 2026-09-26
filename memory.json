@@ -74,7 +74,8 @@
         "res": "DVT Bldg 3 - B",
         "lesson": "CPL 1.5-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "02 OCT",
@@ -84,6 +85,7 @@
         "res": "DVT Bldg 3 - B",
         "lesson": "CPL 2.6-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     }
 ]
