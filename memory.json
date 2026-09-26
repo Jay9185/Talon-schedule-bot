@@ -8,8 +8,7 @@
         "lesson": "CPLSE 1.25-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Ops Check In -> CancelledSP Unprepared"
+        "dispatch_sent": true
     },
     {
         "date": "26 SEP",
@@ -31,6 +30,7 @@
         "lesson": "IR 2.17-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
+        "dispatch_sent": false,
         "weather_status": "GO"
     },
     {
