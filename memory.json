@@ -19,8 +19,8 @@
         "lesson": "IR 2.17-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "weather_status": "GO"
+        "dispatch_sent": true,
+        "weather_status": "ERROR"
     },
     {
         "date": "30 SEP",
