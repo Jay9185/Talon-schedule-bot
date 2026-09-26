@@ -1,16 +1,5 @@
 [
     {
-        "date": "25 SEP",
-        "time": "13:30 - 18:30",
-        "status": "CancelledSP Unprepared",
-        "ip": "TBD",
-        "res": "PA28-181G",
-        "lesson": "CPLSE 1.25-SXC",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "26 SEP",
         "time": "04:00 - 16:00",
         "status": "Scheduled",
@@ -76,5 +65,25 @@
         "type": "Academic",
         "remark": "",
         "dispatch_sent": false
+    },
+    {
+        "date": "02 OCT",
+        "time": "10:00 - 12:00",
+        "status": "Scheduled",
+        "ip": "Reeves,Jordyn",
+        "res": "DVT Bldg 3 - B",
+        "lesson": "CPL 1.5-Ground",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "02 OCT",
+        "time": "12:00 - 14:00",
+        "status": "Scheduled",
+        "ip": "Reeves,Jordyn",
+        "res": "DVT Bldg 3 - B",
+        "lesson": "CPL 2.6-Ground",
+        "type": "Academic",
+        "remark": ""
     }
 ]
