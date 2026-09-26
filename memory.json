@@ -13,14 +13,14 @@
     {
         "date": "26 SEP",
         "time": "16:00 - 20:00",
-        "status": "Scheduled",
+        "status": "Ops Check In",
         "ip": "Miller,Kaeden",
-        "res": "PA28-181G",
+        "res": "176AG (NXI)",
         "lesson": "IR 2.17-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "ERROR"
+        "changes_text": "  \u2022 Aircraft: PA28-181G -> 176AG (NXI)\n  \u2022 Status: Scheduled -> Ops Check In"
     },
     {
         "date": "30 SEP",
