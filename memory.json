@@ -13,14 +13,26 @@
     {
         "date": "26 SEP",
         "time": "16:00 - 20:00",
-        "status": "Ops Check In",
+        "status": "Ramp Out",
         "ip": "Miller,Kaeden",
         "res": "176AG (NXI)",
         "lesson": "IR 2.17-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "  \u2022 Aircraft: PA28-181G -> 176AG (NXI)\n  \u2022 Status: Scheduled -> Ops Check In"
+        "changes_text": "  \u2022 Status: Ops Check In -> Ramp Out"
+    },
+    {
+        "date": "26 SEP",
+        "time": "21:00 - 03:00 (+1D)",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "742PA (NXi)",
+        "lesson": "CPLSE 1.25-SXC",
+        "type": "Flight",
+        "remark": "Ramp Out",
+        "weather_status": "GO",
+        "dispatch_sent": true
     },
     {
         "date": "30 SEP",
