@@ -1,5 +1,26 @@
 [
     {
+        "date": "29 SEP",
+        "time": "17:00 - 20:30",
+        "status": "Scheduling",
+        "ip": "Miller,Kaeden",
+        "res": "PA28-181G",
+        "lesson": "IR 2.18-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "GO"
+    },
+    {
+        "date": "29 SEP",
+        "time": "20:30 - 08:30 (+1D)",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "Rest Period",
+        "remark": ""
+    },
+    {
         "date": "30 SEP",
         "time": "10:00 - 12:00",
         "status": "Scheduled",
