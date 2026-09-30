@@ -4,24 +4,24 @@
         "time": "10:00 - 12:00",
         "status": "Scheduled",
         "ip": "Reeves,Jordyn",
-        "res": "DVT Bldg 3 - C",
+        "res": "DVT Bldg 3 - B",
         "lesson": "CPL 1.1-Ground",
         "type": "Academic",
         "remark": "",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: DVT Bldg 3 - B -> DVT Bldg 3 - C"
+        "changes_text": "  \u2022 Aircraft: DVT Bldg 3 - C -> DVT Bldg 3 - B"
     },
     {
         "date": "30 SEP",
         "time": "12:00 - 14:00",
         "status": "Scheduled",
         "ip": "Reeves,Jordyn",
-        "res": "DVT Bldg 3 - C",
+        "res": "DVT Bldg 3 - B",
         "lesson": "CPL 1.2-Ground",
         "type": "Academic",
         "remark": "",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: DVT Bldg 3 - B -> DVT Bldg 3 - C"
+        "changes_text": "  \u2022 Aircraft: DVT Bldg 3 - C -> DVT Bldg 3 - B"
     },
     {
         "date": "01 OCT",
@@ -46,6 +46,27 @@
         "dispatch_sent": false
     },
     {
+        "date": "01 OCT",
+        "time": "17:30 - 22:00",
+        "status": "Scheduling",
+        "ip": "Miller,Kaeden",
+        "res": "PA28-181G",
+        "lesson": "IR 2.18-FlightCPLSE 1.23-Flt",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "GO"
+    },
+    {
+        "date": "01 OCT",
+        "time": "22:00 - 10:00 (+1D)",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "Rest Period",
+        "remark": ""
+    },
+    {
         "date": "02 OCT",
         "time": "10:00 - 12:00",
         "status": "Scheduled",
@@ -66,5 +87,25 @@
         "type": "Academic",
         "remark": "",
         "dispatch_sent": false
+    },
+    {
+        "date": "",
+        "time": "",
+        "status": "",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "",
+        "remark": ""
+    },
+    {
+        "date": "30 SEP",
+        "time": "17:30 - 20:30",
+        "status": "Ops Request",
+        "ip": "Miller,Kaeden",
+        "res": "PA28-181G",
+        "lesson": "IR 2.18-Flight",
+        "type": "Flight",
+        "remark": ""
     }
 ]
