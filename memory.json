@@ -1,38 +1,5 @@
 [
     {
-        "date": "29 SEP",
-        "time": "17:00 - 20:00",
-        "status": "CancelledN/A FTD",
-        "ip": "Miller,Kaeden",
-        "res": "Redbird AATD",
-        "lesson": "CPLSE 1.24-AATD",
-        "type": "Sim",
-        "remark": "Ramp Out"
-    },
-    {
-        "date": "29 SEP",
-        "time": "17:00 - 20:30",
-        "status": "CancelledResched Same Day",
-        "ip": "Miller,Kaeden",
-        "res": "169AG (NXI)",
-        "lesson": "IR 2.18-Flight",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Scheduled -> CancelledResched Same Day"
-    },
-    {
-        "date": "29 SEP",
-        "time": "20:30 - 08:30 (+1D)",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "Rest Period",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
         "date": "30 SEP",
         "time": "10:00 - 12:00",
         "status": "Scheduled",
