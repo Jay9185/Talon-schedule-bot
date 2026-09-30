@@ -4,22 +4,24 @@
         "time": "10:00 - 12:00",
         "status": "Scheduled",
         "ip": "Reeves,Jordyn",
-        "res": "DVT Bldg 3 - B",
+        "res": "DVT Bldg 3 - C",
         "lesson": "CPL 1.1-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Aircraft: DVT Bldg 3 - B -> DVT Bldg 3 - C"
     },
     {
         "date": "30 SEP",
         "time": "12:00 - 14:00",
         "status": "Scheduled",
         "ip": "Reeves,Jordyn",
-        "res": "DVT Bldg 3 - B",
+        "res": "DVT Bldg 3 - C",
         "lesson": "CPL 1.2-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Aircraft: DVT Bldg 3 - B -> DVT Bldg 3 - C"
     },
     {
         "date": "01 OCT",
