@@ -8,8 +8,7 @@
         "lesson": "CPL 1.1-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
+        "dispatch_sent": false
     },
     {
         "date": "30 SEP",
@@ -20,8 +19,7 @@
         "lesson": "CPL 1.2-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
+        "dispatch_sent": false
     },
     {
         "date": "30 SEP",
@@ -32,8 +30,7 @@
         "lesson": "IR 2.18-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Ops Request -> CancelledMission not reqd\n  \u2022 Remarks: 'Ramp Out'"
+        "dispatch_sent": false
     },
     {
         "date": "01 OCT",
