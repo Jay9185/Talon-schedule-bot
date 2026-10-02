@@ -20,5 +20,65 @@
         "type": "Academic",
         "remark": "",
         "dispatch_sent": false
+    },
+    {
+        "date": "05 OCT",
+        "time": "10:00 - 12:30",
+        "status": "Scheduled",
+        "ip": "Reeves,Jordyn",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "CPL 2.7-Ground",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "05 OCT",
+        "time": "12:30 - 15:00",
+        "status": "Scheduled",
+        "ip": "Reeves,Jordyn",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "CPL 2.8-Ground",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "06 OCT",
+        "time": "12:00 - 14:00",
+        "status": "Scheduled",
+        "ip": "Hogan,Geoffrey",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "CPL 3.9-Ground",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "06 OCT",
+        "time": "14:00 - 15:00",
+        "status": "Scheduled",
+        "ip": "Hogan,Geoffrey",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "CPL 3.10-Ground",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "08 OCT",
+        "time": "12:00 - 13:30",
+        "status": "Scheduled",
+        "ip": "Hogan,Geoffrey",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "CPL 3.11-Ground",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "08 OCT",
+        "time": "13:30 - 15:30",
+        "status": "Scheduled",
+        "ip": "Hogan,Geoffrey",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "CPL 3.12-Ground",
+        "type": "Academic",
+        "remark": ""
     }
 ]
