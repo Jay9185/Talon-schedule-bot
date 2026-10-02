@@ -1,50 +1,5 @@
 [
     {
-        "date": "01 OCT",
-        "time": "10:00 - 12:00",
-        "status": "Completed",
-        "ip": "Reeves,Jordyn",
-        "res": "DVT Bldg 3 - B",
-        "lesson": "CPL 1.3-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
-        "date": "01 OCT",
-        "time": "12:00 - 14:00",
-        "status": "Completed",
-        "ip": "Reeves,Jordyn",
-        "res": "DVT Bldg 3 - B",
-        "lesson": "CPL 1.4-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
-        "date": "01 OCT",
-        "time": "19:00 - 22:00",
-        "status": "Ramp Out",
-        "ip": "Miller,Kaeden",
-        "res": "176AG (NXI)",
-        "lesson": "IR 2.18-Flight",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "  \u2022 Aircraft: PA28-181G -> 176AG (NXI)\n  \u2022 Status: Scheduled -> Ramp Out"
-    },
-    {
-        "date": "01 OCT",
-        "time": "22:00 - 10:00 (+1D)",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "Rest Period",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
         "date": "02 OCT",
         "time": "10:00 - 12:00",
         "status": "Scheduled",
