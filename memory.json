@@ -1,16 +1,5 @@
 [
     {
-        "date": "04 OCT",
-        "time": "02:00 - 14:00",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "Rest Period",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
         "date": "05 OCT",
         "time": "10:00 - 12:30",
         "status": "Scheduled",
