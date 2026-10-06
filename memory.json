@@ -1,27 +1,5 @@
 [
     {
-        "date": "05 OCT",
-        "time": "09:00 - 11:30",
-        "status": "Completed",
-        "ip": "Reeves,Jordyn",
-        "res": "DVT Bldg 3 - C",
-        "lesson": "CPL 2.7-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
-        "date": "05 OCT",
-        "time": "11:30 - 14:00",
-        "status": "Completed",
-        "ip": "Reeves,Jordyn",
-        "res": "DVT Bldg 3 - C",
-        "lesson": "CPL 2.8-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
         "date": "06 OCT",
         "time": "12:00 - 14:00",
         "status": "Scheduled",
@@ -48,11 +26,12 @@
         "time": "15:30 - 18:00",
         "status": "Scheduled",
         "ip": "Miller,Kaeden",
-        "res": "PA28-181G",
+        "res": "195MA (NXi)",
         "lesson": "CPLSE 1.23-Flt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
+        "changes_text": "  \u2022 Aircraft: PA28-181G -> 195MA (NXi)",
         "weather_status": "GO"
     },
     {
@@ -120,5 +99,25 @@
         "type": "Academic",
         "remark": "",
         "dispatch_sent": false
+    },
+    {
+        "date": "12 OCT",
+        "time": "10:00 - 12:00",
+        "status": "Scheduled",
+        "ip": "Reeves,Jordyn",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "CPL 4.15-Ground",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "12 OCT",
+        "time": "12:00 - 14:00",
+        "status": "Scheduled",
+        "ip": "Reeves,Jordyn",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "CPL 4.16-Ground",
+        "type": "Academic",
+        "remark": ""
     }
 ]
