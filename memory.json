@@ -31,7 +31,6 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: PA28-181G -> 195MA (NXi)",
         "weather_status": "GO"
     },
     {
@@ -55,6 +54,16 @@
         "type": "Rest Period",
         "remark": "",
         "dispatch_sent": false
+    },
+    {
+        "date": "07 OCT",
+        "time": "16:00 - 18:30",
+        "status": "Scheduling",
+        "ip": "Miller,Kaeden",
+        "res": "Redbird AATD",
+        "lesson": "IR 2.20-AATD",
+        "type": "Sim",
+        "remark": "The schedule has not yet been posted for this day"
     },
     {
         "date": "08 OCT",
@@ -108,7 +117,8 @@
         "res": "DVT Bldg 3 - C",
         "lesson": "CPL 4.15-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "12 OCT",
@@ -118,6 +128,7 @@
         "res": "DVT Bldg 3 - C",
         "lesson": "CPL 4.16-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     }
 ]
