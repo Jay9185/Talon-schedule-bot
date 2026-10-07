@@ -8,8 +8,7 @@
         "lesson": "CPL 3.9-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
+        "dispatch_sent": false
     },
     {
         "date": "06 OCT",
@@ -20,31 +19,31 @@
         "lesson": "CPL 3.10-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
+        "dispatch_sent": false
     },
     {
         "date": "06 OCT",
         "time": "15:30 - 18:00",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Miller,Kaeden",
         "res": "195MA (NXi)",
         "lesson": "CPLSE 1.23-Flt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Ramp Out"
+        "changes_text": "  \u2022 Status: Ramp Out -> Completed"
     },
     {
         "date": "06 OCT",
         "time": "18:00 - 21:00",
-        "status": "Scheduled",
+        "status": "Ramp Out",
         "ip": "Miller,Kaeden",
         "res": "RB LD 1 G1000",
         "lesson": "CPLSE 1.24-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduled -> Ramp Out"
     },
     {
         "date": "06 OCT",
@@ -62,12 +61,12 @@
         "time": "16:00 - 18:30",
         "status": "Scheduled",
         "ip": "Miller,Kaeden",
-        "res": "Redbird AATD",
+        "res": "RB LD 1 G1000",
         "lesson": "IR 2.20-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'"
+        "changes_text": "  \u2022 Aircraft: Redbird AATD -> RB LD 1 G1000"
     },
     {
         "date": "07 OCT",
@@ -77,7 +76,8 @@
         "res": "TBD",
         "lesson": "UNKNOWN",
         "type": "Rest Period",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "08 OCT",
