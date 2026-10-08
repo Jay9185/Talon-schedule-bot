@@ -26,12 +26,13 @@
         "time": "16:00 - 18:30",
         "status": "Scheduled",
         "ip": "Miller,Kaeden",
-        "res": "PA28-181G",
+        "res": "545MA",
         "lesson": "CPLSE 1.27-Flt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "ERROR"
+        "changes_text": "  \u2022 Aircraft: PA28-181G -> 545MA",
+        "weather_status": "GO"
     },
     {
         "date": "08 OCT",
@@ -129,7 +130,8 @@
         "res": "DVT Bldg 3 - C",
         "lesson": "CPL 5.19-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "14 OCT",
@@ -139,7 +141,8 @@
         "res": "DVT Bldg 3 - C",
         "lesson": "CPL 5.20-Exam",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "14 OCT",
@@ -149,6 +152,7 @@
         "res": "DVT Bldg 3 - C",
         "lesson": "UNKNOWN",
         "type": "Meeting",
-        "remark": "AI town Hall"
+        "remark": "AI town Hall",
+        "dispatch_sent": false
     }
 ]
