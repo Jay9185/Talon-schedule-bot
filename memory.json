@@ -30,8 +30,7 @@
         "lesson": "CPLSE 1.27-Flt",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: PA28-181G -> 545MA",
+        "dispatch_sent": true,
         "weather_status": "GO"
     },
     {
@@ -77,6 +76,16 @@
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
         "dispatch_sent": false
+    },
+    {
+        "date": "10 OCT",
+        "time": "01:30 - 13:30",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "Rest Period",
+        "remark": ""
     },
     {
         "date": "12 OCT",
