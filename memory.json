@@ -2,14 +2,25 @@
     {
         "date": "07 OCT",
         "time": "16:00 - 18:30",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Miller,Kaeden",
         "res": "RB SD 4 G1000",
         "lesson": "IR 2.20-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
+        "dispatch_sent": false
+    },
+    {
+        "date": "07 OCT",
+        "time": "16:00 - 18:30",
+        "status": "Completed",
+        "ip": "Miller,Kaeden",
+        "res": "RB LD 2 C172",
+        "lesson": "IR 2.20-AATD",
+        "type": "Sim",
+        "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: RB LD 3 C172 -> RB SD 4 G1000"
+        "changes_text": "  \u2022 Aircraft: RB SD 4 G1000 -> RB LD 2 C172\n  \u2022 Status: Scheduled -> Completed"
     },
     {
         "date": "07 OCT",
@@ -46,14 +57,24 @@
     },
     {
         "date": "08 OCT",
-        "time": "15:30 - 18:00",
-        "status": "Scheduling",
+        "time": "16:00 - 18:30",
+        "status": "Scheduled",
         "ip": "Miller,Kaeden",
         "res": "PA28-181G",
         "lesson": "CPLSE 1.27-Flt",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day",
+        "remark": "Ramp Out",
         "weather_status": "GO"
+    },
+    {
+        "date": "08 OCT",
+        "time": "18:30 - 06:30 (+1D)",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "Rest Period",
+        "remark": ""
     },
     {
         "date": "09 OCT",
@@ -76,6 +97,16 @@
         "type": "Academic",
         "remark": "",
         "dispatch_sent": false
+    },
+    {
+        "date": "09 OCT",
+        "time": "20:30 - 01:30 (+1D)",
+        "status": "Scheduling",
+        "ip": "TBD",
+        "res": "PA28-181G",
+        "lesson": "CPLSE 1.26-SXC",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     },
     {
         "date": "12 OCT",
