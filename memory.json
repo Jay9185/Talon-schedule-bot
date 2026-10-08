@@ -1,39 +1,5 @@
 [
     {
-        "date": "07 OCT",
-        "time": "16:00 - 18:30",
-        "status": "Completed",
-        "ip": "Miller,Kaeden",
-        "res": "RB SD 4 G1000",
-        "lesson": "IR 2.20-AATD",
-        "type": "Sim",
-        "remark": "Ramp Out",
-        "dispatch_sent": false
-    },
-    {
-        "date": "07 OCT",
-        "time": "16:00 - 18:30",
-        "status": "Completed",
-        "ip": "Miller,Kaeden",
-        "res": "RB LD 2 C172",
-        "lesson": "IR 2.20-AATD",
-        "type": "Sim",
-        "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: RB SD 4 G1000 -> RB LD 2 C172\n  \u2022 Status: Scheduled -> Completed"
-    },
-    {
-        "date": "07 OCT",
-        "time": "18:30 - 06:30 (+1D)",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "Rest Period",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
         "date": "08 OCT",
         "time": "12:00 - 13:30",
         "status": "Scheduled",
@@ -64,7 +30,8 @@
         "lesson": "CPLSE 1.27-Flt",
         "type": "Flight",
         "remark": "Ramp Out",
-        "weather_status": "GO"
+        "dispatch_sent": false,
+        "weather_status": "ERROR"
     },
     {
         "date": "08 OCT",
@@ -74,7 +41,8 @@
         "res": "TBD",
         "lesson": "UNKNOWN",
         "type": "Rest Period",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "09 OCT",
@@ -106,7 +74,8 @@
         "res": "PA28-181G",
         "lesson": "CPLSE 1.26-SXC",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false
     },
     {
         "date": "12 OCT",
@@ -151,5 +120,35 @@
         "type": "Academic",
         "remark": "",
         "dispatch_sent": false
+    },
+    {
+        "date": "14 OCT",
+        "time": "10:00 - 12:00",
+        "status": "Scheduled",
+        "ip": "Reeves,Jordyn",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "CPL 5.19-Ground",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "14 OCT",
+        "time": "12:00 - 14:00",
+        "status": "Scheduled",
+        "ip": "Reeves,Jordyn",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "CPL 5.20-Exam",
+        "type": "Academic",
+        "remark": ""
+    },
+    {
+        "date": "14 OCT",
+        "time": "16:00 - 18:00",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "DVT Bldg 3 - C",
+        "lesson": "UNKNOWN",
+        "type": "Meeting",
+        "remark": "AI town Hall"
     }
 ]
