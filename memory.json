@@ -8,8 +8,7 @@
         "lesson": "CPL 3.11-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
+        "dispatch_sent": false
     },
     {
         "date": "08 OCT",
@@ -20,18 +19,19 @@
         "lesson": "CPL 3.12-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
+        "dispatch_sent": false
     },
     {
         "date": "08 OCT",
         "time": "17:00 - 19:30",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Miller,Kaeden",
         "res": "176AG (NXI)",
         "lesson": "CPLSE 1.27-Flt",
         "type": "Flight",
-        "remark": "Ramp Out"
+        "remark": "Ramp Out",
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Ramp Out -> Completed"
     },
     {
         "date": "08 OCT",
@@ -41,7 +41,8 @@
         "res": "TBD",
         "lesson": "UNKNOWN",
         "type": "Rest Period",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "09 OCT",
@@ -67,15 +68,13 @@
     },
     {
         "date": "09 OCT",
-        "time": "20:30 - 01:30 (+1D)",
+        "time": "19:00 - 00:00 (+1D)",
         "status": "Scheduled",
         "ip": "TBD",
         "res": "PA28-181G",
         "lesson": "CPLSE 1.26-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'",
         "weather_status": "GO"
     },
     {
@@ -97,7 +96,8 @@
         "res": "PA28-181G",
         "lesson": "CPLSE 1.26-SXC",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false
     },
     {
         "date": "12 OCT",
