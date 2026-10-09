@@ -2,14 +2,14 @@
     {
         "date": "09 OCT",
         "time": "12:00 - 14:30",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Hogan,Geoffrey",
         "res": "CHD Classroom  B",
         "lesson": "CPL 4.13-Ground",
         "type": "Academic",
         "remark": "",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: DVT Bldg 3 - C -> CHD Classroom  B"
+        "changes_text": "  \u2022 Status: Scheduled -> Completed"
     },
     {
         "date": "09 OCT",
@@ -20,8 +20,7 @@
         "lesson": "CPL 4.14-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Aircraft: DVT Bldg 3 - C -> CHD Classroom  B"
+        "dispatch_sent": false
     },
     {
         "date": "09 OCT",
@@ -32,8 +31,8 @@
         "lesson": "CPLSE 1.26-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "weather_status": "NO-GO"
+        "dispatch_sent": true,
+        "weather_status": "GO"
     },
     {
         "date": "10 OCT",
@@ -49,13 +48,14 @@
     {
         "date": "10 OCT",
         "time": "20:00 - 01:00 (+1D)",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "TBD",
         "res": "PA28-181G",
         "lesson": "CPLSE 1.26-SXC",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false
+        "remark": "Ramp Out",
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'"
     },
     {
         "date": "12 OCT",
@@ -66,8 +66,7 @@
         "lesson": "CPL 4.15-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Lesson: CPL 4.16-Ground -> CPL 4.15-Ground\n  \u2022 Instructor: Reeves,Jordyn -> Hogan,Geoffrey\n  \u2022 Aircraft: DVT Bldg 3 - C -> DVT Bldg 3 - A"
+        "dispatch_sent": false
     },
     {
         "date": "12 OCT",
@@ -77,7 +76,8 @@
         "res": "DVT Bldg 3 - A",
         "lesson": "CPL 4.16-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "13 OCT",
@@ -88,8 +88,7 @@
         "lesson": "CPL 5.17-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Lesson: CPL 5.18-Ground -> CPL 5.17-Ground\n  \u2022 Instructor: Reeves,Jordyn -> Hogan,Geoffrey\n  \u2022 Aircraft: DVT Bldg 3 - C -> DVT Bldg 3 - A"
+        "dispatch_sent": false
     },
     {
         "date": "13 OCT",
@@ -99,7 +98,8 @@
         "res": "DVT Bldg 3 - A",
         "lesson": "CPL 5.18-Ground",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "14 OCT",
@@ -110,8 +110,7 @@
         "lesson": "CPL 5.19-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Lesson: CPL 5.20-Exam -> CPL 5.19-Ground\n  \u2022 Instructor: Reeves,Jordyn -> Hogan,Geoffrey\n  \u2022 Aircraft: DVT Bldg 3 - C -> DVT Bldg 3 - A"
+        "dispatch_sent": false
     },
     {
         "date": "14 OCT",
@@ -121,7 +120,8 @@
         "res": "DVT Bldg 3 - A",
         "lesson": "CPL 5.20-Exam",
         "type": "Academic",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "14 OCT",
