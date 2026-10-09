@@ -1,50 +1,5 @@
 [
     {
-        "date": "08 OCT",
-        "time": "12:00 - 13:30",
-        "status": "Completed",
-        "ip": "Hogan,Geoffrey",
-        "res": "DVT Bldg 3 - C",
-        "lesson": "CPL 3.11-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
-        "date": "08 OCT",
-        "time": "13:30 - 15:30",
-        "status": "Completed",
-        "ip": "Hogan,Geoffrey",
-        "res": "DVT Bldg 3 - C",
-        "lesson": "CPL 3.12-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
-        "date": "08 OCT",
-        "time": "17:00 - 19:30",
-        "status": "Completed",
-        "ip": "Miller,Kaeden",
-        "res": "176AG (NXI)",
-        "lesson": "CPLSE 1.27-Flt",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Ramp Out -> Completed"
-    },
-    {
-        "date": "08 OCT",
-        "time": "21:30 - 09:30 (+1D)",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "Rest Period",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
         "date": "09 OCT",
         "time": "12:00 - 14:30",
         "status": "Scheduled",
@@ -68,10 +23,10 @@
     },
     {
         "date": "09 OCT",
-        "time": "19:00 - 00:00 (+1D)",
+        "time": "18:45 - 23:45",
         "status": "Scheduled",
         "ip": "TBD",
-        "res": "PA28-181G",
+        "res": "281TW (NXI)",
         "lesson": "CPLSE 1.26-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
