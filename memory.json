@@ -4,22 +4,24 @@
         "time": "12:00 - 14:30",
         "status": "Scheduled",
         "ip": "Hogan,Geoffrey",
-        "res": "DVT Bldg 3 - C",
+        "res": "CHD Classroom  B",
         "lesson": "CPL 4.13-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Aircraft: DVT Bldg 3 - C -> CHD Classroom  B"
     },
     {
         "date": "09 OCT",
         "time": "14:30 - 16:30",
         "status": "Scheduled",
         "ip": "Hogan,Geoffrey",
-        "res": "DVT Bldg 3 - C",
+        "res": "CHD Classroom  B",
         "lesson": "CPL 4.14-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Aircraft: DVT Bldg 3 - C -> CHD Classroom  B"
     },
     {
         "date": "09 OCT",
@@ -30,7 +32,8 @@
         "lesson": "CPLSE 1.26-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "weather_status": "GO"
+        "dispatch_sent": false,
+        "weather_status": "NO-GO"
     },
     {
         "date": "10 OCT",
@@ -56,69 +59,69 @@
     },
     {
         "date": "12 OCT",
-        "time": "10:00 - 12:00",
+        "time": "12:00 - 14:00",
         "status": "Scheduled",
-        "ip": "Reeves,Jordyn",
-        "res": "DVT Bldg 3 - C",
+        "ip": "Hogan,Geoffrey",
+        "res": "DVT Bldg 3 - A",
         "lesson": "CPL 4.15-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Lesson: CPL 4.16-Ground -> CPL 4.15-Ground\n  \u2022 Instructor: Reeves,Jordyn -> Hogan,Geoffrey\n  \u2022 Aircraft: DVT Bldg 3 - C -> DVT Bldg 3 - A"
     },
     {
         "date": "12 OCT",
-        "time": "12:00 - 14:00",
+        "time": "14:00 - 16:00",
         "status": "Scheduled",
-        "ip": "Reeves,Jordyn",
-        "res": "DVT Bldg 3 - C",
+        "ip": "Hogan,Geoffrey",
+        "res": "DVT Bldg 3 - A",
         "lesson": "CPL 4.16-Ground",
         "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false
+        "remark": ""
     },
     {
         "date": "13 OCT",
-        "time": "10:00 - 12:00",
+        "time": "12:00 - 14:00",
         "status": "Scheduled",
-        "ip": "Reeves,Jordyn",
-        "res": "DVT Bldg 3 - C",
+        "ip": "Hogan,Geoffrey",
+        "res": "DVT Bldg 3 - A",
         "lesson": "CPL 5.17-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Lesson: CPL 5.18-Ground -> CPL 5.17-Ground\n  \u2022 Instructor: Reeves,Jordyn -> Hogan,Geoffrey\n  \u2022 Aircraft: DVT Bldg 3 - C -> DVT Bldg 3 - A"
     },
     {
         "date": "13 OCT",
-        "time": "12:00 - 14:00",
+        "time": "14:00 - 16:00",
         "status": "Scheduled",
-        "ip": "Reeves,Jordyn",
-        "res": "DVT Bldg 3 - C",
+        "ip": "Hogan,Geoffrey",
+        "res": "DVT Bldg 3 - A",
         "lesson": "CPL 5.18-Ground",
         "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false
+        "remark": ""
     },
     {
         "date": "14 OCT",
-        "time": "10:00 - 12:00",
+        "time": "12:00 - 14:00",
         "status": "Scheduled",
-        "ip": "Reeves,Jordyn",
-        "res": "DVT Bldg 3 - C",
+        "ip": "Hogan,Geoffrey",
+        "res": "DVT Bldg 3 - A",
         "lesson": "CPL 5.19-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Lesson: CPL 5.20-Exam -> CPL 5.19-Ground\n  \u2022 Instructor: Reeves,Jordyn -> Hogan,Geoffrey\n  \u2022 Aircraft: DVT Bldg 3 - C -> DVT Bldg 3 - A"
     },
     {
         "date": "14 OCT",
-        "time": "12:00 - 14:00",
+        "time": "14:00 - 16:00",
         "status": "Scheduled",
-        "ip": "Reeves,Jordyn",
-        "res": "DVT Bldg 3 - C",
+        "ip": "Hogan,Geoffrey",
+        "res": "DVT Bldg 3 - A",
         "lesson": "CPL 5.20-Exam",
         "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false
+        "remark": ""
     },
     {
         "date": "14 OCT",
