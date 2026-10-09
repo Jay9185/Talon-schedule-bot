@@ -2,47 +2,46 @@
     {
         "date": "08 OCT",
         "time": "12:00 - 13:30",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Hogan,Geoffrey",
         "res": "DVT Bldg 3 - C",
         "lesson": "CPL 3.11-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduled -> Completed"
     },
     {
         "date": "08 OCT",
         "time": "13:30 - 15:30",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Hogan,Geoffrey",
         "res": "DVT Bldg 3 - C",
         "lesson": "CPL 3.12-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduled -> Completed"
     },
     {
         "date": "08 OCT",
-        "time": "16:00 - 18:30",
-        "status": "Scheduled",
+        "time": "17:00 - 19:30",
+        "status": "Ramp Out",
         "ip": "Miller,Kaeden",
-        "res": "545MA",
+        "res": "176AG (NXI)",
         "lesson": "CPLSE 1.27-Flt",
         "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "weather_status": "GO"
+        "remark": "Ramp Out"
     },
     {
         "date": "08 OCT",
-        "time": "18:30 - 06:30 (+1D)",
+        "time": "21:30 - 09:30 (+1D)",
         "status": "Scheduled",
         "ip": "TBD",
         "res": "TBD",
         "lesson": "UNKNOWN",
         "type": "Rest Period",
-        "remark": "",
-        "dispatch_sent": false
+        "remark": ""
     },
     {
         "date": "09 OCT",
@@ -69,13 +68,15 @@
     {
         "date": "09 OCT",
         "time": "20:30 - 01:30 (+1D)",
-        "status": "Scheduling",
+        "status": "Scheduled",
         "ip": "TBD",
         "res": "PA28-181G",
         "lesson": "CPLSE 1.26-SXC",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false
+        "remark": "Ramp Out",
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'",
+        "weather_status": "GO"
     },
     {
         "date": "10 OCT",
@@ -85,7 +86,18 @@
         "res": "TBD",
         "lesson": "UNKNOWN",
         "type": "Rest Period",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
+    },
+    {
+        "date": "10 OCT",
+        "time": "20:00 - 01:00 (+1D)",
+        "status": "Scheduling",
+        "ip": "TBD",
+        "res": "PA28-181G",
+        "lesson": "CPLSE 1.26-SXC",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     },
     {
         "date": "12 OCT",
