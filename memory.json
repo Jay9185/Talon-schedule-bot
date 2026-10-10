@@ -1,17 +1,6 @@
 [
     {
         "date": "09 OCT",
-        "time": "12:00 - 14:30",
-        "status": "Completed",
-        "ip": "Hogan,Geoffrey",
-        "res": "CHD Classroom  B",
-        "lesson": "CPL 4.13-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
-        "date": "09 OCT",
         "time": "14:30 - 16:30",
         "status": "Scheduled",
         "ip": "Hogan,Geoffrey",
@@ -20,18 +9,6 @@
         "type": "Academic",
         "remark": "",
         "dispatch_sent": false
-    },
-    {
-        "date": "09 OCT",
-        "time": "18:45 - 23:45",
-        "status": "CancelledWX - T-Storm",
-        "ip": "TBD",
-        "res": "281TW (NXI)",
-        "lesson": "CPLSE 1.26-SXC",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Scheduled -> CancelledWX - T-Storm"
     },
     {
         "date": "10 OCT",
