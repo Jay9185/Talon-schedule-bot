@@ -8,8 +8,7 @@
         "lesson": "CPL 4.13-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
+        "dispatch_sent": false
     },
     {
         "date": "09 OCT",
@@ -25,14 +24,14 @@
     {
         "date": "09 OCT",
         "time": "18:45 - 23:45",
-        "status": "Scheduled",
+        "status": "CancelledWX - T-Storm",
         "ip": "TBD",
         "res": "281TW (NXI)",
         "lesson": "CPLSE 1.26-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Status: Scheduled -> CancelledWX - T-Storm"
     },
     {
         "date": "10 OCT",
@@ -55,7 +54,7 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'"
+        "weather_status": "GO"
     },
     {
         "date": "12 OCT",
