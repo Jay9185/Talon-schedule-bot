@@ -86,6 +86,6 @@
         "type": "Meeting",
         "remark": "AI town Hall",
         "dispatch_sent": false,
-        "weather_status": "GO"
+        "weather_status": "NO-GO"
     }
 ]
