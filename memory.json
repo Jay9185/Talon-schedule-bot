@@ -24,14 +24,14 @@
     {
         "date": "10 OCT",
         "time": "20:00 - 01:00 (+1D)",
-        "status": "Scheduled",
+        "status": "CancelledWX - T-Storm",
         "ip": "TBD",
         "res": "PA28-181G",
         "lesson": "CPLSE 1.26-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "NO-GO"
+        "changes_text": "  \u2022 Status: Scheduled -> CancelledWX - T-Storm"
     },
     {
         "date": "12 OCT",
@@ -108,6 +108,7 @@
         "lesson": "UNKNOWN",
         "type": "Meeting",
         "remark": "AI town Hall",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "GO"
     }
 ]
