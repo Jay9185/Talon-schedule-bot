@@ -40,7 +40,19 @@
         "res": "TBD",
         "lesson": "UNKNOWN",
         "type": "Rest Period",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
+    },
+    {
+        "date": "13 OCT",
+        "time": "06:45 - 11:45",
+        "status": "Scheduling",
+        "ip": "TBD",
+        "res": "PA28-181G",
+        "lesson": "CPLSE 1.30-SXC",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "GO"
     },
     {
         "date": "13 OCT",
@@ -63,6 +75,16 @@
         "type": "Academic",
         "remark": "",
         "dispatch_sent": false
+    },
+    {
+        "date": "13 OCT",
+        "time": "21:15 - 02:15 (+1D)",
+        "status": "Scheduling",
+        "ip": "TBD",
+        "res": "PA28-181G",
+        "lesson": "CPLSE 1.26-SXC",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     },
     {
         "date": "14 OCT",
@@ -95,7 +117,6 @@
         "lesson": "UNKNOWN",
         "type": "Meeting",
         "remark": "AI town Hall",
-        "dispatch_sent": false,
-        "weather_status": "ERROR"
+        "dispatch_sent": false
     }
 ]
