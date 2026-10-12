@@ -52,6 +52,7 @@
         "lesson": "CPLSE 1.30-SXC",
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false,
         "weather_status": "GO"
     },
     {
@@ -84,7 +85,8 @@
         "res": "PA28-181G",
         "lesson": "CPLSE 1.26-SXC",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false
     },
     {
         "date": "14 OCT",
