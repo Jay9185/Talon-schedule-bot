@@ -1,16 +1,5 @@
 [
     {
-        "date": "09 OCT",
-        "time": "14:30 - 16:30",
-        "status": "Scheduled",
-        "ip": "Hogan,Geoffrey",
-        "res": "CHD Classroom  B",
-        "lesson": "CPL 4.14-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
         "date": "12 OCT",
         "time": "12:00 - 14:00",
         "status": "Scheduled",
@@ -90,25 +79,23 @@
     },
     {
         "date": "14 OCT",
-        "time": "12:00 - 14:00",
+        "time": "11:00 - 13:00",
         "status": "Scheduled",
         "ip": "Hogan,Geoffrey",
         "res": "DVT Bldg 3 - A",
         "lesson": "CPL 5.19-Ground",
         "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false
+        "remark": ""
     },
     {
         "date": "14 OCT",
-        "time": "14:00 - 16:00",
+        "time": "13:00 - 15:00",
         "status": "Scheduled",
         "ip": "Hogan,Geoffrey",
         "res": "DVT Bldg 3 - A",
         "lesson": "CPL 5.20-Exam",
         "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false
+        "remark": ""
     },
     {
         "date": "14 OCT",
