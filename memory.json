@@ -31,7 +31,7 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "GO"
+        "weather_status": "ERROR"
     },
     {
         "date": "13 OCT",
@@ -85,6 +85,7 @@
         "res": "TBD",
         "lesson": "UNKNOWN",
         "type": "FAA Written Test",
-        "remark": "IRA- FAA Written Test"
+        "remark": "IRA- FAA Written Test",
+        "dispatch_sent": false
     }
 ]
