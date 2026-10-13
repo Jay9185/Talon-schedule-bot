@@ -1,40 +1,5 @@
 [
     {
-        "date": "12 OCT",
-        "time": "12:00 - 14:00",
-        "status": "Completed",
-        "ip": "Hogan,Geoffrey",
-        "res": "DVT Bldg 3 - A",
-        "lesson": "CPL 4.15-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
-    },
-    {
-        "date": "12 OCT",
-        "time": "14:00 - 16:00",
-        "status": "Completed",
-        "ip": "Hogan,Geoffrey",
-        "res": "DVT Bldg 3 - A",
-        "lesson": "CPL 4.16-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
-    },
-    {
-        "date": "12 OCT",
-        "time": "16:00 - 04:00 (+1D)",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "Rest Period",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
         "date": "13 OCT",
         "time": "12:00 - 14:00",
         "status": "Scheduled",
@@ -65,7 +30,8 @@
         "lesson": "CPLSE 1.26-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "weather_status": "NO-GO"
+        "dispatch_sent": false,
+        "weather_status": "GO"
     },
     {
         "date": "13 OCT",
@@ -75,7 +41,8 @@
         "res": "TBD",
         "lesson": "UNKNOWN",
         "type": "Rest Period",
-        "remark": ""
+        "remark": "",
+        "dispatch_sent": false
     },
     {
         "date": "14 OCT",
@@ -109,5 +76,15 @@
         "type": "Meeting",
         "remark": "AI town Hall",
         "dispatch_sent": false
+    },
+    {
+        "date": "19 OCT",
+        "time": "08:30 - 12:00",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "FAA Written Test",
+        "remark": "IRA- FAA Written Test"
     }
 ]
