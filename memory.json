@@ -26,12 +26,13 @@
         "time": "18:00 - 23:00",
         "status": "Scheduled",
         "ip": "TBD",
-        "res": "PA28-181G",
+        "res": "742PA (NXi)",
         "lesson": "CPLSE 1.26-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "ERROR"
+        "changes_text": "  \u2022 Aircraft: PA28-181G -> 742PA (NXi)",
+        "weather_status": "NO-GO"
     },
     {
         "date": "13 OCT",
@@ -76,6 +77,16 @@
         "type": "Meeting",
         "remark": "AI town Hall",
         "dispatch_sent": false
+    },
+    {
+        "date": "14 OCT",
+        "time": "18:00 - 06:00 (+1D)",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "Rest Period",
+        "remark": ""
     },
     {
         "date": "19 OCT",
