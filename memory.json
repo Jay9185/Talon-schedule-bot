@@ -13,24 +13,26 @@
     {
         "date": "14 OCT",
         "time": "11:00 - 13:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Hogan,Geoffrey",
         "res": "DVT Bldg 3 - A",
         "lesson": "CPL 5.19-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduled -> Completed"
     },
     {
         "date": "14 OCT",
         "time": "13:00 - 15:00",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Hogan,Geoffrey",
         "res": "DVT Bldg 3 - A",
         "lesson": "CPL 5.20-Exam",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Status: Scheduled -> Completed"
     },
     {
         "date": "14 OCT",
@@ -41,8 +43,18 @@
         "lesson": "UNKNOWN",
         "type": "Meeting",
         "remark": "AI town Hall",
-        "dispatch_sent": false,
+        "dispatch_sent": true,
         "weather_status": "GO"
+    },
+    {
+        "date": "15 OCT",
+        "time": "16:00 - 19:00",
+        "status": "Scheduling",
+        "ip": "Miller,Kaeden",
+        "res": "PA28-181G",
+        "lesson": "CPLSE 1.29-Flt",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     },
     {
         "date": "15 OCT",
@@ -54,6 +66,16 @@
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
         "dispatch_sent": false
+    },
+    {
+        "date": "16 OCT",
+        "time": "02:45 - 14:45",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "Rest Period",
+        "remark": ""
     },
     {
         "date": "19 OCT",
