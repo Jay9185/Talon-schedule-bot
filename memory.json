@@ -1,28 +1,6 @@
 [
     {
         "date": "13 OCT",
-        "time": "12:00 - 14:00",
-        "status": "Completed",
-        "ip": "Hogan,Geoffrey",
-        "res": "DVT Bldg 3 - A",
-        "lesson": "CPL 5.17-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
-        "date": "13 OCT",
-        "time": "14:00 - 16:00",
-        "status": "Completed",
-        "ip": "Hogan,Geoffrey",
-        "res": "DVT Bldg 3 - A",
-        "lesson": "CPL 5.18-Ground",
-        "type": "Academic",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
-        "date": "13 OCT",
         "time": "18:00 - 23:00",
         "status": "Pend A/C",
         "ip": "TBD",
@@ -30,19 +8,7 @@
         "lesson": "CPLSE 1.26-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "  \u2022 Aircraft: 742PA (NXi) -> PA28-181G\n  \u2022 Status: Scheduled -> Pend A/C"
-    },
-    {
-        "date": "13 OCT",
-        "time": "23:00 - 11:00 (+1D)",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "Rest Period",
-        "remark": "",
-        "dispatch_sent": false
+        "dispatch_sent": true
     },
     {
         "date": "14 OCT",
@@ -97,7 +63,8 @@
         "res": "PA28-181G",
         "lesson": "CPLSE 1.28-SXC",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false
     },
     {
         "date": "19 OCT",
