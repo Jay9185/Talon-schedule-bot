@@ -8,8 +8,7 @@
         "lesson": "CPL 5.17-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
+        "dispatch_sent": false
     },
     {
         "date": "13 OCT",
@@ -20,20 +19,19 @@
         "lesson": "CPL 5.18-Ground",
         "type": "Academic",
         "remark": "",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Completed"
+        "dispatch_sent": false
     },
     {
         "date": "13 OCT",
         "time": "18:00 - 23:00",
-        "status": "Scheduled",
+        "status": "Pend A/C",
         "ip": "TBD",
-        "res": "742PA (NXi)",
+        "res": "PA28-181G",
         "lesson": "CPLSE 1.26-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Aircraft: 742PA (NXi) -> PA28-181G\n  \u2022 Status: Scheduled -> Pend A/C"
     },
     {
         "date": "13 OCT",
@@ -77,7 +75,8 @@
         "lesson": "UNKNOWN",
         "type": "Meeting",
         "remark": "AI town Hall",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "GO"
     },
     {
         "date": "14 OCT",
@@ -89,6 +88,16 @@
         "type": "Rest Period",
         "remark": "",
         "dispatch_sent": false
+    },
+    {
+        "date": "15 OCT",
+        "time": "20:45 - 02:45 (+1D)",
+        "status": "Scheduling",
+        "ip": "TBD",
+        "res": "PA28-181G",
+        "lesson": "CPLSE 1.28-SXC",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     },
     {
         "date": "19 OCT",
