@@ -3,6 +3,9 @@
 
 An automated schedule tracker and notification bot for student pilots using the Talon ETA flight management system.
 
+> 📖 **About the author:** Built by Jay Bhatiya, a cadet pilot training at Phoenix Deer Valley (KDVT). I write about flight training, aviation tech and the tools I build at **[TurbulenceGains](https://turbulencegains.com/)**. [See all my projects](https://turbulencegains.com/about/#projects).
+
+
 Flight school schedules are incredibly dynamic. Checking the Talon portal fifteen times a day to see if you received a new flight block, a weather cancellation, or a hidden note from dispatch is frustrating and inefficient. I built this Python script to run silently in the background, check the portal automatically, and push formatted alerts directly to your phone the second something changes.
 
 This project uses Playwright to mimic a real desktop browser. It logs into your portal, scrapes your schedule, compares it to the last known state, and sends alerts via Telegram. It also features webhook support to push your schedule to a TRMNL e-ink display so your desk always reflects your current flight line status.
