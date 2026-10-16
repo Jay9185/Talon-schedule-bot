@@ -8,20 +8,19 @@
         "lesson": "CPLSE 1.29-Flt",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Ops Check In -> Completed"
+        "dispatch_sent": true
     },
     {
         "date": "15 OCT",
         "time": "20:45 - 02:45 (+1D)",
-        "status": "Scheduled",
+        "status": "CancelledWX - Winds",
         "ip": "TBD",
         "res": "822PA (NXi)",
         "lesson": "CPLSE 1.28-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Status: Scheduled -> CancelledWX - Winds"
     },
     {
         "date": "16 OCT",
@@ -43,7 +42,8 @@
         "lesson": "CPLSE 1.26-SXC",
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "GO"
     },
     {
         "date": "19 OCT",
