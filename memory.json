@@ -11,6 +11,16 @@
         "dispatch_sent": false
     },
     {
+        "date": "16 OCT",
+        "time": "15:00 - 20:30",
+        "status": "Scheduled",
+        "ip": "Miller,Kaeden",
+        "res": "RB LD 2 C172",
+        "lesson": "CPLSE 1.31-AATDCPLSE 1.32-AATD",
+        "type": "Sim",
+        "remark": "Ramp Out"
+    },
+    {
         "date": "17 OCT",
         "time": "20:30 - 01:30 (+1D)",
         "status": "Scheduling",
@@ -21,6 +31,16 @@
         "remark": "The schedule has not yet been posted for this day",
         "dispatch_sent": false,
         "weather_status": "NO-GO"
+    },
+    {
+        "date": "18 OCT",
+        "time": "01:30 - 13:30",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "Rest Period",
+        "remark": ""
     },
     {
         "date": "19 OCT",
