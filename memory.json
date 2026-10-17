@@ -13,27 +13,37 @@
     {
         "date": "16 OCT",
         "time": "15:00 - 20:30",
-        "status": "Ramp Out",
+        "status": "Completed",
         "ip": "Miller,Kaeden",
         "res": "RB LD 2 C172",
         "lesson": "CPLSE 1.31-AATDCPLSE 1.32-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduled -> Ramp Out"
+        "changes_text": "  \u2022 Status: Ramp Out -> Completed"
+    },
+    {
+        "date": "17 OCT",
+        "time": "11:00 - 13:30",
+        "status": "Scheduled",
+        "ip": "Miller,Kaeden",
+        "res": "PA28-181G",
+        "lesson": "CPLSE 1.29-Flt",
+        "type": "Flight",
+        "remark": "Ramp Out",
+        "weather_status": "NO-GO"
     },
     {
         "date": "17 OCT",
         "time": "20:30 - 01:30 (+1D)",
-        "status": "Scheduled",
+        "status": "CancelledMission not reqd",
         "ip": "TBD",
         "res": "PA28-181G",
         "lesson": "CPLSE 1.26-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'",
-        "weather_status": "NO-GO"
+        "changes_text": "  \u2022 Status: Scheduled -> CancelledMission not reqd"
     },
     {
         "date": "18 OCT",
