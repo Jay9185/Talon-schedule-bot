@@ -8,8 +8,7 @@
         "lesson": "CPLSE 1.29-Flt",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "  \u2022 Aircraft: PA28-181G -> 655AG (NXI)\n  \u2022 Status: Scheduled -> Ops Check In"
+        "dispatch_sent": true
     },
     {
         "date": "17 OCT",
@@ -43,6 +42,6 @@
         "type": "FAA Written Test",
         "remark": "IRA- FAA Written Test",
         "dispatch_sent": false,
-        "weather_status": "NO-GO"
+        "weather_status": "GO"
     }
 ]
