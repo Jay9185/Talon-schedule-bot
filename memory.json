@@ -42,6 +42,16 @@
         "type": "FAA Written Test",
         "remark": "IRA- FAA Written Test",
         "dispatch_sent": false,
-        "weather_status": "NO-GO"
+        "weather_status": "GO"
+    },
+    {
+        "date": "19 OCT",
+        "time": "21:00 - 03:00 (+1D)",
+        "status": "Scheduling",
+        "ip": "TBD",
+        "res": "PA28-181G",
+        "lesson": "CPLSE 1.28-SXC",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
