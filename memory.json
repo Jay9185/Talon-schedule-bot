@@ -42,7 +42,7 @@
         "type": "FAA Written Test",
         "remark": "IRA- FAA Written Test",
         "dispatch_sent": false,
-        "weather_status": "GO"
+        "weather_status": "NO-GO"
     },
     {
         "date": "19 OCT",
@@ -52,6 +52,7 @@
         "res": "PA28-181G",
         "lesson": "CPLSE 1.28-SXC",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false
     }
 ]
