@@ -13,15 +13,24 @@
     {
         "date": "20 OCT",
         "time": "12:30 - 15:00",
-        "status": "Ops Check In",
+        "status": "CancelledN/A Aircraft",
         "ip": "Miller,Kaeden",
         "res": "271AG (NXI)",
         "lesson": "CPLSE 1.29-Flt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "  \u2022 Aircraft: 195MA (NXi) -> 271AG (NXI)\n  \u2022 Status: Scheduled -> Ops Check In",
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Status: Ops Check In -> CancelledN/A Aircraft"
+    },
+    {
+        "date": "20 OCT",
+        "time": "13:00 - 16:00",
+        "status": "Ramp Out",
+        "ip": "Miller,Kaeden",
+        "res": "RB LD 3 C172",
+        "lesson": "CPLSE 2.36-AATD",
+        "type": "Sim",
+        "remark": "Ramp Out"
     },
     {
         "date": "21 OCT",
@@ -32,6 +41,37 @@
         "lesson": "CPLSE 1.26-SXC",
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "GO"
+    },
+    {
+        "date": "22 OCT",
+        "time": "00:00 - 12:00",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "Rest Period",
+        "remark": ""
+    },
+    {
+        "date": "",
+        "time": "",
+        "status": "",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "",
+        "remark": ""
+    },
+    {
+        "date": "20 OCT",
+        "time": "18:00 - 20:30",
+        "status": "Ops Request",
+        "ip": "Khairi,Mohammad",
+        "res": "PA28-181G",
+        "lesson": "CPLSE 1.29-Flt",
+        "type": "Flight",
+        "remark": ""
     }
 ]
