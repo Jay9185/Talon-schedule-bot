@@ -1,50 +1,5 @@
 [
     {
-        "date": "20 OCT",
-        "time": "00:30 - 12:30",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "Rest Period",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
-        "date": "20 OCT",
-        "time": "12:30 - 15:00",
-        "status": "CancelledN/A Aircraft",
-        "ip": "Miller,Kaeden",
-        "res": "271AG (NXI)",
-        "lesson": "CPLSE 1.29-Flt",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
-        "date": "20 OCT",
-        "time": "13:00 - 16:00",
-        "status": "Completed",
-        "ip": "Miller,Kaeden",
-        "res": "RB LD 3 C172",
-        "lesson": "CPLSE 2.36-AATD",
-        "type": "Sim",
-        "remark": "Ramp Out",
-        "dispatch_sent": false
-    },
-    {
-        "date": "20 OCT",
-        "time": "18:00 - 20:30",
-        "status": "Completed",
-        "ip": "Khairi,Mohammad",
-        "res": "822PA (NXi)",
-        "lesson": "CPLSE 1.29-Flt",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Ops Check In -> Completed"
-    },
-    {
         "date": "21 OCT",
         "time": "19:00 - 00:00 (+1D)",
         "status": "Scheduled",
