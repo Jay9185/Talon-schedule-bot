@@ -30,21 +30,19 @@
         "lesson": "CPLSE 2.36-AATD",
         "type": "Sim",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Ramp Out -> Completed"
+        "dispatch_sent": false
     },
     {
         "date": "20 OCT",
         "time": "18:00 - 20:30",
-        "status": "Ops Check In",
+        "status": "Completed",
         "ip": "Khairi,Mohammad",
         "res": "822PA (NXi)",
         "lesson": "CPLSE 1.29-Flt",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "  \u2022 Aircraft: PA28-181G -> 822PA (NXi)\n  \u2022 Status: Ops Request -> Ops Check In\n  \u2022 Remarks: 'Ramp Out'",
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Status: Ops Check In -> Completed"
     },
     {
         "date": "21 OCT",
@@ -56,7 +54,7 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'"
+        "weather_status": "GO"
     },
     {
         "date": "22 OCT",
