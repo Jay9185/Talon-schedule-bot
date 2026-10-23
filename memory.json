@@ -13,14 +13,14 @@
     {
         "date": "22 OCT",
         "time": "19:15 - 00:15 (+1D)",
-        "status": "Scheduled",
+        "status": "CancelledWX - Winds",
         "ip": "TBD",
         "res": "597AG (NXI)",
         "lesson": "CPLSE 1.26-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "NO-GO"
+        "changes_text": "  \u2022 Status: Scheduled -> CancelledWX - Winds"
     },
     {
         "date": "23 OCT",
@@ -43,7 +43,7 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'"
+        "weather_status": "GO"
     },
     {
         "date": "24 OCT",
