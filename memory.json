@@ -32,5 +32,25 @@
         "remark": "The schedule has not yet been posted for this day",
         "dispatch_sent": false,
         "weather_status": "GO"
+    },
+    {
+        "date": "",
+        "time": "",
+        "status": "",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "",
+        "remark": ""
+    },
+    {
+        "date": "24 OCT",
+        "time": "13:30 - 16:00",
+        "status": "Ops Request",
+        "ip": "Miller,Kaeden",
+        "res": "PA28-181G",
+        "lesson": "IR 2.21-Flight",
+        "type": "Flight",
+        "remark": ""
     }
 ]
