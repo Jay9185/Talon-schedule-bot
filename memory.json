@@ -1,27 +1,15 @@
 [
     {
         "date": "23 OCT",
-        "time": "00:15 - 12:15",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "Rest Period",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
-        "date": "23 OCT",
         "time": "20:30 - 01:30 (+1D)",
-        "status": "Scheduled",
+        "status": "Ramp Out",
         "ip": "TBD",
         "res": "276AG (NXI)",
         "lesson": "CPLSE 1.28-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "  \u2022 Aircraft: 281TW (NXI) -> 276AG (NXI)",
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Status: Scheduled -> Ramp Out"
     },
     {
         "date": "24 OCT",
@@ -42,6 +30,8 @@
         "res": "PA28-181G",
         "lesson": "CPLSE 1.26-SXC",
         "type": "Flight",
-        "remark": "The schedule has not yet been posted for this day"
+        "remark": "The schedule has not yet been posted for this day",
+        "dispatch_sent": false,
+        "weather_status": "GO"
     }
 ]
