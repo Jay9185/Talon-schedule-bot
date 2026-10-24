@@ -2,14 +2,14 @@
     {
         "date": "23 OCT",
         "time": "20:30 - 01:30 (+1D)",
-        "status": "Ramp Out",
+        "status": "Ramp In",
         "ip": "TBD",
         "res": "276AG (NXI)",
         "lesson": "CPLSE 1.28-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Scheduled -> Ramp Out"
+        "changes_text": "  \u2022 Status: Ramp Out -> Ramp In"
     },
     {
         "date": "24 OCT",
