@@ -15,11 +15,12 @@
         "time": "20:30 - 01:30 (+1D)",
         "status": "Scheduled",
         "ip": "TBD",
-        "res": "281TW (NXI)",
+        "res": "276AG (NXI)",
         "lesson": "CPLSE 1.28-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
+        "dispatch_sent": true,
+        "changes_text": "  \u2022 Aircraft: 281TW (NXI) -> 276AG (NXI)",
         "weather_status": "GO"
     },
     {
@@ -32,5 +33,15 @@
         "type": "Rest Period",
         "remark": "",
         "dispatch_sent": false
+    },
+    {
+        "date": "25 OCT",
+        "time": "21:15 - 02:15 (+1D)",
+        "status": "Scheduling",
+        "ip": "TBD",
+        "res": "PA28-181G",
+        "lesson": "CPLSE 1.26-SXC",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day"
     }
 ]
