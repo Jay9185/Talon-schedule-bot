@@ -41,9 +41,7 @@
         "lesson": "CPLSE 1.26-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "  \u2022 Lesson: CPLSE 1.28-SXC -> CPLSE 1.26-SXC",
-        "weather_status": "GO"
+        "dispatch_sent": true
     },
     {
         "date": "25 OCT",
@@ -55,7 +53,7 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'"
+        "weather_status": "GO"
     },
     {
         "date": "26 OCT",
