@@ -33,18 +33,6 @@
         "dispatch_sent": true
     },
     {
-        "date": "25 OCT",
-        "time": "21:15 - 02:15 (+1D)",
-        "status": "CancelledWX - Winds",
-        "ip": "TBD",
-        "res": "597AG (NXI)",
-        "lesson": "CPLSE 1.26-SXC",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true,
-        "changes_text": "  \u2022 Status: Scheduled -> CancelledWX - Winds"
-    },
-    {
         "date": "26 OCT",
         "time": "02:15 - 14:15",
         "status": "Scheduled",
