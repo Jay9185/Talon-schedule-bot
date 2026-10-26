@@ -45,6 +45,27 @@
     },
     {
         "date": "27 OCT",
+        "time": "05:30 - 08:30",
+        "status": "Scheduling",
+        "ip": "Miller,Kaeden",
+        "res": "PA28-181G",
+        "lesson": "IR 2.21-Flight",
+        "type": "Flight",
+        "remark": "The schedule has not yet been posted for this day",
+        "weather_status": "GO"
+    },
+    {
+        "date": "27 OCT",
+        "time": "08:30 - 20:30",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "Rest Period",
+        "remark": ""
+    },
+    {
+        "date": "27 OCT",
         "time": "20:30 - 01:30 (+1D)",
         "status": "Scheduling",
         "ip": "TBD",
@@ -52,7 +73,16 @@
         "lesson": "CPLSE 1.28-SXC",
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false,
-        "weather_status": "GO"
+        "dispatch_sent": false
+    },
+    {
+        "date": "28 OCT",
+        "time": "01:30 - 13:30",
+        "status": "Scheduled",
+        "ip": "TBD",
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "Rest Period",
+        "remark": ""
     }
 ]
