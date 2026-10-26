@@ -8,6 +8,7 @@ import urllib.parse
 from datetime import datetime, timezone, timedelta
 from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
+import duty_rules
 
 # --- CONFIGURATION ---
 TALON_LOGIN_URL = "https://apps4.talonsystems.com/tseta/servlet/content?module=home&page=homepg&zajael1120=42DC6E6C4E5A723E80D0BF0AC5A1C8AF"
@@ -147,12 +148,8 @@ def is_future_flight(f):
     except:
         return True 
 
-def is_cancelled(f):
-    status = f.get('status', '').lower()
-    return 'cancel' in status or 'cnx' in status
-
-def is_rest_period(f):
-    return "Rest Period" in f.get('type', '') or "Rest Period" in f.get('lesson', '')
+is_cancelled = duty_rules.is_cancelled
+is_rest_period = duty_rules.is_rest_period
 
 def is_actual_flight(f):
     act_type = f.get('type', '').lower()
@@ -161,85 +158,9 @@ def is_actual_flight(f):
     return act_type not in ['academic', 'oral', 'sim', 'ground', 'brief']
 
 def evaluate_fatigue(target_flight, all_flights):
-    warnings = []
     mst_tz = timezone(timedelta(hours=-7))
-    now = datetime.now(mst_tz)
-    current_year = now.year
-    
-    if is_cancelled(target_flight) or is_rest_period(target_flight): return []
-    
-    def parse_dt(d_str, t_str):
-        clean_date = "".join(c for c in d_str if c.isalnum() or c.isspace()).strip()
-        dt_str = f"{clean_date} {current_year} {t_str}"
-        dt = datetime.strptime(dt_str, "%d %b %Y %H:%M")
-        if dt.month == 12 and now.month < 3: dt = dt.replace(year=current_year - 1)
-        elif dt.month < 3 and now.month == 12: dt = dt.replace(year=current_year + 1)
-        return dt
-
-    # 1. 12-Hour Duty Limit (Resets on Rest Periods)
-    try:
-        day_events = [f for f in all_flights if not is_cancelled(f) and f['date'] == target_flight['date']]
-        
-        # Sort events chronologically to accurately track the circuit breaker
-        day_events.sort(key=lambda x: parse_dt(x['date'], x['time'].split("-")[0].strip()))
-        
-        duty_start = None
-        max_duty_hours = 0.0
-        worst_start = None
-        worst_end = None
-        
-        for df in day_events:
-            if is_rest_period(df):
-                duty_start = None # CIRCUIT BREAKER: Duty resets here
-                continue
-                
-            parts = df['time'].split("-")
-            s_dt = parse_dt(df['date'], parts[0].strip())
-            e_dt = parse_dt(df['date'], parts[1].split("(")[0].strip())
-            if "(+1D)" in df['time']: e_dt += timedelta(days=1)
-            
-            if duty_start is None:
-                duty_start = s_dt
-                
-            span = (e_dt - duty_start).total_seconds() / 3600
-            
-            if span > max_duty_hours:
-                max_duty_hours = span
-                worst_start = duty_start
-                worst_end = e_dt
-                
-        if max_duty_hours > 12.0:
-            warnings.append(f"Duty Day Span: {max_duty_hours:.1f} Hours ({worst_start.strftime('%H:%M')}-{worst_end.strftime('%H:%M')})")
-    except Exception:
-        pass
-
-    # 2. 7-Day Continuous Check (Ignores days that ONLY have Rest Periods)
-    try:
-        working_flights = [f for f in all_flights if not is_cancelled(f) and not is_rest_period(f)]
-        unique_dates = set()
-        for f in working_flights:
-            unique_dates.add(parse_dt(f['date'], "00:00").date())
-            
-        target_date = parse_dt(target_flight['date'], "00:00").date()
-        if target_date in unique_dates:
-            streak = 1
-            
-            check_date = target_date - timedelta(days=1)
-            while check_date in unique_dates:
-                streak += 1
-                check_date -= timedelta(days=1)
-                
-            check_date = target_date + timedelta(days=1)
-            while check_date in unique_dates:
-                streak += 1
-                check_date += timedelta(days=1)
-                
-            if streak > 7:
-                warnings.append(f"Consecutive Days: {streak} Days (Requires 1 rest day in 7)")
-    except Exception:
-        pass
-        
-    return warnings
+    now = datetime.now(mst_tz).replace(tzinfo=None)
+    return duty_rules.evaluate_event(target_flight, all_flights, now)
 
 def get_trmnl_flights(schedule):
     mst_tz = timezone(timedelta(hours=-7))
