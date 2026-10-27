@@ -33,17 +33,6 @@
         "dispatch_sent": true
     },
     {
-        "date": "26 OCT",
-        "time": "02:15 - 14:15",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "Rest Period",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
         "date": "27 OCT",
         "time": "04:30 - 07:30",
         "status": "Scheduled",
@@ -53,7 +42,7 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "ERROR"
+        "weather_status": "GO"
     },
     {
         "date": "27 OCT",
