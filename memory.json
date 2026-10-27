@@ -1,48 +1,15 @@
 [
     {
-        "date": "23 OCT",
-        "time": "20:30 - 01:30 (+1D)",
-        "status": "Ramp In",
-        "ip": "TBD",
-        "res": "276AG (NXI)",
-        "lesson": "CPLSE 1.28-SXC",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
-        "date": "24 OCT",
-        "time": "13:30 - 16:00",
-        "status": "Ops Check In",
-        "ip": "Miller,Kaeden",
-        "res": "364AG (NXI)",
-        "lesson": "IR 2.21-Flight",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": false
-    },
-    {
-        "date": "24 OCT",
-        "time": "19:45 - 00:45 (+1D)",
-        "status": "Ops Check In",
-        "ip": "TBD",
-        "res": "PA28-181G",
-        "lesson": "CPLSE 1.26-SXC",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
-    },
-    {
         "date": "27 OCT",
         "time": "04:30 - 07:30",
-        "status": "Scheduled",
+        "status": "Completed",
         "ip": "Miller,Kaeden",
-        "res": "PA28-181G",
+        "res": "908AG (NXI)",
         "lesson": "IR 2.21-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": false,
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Aircraft: PA28-181G -> 908AG (NXI)\n  \u2022 Status: Scheduled -> Completed"
     },
     {
         "date": "27 OCT",
@@ -60,11 +27,13 @@
         "time": "20:30 - 01:30 (+1D)",
         "status": "Scheduled",
         "ip": "TBD",
-        "res": "PA28-181G",
+        "res": "597AG (NXI)",
         "lesson": "CPLSE 1.28-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "changes_text": "  \u2022 Aircraft: PA28-181G -> 597AG (NXI)",
+        "weather_status": "GO"
     },
     {
         "date": "28 OCT",
