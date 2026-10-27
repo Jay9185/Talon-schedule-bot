@@ -52,7 +52,8 @@
         "lesson": "IR 2.21-Flight",
         "type": "Flight",
         "remark": "Ramp Out",
-        "weather_status": "GO"
+        "dispatch_sent": false,
+        "weather_status": "ERROR"
     },
     {
         "date": "27 OCT",
@@ -74,8 +75,7 @@
         "lesson": "CPLSE 1.28-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
-        "dispatch_sent": false,
-        "changes_text": "  \u2022 Status: Scheduling -> Scheduled\n  \u2022 Remarks: 'Ramp Out'"
+        "dispatch_sent": false
     },
     {
         "date": "28 OCT",
