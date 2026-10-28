@@ -1,37 +1,15 @@
 [
     {
         "date": "27 OCT",
-        "time": "04:30 - 07:30",
-        "status": "Completed",
-        "ip": "Miller,Kaeden",
-        "res": "908AG (NXI)",
-        "lesson": "IR 2.21-Flight",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": false
-    },
-    {
-        "date": "27 OCT",
-        "time": "08:30 - 20:30",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "Rest Period",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
-        "date": "27 OCT",
         "time": "20:30 - 01:30 (+1D)",
-        "status": "Scheduled",
+        "status": "Ramp In",
         "ip": "TBD",
         "res": "545MA",
-        "lesson": "CPLSE 1.28-SXC",
+        "lesson": "CPLSE 1.26-SXC",
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true,
-        "weather_status": "GO"
+        "changes_text": "  \u2022 Lesson: CPLSE 1.28-SXC -> CPLSE 1.26-SXC\n  \u2022 Status: Scheduled -> Ramp In"
     },
     {
         "date": "28 OCT",
@@ -53,6 +31,7 @@
         "lesson": "CPLSE 1.26-SXC",
         "type": "Flight",
         "remark": "The schedule has not yet been posted for this day",
-        "dispatch_sent": false
+        "dispatch_sent": false,
+        "weather_status": "GO"
     }
 ]
