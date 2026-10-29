@@ -11,17 +11,6 @@
         "dispatch_sent": true
     },
     {
-        "date": "28 OCT",
-        "time": "01:30 - 13:30",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "Rest Period",
-        "remark": "",
-        "dispatch_sent": false
-    },
-    {
         "date": "29 OCT",
         "time": "20:00 - 01:00 (+1D)",
         "status": "Scheduled",
