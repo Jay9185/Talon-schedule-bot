@@ -19,7 +19,6 @@
         "lesson": "UNKNOWN",
         "type": "Meeting",
         "remark": "Meeting with Eric Noel",
-        "dispatch_sent": true,
-        "weather_status": "GO"
+        "dispatch_sent": true
     }
 ]
