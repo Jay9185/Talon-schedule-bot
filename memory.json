@@ -9,16 +9,5 @@
         "type": "Flight",
         "remark": "Ramp Out",
         "dispatch_sent": true
-    },
-    {
-        "date": "04 NOV",
-        "time": "09:00 - 09:30",
-        "status": "Scheduled",
-        "ip": "TBD",
-        "res": "TBD",
-        "lesson": "UNKNOWN",
-        "type": "Meeting",
-        "remark": "Meeting with Eric Noel",
-        "dispatch_sent": true
     }
 ]
