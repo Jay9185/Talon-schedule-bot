@@ -1,13 +1,13 @@
 [
     {
-        "date": "27 OCT",
-        "time": "20:30 - 01:30 (+1D)",
-        "status": "Ramp In",
+        "date": "12 NOV",
+        "time": "09:00 - 12:30",
+        "status": "Scheduled",
         "ip": "TBD",
-        "res": "545MA",
-        "lesson": "CPLSE 1.26-SXC",
-        "type": "Flight",
-        "remark": "Ramp Out",
-        "dispatch_sent": true
+        "res": "TBD",
+        "lesson": "UNKNOWN",
+        "type": "FAA Written Test",
+        "remark": "CAX- FAA Written Test",
+        "weather_status": "GO"
     }
 ]
