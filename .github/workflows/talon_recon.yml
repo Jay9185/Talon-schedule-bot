@@ -2,7 +2,7 @@ name: Talon Schedule Recon & Dispatch
 
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    /- cron: '*/30 * * * *'
   workflow_dispatch:
 
 permissions:
